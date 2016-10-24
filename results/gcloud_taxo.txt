@@ -1,0 +1,903 @@
+gcloud
+└─  app
+│    └─  instances
+│    │    └─  disable-debug
+│    │    └─  enable-debug
+│    │    └─  list
+│    └─  logs
+│    │    └─  read
+│    └─  services
+│    │    └─  browse
+│    │    └─  delete
+│    │    └─  list
+│    │    └─  set-traffic
+│    └─  versions
+│    │    └─  browse
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    │    └─  start
+│    │    └─  stop
+│    └─  browse
+│    └─  deploy
+│    └─  open-console
+└─  auth
+│    └─  application-default
+│    │    └─  login
+│    │    └─  print-access-token
+│    │    └─  revoke
+│    └─  list
+│    └─  login
+│    └─  revoke
+└─  components
+│    └─  repositories
+│    │    └─  add
+│    │    └─  list
+│    │    └─  remove
+│    └─  install
+│    └─  list
+│    └─  reinstall
+│    └─  remove
+│    └─  restore
+│    └─  update
+└─  compute
+│    └─  addresses
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    └─  backend-services
+│    │    └─  add-backend
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  edit
+│    │    └─  get-health
+│    │    └─  list
+│    │    └─  remove-backend
+│    │    └─  update
+│    │    └─  update-backend
+│    └─  disk-types
+│    │    └─  describe
+│    │    └─  list
+│    └─  disks
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    │    └─  move
+│    │    └─  resize
+│    │    └─  snapshot
+│    └─  firewall-rules
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    │    └─  update
+│    └─  forwarding-rules
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    │    └─  set-target
+│    └─  health-checks
+│    │    └─  create
+│    │    │    └─  http
+│    │    │    └─  https
+│    │    │    └─  ssl
+│    │    │    └─  tcp
+│    │    └─  update
+│    │    │    └─  http
+│    │    │    └─  https
+│    │    │    └─  ssl
+│    │    │    └─  tcp
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    └─  http-health-checks
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    │    └─  update
+│    └─  https-health-checks
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    │    └─  update
+│    └─  images
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  deprecate
+│    │    └─  describe
+│    │    └─  describe-from-family
+│    │    └─  list
+│    └─  instance-groups
+│    │    └─  managed
+│    │    │    └─  abandon-instances
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  delete-instances
+│    │    │    └─  describe
+│    │    │    └─  get-named-ports
+│    │    │    └─  list
+│    │    │    └─  list-instances
+│    │    │    └─  recreate-instances
+│    │    │    └─  resize
+│    │    │    └─  set-autoscaling
+│    │    │    └─  set-instance-template
+│    │    │    └─  set-named-ports
+│    │    │    └─  set-target-pools
+│    │    │    └─  stop-autoscaling
+│    │    │    └─  wait-until-stable
+│    │    └─  unmanaged
+│    │    │    └─  add-instances
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  get-named-ports
+│    │    │    └─  list
+│    │    │    └─  list-instances
+│    │    │    └─  remove-instances
+│    │    │    └─  set-named-ports
+│    │    └─  describe
+│    │    └─  get-named-ports
+│    │    └─  list
+│    │    └─  list-instances
+│    │    └─  set-named-ports
+│    └─  instance-templates
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    └─  instances
+│    │    └─  add-access-config
+│    │    └─  add-metadata
+│    │    └─  add-tags
+│    │    └─  attach-disk
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  delete-access-config
+│    │    └─  describe
+│    │    └─  detach-disk
+│    │    └─  list
+│    │    └─  move
+│    │    └─  remove-metadata
+│    │    └─  remove-tags
+│    │    └─  reset
+│    │    └─  set-disk-auto-delete
+│    │    └─  set-machine-type
+│    │    └─  set-scheduling
+│    │    └─  start
+│    │    └─  stop
+│    └─  machine-types
+│    │    └─  describe
+│    │    └─  list
+│    └─  networks
+│    │    └─  subnets
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    └─  operations
+│    │    └─  describe
+│    │    └─  list
+│    └─  project-info
+│    │    └─  add-metadata
+│    │    └─  describe
+│    │    └─  remove-metadata
+│    │    └─  set-usage-bucket
+│    └─  regions
+│    │    └─  describe
+│    │    └─  list
+│    └─  routers
+│    │    └─  add-bgp-peer
+│    │    └─  add-interface
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  get-status
+│    │    └─  list
+│    │    └─  remove-bgp-peer
+│    │    └─  remove-interface
+│    │    └─  update-bgp-peer
+│    │    └─  update-interface
+│    └─  routes
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    └─  snapshots
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    └─  ssl-certificates
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    └─  target-http-proxies
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    │    └─  update
+│    └─  target-https-proxies
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    │    └─  update
+│    └─  target-instances
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    └─  target-pools
+│    │    └─  add-health-checks
+│    │    └─  add-instances
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  get-health
+│    │    └─  list
+│    │    └─  remove-health-checks
+│    │    └─  remove-instances
+│    │    └─  set-backup
+│    └─  target-ssl-proxies
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    │    └─  update
+│    └─  target-vpn-gateways
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    └─  url-maps
+│    │    └─  add-host-rule
+│    │    └─  add-path-matcher
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  edit
+│    │    └─  invalidate-cdn-cache
+│    │    └─  list
+│    │    └─  remove-host-rule
+│    │    └─  remove-path-matcher
+│    │    └─  set-default-service
+│    └─  vpn-tunnels
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    └─  zones
+│    │    └─  describe
+│    │    └─  list
+│    └─  config-ssh
+│    └─  copy-files
+│    └─  ssh
+└─  config
+│    └─  configurations
+│    │    └─  activate
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    └─  list
+│    └─  set
+│    └─  unset
+└─  container
+│    └─  clusters
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  get-credentials
+│    │    └─  list
+│    │    └─  resize
+│    │    └─  update
+│    │    └─  upgrade
+│    └─  node-pools
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    └─  operations
+│    │    └─  describe
+│    │    └─  list
+│    │    └─  wait
+│    └─  get-server-config
+└─  dataproc
+│    └─  clusters
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  diagnose
+│    │    └─  list
+│    │    └─  update
+│    └─  jobs
+│    │    └─  submit
+│    │    │    └─  hadoop
+│    │    │    └─  hive
+│    │    │    └─  pig
+│    │    │    └─  pyspark
+│    │    │    └─  spark
+│    │    │    └─  spark-sql
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  kill
+│    │    └─  list
+│    │    └─  wait
+│    └─  operations
+│    │    └─  cancel
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+└─  deployment-manager
+│    └─  deployments
+│    │    └─  cancel-preview
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    │    └─  stop
+│    │    └─  update
+│    └─  manifests
+│    │    └─  describe
+│    │    └─  list
+│    └─  operations
+│    │    └─  describe
+│    │    └─  list
+│    │    └─  wait
+│    └─  resources
+│    │    └─  describe
+│    │    └─  list
+│    └─  types
+│    │    └─  list
+└─  dns
+│    └─  managed-zones
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    └─  project-info
+│    │    └─  describe
+│    └─  record-sets
+│    │    └─  changes
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  transaction
+│    │    │    └─  abort
+│    │    │    └─  add
+│    │    │    └─  describe
+│    │    │    └─  execute
+│    │    │    └─  remove
+│    │    │    └─  start
+│    │    └─  export
+│    │    └─  import
+│    │    └─  list
+└─  iam
+│    └─  service-accounts
+│    │    └─  keys
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  list
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  get-iam-policy
+│    │    └─  list
+│    │    └─  set-iam-policy
+│    │    └─  sign-blob
+│    │    └─  update
+│    └─  list-grantable-roles
+└─  preview
+│    └─  datastore
+│    │    └─  cleanup-indexes
+│    │    └─  create-indexes
+└─  projects
+│    └─  delete
+│    └─  describe
+│    └─  get-iam-policy
+│    └─  list
+│    └─  set-iam-policy
+│    └─  undelete
+│    └─  update
+└─  source
+│    └─  repos
+│    │    └─  clone
+└─  sql
+│    └─  backups
+│    │    └─  describe
+│    │    └─  list
+│    └─  flags
+│    │    └─  list
+│    └─  instances
+│    │    └─  clone
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  export
+│    │    └─  import
+│    │    └─  list
+│    │    └─  patch
+│    │    └─  promote-replica
+│    │    └─  reset-ssl-config
+│    │    └─  restart
+│    │    └─  restore-backup
+│    │    └─  set-root-password
+│    └─  operations
+│    │    └─  describe
+│    │    └─  list
+│    │    └─  wait
+│    └─  ssl-certs
+│    │    └─  create
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  list
+│    └─  tiers
+│    │    └─  list
+└─  topic
+└─  docker
+└─  feedback
+└─  help
+│    └─  app
+│    │    └─  instances
+│    │    │    └─  disable-debug
+│    │    │    └─  enable-debug
+│    │    │    └─  list
+│    │    └─  logs
+│    │    │    └─  read
+│    │    └─  services
+│    │    │    └─  browse
+│    │    │    └─  delete
+│    │    │    └─  list
+│    │    │    └─  set-traffic
+│    │    └─  versions
+│    │    │    └─  browse
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    │    └─  start
+│    │    │    └─  stop
+│    │    └─  browse
+│    │    └─  deploy
+│    │    └─  open-console
+│    └─  auth
+│    │    └─  application-default
+│    │    │    └─  login
+│    │    │    └─  print-access-token
+│    │    │    └─  revoke
+│    │    └─  list
+│    │    └─  login
+│    │    └─  revoke
+│    └─  components
+│    │    └─  repositories
+│    │    │    └─  add
+│    │    │    └─  list
+│    │    │    └─  remove
+│    │    └─  install
+│    │    └─  list
+│    │    └─  reinstall
+│    │    └─  remove
+│    │    └─  restore
+│    │    └─  update
+│    └─  compute
+│    │    └─  addresses
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  backend-services
+│    │    │    └─  add-backend
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  edit
+│    │    │    └─  get-health
+│    │    │    └─  list
+│    │    │    └─  remove-backend
+│    │    │    └─  update
+│    │    │    └─  update-backend
+│    │    └─  disk-types
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  disks
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    │    └─  move
+│    │    │    └─  resize
+│    │    │    └─  snapshot
+│    │    └─  firewall-rules
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    │    └─  update
+│    │    └─  forwarding-rules
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    │    └─  set-target
+│    │    └─  health-checks
+│    │    │    └─  create
+│    │    │    │    └─  http
+│    │    │    │    └─  https
+│    │    │    │    └─  ssl
+│    │    │    │    └─  tcp
+│    │    │    └─  update
+│    │    │    │    └─  http
+│    │    │    │    └─  https
+│    │    │    │    └─  ssl
+│    │    │    │    └─  tcp
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  http-health-checks
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    │    └─  update
+│    │    └─  https-health-checks
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    │    └─  update
+│    │    └─  images
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  deprecate
+│    │    │    └─  describe
+│    │    │    └─  describe-from-family
+│    │    │    └─  list
+│    │    └─  instance-groups
+│    │    │    └─  managed
+│    │    │    │    └─  abandon-instances
+│    │    │    │    └─  create
+│    │    │    │    └─  delete
+│    │    │    │    └─  delete-instances
+│    │    │    │    └─  describe
+│    │    │    │    └─  get-named-ports
+│    │    │    │    └─  list
+│    │    │    │    └─  list-instances
+│    │    │    │    └─  recreate-instances
+│    │    │    │    └─  resize
+│    │    │    │    └─  set-autoscaling
+│    │    │    │    └─  set-instance-template
+│    │    │    │    └─  set-named-ports
+│    │    │    │    └─  set-target-pools
+│    │    │    │    └─  stop-autoscaling
+│    │    │    │    └─  wait-until-stable
+│    │    │    └─  unmanaged
+│    │    │    │    └─  add-instances
+│    │    │    │    └─  create
+│    │    │    │    └─  delete
+│    │    │    │    └─  describe
+│    │    │    │    └─  get-named-ports
+│    │    │    │    └─  list
+│    │    │    │    └─  list-instances
+│    │    │    │    └─  remove-instances
+│    │    │    │    └─  set-named-ports
+│    │    │    └─  describe
+│    │    │    └─  get-named-ports
+│    │    │    └─  list
+│    │    │    └─  list-instances
+│    │    │    └─  set-named-ports
+│    │    └─  instance-templates
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  instances
+│    │    │    └─  add-access-config
+│    │    │    └─  add-metadata
+│    │    │    └─  add-tags
+│    │    │    └─  attach-disk
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  delete-access-config
+│    │    │    └─  describe
+│    │    │    └─  detach-disk
+│    │    │    └─  list
+│    │    │    └─  move
+│    │    │    └─  remove-metadata
+│    │    │    └─  remove-tags
+│    │    │    └─  reset
+│    │    │    └─  set-disk-auto-delete
+│    │    │    └─  set-machine-type
+│    │    │    └─  set-scheduling
+│    │    │    └─  start
+│    │    │    └─  stop
+│    │    └─  machine-types
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  networks
+│    │    │    └─  subnets
+│    │    │    │    └─  create
+│    │    │    │    └─  delete
+│    │    │    │    └─  describe
+│    │    │    │    └─  list
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  operations
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  project-info
+│    │    │    └─  add-metadata
+│    │    │    └─  describe
+│    │    │    └─  remove-metadata
+│    │    │    └─  set-usage-bucket
+│    │    └─  regions
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  routers
+│    │    │    └─  add-bgp-peer
+│    │    │    └─  add-interface
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  get-status
+│    │    │    └─  list
+│    │    │    └─  remove-bgp-peer
+│    │    │    └─  remove-interface
+│    │    │    └─  update-bgp-peer
+│    │    │    └─  update-interface
+│    │    └─  routes
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  snapshots
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  ssl-certificates
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  target-http-proxies
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    │    └─  update
+│    │    └─  target-https-proxies
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    │    └─  update
+│    │    └─  target-instances
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  target-pools
+│    │    │    └─  add-health-checks
+│    │    │    └─  add-instances
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  get-health
+│    │    │    └─  list
+│    │    │    └─  remove-health-checks
+│    │    │    └─  remove-instances
+│    │    │    └─  set-backup
+│    │    └─  target-ssl-proxies
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    │    └─  update
+│    │    └─  target-vpn-gateways
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  url-maps
+│    │    │    └─  add-host-rule
+│    │    │    └─  add-path-matcher
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  edit
+│    │    │    └─  invalidate-cdn-cache
+│    │    │    └─  list
+│    │    │    └─  remove-host-rule
+│    │    │    └─  remove-path-matcher
+│    │    │    └─  set-default-service
+│    │    └─  vpn-tunnels
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  zones
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  config-ssh
+│    │    └─  copy-files
+│    │    └─  ssh
+│    └─  config
+│    │    └─  configurations
+│    │    │    └─  activate
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  list
+│    │    └─  set
+│    │    └─  unset
+│    └─  container
+│    │    └─  clusters
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  get-credentials
+│    │    │    └─  list
+│    │    │    └─  resize
+│    │    │    └─  update
+│    │    │    └─  upgrade
+│    │    └─  node-pools
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  operations
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    │    └─  wait
+│    │    └─  get-server-config
+│    └─  dataproc
+│    │    └─  clusters
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  diagnose
+│    │    │    └─  list
+│    │    │    └─  update
+│    │    └─  jobs
+│    │    │    └─  submit
+│    │    │    │    └─  hadoop
+│    │    │    │    └─  hive
+│    │    │    │    └─  pig
+│    │    │    │    └─  pyspark
+│    │    │    │    └─  spark
+│    │    │    │    └─  spark-sql
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  kill
+│    │    │    └─  list
+│    │    │    └─  wait
+│    │    └─  operations
+│    │    │    └─  cancel
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    └─  deployment-manager
+│    │    └─  deployments
+│    │    │    └─  cancel-preview
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    │    └─  stop
+│    │    │    └─  update
+│    │    └─  manifests
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  operations
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    │    └─  wait
+│    │    └─  resources
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  types
+│    │    │    └─  list
+│    └─  dns
+│    │    └─  managed-zones
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  project-info
+│    │    │    └─  describe
+│    │    └─  record-sets
+│    │    │    └─  changes
+│    │    │    │    └─  describe
+│    │    │    │    └─  list
+│    │    │    └─  transaction
+│    │    │    │    └─  abort
+│    │    │    │    └─  add
+│    │    │    │    └─  describe
+│    │    │    │    └─  execute
+│    │    │    │    └─  remove
+│    │    │    │    └─  start
+│    │    │    └─  export
+│    │    │    └─  import
+│    │    │    └─  list
+│    └─  iam
+│    │    └─  service-accounts
+│    │    │    └─  keys
+│    │    │    │    └─  create
+│    │    │    │    └─  delete
+│    │    │    │    └─  list
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  get-iam-policy
+│    │    │    └─  list
+│    │    │    └─  set-iam-policy
+│    │    │    └─  sign-blob
+│    │    │    └─  update
+│    │    └─  list-grantable-roles
+│    └─  preview
+│    │    └─  datastore
+│    │    │    └─  cleanup-indexes
+│    │    │    └─  create-indexes
+│    └─  projects
+│    │    └─  delete
+│    │    └─  describe
+│    │    └─  get-iam-policy
+│    │    └─  list
+│    │    └─  set-iam-policy
+│    │    └─  undelete
+│    │    └─  update
+│    └─  source
+│    │    └─  repos
+│    │    │    └─  clone
+│    └─  sql
+│    │    └─  backups
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  flags
+│    │    │    └─  list
+│    │    └─  instances
+│    │    │    └─  clone
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  export
+│    │    │    └─  import
+│    │    │    └─  list
+│    │    │    └─  patch
+│    │    │    └─  promote-replica
+│    │    │    └─  reset-ssl-config
+│    │    │    └─  restart
+│    │    │    └─  restore-backup
+│    │    │    └─  set-root-password
+│    │    └─  operations
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    │    └─  wait
+│    │    └─  ssl-certs
+│    │    │    └─  create
+│    │    │    └─  delete
+│    │    │    └─  describe
+│    │    │    └─  list
+│    │    └─  tiers
+│    │    │    └─  list
+│    └─  topic
+│    └─  docker
+│    └─  feedback
+│    └─  help
+│    └─  info
+│    └─  init
+│    └─  version
+└─  info
+└─  init
+└─  version

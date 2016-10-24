@@ -1,0 +1,89 @@
+docker
+└─  attach
+└─  build
+└─  commit
+└─  cp
+└─  create
+└─  deploy
+└─  diff
+└─  events
+└─  exec
+└─  export
+└─  history
+└─  images
+└─  import
+└─  info
+└─  inspect
+└─  kill
+└─  load
+└─  login
+└─  logout
+└─  logs
+└─  network
+│    └─  connect
+│    └─  create
+│    └─  disconnect
+│    └─  inspect
+│    └─  ls
+│    └─  rm
+└─  node
+│    └─  demote
+│    └─  inspect
+│    └─  ls
+│    └─  promote
+│    └─  rm
+│    └─  ps
+│    └─  update
+└─  pause
+└─  plugin
+│    └─  disable
+│    └─  enable
+│    └─  inspect
+│    └─  install
+│    └─  ls
+│    └─  rm
+│    └─  set
+│    └─  push
+└─  port
+└─  ps
+└─  pull
+└─  push
+└─  rename
+└─  restart
+└─  rm
+└─  rmi
+└─  run
+└─  save
+└─  search
+└─  service
+│    └─  create
+│    └─  inspect
+│    └─  ps
+│    └─  ls
+│    └─  rm
+│    └─  scale
+│    └─  update
+└─  stack
+│    └─  config
+│    └─  deploy
+│    └─  rm
+│    └─  ps
+└─  start
+└─  stats
+└─  stop
+└─  swarm
+│    └─  init
+│    └─  join
+│    └─  update
+│    └─  leave
+└─  tag
+└─  top
+└─  unpause
+└─  update
+└─  version
+└─  volume
+│    └─  create
+│    └─  inspect
+│    └─  ls
+│    └─  rm
+└─  wait

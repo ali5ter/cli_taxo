@@ -1,0 +1,40 @@
+kubectl
+└─  get
+└─  describe
+└─  create
+│    └─  namespace
+│    └─  secret
+│    │    └─  generic
+│    └─  configmap
+│    └─  serviceaccount
+└─  replace
+└─  patch
+└─  delete
+└─  edit
+└─  apply
+└─  namespace
+└─  logs
+└─  scale
+└─  cordon
+└─  drain
+└─  uncordon
+└─  attach
+└─  exec
+└─  proxy
+└─  run
+└─  expose
+└─  autoscale
+└─  rollout
+│    └─  history
+│    └─  pause
+│    └─  resume
+│    └─  undo
+└─  label
+└─  annotate
+└─  config
+│    └─  view
+│    └─  set
+│    └─  unset
+└─  version
+└─  explain
+└─  convert
