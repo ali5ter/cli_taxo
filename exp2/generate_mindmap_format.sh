@@ -4,7 +4,7 @@
 
 cmd="$1"
 
-csv="$cmd.csv"
-file="$cmd.mm"
+csv="results/$cmd.csv"
+file="results/$cmd.mm"
 "../exp1/${cmd}_taxo.sh" -o csv "$@" > "$csv"
 ./csv_to_mm.py "$csv" > "$file"
