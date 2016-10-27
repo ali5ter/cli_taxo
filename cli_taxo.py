@@ -8,6 +8,7 @@ import sys
 import os
 import getopt
 import subprocess
+from colorama import Fore, Back, Style
 import string
 import re
 from enum import Enum
@@ -62,6 +63,10 @@ def usage():
     print("  -o tree|csv, --output tree|csv  Output format. "
         "Defaults to: ", OUTPUT_FORMAT)
     print("  -O, --show-opts    Include options in the output")
+    print("  -d                 Display debug information to STDERR")
+
+def eprint(*args, **kwargs):
+        print(*args, file=sys.stderr, **kwargs)
 
 def run_command(command):
     p = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
@@ -70,7 +75,12 @@ def run_command(command):
 def parse_options_and_commands(command, depth=-1):
 
     depth += 1
-    if _DEBUG: print('Parsing:', ' '.join(map(str, command)))
+
+    if _DEBUG:
+        eprint("\n{:s}Parsing: {:s}{:s}".format(
+            '  '*depth+Fore.GREEN,
+            ' '.join(map(str, command)),
+            Fore.RESET))
 
     if OPTIONS_TOKEN_RE:
         found_options = False
@@ -81,35 +91,45 @@ def parse_options_and_commands(command, depth=-1):
     else:
         found_commands = True
 
-    for line in run_command(command):
+    for _line in run_command(command):
+
+        line = _line.strip('\n')
+        if not line or line.isspace(): continue
 
 #        line = line.decode('utf-8')
 #        line = "".join(i for i in line if 31 < ord(i) < 127)
 
-#        if _DEBUG:
-#            print('Line >>', line, '<<')
-#            print('Options token match: ', _OPTIONS_TOKEN_RE.search(line))
-#            print('Option match: ', _OPTIONS_RE.search(line))
-#            print('Command token match ', _COMMANDS_TOKEN_RE.search(line))
-#            print('Command match: ', _COMMANDS_RE.search(line))
-#            print("\n")
+        if _DEBUG:
+            eprint("\n{:s}[{:s}{:s}] Line >>{:s}<<{:s}".format(
+                '  '*depth+Style.DIM,
+                'C✓' if found_commands else 'C ',
+                'O✓' if found_options else 'O ',
+                line, Style.RESET_ALL))
 
         if _OPTIONS_TOKEN_RE.search(line) and not found_options:
             found_options = True
         if _OPTIONS_RE.search(line) and SHOW_OPTIONS and found_options:
-            option = _OPTIONS_RE.search(line).group(1)
-            if not (_HELP_RE.search(option) and EXCLUDE_HELP_OPTS):
-                print(format_item(depth, command, option))
+            for match in _OPTIONS_RE.search(line).groups():
+                if _DEBUG:
+                    eprint('{:s}  Opt match: >>{:s}<<'.format(
+                        '  '*depth, match))
+                if match and not (_HELP_RE.search(match)
+                    and EXCLUDE_HELP_OPTS):
+                    print(format_item(depth, command, match))
 
         if _COMMANDS_TOKEN_RE.search(line) and not found_commands:
             found_commands = True
         if _COMMANDS_RE.search(line) and SHOW_COMMANDS and found_commands:
-            subcommand = _COMMANDS_RE.search(line).group(1)
-            if not (_HELP_RE.search(subcommand) and EXCLUDE_HELP_OPTS):
-                print(format_item(depth, command, subcommand))
-                _command = command[:-1]
-                _command.extend([subcommand, HELP_OPT])
-                parse_options_and_commands(_command, depth)
+            for match in _COMMANDS_RE.search(line).groups():
+                if _DEBUG:
+                    eprint('{:s}  Cmd match: >>{:s}<<'.format(
+                        '  '*depth, match))
+                if match and not (_HELP_RE.search(match)
+                    and EXCLUDE_HELP_OPTS):
+                    print(format_item(depth, command, match))
+                    _command = command[:-1]
+                    _command.extend([match, HELP_OPT])
+                    parse_options_and_commands(_command, depth)
 
     depth -= 1
 
@@ -188,16 +208,16 @@ def main(argv):
             sys.exit()
 
     if _DEBUG:
-        print('INT_CMD:', INIT_CMD)
-        print('HELP_OPT:', HELP_OPT)
-        print('OPTIONS_TOKEN_RE:', OPTIONS_TOKEN_RE)
-        print('OPTIONS_RE:', OPTIONS_RE)
-        print('COMMANDS_TOKEN_RE:', COMMANDS_TOKEN_RE)
-        print('COMMANDS_RE:', COMMANDS_RE)
-        print('SHOW_OPTIONS:', SHOW_OPTIONS)
-        print('SHOW_COMMANDS:', SHOW_COMMANDS)
-        print('EXCLUDE_HELP_OPTS:', EXCLUDE_HELP_OPTS)
-        print('OUTPUT_FORMAT:', OUTPUT_FORMAT)
+        eprint('INT_CMD:', INIT_CMD)
+        eprint('HELP_OPT:', HELP_OPT)
+        eprint('OPTIONS_TOKEN_RE:', OPTIONS_TOKEN_RE)
+        eprint('OPTIONS_RE:', OPTIONS_RE)
+        eprint('COMMANDS_TOKEN_RE:', COMMANDS_TOKEN_RE)
+        eprint('COMMANDS_RE:', COMMANDS_RE)
+        eprint('SHOW_OPTIONS:', SHOW_OPTIONS)
+        eprint('SHOW_COMMANDS:', SHOW_COMMANDS)
+        eprint('EXCLUDE_HELP_OPTS:', EXCLUDE_HELP_OPTS)
+        eprint('OUTPUT_FORMAT:', OUTPUT_FORMAT)
 
     global _OPTIONS_TOKEN_RE
     _OPTIONS_TOKEN_RE = re.compile(r""+OPTIONS_TOKEN_RE)
