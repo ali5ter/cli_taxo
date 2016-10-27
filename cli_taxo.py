@@ -43,7 +43,8 @@ def usage():
         "[--options-token <reg_ex>] "
         "[--exclude-help] "
         "[-o tree|csv | --output tree|csv] "
-        "[-O | --show-opts]")
+        "[-O | --show-opts] "
+        "[-d]")
     print("  docker_taxo -h | --help")
     print("\nOptions:")
     print("  -h, --help         Show this usage description")

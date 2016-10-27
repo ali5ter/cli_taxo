@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # @author Alister Lewis-Bowen <bowena@vmware.com>
 
-./generate_mindmap_format.sh aws "$@"
+./generate_mindmap_format.sh aws --exclude-help "$@"

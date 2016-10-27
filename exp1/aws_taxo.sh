@@ -5,7 +5,8 @@
 ../cli_taxo.py aws \
     --help-opt help \
     --commands-filter '\so\s(.+?)$' \
-    --commands-token 'AVAILABLE SERVICES' \
+    --commands-token 'AVAILABLE SERVICES|AVAILABLE COMMANDS' \
     --options-filter '\s(-.+?)\s' \
     --options-token 'OPTIONS' \
+    --exclude-help \
     "$@"
