@@ -1,17 +1,135 @@
 photon
 └── auth
+│   └── login
+│   └── logout
+│   └── show
 └── cluster
+│   └── create
+│   └── delete
+│   └── list
+│   └── list_vms
+│   └── resize
+│   └── show
 └── demo
+│   └── threads
+│   │   └── set
+│   │   └── show
+│   └── vms
+│   │   └── create
+│   │   └── delete
+│   │   └── start
+│   │   └── stop
 └── deployment
+│   └── create
+│   └── delete
+│   └── deploy
+│   └── destroy
+│   └── disable_cluster_type
+│   └── enable_cluster_type
+│   └── list
+│   └── list_hosts
+│   └── list_vms
+│   └── pause_system
+│   └── show
+│   └── update
 └── disk
+│   └── create
+│   └── delete
+│   └── find_by_name
+│   └── list
+│   └── show
+│   └── tasks
 └── flavor
+│   └── create
+│   └── delete
+│   └── list
+│   └── show
+│   └── tasks
+│   └── upload
 └── host
+│   └── create
+│   └── delete
+│   └── enter_maintenance
+│   └── enter_suspended
+│   └── exit_maintenance
+│   └── list_tasks
+│   └── list_vms
+│   └── resume
+│   └── show
 └── image
+│   └── delete
+│   └── list
+│   └── show
+│   └── tasks
+│   └── upload
 └── network
+│   └── create
+│   └── delete
+│   └── list
+│   └── set_default
+│   └── set_portgroups
+│   └── show
 └── project
+│   └── create
+│   └── delete
+│   └── get_security_groups
+│   └── list
+│   └── purge
+│   └── set
+│   └── set_security_groups
+│   └── show
+│   └── start
+│   └── stop
+│   └── tasks
 └── resource-ticket
+│   └── create
+│   └── list
+│   └── tasks
 └── system
+│   └── deploy
+
+│   └── destroy
+│   └── migration
+│   │   └── finalize
+
+│   │   └── prepare
+
+│   └── status
 └── target
+│   └── set
+│   └── show
 └── task
+│   └── list
+│   └── monitor
+│   └── show
 └── tenant
+│   └── create
+│   └── delete
+│   └── get_security_groups
+
+│   └── list
+│   └── purge
+│   └── set
+│   └── set_security_groups
+│   └── show
+│   └── tasks
 └── vm
+│   └── attach_disk
+│   └── attach_iso
+│   └── create
+│   └── create_image
+│   └── delete
+│   └── detach_disk
+│   └── detach_iso
+│   └── find_by_name
+│   └── list
+│   └── mks_ticket
+│   └── networks
+│   └── restart
+│   └── resume
+│   └── set_metadata
+│   └── show
+│   └── start
+│   └── stop
+│   └── suspend
+│   └── tasks
