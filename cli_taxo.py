@@ -22,8 +22,9 @@ COMMANDS_RE = '^\s+(\w+?)\s+'
 SHOW_OPTIONS = False
 SHOW_COMMANDS = True
 EXCLUDE_HELP_OPTS = False
-OUTPUT_FORMATS = Enum('OUTPUT_FORMATS', 'tree csv')
+OUTPUT_FORMATS = Enum('OUTPUT_FORMATS', 'tree csv table')
 OUTPUT_FORMAT = OUTPUT_FORMATS.tree.name
+TABLE_COLS = 6
 
 _DEBUG=False
 
@@ -42,7 +43,7 @@ def usage():
         "[--options-filters <reg_ex>] "
         "[--options-token <reg_ex>] "
         "[--exclude-help] "
-        "[-o tree|csv | --output tree|csv] "
+        "[-o tree|csv|table | --output tree|csv|table] "
         "[-O | --show-opts] "
         "[-d]")
     print("  docker_taxo -h | --help")
@@ -140,6 +141,8 @@ def format_item(depth, command, item):
     if OUTPUT_FORMAT == OUTPUT_FORMATS.csv.name:
         item = string.replace(item, ',', ' | ')
         return ','.join(_command) + ',' + item
+    elif OUTPUT_FORMAT == OUTPUT_FORMATS.table.name:
+       return '|    '*2 +'|    '*depth + item +'    |'*(TABLE_COLS-1-depth)
     else: # OUTPUT_FORMATS.tree
         if depth == 0:
             prefix = '└── '
@@ -231,7 +234,11 @@ def main(argv):
     global _HELP_RE
     _HELP_RE = re.compile(r'help')
 
-    print(INIT_CMD)
+    if OUTPUT_FORMAT == OUTPUT_FORMATS.table.name:
+        print('|    '+ INIT_CMD +'    |'*(TABLE_COLS))
+    else:
+        print(INIT_CMD)
+
     parse_options_and_commands([INIT_CMD, HELP_OPT])
     del os.environ['MANPAGER']
 
