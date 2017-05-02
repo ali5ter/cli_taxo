@@ -12,6 +12,7 @@ from colorama import Fore, Back, Style
 import string
 import re
 from enum import Enum
+from collections import defaultdict
 
 INIT_CMD = ''
 HELP_OPT = '-h'
@@ -22,9 +23,10 @@ COMMANDS_RE = '^\s+(\w+?)\s+'
 SHOW_OPTIONS = False
 SHOW_COMMANDS = True
 EXCLUDE_HELP_OPTS = False
-OUTPUT_FORMATS = Enum('OUTPUT_FORMATS', 'tree csv table')
+OUTPUT_FORMATS = Enum('OUTPUT_FORMATS', 'tree csv table completion')
 OUTPUT_FORMAT = OUTPUT_FORMATS.tree.name
 TABLE_COLS = 6
+COMPLETION_CMDS = defaultdict(list)
 
 _DEBUG=False
 
@@ -43,7 +45,7 @@ def usage():
         "[--options-filters <reg_ex>] "
         "[--options-token <reg_ex>] "
         "[--exclude-help] "
-        "[-o tree|csv|table | --output tree|csv|table] "
+        "[-o tree|csv|table|completion | --output tree|csv|table|completion] "
         "[-O | --show-opts] "
         "[-d]")
     print("  docker_taxo -h | --help")
@@ -142,13 +144,38 @@ def format_item(depth, command, item):
         item = string.replace(item, ',', ' | ')
         return ','.join(_command) + ',' + item
     elif OUTPUT_FORMAT == OUTPUT_FORMATS.table.name:
-       return '|    '*2 +'|    '*depth + item +'    |'*(TABLE_COLS-1-depth)
+        return '|    '*2 +'|    '*depth + item +'    |'*(TABLE_COLS-1-depth)
+    elif OUTPUT_FORMAT == OUTPUT_FORMATS.completion.name:
+        COMPLETION_CMDS[command[depth]].append(item)
+        return 'Appending '+ item +' for auto completion of '+ command[depth]
     else: # OUTPUT_FORMATS.tree
         if depth == 0:
             prefix = '└── '
         else:
             prefix = '│   '*depth + '└── '
         return prefix + item
+
+def create_completion_script():
+    with open(os.path.dirname(sys.argv[0]) +'/completion.tmpl', 'r') as file:
+        content = file.read()
+
+    content = content.replace('%CMD%', INIT_CMD)
+    parts = content.partition('%COMPLETIONS%')
+    content = parts[0]
+    top_level_commands = []
+    for command, subcommands in COMPLETION_CMDS.iteritems():
+        top_level_commands.append(command)
+        content = content +"        "+ command +")    cmds=\""+ ' '.join(subcommands) +"\";;\n"
+    content = content +"        *)    cmds=\""+ ' '.join(top_level_commands) +'";;'
+    content = content + parts[2]
+
+    script = INIT_CMD +'_completion.sh'
+    with open(script, 'w') as file:
+        file.write(content)
+    os.chmod(script, 0o755)
+
+    print('Bash completion script generated. To use it it, run')
+    print('  source ./'+ script)
 
 def main(argv):
     try:
@@ -167,7 +194,7 @@ def main(argv):
         sys.exit()
 
     if not non_opts:
-        print;("\033[31;1mError: \033[0mPlease provide the command name\n")
+        print("\033[31;1mError: \033[0mPlease provide the command name\n")
         usage()
         sys.exit()
     else:
@@ -240,6 +267,8 @@ def main(argv):
         print(INIT_CMD)
 
     parse_options_and_commands([INIT_CMD, HELP_OPT])
+    if OUTPUT_FORMAT == OUTPUT_FORMATS.completion.name:
+        create_completion_script()
     del os.environ['MANPAGER']
 
 if __name__ == "__main__":
