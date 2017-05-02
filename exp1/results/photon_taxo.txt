@@ -1,135 +1,354 @@
 photon
 └── auth
-│   └── login
-│   └── logout
 │   └── show
-└── cluster
-│   └── create
-│   └── delete
-│   └── list
-│   └── list_vms
-│   └── resize
-│   └── show
-└── demo
-│   └── threads
-│   │   └── set
-│   │   └── show
-│   └── vms
-│   │   └── create
-│   │   └── delete
-│   │   └── start
-│   │   └── stop
-└── deployment
-│   └── create
-│   └── delete
-│   └── deploy
-│   └── destroy
-│   └── disable_cluster_type
-│   └── enable_cluster_type
-│   └── list
-│   └── list_hosts
-│   └── list_vms
-│   └── pause_system
-│   └── show
-│   └── update
-└── disk
-│   └── create
-│   └── delete
-│   └── find_by_name
-│   └── list
-│   └── show
-│   └── tasks
-└── flavor
-│   └── create
-│   └── delete
-│   └── list
-│   └── show
-│   └── tasks
-│   └── upload
-└── host
-│   └── create
-│   └── delete
-│   └── enter_maintenance
-│   └── enter_suspended
-│   └── exit_maintenance
-│   └── list_tasks
-│   └── list_vms
-│   └── resume
-│   └── show
-└── image
-│   └── delete
-│   └── list
-│   └── show
-│   └── tasks
-│   └── upload
-└── network
-│   └── create
-│   └── delete
-│   └── list
-│   └── set_default
-│   └── set_portgroups
-│   └── show
-└── project
-│   └── create
-│   └── delete
-│   └── get_security_groups
-│   └── list
-│   └── purge
-│   └── set
-│   └── set_security_groups
-│   └── show
-│   └── start
-│   └── stop
-│   └── tasks
-└── resource-ticket
-│   └── create
-│   └── list
-│   └── tasks
+│   └── show-login-token
+│   └── get-lightwave-ca-cert
+│   │   └── --filename
+│   └── get-api-tokens
+│   │   └── --username
+│   │   └── --password
+│   └── --help
 └── system
-│   └── deploy
-
-│   └── destroy
-│   └── migration
-│   │   └── finalize
-
-│   │   └── prepare
-
 │   └── status
+│   └── add-hosts
+│   └── info
+│   └── pause
+│   └── pause-background-tasks
+│   └── resume
+│   └── set-security-groups
+│   └── --help
 └── target
 │   └── set
+│   │   └── --nocertcheck
 │   └── show
-└── task
-│   └── list
-│   └── monitor
-│   └── show
+│   └── info
+│   └── login
+│   │   └── --access_token
+│   │   └── --username
+│   │   └── --password
+│   │   └── --windows
+│   └── logout
+│   └── --help
 └── tenant
 │   └── create
+│   │   └── --security-groups
+│   │   └── --limits
 │   └── delete
-│   └── get_security_groups
-
+│   └── show
 │   └── list
-│   └── purge
 │   └── set
-│   └── set_security_groups
+│   └── get
+│   └── tasks
+│   │   └── --state
+│   └── set-security-groups
+│   └── iam
+│   │   └── show
+│   │   └── add
+│   │   │   └── --principal
+│   │   │   └── --role
+│   │   └── remove
+│   │   │   └── --principal
+│   │   │   └── --role
+│   │   └── --help
+│   └── quota
+│   │   └── set
+│   │   │   └── --limits
+│   │   └── show
+│   │   └── update
+│   │   │   └── --limits
+│   │   └── exclude
+│   │   │   └── --limits
+│   │   └── --help
+│   └── --help
+└── host
+│   └── create
+│   │   └── --username
+│   │   └── --password
+│   │   └── --address
+│   │   └── --availability_zone
+│   │   └── --tag
+│   │   └── --metadata
+│   └── delete
+│   └── list
+│   └── show
+│   └── list-vms
+│   └── set-availability-zone
+│   └── tasks
+│   │   └── --state
+│   └── provision
+│   └── suspend
+│   └── resume
+│   └── enter-maintenance
+│   └── exit-maintenance
+│   └── --help
+└── datastore
+│   └── list
+│   └── show
+│   └── --help
+└── deployment
+│   └── list
+│   └── list-hosts
+│   └── list-vms
+│   └── configure-nsx
+│   │   └── --nsx-address
+│   │   └── --nsx-username
+│   │   └── --nsx-password
+│   │   └── --private-ip-root-cidr
+│   │   └── --floating-ip-root-range-start
+│   │   └── --floating-ip-root-range-end
+│   │   └── --t0-router-id
+│   │   └── --edge-cluster-id
+│   │   └── --overlay-transport-zone-id
+│   │   └── --tunnel-ip-pool-id
+│   │   └── --host-uplink-pnic
+│   │   └── --host-uplink-vlan-id
+│   │   └── --dns-server-addresses
+│   └── enable-service-type
+│   │   └── --type
+│   │   └── --image-id
+│   └── disable-service-type
+│   │   └── --type
+│   └── update-image-datastores
+│   │   └── --datastores
+│   └── sync-hosts-config
+│   └── --help
+└── image
+│   └── create
+│   │   └── --name
+│   │   └── --image_replication
+│   │   └── --project
+│   └── delete
+│   └── list
+│   │   └── --name
 │   └── show
 │   └── tasks
-└── vm
-│   └── attach_disk
-│   └── attach_iso
-│   └── create
-│   └── create_image
-│   └── delete
-│   └── detach_disk
-│   └── detach_iso
-│   └── find_by_name
+│   │   └── --state
+│   └── iam
+│   │   └── show
+│   │   └── add
+│   │   │   └── --principal
+│   │   │   └── --role
+│   │   └── remove
+│   │   │   └── --principal
+│   │   │   └── --role
+│   │   └── --help
+│   └── --help
+└── task
 │   └── list
-│   └── mks_ticket
-│   └── networks
-│   └── restart
-│   └── resume
-│   └── set_metadata
+│   │   └── --entityId
+│   │   └── --entityKind
+│   │   └── --state
 │   └── show
+│   └── monitor
+│   └── --help
+└── flavor
+│   └── create
+│   │   └── --name
+│   │   └── --kind
+│   │   └── --cost
+│   └── delete
+│   └── list
+│   │   └── --name
+│   │   └── --kind
+│   └── show
+│   └── tasks
+│   │   └── --state
+│   └── --help
+└── project
+│   └── create
+│   │   └── --limits
+│   │   └── --percent
+│   │   └── --tenant
+│   │   └── --security-groups
+│   │   └── --default-router-private-ip-cidr
+│   └── delete
+│   └── show
+│   └── get
+│   └── set
+│   └── list
+│   │   └── --tenant
+│   └── tasks
+│   │   └── --state
+│   │   └── --kind
+│   └── set-security-groups
+│   └── iam
+│   │   └── show
+│   │   └── add
+│   │   │   └── --principal
+│   │   │   └── --role
+│   │   └── remove
+│   │   │   └── --principal
+│   │   │   └── --role
+│   │   └── --help
+│   └── quota
+│   │   └── set
+│   │   │   └── --limits
+│   │   └── show
+│   │   └── update
+│   │   │   └── --limits
+│   │   └── exclude
+│   │   │   └── --limits
+│   │   └── --help
+│   └── --help
+└── disk
+│   └── create
+│   │   └── --name
+│   │   └── --flavor
+│   │   └── --capacityGB
+│   │   └── --affinities
+│   │   └── --tenant
+│   │   └── --tags
+│   │   └── --project
+│   └── delete
+│   └── show
+│   └── list
+│   │   └── --tenant
+│   │   └── --project
+│   │   └── --summary
+│   │   └── --name
+│   └── tasks
+│   │   └── --state
+│   └── --help
+└── vm
+│   └── create
+│   │   └── --name
+│   │   └── --flavor
+│   │   └── --image
+│   │   └── --boot-disk-flavor
+│   │   └── --disks
+│   │   └── --environment
+│   │   └── --affinities
+│   │   └── --networks
+│   │   └── --tenant
+│   │   └── --project
+│   └── delete
+│   └── show
+│   └── list
+│   │   └── --tenant
+│   │   └── --project
+│   │   └── --summary
+│   │   └── --name
+│   └── tasks
+│   │   └── --state
 │   └── start
 │   └── stop
 │   └── suspend
+│   └── resume
+│   └── restart
+│   └── attach-disk
+│   │   └── --disk
+│   └── detach-disk
+│   │   └── --disk
+│   └── attach-iso
+│   │   └── --path
+│   │   └── --name
+│   └── detach-iso
+│   └── set-metadata
+│   │   └── --metadata
+│   └── set-tag
+│   │   └── --tag
+│   └── networks
+│   └── mks-ticket
+│   └── create-image
+│   │   └── --name
+│   │   └── --image_replication
+│   └── acquire-floating-ip
+│   │   └── --network_id
+│   └── release-floating-ip
+│   └── --help
+└── service
+│   └── create
+│   │   └── --tenant
+│   │   └── --project
+│   │   └── --name
+│   │   └── --type
+│   │   └── --vm_flavor
+│   │   └── --master-vm-flavor
+│   │   └── --worker-vm-flavor
+│   │   └── --disk_flavor
+│   │   └── --subnet_id
+│   │   └── --image-id
+│   │   └── --worker_count
+│   │   └── --dns
+│   │   └── --gateway
+│   │   └── --netmask
+│   │   └── --number-of-masters
+│   │   └── --master-ip
+│   │   └── --master-ip2
+│   │   └── --load-balancer-ip
+│   │   └── --container-network
+│   │   └── --number-of-etcds
+│   │   └── --etcd1
+│   │   └── --etcd2
+│   │   └── --etcd3
+│   │   └── --ssh-key
+│   │   └── --registry-ca-cert
+│   │   └── --admin-password
+│   │   └── --batchSize
+│   │   └── --wait-for-ready
+│   └── show
+│   └── list
+│   │   └── --tenant
+│   │   └── --project
+│   │   └── --summary
+│   └── list-vms
+│   └── resize
+│   │   └── --wait-for-ready
+│   └── delete
+│   └── trigger-maintenance
+│   └── cert-to-file
+│   └── change-version
+│   │   └── --image-id
+│   │   └── --wait-for-ready
+│   └── get-kubectl-auth
+│   │   └── --username
+│   │   └── --password
+│   └── --help
+└── router
+│   └── create
+│   │   └── --name
+│   │   └── --privateIpCidr
+│   │   └── --tenant
+│   │   └── --project
+│   └── delete
+│   └── list
+│   │   └── --tenant
+│   │   └── --project
+│   │   └── --name
+│   └── show
+│   └── update
+│   │   └── --name
+│   └── --help
+└── subnet
+│   └── create
+│   │   └── --name
+│   │   └── --description
+│   │   └── --privateIpCidr
+│   │   └── --router
+│   │   └── --type
+│   │   └── --portgroups
+│   └── delete
+│   └── list
+│   │   └── --name
+│   │   └── --router-id
+│   └── show
+│   └── update
+│   │   └── --name
+│   └── set-default
+│   └── --help
+└── zone
+│   └── create
+│   │   └── --name
+│   └── delete
+│   └── list
+│   └── show
 │   └── tasks
+│   │   └── --state
+│   └── --help
+└── help
+└── --non-interactive
+└── --log-file
+└── --output
+└── --detail
+└── --help
+└── --version
