@@ -16,9 +16,9 @@ from collections import defaultdict
 
 INIT_CMD = ''
 HELP_OPT = '-h'
-OPTIONS_TOKEN_RE = '^Options:\s+'
+OPTIONS_TOKEN_RE = '^Options:'
 OPTIONS_RE = '^\s+?(-.+?)\s\s'
-COMMANDS_TOKEN_RE = '^Commands:\s+'
+COMMANDS_TOKEN_RE = '^(Commands:)|^(Management Commands:)'
 COMMANDS_RE = '^\s+(\w+?)\s+'
 SHOW_OPTIONS = False
 SHOW_COMMANDS = True
