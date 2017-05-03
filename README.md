@@ -11,7 +11,7 @@ Assuming a successful taxonomy can successfully be established, it is output in 
 * Comma seperated values for integration with other tools
 * A very simple, headerless, markdown table
 
-**This script can also output or generate a Bash completion script. While this autocomplete script is rudimentary, it can still be a significant aid the developer experience of a CLI where one doesn't already exist.**
+**This script can also generate a Bash autocomplete script. While this tab completion script is rudimentary, it can still significantly aid developer experience of a CLI where one doesn't already exist.**
 
 ## Usage
 Regular expressions are configurable by the user to parse the CLI help documentation and default to expressions that parse the `docker` help - at least the last time it was run. However, to display the taxonomy or `kubectl`, you can run
