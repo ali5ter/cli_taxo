@@ -2,7 +2,7 @@
 
 Experiments in displaying CLI command taxonomy as an aid to evaluate the developer experience.
 
-The cli_taxo.py script parses the help documentation for a CLI command in an attempt to understand:
+The `cli_taxo.py` script parses the help documentation for a CLI command in an attempt to understand:
 * The consistency of the documentation
 * The layout of subcommands and options
 * The consistency of the language used
@@ -62,11 +62,13 @@ kubectl
 ```
 The `-O` option can be added to display a tree with all the CLI subcommand options too.
 
-Wrapper scripts for some CLIs can be found under the `exp1` directory.
+Wrapper scripts for some CLIs can be found under the exp1](exp1) directory.
 
 ## 'Experiments'
-Not so much experiments, rather different ways the cli_taxo.py script has been used.
+Not so much experiments, rather different ways the `cli_taxo.py` script has been used.
 
 [exp1](exp1) ... Some wrapper scripts to call `cli_taxo.py` to generate taxonomy tree output for various CLIs
+
 [exp2](exp2) ... Scripts to generate CSV output that integrates with a tool to generate a MindMap format file. This can be viewed with tools like [FreeMind](http://freemind.sourceforge.net/wiki/index.php/Main_Page)
+
 [exp3](exp3) ... Scripts to take CSV formats from [exp2](exp2) and generate d3 radial trees
