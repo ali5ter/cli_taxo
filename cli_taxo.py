@@ -64,7 +64,7 @@ def usage():
         "which the CLI options are found in the description text. "
         "Defaults to: ", OPTIONS_TOKEN_RE)
     print("  --exclude-help     Exclude any help options from the output.")
-    print("  -o tree|csv, --output tree|csv  Output format. "
+    print("  -o tree|csv|table|completion, --output tree|csv|table|completion  Output format. "
         "Defaults to: ", OUTPUT_FORMAT)
     print("  -O, --show-opts    Include options in the output")
     print("  -d                 Display debug information to STDERR")
