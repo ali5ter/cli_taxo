@@ -70,3 +70,5 @@ Not so much experiments, rather different ways the [cli_taxo.py](cli_taxo.py) sc
 [exp2](exp2) ... Scripts to generate CSV output that integrates with a tool to generate a MindMap format file. This can be viewed with tools like [FreeMind](http://freemind.sourceforge.net/wiki/index.php/Main_Page)
 
 [exp3](exp3) ... Scripts to take CSV formats from [exp2](exp2) and generate [d3 radial trees](https://bl.ocks.org/mbostock/4063550)
+
+[exp4](exp4) ... Scripts to generate bash auto/tab completion scripts using the wrapper scripts in [exp1](exp1)
