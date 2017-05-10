@@ -1,0 +1,142 @@
+oc
+└── types
+└── login
+└── new-project
+└── new-app
+└── status
+└── project
+└── projects
+└── explain
+└── cluster
+│   └── down
+│   └── join
+│   └── status
+│   └── up
+└── rollout
+│   └── history
+│   └── latest
+│   └── pause
+│   └── resume
+│   └── retry
+│   └── status
+│   └── undo
+└── deploy
+└── rollback
+└── new-build
+└── start-build
+└── cancel-build
+└── import-image
+└── tag
+└── get
+└── describe
+└── edit
+└── set
+└── label
+└── annotate
+└── expose
+└── delete
+└── scale
+└── autoscale
+└── secrets
+│   └── add
+│   └── link
+│   └── new
+│   └── new-basicauth
+│   └── new-dockercfg
+│   └── new-sshauth
+│   └── unlink
+└── serviceaccounts
+│   └── create-kubeconfig
+│   └── get-token
+│   └── new-token
+└── logs
+└── rsh
+└── rsync
+└── port-forward
+└── debug
+└── exec
+└── proxy
+└── attach
+└── run
+└── cp
+└── adm
+│   └── completion
+│   └── config
+│   │   └── current-context
+│   │   └── delete-cluster
+│   │   └── delete-context
+│   │   └── get-clusters
+│   │   └── get-contexts
+│   │   └── set
+│   │   └── set-cluster
+│   │   └── set-context
+│   │   └── set-credentials
+│   │   └── unset
+│   │   └── use-context
+│   │   └── view
+└── create
+│   └── clusterresourcequota
+│   └── configmap
+│   └── deployment
+│   └── deploymentconfig
+│   └── identity
+│   └── imagestream
+│   └── namespace
+│   └── policybinding
+│   └── quota
+│   └── route
+│   │   └── edge
+│   │   └── passthrough
+│   │   └── reencrypt
+│   └── secret
+│   │   └── docker-registry
+│   │   └── generic
+│   │   └── tls
+│   └── service
+│   │   └── clusterip
+│   │   └── loadbalancer
+│   │   └── nodeport
+│   └── serviceaccount
+│   └── user
+│   └── useridentitymapping
+└── replace
+└── apply
+└── patch
+└── process
+└── export
+└── extract
+└── idle
+└── observe
+└── policy
+│   └── add-role-to-group
+│   └── add-role-to-user
+│   └── can-i
+│   └── remove-group
+│   └── remove-role-from-group
+│   └── remove-role-from-user
+│   └── remove-user
+│   └── scc-review
+│   └── scc-subject-review
+│   └── who-can
+└── convert
+└── import
+│   └── app.json
+│   └── docker-compose
+└── logout
+└── config
+│   └── current-context
+│   └── delete-cluster
+│   └── delete-context
+│   └── get-clusters
+│   └── get-contexts
+│   └── set
+│   └── set-cluster
+│   └── set-context
+│   └── set-credentials
+│   └── unset
+│   └── use-context
+│   └── view
+└── whoami
+└── completion
+└── help
+└── version

@@ -27,6 +27,7 @@ OUTPUT_FORMATS = Enum('OUTPUT_FORMATS', 'tree csv table completion')
 OUTPUT_FORMAT = OUTPUT_FORMATS.tree.name
 TABLE_COLS = 6
 COMPLETION_CMDS = defaultdict(list)
+MAX_DEPTH = 3
 
 _DEBUG=False
 
@@ -47,7 +48,8 @@ def usage():
         "[--exclude-help] "
         "[-o tree|csv|table|completion | --output tree|csv|table|completion] "
         "[-O | --show-opts] "
-        "[-d]")
+        "[--depth <number>} "
+        "[-D]")
     print("  docker_taxo -h | --help")
     print("\nOptions:")
     print("  -h, --help         Show this usage description")
@@ -67,7 +69,8 @@ def usage():
     print("  -o tree|csv|table|completion, --output tree|csv|table|completion  Output format. "
         "Defaults to: ", OUTPUT_FORMAT)
     print("  -O, --show-opts    Include options in the output")
-    print("  -d                 Display debug information to STDERR")
+    print("  -d, --depth        Limit the depth of command to parse. Defaults to: ", MAX_DEPTH)
+    print("  -D                 Display debug information to STDERR")
 
 def eprint(*args, **kwargs):
         print(*args, file=sys.stderr, **kwargs)
@@ -79,6 +82,7 @@ def run_command(command):
 def parse_options_and_commands(command, depth=-1):
 
     depth += 1
+    if depth > MAX_DEPTH : return
 
     if _DEBUG:
         eprint("\n{:s}Parsing: {:s}{:s}".format(
@@ -179,7 +183,7 @@ def create_completion_script():
 
 def main(argv):
     try:
-        opts, non_opts = getopt.gnu_getopt(argv, "ho:Od", [
+        opts, non_opts = getopt.gnu_getopt(argv, "ho:d:OD", [
             'help-opt=',
             'commands-filter=',
             'commands-token=',
@@ -188,6 +192,7 @@ def main(argv):
             'exclude-help',
             'show-opts',
             'output=',
+            'depth=',
             'help'])
     except getopt.GetoptError:
         usage()
@@ -231,7 +236,10 @@ def main(argv):
         elif opt in ('-O', '--show_opts'):
             global SHOW_OPTIONS
             SHOW_OPTIONS = True
-        elif opt == '-d':
+        elif opt in ('-d', '--depth'):
+            global MAX_DEPTH
+            MAX_DEPTH = arg
+        elif opt == '-D':
             global _DEBUG
             _DEBUG = True
         elif opt in ('-h', '--help'):

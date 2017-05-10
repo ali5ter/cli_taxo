@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# Parse kubectl CLI help and pretty print command taxonomy
+# Parse openshift CLI help and pretty print command taxonomy
 # @author Alister Lewis-Bowen <bowena@vmware.com>
 
-../cli_taxo.py kubectl \
+../cli_taxo.py oc \
     --commands-token 'Commands\s\(\S+\):|Commands:' \
     --commands-filter '^\s\s((?!#)\S+)\s+[A-Z]' \
     --options-token '^Options:' \

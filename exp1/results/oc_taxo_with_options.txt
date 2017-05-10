@@ -1,0 +1,1151 @@
+oc
+└── types
+└── login
+│   └── -p, --password=''
+│   └── -u, --username=''
+│   └── --insecure-skip-tls-verify=false
+│   └── --token=''
+└── new-project
+│   └── --description=''
+│   └── --display-name=''
+│   └── --skip-config-write=false
+└── new-app
+│   └── --allow-missing-images=false
+│   └── --allow-missing-imagestream-tags=false
+│   └── --as-test=false
+│   └── --build-env=[]
+│   └── --build-env-file=[]
+│   └── --code=[]
+│   └── --context-dir=''
+│   └── --docker-image=[]
+│   └── --dry-run=false
+│   └── -e, --env=[]
+│   └── --env-file=[]
+│   └── -f, --file=[]
+│   └── --grant-install-rights=false
+│   └── --group=[]
+│   └── --image=[]
+│   └── -i, --image-stream=[]
+│   └── --insecure-registry=false
+│   └── -l, --labels=''
+│   └── -L, --list=false
+│   └── --name=''
+│   └── --no-install=false
+│   └── -o, --output=''
+│   └── --output-version=''
+│   └── -p, --param=[]
+│   └── --param-file=[]
+│   └── -S, --search=false
+│   └── --strategy=
+│   └── --template=[]
+└── status
+│   └── --all-namespaces=false
+│   └── -o, --output=''
+│   └── -v, --verbose=false
+└── project
+│   └── -q, --short=false
+└── projects
+│   └── -q, --short=false
+└── explain
+│   └── --include-extended-apis=true
+│   └── --recursive=false
+└── cluster
+│   └── down
+│   │   └── --docker-machine=''
+│   └── join
+│   │   └── --create-machine=false
+│   │   └── --docker-machine=''
+│   │   └── -e, --env=[]
+│   │   └── --forward-ports=false
+│   │   └── --host-config-dir='/var/lib/origin/openshift.local.config'
+│   │   └── --host-data-dir=''
+│   │   └── --host-pv-dir='/var/lib/origin/openshift.local.pv'
+│   │   └── --host-volumes-dir='/var/lib/origin/openshift.local.volumes'
+│   │   └── --http-proxy=''
+│   │   └── --https-proxy=''
+│   │   └── --image='openshift/origin'
+│   │   └── --image-streams='centos7'
+│   │   └── --logging=false
+│   │   └── --metrics=false
+│   │   └── --no-proxy=[]
+│   │   └── --public-hostname=''
+│   │   └── --routing-suffix=''
+│   │   └── --secret=''
+│   │   └── --server-loglevel=0
+│   │   └── --skip-registry-check=false
+│   │   └── --use-existing-config=false
+│   │   └── --version=''
+│   └── status
+│   │   └── --docker-machine=''
+│   └── up
+│   │   └── --create-machine=false
+│   │   └── --docker-machine=''
+│   │   └── -e, --env=[]
+│   │   └── --forward-ports=true
+│   │   └── --host-config-dir='/var/lib/origin/openshift.local.config'
+│   │   └── --host-data-dir=''
+│   │   └── --host-pv-dir='/var/lib/origin/openshift.local.pv'
+│   │   └── --host-volumes-dir='/var/lib/origin/openshift.local.volumes'
+│   │   └── --http-proxy=''
+│   │   └── --https-proxy=''
+│   │   └── --image='openshift/origin'
+│   │   └── --image-streams='centos7'
+│   │   └── --logging=false
+│   │   └── --metrics=false
+│   │   └── --no-proxy=[]
+│   │   └── --public-hostname=''
+│   │   └── --routing-suffix=''
+│   │   └── --server-loglevel=0
+│   │   └── --skip-registry-check=false
+│   │   └── --use-existing-config=false
+│   │   └── --version=''
+└── rollout
+│   └── history
+│   │   └── -f, --filename=[]
+│   │   └── -R, --recursive=false
+│   │   └── --revision=0
+│   └── latest
+│   │   └── --again=false
+│   │   └── --allow-missing-template-keys=true
+│   │   └── --dry-run=false
+│   │   └── --no-headers=false
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+│   │   └── -a, --show-all=true
+│   │   └── --show-labels=false
+│   │   └── --sort-by=''
+│   │   └── --template=''
+│   └── pause
+│   │   └── -f, --filename=[]
+│   │   └── -R, --recursive=false
+│   └── resume
+│   │   └── -f, --filename=[]
+│   │   └── -R, --recursive=false
+│   └── retry
+│   │   └── -f, --filename=[]
+│   │   └── -R, --recursive=false
+│   └── status
+│   │   └── -f, --filename=[]
+│   │   └── -R, --recursive=false
+│   │   └── --revision=0
+│   │   └── -w, --watch=true
+│   └── undo
+│   │   └── --dry-run=false
+│   │   └── -f, --filename=[]
+│   │   └── -R, --recursive=false
+│   │   └── --to-revision=0
+└── deploy
+│   └── --cancel=false
+│   └── --enable-triggers=false
+│   └── --follow=false
+│   └── --latest=false
+│   └── --retry=false
+└── rollback
+│   └── --change-scaling-settings=false
+│   └── --change-strategy=false
+│   └── --change-triggers=false
+│   └── -d, --dry-run=false
+│   └── -o, --output=''
+│   └── -t, --template=''
+│   └── --to-version=0
+└── new-build
+│   └── --allow-missing-images=false
+│   └── --allow-missing-imagestream-tags=false
+│   └── --binary=false
+│   └── --build-secret=[]
+│   └── --code=[]
+│   └── --context-dir=''
+│   └── --docker-image=[]
+│   └── -D, --dockerfile=''
+│   └── --dry-run=false
+│   └── -e, --env=[]
+│   └── --env-file=[]
+│   └── --image=[]
+│   └── -i, --image-stream=[]
+│   └── -l, --labels=''
+│   └── --name=''
+│   └── --no-output=false
+│   └── -o, --output=''
+│   └── --output-version=''
+│   └── --source-image=''
+│   └── --source-image-path=''
+│   └── --strategy=
+│   └── --to=''
+│   └── --to-docker=false
+└── start-build
+│   └── --build-loglevel=''
+│   └── --commit=''
+│   └── -e, --env=[]
+│   └── -F, --follow=false
+│   └── --from-archive=''
+│   └── --from-build=''
+│   └── --from-dir=''
+│   └── --from-file=''
+│   └── --from-repo=''
+│   └── --from-webhook=''
+│   └── --git-post-receive=''
+│   └── --git-repository=''
+│   └── --list-webhooks=''
+│   └── -o, --output=''
+│   └── -w, --wait=false
+└── cancel-build
+│   └── --dump-logs=false
+│   └── --restart=false
+│   └── --state=[]
+└── import-image
+│   └── --all=false
+│   └── --confirm=false
+│   └── --from=''
+│   └── --insecure=false
+└── tag
+│   └── --alias=false
+│   └── -d, --delete=false
+│   └── --insecure=false
+│   └── --reference=false
+│   └── --reference-policy='source'
+│   └── --scheduled=false
+│   └── --source=''
+└── get
+│   └── --all-namespaces=false
+│   └── --allow-missing-template-keys=true
+│   └── --export=false
+│   └── -f, --filename=[]
+│   └── --include-extended-apis=true
+│   └── -L, --label-columns=[]
+│   └── --no-headers=false
+│   └── -o, --output=''
+│   └── --output-version=''
+│   └── --raw=''
+│   └── -R, --recursive=false
+│   └── -l, --selector=''
+│   └── -a, --show-all=true
+│   └── --show-kind=false
+│   └── --show-labels=false
+│   └── --sort-by=''
+│   └── --template=''
+│   └── -w, --watch=false
+│   └── --watch-only=false
+└── describe
+│   └── --all-namespaces=false
+│   └── -f, --filename=[]
+│   └── --include-extended-apis=true
+│   └── -R, --recursive=false
+│   └── -l, --selector=''
+│   └── --show-events=true
+└── edit
+│   └── -f, --filename=[]
+│   └── --include-extended-apis=true
+│   └── -o, --output='yaml'
+│   └── --output-version=''
+│   └── --record=false
+│   └── -R, --recursive=false
+│   └── --save-config=false
+│   └── --schema-cache-dir='~/.kube/schema'
+│   └── --validate=false
+│   └── --windows-line-endings=false
+└── set
+└── label
+│   └── --all=false
+│   └── --allow-missing-template-keys=true
+│   └── --dry-run=false
+│   └── -f, --filename=[]
+│   └── --include-extended-apis=true
+│   └── --local=false
+│   └── --no-headers=false
+│   └── -o, --output=''
+│   └── --output-version=''
+│   └── --overwrite=false
+│   └── --record=false
+│   └── -R, --recursive=false
+│   └── --resource-version=''
+│   └── -l, --selector=''
+│   └── -a, --show-all=true
+│   └── --show-labels=false
+│   └── --sort-by=''
+│   └── --template=''
+└── annotate
+│   └── --all=false
+│   └── --allow-missing-template-keys=true
+│   └── --dry-run=false
+│   └── -f, --filename=[]
+│   └── --include-extended-apis=true
+│   └── --local=false
+│   └── --no-headers=false
+│   └── -o, --output=''
+│   └── --output-version=''
+│   └── --overwrite=false
+│   └── --record=false
+│   └── -R, --recursive=false
+│   └── --resource-version=''
+│   └── -l, --selector=''
+│   └── -a, --show-all=true
+│   └── --show-labels=false
+│   └── --sort-by=''
+│   └── --template=''
+└── expose
+│   └── --allow-missing-template-keys=true
+│   └── --cluster-ip=''
+│   └── --container-port=''
+│   └── --create-external-load-balancer=false
+│   └── --dry-run=false
+│   └── --external-ip=''
+│   └── -f, --filename=[]
+│   └── --generator=''
+│   └── --hostname=''
+│   └── -l, --labels=''
+│   └── --load-balancer-ip=''
+│   └── --name=''
+│   └── --no-headers=false
+│   └── -o, --output=''
+│   └── --output-version=''
+│   └── --overrides=''
+│   └── --path=''
+│   └── --port=''
+│   └── --protocol=''
+│   └── --record=false
+│   └── -R, --recursive=false
+│   └── --save-config=false
+│   └── --selector=''
+│   └── --session-affinity=''
+│   └── -a, --show-all=true
+│   └── --show-labels=false
+│   └── --sort-by=''
+│   └── --target-port=''
+│   └── --template=''
+│   └── --type=''
+│   └── --wildcard-policy=''
+└── delete
+│   └── --all=false
+│   └── --cascade=true
+│   └── -f, --filename=[]
+│   └── --force=false
+│   └── --grace-period=-1
+│   └── --ignore-not-found=false
+│   └── --include-extended-apis=true
+│   └── --now=false
+│   └── -o, --output=''
+│   └── -R, --recursive=false
+│   └── -l, --selector=''
+│   └── --timeout=0s
+└── scale
+│   └── --current-replicas=-1
+│   └── -f, --filename=[]
+│   └── --include-extended-apis=true
+│   └── -o, --output=''
+│   └── --record=false
+│   └── -R, --recursive=false
+│   └── --replicas=-1
+│   └── --resource-version=''
+│   └── --timeout=0s
+└── autoscale
+│   └── --allow-missing-template-keys=true
+│   └── --cpu-percent=-1
+│   └── --dry-run=false
+│   └── -f, --filename=[]
+│   └── --generator='horizontalpodautoscaler/v1'
+│   └── --include-extended-apis=true
+│   └── --max=-1
+│   └── --min=-1
+│   └── --name=''
+│   └── --no-headers=false
+│   └── -o, --output=''
+│   └── --output-version=''
+│   └── --record=false
+│   └── -R, --recursive=false
+│   └── --save-config=false
+│   └── -a, --show-all=true
+│   └── --show-labels=false
+│   └── --sort-by=''
+│   └── --template=''
+└── secrets
+│   └── add
+│   │   └── --for=[mount]
+│   └── link
+│   │   └── --for=[mount]
+│   └── new
+│   │   └── --allow-missing-template-keys=true
+│   │   └── --confirm=false
+│   │   └── --no-headers=false
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+│   │   └── -q, --quiet=false
+│   │   └── -a, --show-all=true
+│   │   └── --show-labels=false
+│   │   └── --sort-by=''
+│   │   └── --template=''
+│   │   └── --type=''
+│   └── new-basicauth
+│   │   └── --allow-missing-template-keys=true
+│   │   └── --ca-cert=''
+│   │   └── --gitconfig=''
+│   │   └── --no-headers=false
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+│   │   └── --password=''
+│   │   └── --prompt=false
+│   │   └── -a, --show-all=true
+│   │   └── --show-labels=false
+│   │   └── --sort-by=''
+│   │   └── --template=''
+│   │   └── --username=''
+│   └── new-dockercfg
+│   │   └── --allow-missing-template-keys=true
+│   │   └── --docker-email=''
+│   │   └── --docker-password=''
+│   │   └── --docker-server='https
+│   │   └── --docker-username=''
+│   │   └── --no-headers=false
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+│   │   └── -a, --show-all=true
+│   │   └── --show-labels=false
+│   │   └── --sort-by=''
+│   │   └── --template=''
+│   └── new-sshauth
+│   │   └── --allow-missing-template-keys=true
+│   │   └── --ca-cert=''
+│   │   └── --gitconfig=''
+│   │   └── --no-headers=false
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+│   │   └── -a, --show-all=true
+│   │   └── --show-labels=false
+│   │   └── --sort-by=''
+│   │   └── --ssh-privatekey=''
+│   │   └── --template=''
+│   └── unlink
+└── serviceaccounts
+│   └── create-kubeconfig
+│   │   └── --with-namespace=''
+│   └── get-token
+│   └── new-token
+│   │   └── -l, --labels=''
+│   │   └── --timeout=30s
+└── logs
+│   └── -c, --container=''
+│   └── -f, --follow=false
+│   └── --include-extended-apis=true
+│   └── --interactive=false
+│   └── --limit-bytes=0
+│   └── -p, --previous=false
+│   └── --since=0s
+│   └── --since-time=''
+│   └── --tail=-1
+│   └── --timestamps=false
+│   └── --version=0
+└── rsh
+│   └── -c, --container=''
+│   └── -T, --no-tty=false
+│   └── --shell='/bin/sh'
+│   └── --timeout=10
+│   └── -t, --tty=false
+└── rsync
+│   └── -c, --container=''
+│   └── --delete=false
+│   └── --exclude=[]
+│   └── --include=[]
+│   └── --no-perms=false
+│   └── --progress=false
+│   └── -q, --quiet=false
+│   └── --strategy=''
+│   └── -w, --watch=false
+└── port-forward
+│   └── -p, --pod=''
+└── debug
+│   └── --as-root=false
+│   └── --as-user=-1
+│   └── -c, --container=''
+│   └── -f, --filename=''
+│   └── --keep-annotations=false
+│   └── --keep-init-containers=true
+│   └── --keep-liveness=false
+│   └── --keep-readiness=false
+│   └── -I, --no-stdin=false
+│   └── -T, --no-tty=false
+│   └── --node-name=''
+│   └── --one-container=false
+│   └── -o, --output=''
+│   └── --output-version=''
+│   └── --template=''
+│   └── -t, --tty=false
+└── exec
+│   └── -c, --container=''
+│   └── -p, --pod=''
+│   └── -i, --stdin=false
+│   └── -t, --tty=false
+└── proxy
+│   └── --accept-hosts='^localhost$,^127\.0\.0\.1$,^\[
+│   └── --accept-paths='^/.*'
+│   └── --address='127.0.0.1'
+│   └── --api-prefix='/'
+│   └── --disable-filter=false
+│   └── -p, --port=8001
+│   └── --reject-methods='POST,PUT,PATCH'
+│   └── --reject-paths='^/api/.*/pods/.*/exec,^/api/.*/pods/.*/attach'
+│   └── -u, --unix-socket=''
+│   └── -w, --www=''
+│   └── -P, --www-prefix='/static/'
+└── attach
+│   └── -c, --container=''
+│   └── -i, --stdin=false
+│   └── -t, --tty=false
+└── run
+│   └── --allow-missing-template-keys=true
+│   └── --attach=false
+│   └── --command=false
+│   └── --dry-run=false
+│   └── --env=[]
+│   └── --expose=false
+│   └── --generator=''
+│   └── --hostport=-1
+│   └── --image=''
+│   └── --image-pull-policy=''
+│   └── --include-extended-apis=true
+│   └── -l, --labels=''
+│   └── --leave-stdin-open=false
+│   └── --limits=''
+│   └── --no-headers=false
+│   └── -o, --output=''
+│   └── --output-version=''
+│   └── --overrides=''
+│   └── --port=''
+│   └── --quiet=false
+│   └── --record=false
+│   └── -r, --replicas=1
+│   └── --requests=''
+│   └── --restart='Always'
+│   └── --rm=false
+│   └── --save-config=false
+│   └── --schedule=''
+│   └── --service-generator='service/v2'
+│   └── --service-overrides=''
+│   └── -a, --show-all=true
+│   └── --show-labels=false
+│   └── --sort-by=''
+│   └── -i, --stdin=false
+│   └── --template=''
+│   └── -t, --tty=false
+└── cp
+│   └── -c, --container=''
+└── adm
+│   └── completion
+│   └── config
+│   │   └── current-context
+│   │   └── delete-cluster
+│   │   └── delete-context
+│   │   └── get-clusters
+│   │   └── get-contexts
+│   │   │   └── --allow-missing-template-keys=true
+│   │   │   └── --no-headers=false
+│   │   │   └── -o, --output=''
+│   │   └── set
+│   │   │   └── --set-raw-bytes=false
+│   │   └── set-cluster
+│   │   │   └── --api-version=''
+│   │   │   └── --certificate-authority=''
+│   │   │   └── --embed-certs=false
+│   │   │   └── --insecure-skip-tls-verify=false
+│   │   │   └── --server=''
+│   │   └── set-context
+│   │   │   └── --cluster=''
+│   │   │   └── --namespace=''
+│   │   │   └── --user=''
+│   │   └── set-credentials
+│   │   │   └── --auth-provider=''
+│   │   │   └── --auth-provider-arg=[]
+│   │   │   └── --client-certificate=''
+│   │   │   └── --client-key=''
+│   │   │   └── --embed-certs=false
+│   │   │   └── --password=''
+│   │   │   └── --token=''
+│   │   │   └── --username=''
+│   │   └── unset
+│   │   └── use-context
+│   │   └── view
+│   │   │   └── --allow-missing-template-keys=true
+│   │   │   └── --flatten=false
+│   │   │   └── --merge=true
+│   │   │   └── --minify=false
+│   │   │   └── --no-headers=false
+│   │   │   └── -o, --output=''
+│   │   │   └── --output-version=''
+│   │   │   └── --raw=false
+│   │   │   └── -a, --show-all=true
+│   │   │   └── --show-labels=false
+│   │   │   └── --sort-by=''
+│   │   │   └── --template=''
+└── create
+│   └── clusterresourcequota
+│   │   └── --allow-missing-template-keys=true
+│   │   └── --dry-run=false
+│   │   └── --hard=[]
+│   │   └── --no-headers=false
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+│   │   └── --project-annotation-selector=''
+│   │   └── --project-label-selector=''
+│   │   └── -a, --show-all=true
+│   │   └── --show-labels=false
+│   │   └── --sort-by=''
+│   │   └── --template=''
+│   └── configmap
+│   │   └── --allow-missing-template-keys=true
+│   │   └── --dry-run=false
+│   │   └── --from-file=[]
+│   │   └── --from-literal=[]
+│   │   └── --generator='configmap/v1'
+│   │   └── --no-headers=false
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+│   │   └── --save-config=false
+│   │   └── --schema-cache-dir='~/.kube/schema'
+│   │   └── -a, --show-all=true
+│   │   └── --show-labels=false
+│   │   └── --sort-by=''
+│   │   └── --template=''
+│   │   └── --validate=false
+│   └── deployment
+│   │   └── --allow-missing-template-keys=true
+│   │   └── --dry-run=false
+│   │   └── --generator='deployment-basic/v1beta1'
+│   │   └── --image=[]
+│   │   └── --no-headers=false
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+│   │   └── --save-config=false
+│   │   └── --schema-cache-dir='~/.kube/schema'
+│   │   └── -a, --show-all=true
+│   │   └── --show-labels=false
+│   │   └── --sort-by=''
+│   │   └── --template=''
+│   │   └── --validate=false
+│   └── deploymentconfig
+│   │   └── --allow-missing-template-keys=true
+│   │   └── --dry-run=false
+│   │   └── --image=''
+│   │   └── --no-headers=false
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+│   │   └── -a, --show-all=true
+│   │   └── --show-labels=false
+│   │   └── --sort-by=''
+│   │   └── --template=''
+│   └── identity
+│   │   └── --allow-missing-template-keys=true
+│   │   └── --dry-run=false
+│   │   └── --no-headers=false
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+│   │   └── -a, --show-all=true
+│   │   └── --show-labels=false
+│   │   └── --sort-by=''
+│   │   └── --template=''
+│   └── imagestream
+│   │   └── --allow-missing-template-keys=true
+│   │   └── --dry-run=false
+│   │   └── --no-headers=false
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+│   │   └── -a, --show-all=true
+│   │   └── --show-labels=false
+│   │   └── --sort-by=''
+│   │   └── --template=''
+│   └── namespace
+│   │   └── --allow-missing-template-keys=true
+│   │   └── --dry-run=false
+│   │   └── --generator='namespace/v1'
+│   │   └── --no-headers=false
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+│   │   └── --save-config=false
+│   │   └── --schema-cache-dir='~/.kube/schema'
+│   │   └── -a, --show-all=true
+│   │   └── --show-labels=false
+│   │   └── --sort-by=''
+│   │   └── --template=''
+│   │   └── --validate=false
+│   └── policybinding
+│   │   └── -o, --output=''
+│   └── quota
+│   │   └── --allow-missing-template-keys=true
+│   │   └── --dry-run=false
+│   │   └── --generator='resourcequotas/v1'
+│   │   └── --hard=''
+│   │   └── --no-headers=false
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+│   │   └── --save-config=false
+│   │   └── --schema-cache-dir='~/.kube/schema'
+│   │   └── --scopes=''
+│   │   └── -a, --show-all=true
+│   │   └── --show-labels=false
+│   │   └── --sort-by=''
+│   │   └── --template=''
+│   │   └── --validate=false
+│   └── route
+│   │   └── edge
+│   │   │   └── --allow-missing-template-keys=true
+│   │   │   └── --ca-cert=''
+│   │   │   └── --cert=''
+│   │   │   └── --dry-run=false
+│   │   │   └── --hostname=''
+│   │   │   └── --insecure-policy=''
+│   │   │   └── --key=''
+│   │   │   └── --no-headers=false
+│   │   │   └── -o, --output=''
+│   │   │   └── --output-version=''
+│   │   │   └── --path=''
+│   │   │   └── --port=''
+│   │   │   └── --schema-cache-dir='~/.kube/schema'
+│   │   │   └── --service=''
+│   │   │   └── -a, --show-all=true
+│   │   │   └── --show-labels=false
+│   │   │   └── --sort-by=''
+│   │   │   └── --template=''
+│   │   │   └── --validate=false
+│   │   │   └── --wildcard-policy=''
+│   │   └── passthrough
+│   │   │   └── --allow-missing-template-keys=true
+│   │   │   └── --dry-run=false
+│   │   │   └── --hostname=''
+│   │   │   └── --insecure-policy=''
+│   │   │   └── --no-headers=false
+│   │   │   └── -o, --output=''
+│   │   │   └── --output-version=''
+│   │   │   └── --port=''
+│   │   │   └── --schema-cache-dir='~/.kube/schema'
+│   │   │   └── --service=''
+│   │   │   └── -a, --show-all=true
+│   │   │   └── --show-labels=false
+│   │   │   └── --sort-by=''
+│   │   │   └── --template=''
+│   │   │   └── --validate=false
+│   │   │   └── --wildcard-policy=''
+│   │   └── reencrypt
+│   │   │   └── --allow-missing-template-keys=true
+│   │   │   └── --ca-cert=''
+│   │   │   └── --cert=''
+│   │   │   └── --dest-ca-cert=''
+│   │   │   └── --dry-run=false
+│   │   │   └── --hostname=''
+│   │   │   └── --insecure-policy=''
+│   │   │   └── --key=''
+│   │   │   └── --no-headers=false
+│   │   │   └── -o, --output=''
+│   │   │   └── --output-version=''
+│   │   │   └── --path=''
+│   │   │   └── --port=''
+│   │   │   └── --schema-cache-dir='~/.kube/schema'
+│   │   │   └── --service=''
+│   │   │   └── -a, --show-all=true
+│   │   │   └── --show-labels=false
+│   │   │   └── --sort-by=''
+│   │   │   └── --template=''
+│   │   │   └── --validate=false
+│   │   │   └── --wildcard-policy=''
+│   └── secret
+│   │   └── docker-registry
+│   │   │   └── --allow-missing-template-keys=true
+│   │   │   └── --docker-email=''
+│   │   │   └── --docker-password=''
+│   │   │   └── --docker-server='https
+│   │   │   └── --docker-username=''
+│   │   │   └── --dry-run=false
+│   │   │   └── --generator='secret-for-docker-registry/v1'
+│   │   │   └── --include-extended-apis=true
+│   │   │   └── --no-headers=false
+│   │   │   └── -o, --output=''
+│   │   │   └── --output-version=''
+│   │   │   └── --save-config=false
+│   │   │   └── --schema-cache-dir='~/.kube/schema'
+│   │   │   └── -a, --show-all=true
+│   │   │   └── --show-labels=false
+│   │   │   └── --sort-by=''
+│   │   │   └── --template=''
+│   │   │   └── --validate=false
+│   │   └── generic
+│   │   │   └── --allow-missing-template-keys=true
+│   │   │   └── --dry-run=false
+│   │   │   └── --from-file=[]
+│   │   │   └── --from-literal=[]
+│   │   │   └── --generator='secret/v1'
+│   │   │   └── --no-headers=false
+│   │   │   └── -o, --output=''
+│   │   │   └── --output-version=''
+│   │   │   └── --save-config=false
+│   │   │   └── --schema-cache-dir='~/.kube/schema'
+│   │   │   └── -a, --show-all=true
+│   │   │   └── --show-labels=false
+│   │   │   └── --sort-by=''
+│   │   │   └── --template=''
+│   │   │   └── --type=''
+│   │   │   └── --validate=false
+│   │   └── tls
+│   │   │   └── --allow-missing-template-keys=true
+│   │   │   └── --cert=''
+│   │   │   └── --dry-run=false
+│   │   │   └── --generator='secret-for-tls/v1'
+│   │   │   └── --key=''
+│   │   │   └── --no-headers=false
+│   │   │   └── -o, --output=''
+│   │   │   └── --output-version=''
+│   │   │   └── --save-config=false
+│   │   │   └── --schema-cache-dir='~/.kube/schema'
+│   │   │   └── -a, --show-all=true
+│   │   │   └── --show-labels=false
+│   │   │   └── --sort-by=''
+│   │   │   └── --template=''
+│   │   │   └── --validate=false
+│   └── service
+│   │   └── clusterip
+│   │   │   └── --allow-missing-template-keys=true
+│   │   │   └── --clusterip=''
+│   │   │   └── --dry-run=false
+│   │   │   └── --generator='service-clusterip/v1'
+│   │   │   └── --no-headers=false
+│   │   │   └── -o, --output=''
+│   │   │   └── --output-version=''
+│   │   │   └── --save-config=false
+│   │   │   └── --schema-cache-dir='~/.kube/schema'
+│   │   │   └── -a, --show-all=true
+│   │   │   └── --show-labels=false
+│   │   │   └── --sort-by=''
+│   │   │   └── --tcp=[]
+│   │   │   └── --template=''
+│   │   │   └── --validate=false
+│   │   └── loadbalancer
+│   │   │   └── --allow-missing-template-keys=true
+│   │   │   └── --dry-run=false
+│   │   │   └── --generator='service-loadbalancer/v1'
+│   │   │   └── --no-headers=false
+│   │   │   └── -o, --output=''
+│   │   │   └── --output-version=''
+│   │   │   └── --save-config=false
+│   │   │   └── --schema-cache-dir='~/.kube/schema'
+│   │   │   └── -a, --show-all=true
+│   │   │   └── --show-labels=false
+│   │   │   └── --sort-by=''
+│   │   │   └── --tcp=[]
+│   │   │   └── --template=''
+│   │   │   └── --validate=false
+│   │   └── nodeport
+│   │   │   └── --allow-missing-template-keys=true
+│   │   │   └── --dry-run=false
+│   │   │   └── --generator='service-nodeport/v1'
+│   │   │   └── --no-headers=false
+│   │   │   └── --node-port=0
+│   │   │   └── -o, --output=''
+│   │   │   └── --output-version=''
+│   │   │   └── --save-config=false
+│   │   │   └── --schema-cache-dir='~/.kube/schema'
+│   │   │   └── -a, --show-all=true
+│   │   │   └── --show-labels=false
+│   │   │   └── --sort-by=''
+│   │   │   └── --tcp=[]
+│   │   │   └── --template=''
+│   │   │   └── --validate=false
+│   └── serviceaccount
+│   │   └── --allow-missing-template-keys=true
+│   │   └── --dry-run=false
+│   │   └── --generator='serviceaccount/v1'
+│   │   └── --include-extended-apis=true
+│   │   └── --no-headers=false
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+│   │   └── --save-config=false
+│   │   └── --schema-cache-dir='~/.kube/schema'
+│   │   └── -a, --show-all=true
+│   │   └── --show-labels=false
+│   │   └── --sort-by=''
+│   │   └── --template=''
+│   │   └── --validate=false
+│   └── user
+│   │   └── --allow-missing-template-keys=true
+│   │   └── --dry-run=false
+│   │   └── --full-name=''
+│   │   └── --no-headers=false
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+│   │   └── -a, --show-all=true
+│   │   └── --show-labels=false
+│   │   └── --sort-by=''
+│   │   └── --template=''
+│   └── useridentitymapping
+│   │   └── --allow-missing-template-keys=true
+│   │   └── --dry-run=false
+│   │   └── --no-headers=false
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+│   │   └── -a, --show-all=true
+│   │   └── --show-labels=false
+│   │   └── --sort-by=''
+│   │   └── --template=''
+│   └── --allow-missing-template-keys=true
+│   └── --dry-run=false
+│   └── --edit=false
+│   └── -f, --filename=[]
+│   └── --include-extended-apis=true
+│   └── --no-headers=false
+│   └── -o, --output=''
+│   └── --output-version=''
+│   └── --record=false
+│   └── -R, --recursive=false
+│   └── --save-config=false
+│   └── --schema-cache-dir='~/.kube/schema'
+│   └── -a, --show-all=true
+│   └── --show-labels=false
+│   └── --sort-by=''
+│   └── --template=''
+│   └── --validate=false
+│   └── --windows-line-endings=false
+└── replace
+│   └── --cascade=false
+│   └── -f, --filename=[]
+│   └── --force=false
+│   └── --grace-period=-1
+│   └── --include-extended-apis=true
+│   └── -o, --output=''
+│   └── --record=false
+│   └── -R, --recursive=false
+│   └── --save-config=false
+│   └── --schema-cache-dir='~/.kube/schema'
+│   └── --timeout=0s
+│   └── --validate=false
+└── apply
+│   └── --all=false
+│   └── --allow-missing-template-keys=true
+│   └── --cascade=true
+│   └── --dry-run=false
+│   └── -f, --filename=[]
+│   └── --force=false
+│   └── --grace-period=-1
+│   └── --include-extended-apis=true
+│   └── --no-headers=false
+│   └── -o, --output=''
+│   └── --output-version=''
+│   └── --overwrite=true
+│   └── --prune=false
+│   └── --prune-whitelist=[]
+│   └── --record=false
+│   └── -R, --recursive=false
+│   └── --schema-cache-dir='~/.kube/schema'
+│   └── -l, --selector=''
+│   └── -a, --show-all=true
+│   └── --show-labels=false
+│   └── --sort-by=''
+│   └── --template=''
+│   └── --timeout=0s
+│   └── --validate=false
+└── patch
+│   └── --allow-missing-template-keys=true
+│   └── -f, --filename=[]
+│   └── --include-extended-apis=true
+│   └── --local=false
+│   └── --no-headers=false
+│   └── -o, --output=''
+│   └── --output-version=''
+│   └── -p, --patch=''
+│   └── --record=false
+│   └── -R, --recursive=false
+│   └── -a, --show-all=true
+│   └── --show-labels=false
+│   └── --sort-by=''
+│   └── --template=''
+│   └── --type='strategic'
+└── process
+│   └── -f, --filename=''
+│   └── -l, --labels=''
+│   └── --local=false
+│   └── -o, --output='json'
+│   └── --output-version=''
+│   └── -p, --param=[]
+│   └── --param-file=[]
+│   └── --parameters=false
+│   └── --raw=false
+│   └── -t, --template=''
+└── export
+│   └── --all=true
+│   └── --all-namespaces=false
+│   └── --allow-missing-template-keys=true
+│   └── --as-template=''
+│   └── --exact=false
+│   └── -f, --filename=[]
+│   └── --no-headers=false
+│   └── -o, --output=''
+│   └── --output-version=''
+│   └── --raw=false
+│   └── -l, --selector=''
+│   └── -a, --show-all=true
+│   └── --show-labels=false
+│   └── --sort-by=''
+│   └── --template=''
+└── extract
+│   └── --allow-missing-template-keys=true
+│   └── --confirm=false
+│   └── -f, --filename=[]
+│   └── --keys=[]
+│   └── --no-headers=false
+│   └── -o, --output=''
+│   └── --output-version=''
+│   └── -a, --show-all=true
+│   └── --show-labels=false
+│   └── --sort-by=''
+│   └── --template=''
+│   └── --to='.'
+└── idle
+│   └── --all=false
+│   └── --all-namespaces=false
+│   └── --dry-run=false
+│   └── --resource-names-file=''
+│   └── -l, --selector=''
+└── observe
+│   └── --all-namespaces=false
+│   └── -a, --argument=''
+│   └── -d, --delete=''
+│   └── --exit-after=0s
+│   └── --listen-addr='
+│   └── --maximum-errors=20
+│   └── --names=''
+│   └── --no-headers=false
+│   └── --object-env-var=''
+│   └── --once=false
+│   └── --output='jsonpath'
+│   └── --print-metrics-on-exit=false
+│   └── --resync-period=0s
+│   └── --retry-count=2
+│   └── --retry-on-exit-code=0
+│   └── --strict-templates=false
+│   └── --type-env-var=''
+└── policy
+│   └── add-role-to-group
+│   │   └── --role-namespace=''
+│   └── add-role-to-user
+│   │   └── --role-namespace=''
+│   │   └── -z, --serviceaccount=[]
+│   └── can-i
+│   │   └── --all-namespaces=false
+│   │   └── --groups=[]
+│   │   └── --ignore-scopes=false
+│   │   └── --list=false
+│   │   └── -q, --quiet=false
+│   │   └── --scopes=[]
+│   │   └── --user=''
+│   └── remove-group
+│   └── remove-role-from-group
+│   │   └── --role-namespace=''
+│   └── remove-role-from-user
+│   │   └── --role-namespace=''
+│   │   └── -z, --serviceaccount=[]
+│   └── remove-user
+│   └── scc-review
+│   │   └── --allow-missing-template-keys=true
+│   │   └── -f, --filename=[]
+│   │   └── --no-headers=false
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+│   │   └── -R, --recursive=false
+│   │   └── -z, --serviceaccount=[]
+│   │   └── -a, --show-all=true
+│   │   └── --show-labels=false
+│   │   └── --sort-by=''
+│   │   └── --template=''
+│   └── scc-subject-review
+│   │   └── --allow-missing-template-keys=true
+│   │   └── -f, --filename=[]
+│   │   └── -g, --groups=[]
+│   │   └── --no-headers=false
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+│   │   └── -R, --recursive=false
+│   │   └── -z, --serviceaccount=''
+│   │   └── -a, --show-all=true
+│   │   └── --show-labels=false
+│   │   └── --sort-by=''
+│   │   └── --template=''
+│   │   └── -u, --user=''
+│   └── who-can
+│   │   └── --all-namespaces=false
+└── convert
+│   └── --allow-missing-template-keys=true
+│   └── -f, --filename=[]
+│   └── --include-extended-apis=true
+│   └── --local=true
+│   └── --no-headers=false
+│   └── -o, --output=''
+│   └── --output-version=''
+│   └── -R, --recursive=false
+│   └── --schema-cache-dir='~/.kube/schema'
+│   └── -a, --show-all=true
+│   └── --show-labels=false
+│   └── --sort-by=''
+│   └── --template=''
+│   └── --validate=false
+└── import
+│   └── app.json
+│   │   └── --as-template=''
+│   │   └── --dry-run=false
+│   │   └── -f, --filename=[]
+│   │   └── --generator='app-json/v1'
+│   │   └── --image=''
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+│   └── docker-compose
+│   │   └── --as-template=''
+│   │   └── --dry-run=false
+│   │   └── -f, --filename=[]
+│   │   └── --generator='docker-compose/v1'
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+└── logout
+└── config
+│   └── current-context
+│   └── delete-cluster
+│   └── delete-context
+│   └── get-clusters
+│   └── get-contexts
+│   │   └── --allow-missing-template-keys=true
+│   │   └── --no-headers=false
+│   │   └── -o, --output=''
+│   └── set
+│   │   └── --set-raw-bytes=false
+│   └── set-cluster
+│   │   └── --api-version=''
+│   │   └── --certificate-authority=''
+│   │   └── --embed-certs=false
+│   │   └── --insecure-skip-tls-verify=false
+│   │   └── --server=''
+│   └── set-context
+│   │   └── --cluster=''
+│   │   └── --namespace=''
+│   │   └── --user=''
+│   └── set-credentials
+│   │   └── --auth-provider=''
+│   │   └── --auth-provider-arg=[]
+│   │   └── --client-certificate=''
+│   │   └── --client-key=''
+│   │   └── --embed-certs=false
+│   │   └── --password=''
+│   │   └── --token=''
+│   │   └── --username=''
+│   └── unset
+│   └── use-context
+│   └── view
+│   │   └── --allow-missing-template-keys=true
+│   │   └── --flatten=false
+│   │   └── --merge=true
+│   │   └── --minify=false
+│   │   └── --no-headers=false
+│   │   └── -o, --output=''
+│   │   └── --output-version=''
+│   │   └── --raw=false
+│   │   └── -a, --show-all=true
+│   │   └── --show-labels=false
+│   │   └── --sort-by=''
+│   │   └── --template=''
+└── whoami
+│   └── -c, --show-context=false
+│   └── --show-server=false
+│   └── -t, --show-token=false
+└── completion
+└── help
+└── version

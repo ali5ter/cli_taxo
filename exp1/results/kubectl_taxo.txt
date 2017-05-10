@@ -1,40 +1,86 @@
 kubectl
-└─  get
-└─  describe
-└─  create
-│    └─  namespace
-│    └─  secret
-│    │    └─  generic
-│    └─  configmap
-│    └─  serviceaccount
-└─  replace
-└─  patch
-└─  delete
-└─  edit
-└─  apply
-└─  namespace
-└─  logs
-└─  scale
-└─  cordon
-└─  drain
-└─  uncordon
-└─  attach
-└─  exec
-└─  proxy
-└─  run
-└─  expose
-└─  autoscale
-└─  rollout
-│    └─  history
-│    └─  pause
-│    └─  resume
-│    └─  undo
-└─  label
-└─  annotate
-└─  config
-│    └─  view
-│    └─  set
-│    └─  unset
-└─  version
-└─  explain
-└─  convert
+└── create
+│   └── clusterrole
+│   └── clusterrolebinding
+│   └── configmap
+│   └── deployment
+│   └── namespace
+│   └── poddisruptionbudget
+│   └── quota
+│   └── role
+│   └── rolebinding
+│   └── secret
+│   │   └── docker-registry
+│   │   └── generic
+│   │   └── tls
+│   └── service
+│   │   └── clusterip
+│   │   └── externalname
+│   │   └── loadbalancer
+│   │   └── nodeport
+│   └── serviceaccount
+└── expose
+└── run
+└── set
+│   └── image
+│   └── resources
+│   └── selector
+└── get
+└── explain
+└── edit
+└── delete
+└── rollout
+│   └── history
+│   └── pause
+│   └── resume
+│   └── status
+│   └── undo
+└── rolling-update
+└── scale
+└── autoscale
+└── certificate
+│   └── approve
+│   └── deny
+└── cluster-info
+│   └── dump
+└── top
+│   └── node
+│   └── pod
+└── cordon
+└── uncordon
+└── drain
+└── taint
+└── describe
+└── logs
+└── attach
+└── exec
+└── port-forward
+└── proxy
+└── cp
+└── auth
+│   └── can-i
+└── apply
+│   └── set-last-applied
+│   └── view-last-applied
+└── patch
+└── replace
+└── convert
+└── label
+└── annotate
+└── completion
+└── api-versions
+└── config
+│   └── current-context
+│   └── delete-cluster
+│   └── delete-context
+│   └── get-clusters
+│   └── get-contexts
+│   └── set
+│   └── set-cluster
+│   └── set-context
+│   └── set-credentials
+│   └── unset
+│   └── use-context
+│   └── view
+└── help
+└── version
