@@ -66,11 +66,31 @@ def usage():
         "which the CLI options are found in the description text. "
         "Defaults to: ", OPTIONS_TOKEN_RE)
     print("  --exclude-help     Exclude any help options from the output.")
-    print("  -o tree|csv|table|completion, --output tree|csv|table|completion  Output format. "
+    print("  -o tree|csv|table|completion, --output tree|csv|table|completion "
         "Defaults to: ", OUTPUT_FORMAT)
     print("  -O, --show-opts    Include options in the output")
     print("  -d, --depth        Limit the depth of command to parse. Defaults to: ", MAX_DEPTH)
     print("  -D                 Display debug information to STDERR")
+    print("\nExamples:")
+    print("Generate an ASCII tree of the docker CLI commands with no options: ")
+    print("  cli_taxo.py docker")
+    print("\nGenerate a tree of the kubectl CLI command and options: ")
+    print("  cli_taxo.py kubectl \\")
+    print("  --commands-token 'Commands\s\(\S+\):|Commands:' \\")
+    print("  --commands-filter '^\s\s((?!#)\S+)\s+[A-Z]' \\")
+    print("  --options-token '^Options:' \\")
+    print("  --options-filter '^\s+?(-.+?):' \\")
+    print("  --show-opts")
+    print("\nIt is useful to run cli_taxo in debug mode when constructing the ")
+    print("regualr expressions to filter on the CLI commands and options.")
+    print("\nThe output formats include an ASCII tree, comma seperated values, a ")
+    print("very simple wiki/markdown table, and a bash autocompletion script ")
+    print("\nExamples of using the autocompletion output: ")
+    print("  cli_taxo.py docker --show-opts --output completion > ~/.docker/completion.bash.inc")
+    print("  printf \"\\n# Docker shell completion\\nsource '$HOME/.docker/completion.bash.inc'\\n\" >> $HOME/.bash_profile")
+    print("  source $HOME/.bash_profile")
+    print("\nTo apply the bash autocompletion to the current shell: ")
+    print("  source <(cli_taxo.py docker --show-opts --output completion)")
 
 def eprint(*args, **kwargs):
         print(*args, file=sys.stderr, **kwargs)
@@ -123,7 +143,9 @@ def parse_options_and_commands(command, depth=-1):
                         '  '*depth, match))
                 if match and not (_HELP_RE.search(match)
                     and EXCLUDE_HELP_OPTS):
-                    print(format_item(depth, command, match))
+                    content = format_item(depth, command, match)
+                    if content is not None:
+                        print(content)
 
         if _COMMANDS_TOKEN_RE.search(line) and not found_commands:
             found_commands = True
@@ -134,7 +156,9 @@ def parse_options_and_commands(command, depth=-1):
                         '  '*depth, match))
                 if match and not (_HELP_RE.search(match)
                     and EXCLUDE_HELP_OPTS):
-                    print(format_item(depth, command, match))
+                    content = format_item(depth, command, match)
+                    if content is not None:
+                        print(content)
                     _command = command[:-1]
                     _command.extend([match, HELP_OPT])
                     parse_options_and_commands(_command, depth)
@@ -151,7 +175,7 @@ def format_item(depth, command, item):
         return '|    '*2 +'|    '*depth + item +'    |'*(TABLE_COLS-1-depth)
     elif OUTPUT_FORMAT == OUTPUT_FORMATS.completion.name:
         COMPLETION_CMDS[command[depth]].append(item)
-        return 'Appending '+ item +' for auto completion of '+ command[depth]
+        return
     else: # OUTPUT_FORMATS.tree
         if depth == 0:
             prefix = '└── '
@@ -173,13 +197,7 @@ def create_completion_script():
     content = content +"        *)    cmds=\""+ ' '.join(top_level_commands) +'";;'
     content = content + parts[2]
 
-    script = INIT_CMD +'_completion.sh'
-    with open(script, 'w') as file:
-        file.write(content)
-    os.chmod(script, 0o755)
-
-    print('Bash completion script generated. To use it it, run')
-    print('  source ./'+ script)
+    print(content)
 
 def main(argv):
     try:
@@ -271,6 +289,8 @@ def main(argv):
 
     if OUTPUT_FORMAT == OUTPUT_FORMATS.table.name:
         print('|    '+ INIT_CMD +'    |'*(TABLE_COLS))
+    elif OUTPUT_FORMAT == OUTPUT_FORMATS.completion.name:
+        pass
     else:
         print(INIT_CMD)
 
