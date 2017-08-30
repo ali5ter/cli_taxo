@@ -62,6 +62,11 @@ The `-O` option can be added to display a tree with all the CLI subcommand optio
 
 Wrapper scripts for some CLIs can be found under the [exp1](exp1) directory.
 
+## Installation
+To install all the dependencies for `cli_taxo.py`:
+* Make sure `pip` is installed, e.g. on macOS run `sudo easy_install pip`
+* Run `pip install -r requirements.txt`
+
 ## 'Experiments'
 Not so much experiments, rather different ways the [cli_taxo.py](cli_taxo.py) script has been used.
 
