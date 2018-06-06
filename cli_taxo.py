@@ -23,7 +23,7 @@ COMMANDS_RE = '^\s+(\w+?)\s+'
 SHOW_OPTIONS = False
 SHOW_COMMANDS = True
 EXCLUDE_HELP_OPTS = False
-OUTPUT_FORMATS = Enum('OUTPUT_FORMATS', 'tree csv table completion')
+OUTPUT_FORMATS = Enum('OUTPUT_FORMATS', 'tree csv table bash zsh')
 OUTPUT_FORMAT = OUTPUT_FORMATS.tree.name
 TABLE_COLS = 6
 COMPLETION_CMDS = defaultdict(list)
@@ -46,7 +46,7 @@ def usage():
         "[--options-filters <reg_ex>] "
         "[--options-token <reg_ex>] "
         "[--exclude-help] "
-        "[-o tree|csv|table|completion | --output tree|csv|table|completion] "
+        "[-o tree|csv|table|bash|zsh | --output tree|csv|table|bash|zsh] "
         "[-O | --show-opts] "
         "[--depth <number>} "
         "[-D]")
@@ -66,7 +66,7 @@ def usage():
         "which the CLI options are found in the description text. "
         "Defaults to: ", OPTIONS_TOKEN_RE)
     print("  --exclude-help     Exclude any help options from the output.")
-    print("  -o tree|csv|table|completion, --output tree|csv|table|completion "
+    print("  -o tree|csv|table|bash|zsh, --output tree|csv|table|bash|zsh "
         "Defaults to: ", OUTPUT_FORMAT)
     print("  -O, --show-opts    Include options in the output")
     print("  -d, --depth        Limit the depth of command to parse. Defaults to: ", MAX_DEPTH)
@@ -86,11 +86,11 @@ def usage():
     print("\nThe output formats include an ASCII tree, comma seperated values, a ")
     print("very simple wiki/markdown table, and a bash autocompletion script ")
     print("\nExamples of using the autocompletion output: ")
-    print("  cli_taxo.py docker --show-opts --output completion > ~/.docker/completion.bash.inc")
+    print("  cli_taxo.py docker --show-opts --output bash > ~/.docker/completion.bash.inc")
     print("  printf \"\\n# Docker shell completion\\nsource '$HOME/.docker/completion.bash.inc'\\n\" >> $HOME/.bash_profile")
     print("  source $HOME/.bash_profile")
     print("\nTo apply the bash autocompletion to the current shell: ")
-    print("  source <(cli_taxo.py docker --show-opts --output completion)")
+    print("  source <(cli_taxo.py docker --show-opts --output bash)")
 
 def eprint(*args, **kwargs):
         print(*args, file=sys.stderr, **kwargs)
@@ -173,7 +173,7 @@ def format_item(depth, command, item):
         return ','.join(_command) + ',' + item
     elif OUTPUT_FORMAT == OUTPUT_FORMATS.table.name:
         return '|    '*2 +'|    '*depth + item +'    |'*(TABLE_COLS-1-depth)
-    elif OUTPUT_FORMAT == OUTPUT_FORMATS.completion.name:
+    elif OUTPUT_FORMAT == OUTPUT_FORMATS.bash.name or OUTPUT_FORMAT == OUTPUT_FORMATS.zsh.name:
         COMPLETION_CMDS[command[depth]].append(item)
         return
     else: # OUTPUT_FORMATS.tree
@@ -183,8 +183,8 @@ def format_item(depth, command, item):
             prefix = '│   '*depth + '└── '
         return prefix + item
 
-def create_completion_script():
-    with open(os.path.dirname(sys.argv[0]) +'/completion.tmpl', 'r') as file:
+def create_bash_completion_script():
+    with open(os.path.dirname(sys.argv[0]) +'/bash_completion.tmpl', 'r') as file:
         content = file.read()
 
     content = content.replace('%CMD%', INIT_CMD)
@@ -196,6 +196,12 @@ def create_completion_script():
         content = content +"        "+ command +")    cmds=\""+ ' '.join(subcommands) +"\";;\n"
     content = content +"        *)    cmds=\""+ ' '.join(top_level_commands) +'";;'
     content = content + parts[2]
+
+    print(content)
+
+def create_zsh_completion_script():
+    with open(os.path.dirname(sys.argv[0]) +'/zsh_completion.tmpl', 'r') as file:
+        content = file.read()
 
     print(content)
 
@@ -289,14 +295,16 @@ def main(argv):
 
     if OUTPUT_FORMAT == OUTPUT_FORMATS.table.name:
         print('|    '+ INIT_CMD +'    |'*(TABLE_COLS))
-    elif OUTPUT_FORMAT == OUTPUT_FORMATS.completion.name:
+    elif OUTPUT_FORMAT == OUTPUT_FORMATS.bash.name or OUTPUT_FORMAT == OUTPUT_FORMATS.zsh.name:
         pass
     else:
         print(INIT_CMD)
 
     parse_options_and_commands([INIT_CMD, HELP_OPT])
-    if OUTPUT_FORMAT == OUTPUT_FORMATS.completion.name:
-        create_completion_script()
+    if OUTPUT_FORMAT == OUTPUT_FORMATS.bash.name:
+        create_bash_completion_script()
+    elif OUTPUT_FORMAT == OUTPUT_FORMATS.zsh.name:
+        create_zsh_completion_script()
     del os.environ['MANPAGER']
 
 if __name__ == "__main__":

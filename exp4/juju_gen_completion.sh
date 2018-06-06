@@ -2,4 +2,4 @@
 # Generate a bash completion script for juju
 # @author Alister Lewis-Bowen <bowena@vmware.com>
 
-../exp1/juju_taxo.sh -o completion -O
+../exp1/juju_taxo.sh -o bash -O
