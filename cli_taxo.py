@@ -200,10 +200,10 @@ def create_bash_completion_script():
     print(content)
 
 def create_zsh_completion_script():
-    with open(os.path.dirname(sys.argv[0]) +'/zsh_completion.tmpl', 'r') as file:
-        content = file.read()
-
-    print(content)
+    print('Generate the bash completion to a file, then run the following to enable it...')
+    print("\tautoload bashcompinit")
+    print("\tbashcompinit")
+    print("\tsource /path/to/your/bash_completion_file")
 
 def main(argv):
     try:
