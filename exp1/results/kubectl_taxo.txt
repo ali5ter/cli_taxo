@@ -4,8 +4,10 @@ kubectl
 │   └── clusterrolebinding
 │   └── configmap
 │   └── deployment
+│   └── job
 │   └── namespace
 │   └── poddisruptionbudget
+│   └── priorityclass
 │   └── quota
 │   └── role
 │   └── rolebinding
@@ -22,9 +24,13 @@ kubectl
 └── expose
 └── run
 └── set
+│   └── env
 │   └── image
 │   └── resources
 │   └── selector
+│   └── serviceaccount
+│   └── subject
+└── run-container
 └── get
 └── explain
 └── edit
@@ -59,7 +65,9 @@ kubectl
 └── cp
 └── auth
 │   └── can-i
+│   └── reconcile
 └── apply
+│   └── edit-last-applied
 │   └── set-last-applied
 │   └── view-last-applied
 └── patch
@@ -75,6 +83,7 @@ kubectl
 │   └── delete-context
 │   └── get-clusters
 │   └── get-contexts
+│   └── rename-context
 │   └── set
 │   └── set-cluster
 │   └── set-context
@@ -83,4 +92,5 @@ kubectl
 │   └── use-context
 │   └── view
 └── help
+└── plugin
 └── version
