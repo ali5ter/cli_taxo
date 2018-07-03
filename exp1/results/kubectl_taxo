@@ -1,0 +1,96 @@
+kubectl
+└── create
+│   └── clusterrole
+│   └── clusterrolebinding
+│   └── configmap
+│   └── deployment
+│   └── job
+│   └── namespace
+│   └── poddisruptionbudget
+│   └── priorityclass
+│   └── quota
+│   └── role
+│   └── rolebinding
+│   └── secret
+│   │   └── docker-registry
+│   │   └── generic
+│   │   └── tls
+│   └── service
+│   │   └── clusterip
+│   │   └── externalname
+│   │   └── loadbalancer
+│   │   └── nodeport
+│   └── serviceaccount
+└── expose
+└── run
+└── set
+│   └── env
+│   └── image
+│   └── resources
+│   └── selector
+│   └── serviceaccount
+│   └── subject
+└── run-container
+└── get
+└── explain
+└── edit
+└── delete
+└── rollout
+│   └── history
+│   └── pause
+│   └── resume
+│   └── status
+│   └── undo
+└── rolling-update
+└── scale
+└── autoscale
+└── certificate
+│   └── approve
+│   └── deny
+└── cluster-info
+│   └── dump
+└── top
+│   └── node
+│   └── pod
+└── cordon
+└── uncordon
+└── drain
+└── taint
+└── describe
+└── logs
+└── attach
+└── exec
+└── port-forward
+└── proxy
+└── cp
+└── auth
+│   └── can-i
+│   └── reconcile
+└── apply
+│   └── edit-last-applied
+│   └── set-last-applied
+│   └── view-last-applied
+└── patch
+└── replace
+└── convert
+└── label
+└── annotate
+└── completion
+└── api-versions
+└── config
+│   └── current-context
+│   └── delete-cluster
+│   └── delete-context
+│   └── get-clusters
+│   └── get-contexts
+│   └── rename-context
+│   └── set
+│   └── set-cluster
+│   └── set-context
+│   └── set-credentials
+│   └── unset
+│   └── use-context
+│   └── view
+└── help
+└── plugin
+└── version
