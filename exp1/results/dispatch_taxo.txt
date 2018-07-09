@@ -1,0 +1,55 @@
+dispatch
+└── create
+│   └── api
+│   └── application
+│   └── base-image
+│   └── eventdriver
+│   └── function
+│   └── image
+│   └── secret
+│   └── seed-images
+│   └── subscription
+└── delete
+│   └── api
+│   └── application
+│   └── base-image
+│   └── eventdriver
+│   └── function
+│   └── image
+│   └── secret
+│   └── subscription
+└── emit
+└── exec
+└── get
+│   └── api
+│   └── application
+│   └── base-image
+│   └── eventdriver
+│   └── function
+│   └── image
+│   └── run
+│   └── secret
+│   └── serviceclass
+│   └── subscription
+└── help
+└── iam
+│   └── create
+│   │   └── organization
+│   │   └── policy
+│   └── delete
+│   │   └── organization
+│   │   └── policy
+│   └── get
+│   │   └── organization
+│   │   └── policy
+│   └── update
+└── install
+└── log
+└── login
+└── logout
+└── manage
+│   └── bootstrap
+│   └── context
+└── uninstall
+└── update
+└── version

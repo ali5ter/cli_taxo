@@ -1,0 +1,764 @@
+dispatch
+└── create
+│   └── api
+│   │   └── -a, --application string
+│   │   └── --auth string
+│   │   └── --cors
+│   │   └── --disable
+│   │   └── -d, --domain stringArray
+│   │   └── -h, --help
+│   │   └── --https-only
+│   │   └── -m, --method stringArray
+│   │   └── -p, --path stringArray
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── application
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── base-image
+│   │   └── -h, --help
+│   │   └── --language string
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── eventdriver
+│   │   └── -a, --application string
+│   │   └── -h, --help
+│   │   └── --name string
+│   │   └── --secret stringArray
+│   │   └── -s, --set stringArray
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── function
+│   │   └── -a, --application string
+│   │   └── --handler string
+│   │   └── -h, --help
+│   │   └── --image string
+│   │   └── --schema-in string
+│   │   └── --schema-out string
+│   │   └── --secret stringArray
+│   │   └── --service stringArray
+│   │   └── --timeout int
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── image
+│   │   └── -a, --application string
+│   │   └── -h, --help
+│   │   └── --runtime-deps string
+│   │   └── --system-deps string
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── secret
+│   │   └── -a, --application string
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── seed-images
+│   │   └── -h, --help
+│   │   └── -O, --output-file string
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── subscription
+│   │   └── -a, --application string
+│   │   └── --event-type string
+│   │   └── -h, --help
+│   │   └── --name string
+│   │   └── --secret stringArray
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── -a, --application string
+│   └── -f, --file string
+│   └── -h, --help
+│   └── -w, --work-dir string
+│   └── --config string
+│   └── --host string
+│   └── --insecure
+│   └── --json
+│   └── --jwt-private-key string
+│   └── --organization string
+│   └── --port int
+│   └── --scheme string
+│   └── --service-account string
+│   └── --token string
+└── delete
+│   └── api
+│   │   └── -a, --application string
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── application
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── base-image
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── eventdriver
+│   │   └── -a, --application string
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── function
+│   │   └── -a, --application string
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── image
+│   │   └── -a, --application string
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── secret
+│   │   └── -a, --application string
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── subscription
+│   │   └── -a, --application string
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── -f, --file string
+│   └── -h, --help
+│   └── -w, --work-dir string
+│   └── --config string
+│   └── --host string
+│   └── --insecure
+│   └── --json
+│   └── --jwt-private-key string
+│   └── --organization string
+│   └── --port int
+│   └── --scheme string
+│   └── --service-account string
+│   └── --token string
+└── emit
+│   └── --binary
+│   └── --content-type string
+│   └── --data string
+│   └── --data-from-file string
+│   └── --event-id string
+│   └── --event-schema-url string
+│   └── --event-type-version string
+│   └── -h, --help
+│   └── --source-id string
+│   └── --config string
+│   └── --host string
+│   └── --insecure
+│   └── --json
+│   └── --jwt-private-key string
+│   └── --organization string
+│   └── --port int
+│   └── --scheme string
+│   └── --service-account string
+│   └── --token string
+└── exec
+│   └── --all
+│   └── -a, --application string
+│   └── -h, --help
+│   └── --input string
+│   └── --secret stringArray
+│   └── --wait
+│   └── --config string
+│   └── --host string
+│   └── --insecure
+│   └── --json
+│   └── --jwt-private-key string
+│   └── --organization string
+│   └── --port int
+│   └── --scheme string
+│   └── --service-account string
+│   └── --token string
+└── get
+│   └── api
+│   │   └── -a, --application string
+│   │   └── -f, --func string
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── application
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── base-image
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── eventdriver
+│   │   └── -a, --application string
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── function
+│   │   └── -a, --application string
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── image
+│   │   └── -a, --application string
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── run
+│   │   └── -a, --application string
+│   │   └── -f, --follow
+│   │   └── -h, --help
+│   │   └── --last
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── secret
+│   │   └── --all
+│   │   └── -a, --application string
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── serviceclass
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── subscription
+│   │   └── -a, --application string
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── -h, --help
+│   └── --config string
+│   └── --host string
+│   └── --insecure
+│   └── --json
+│   └── --jwt-private-key string
+│   └── --organization string
+│   └── --port int
+│   └── --scheme string
+│   └── --service-account string
+│   └── --token string
+└── help
+│   └── -h, --help
+│   └── --config string
+│   └── --host string
+│   └── --insecure
+│   └── --json
+│   └── --jwt-private-key string
+│   └── --organization string
+│   └── --port int
+│   └── --scheme string
+│   └── --service-account string
+│   └── --token string
+└── iam
+│   └── create
+│   │   └── organization
+│   │   │   └── -h, --help
+│   │   │   └── --config string
+│   │   │   └── --host string
+│   │   │   └── --insecure
+│   │   │   └── --json
+│   │   │   └── --jwt-private-key string
+│   │   │   └── --organization string
+│   │   │   └── --port int
+│   │   │   └── --scheme string
+│   │   │   └── --service-account string
+│   │   │   └── --token string
+│   │   └── policy
+│   │   │   └── -a, --action stringSlice
+│   │   │   └── --global
+│   │   │   └── -h, --help
+│   │   │   └── -r, --resource stringSlice
+│   │   │   └── -s, --subject stringSlice
+│   │   │   └── --config string
+│   │   │   └── --host string
+│   │   │   └── --insecure
+│   │   │   └── --json
+│   │   │   └── --jwt-private-key string
+│   │   │   └── --organization string
+│   │   │   └── --port int
+│   │   │   └── --scheme string
+│   │   │   └── --service-account string
+│   │   │   └── --token string
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── delete
+│   │   └── organization
+│   │   │   └── -h, --help
+│   │   │   └── --config string
+│   │   │   └── --host string
+│   │   │   └── --insecure
+│   │   │   └── --json
+│   │   │   └── --jwt-private-key string
+│   │   │   └── --organization string
+│   │   │   └── --port int
+│   │   │   └── --scheme string
+│   │   │   └── --service-account string
+│   │   │   └── --token string
+│   │   └── policy
+│   │   │   └── -h, --help
+│   │   │   └── --config string
+│   │   │   └── --host string
+│   │   │   └── --insecure
+│   │   │   └── --json
+│   │   │   └── --jwt-private-key string
+│   │   │   └── --organization string
+│   │   │   └── --port int
+│   │   │   └── --scheme string
+│   │   │   └── --service-account string
+│   │   │   └── --token string
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── get
+│   │   └── organization
+│   │   │   └── -h, --help
+│   │   │   └── --config string
+│   │   │   └── --host string
+│   │   │   └── --insecure
+│   │   │   └── --json
+│   │   │   └── --jwt-private-key string
+│   │   │   └── --organization string
+│   │   │   └── --port int
+│   │   │   └── --scheme string
+│   │   │   └── --service-account string
+│   │   │   └── --token string
+│   │   └── policy
+│   │   │   └── -h, --help
+│   │   │   └── -w, --wide
+│   │   │   └── --config string
+│   │   │   └── --host string
+│   │   │   └── --insecure
+│   │   │   └── --json
+│   │   │   └── --jwt-private-key string
+│   │   │   └── --organization string
+│   │   │   └── --port int
+│   │   │   └── --scheme string
+│   │   │   └── --service-account string
+│   │   │   └── --token string
+│   │   └── -h, --help
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── update
+│   │   └── -f, --file string
+│   │   └── -h, --help
+│   │   └── -w, --work-dir string
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── -h, --help
+│   └── --config string
+│   └── --host string
+│   └── --insecure
+│   └── --json
+│   └── --jwt-private-key string
+│   └── --organization string
+│   └── --port int
+│   └── --scheme string
+│   └── --service-account string
+│   └── --token string
+└── install
+│   └── --charts-dir string
+│   └── --charts-repo string
+│   └── --debug
+│   └── -d, --destination string
+│   └── --dry-run
+│   └── -f, --file string
+│   └── -h, --help
+│   └── --ignore-helm-check
+│   └── -s, --service stringArray
+│   └── --single-namespace string
+│   └── --tiller-namespace string
+│   └── -t, --timeout int
+│   └── --config string
+│   └── --host string
+│   └── --insecure
+│   └── --json
+│   └── --jwt-private-key string
+│   └── --organization string
+│   └── --port int
+│   └── --scheme string
+│   └── --service-account string
+│   └── --token string
+└── log
+│   └── -f, --follow
+│   └── -h, --help
+│   └── -n, --namespace string
+│   └── -t, --tail int
+│   └── --config string
+│   └── --host string
+│   └── --insecure
+│   └── --json
+│   └── --jwt-private-key string
+│   └── --organization string
+│   └── --port int
+│   └── --scheme string
+│   └── --service-account string
+│   └── --token string
+└── login
+│   └── --debug
+│   └── -h, --help
+│   └── --config string
+│   └── --host string
+│   └── --insecure
+│   └── --json
+│   └── --jwt-private-key string
+│   └── --organization string
+│   └── --port int
+│   └── --scheme string
+│   └── --service-account string
+│   └── --token string
+└── logout
+│   └── -h, --help
+│   └── --config string
+│   └── --host string
+│   └── --insecure
+│   └── --json
+│   └── --jwt-private-key string
+│   └── --organization string
+│   └── --port int
+│   └── --scheme string
+│   └── --service-account string
+│   └── --token string
+└── manage
+│   └── bootstrap
+│   │   └── --bootstrap-org string
+│   │   └── --bootstrap-svc-account string
+│   │   └── --bootstrap-user string
+│   │   └── -d, --disable
+│   │   └── -h, --help
+│   │   └── --kubeconfig string
+│   │   └── --timeout duration
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── context
+│   │   └── -h, --help
+│   │   └── -s, --set string
+│   │   └── --config string
+│   │   └── --host string
+│   │   └── --insecure
+│   │   └── --json
+│   │   └── --jwt-private-key string
+│   │   └── --organization string
+│   │   └── --port int
+│   │   └── --scheme string
+│   │   └── --service-account string
+│   │   └── --token string
+│   └── -h, --help
+│   └── --config string
+│   └── --host string
+│   └── --insecure
+│   └── --json
+│   └── --jwt-private-key string
+│   └── --organization string
+│   └── --port int
+│   └── --scheme string
+│   └── --service-account string
+│   └── --token string
+└── uninstall
+│   └── --debug
+│   └── --dry-run
+│   └── -f, --file string
+│   └── -h, --help
+│   └── --keep-namespaces
+│   └── --remove-cert-files
+│   └── -s, --service stringArray
+│   └── --single-namespace string
+│   └── --tiller-namespace string
+│   └── --config string
+│   └── --host string
+│   └── --insecure
+│   └── --json
+│   └── --jwt-private-key string
+│   └── --organization string
+│   └── --port int
+│   └── --scheme string
+│   └── --service-account string
+│   └── --token string
+└── update
+│   └── -f, --file string
+│   └── -h, --help
+│   └── -w, --work-dir string
+│   └── --config string
+│   └── --host string
+│   └── --insecure
+│   └── --json
+│   └── --jwt-private-key string
+│   └── --organization string
+│   └── --port int
+│   └── --scheme string
+│   └── --service-account string
+│   └── --token string
+└── version
+│   └── -h, --help
+│   └── --config string
+│   └── --host string
+│   └── --insecure
+│   └── --json
+│   └── --jwt-private-key string
+│   └── --organization string
+│   └── --port int
+│   └── --scheme string
+│   └── --service-account string
+│   └── --token string
+└── --config string
+└── -h, --help
+└── --host string
+└── --insecure
+└── --json
+└── --jwt-private-key string
+└── --organization string
+└── --port int
+└── --scheme string
+└── --service-account string
+└── --token string
