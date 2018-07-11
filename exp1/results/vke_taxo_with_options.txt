@@ -1,0 +1,231 @@
+vke
+└── account
+│   └── show
+│   └── login
+│   │   └── --organization
+│   │   └── --refresh-token
+│   └── --help
+└── organization
+│   └── show
+│   └── iam
+│   │   └── show
+│   │   └── export
+│   │   │   └── --output
+│   │   └── import
+│   │   │   └── --input
+│   │   └── add
+│   │   │   └── --subject
+│   │   │   └── --role
+│   │   └── remove
+│   │   │   └── --subject
+│   │   │   └── --role
+│   │   └── --help
+│   └── --help
+└── info
+│   └── region
+│   │   └── list
+│   │   └── --help
+│   └── --help
+└── iam
+│   └── role
+│   │   └── list
+│   │   └── --help
+│   └── user
+│   │   └── show
+│   │   └── list
+│   │   └── --help
+│   └── group
+│   │   └── create
+│   │   │   └── --description
+│   │   └── delete
+│   │   └── show
+│   │   └── list
+│   │   └── member
+│   │   │   └── add
+│   │   │   └── remove
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── --help
+│   └── --help
+└── folder
+│   └── create
+│   │   └── --display-name
+│   └── delete
+│   └── show
+│   └── get
+│   └── set
+│   └── unset
+│   └── list
+│   └── iam
+│   │   └── show
+│   │   └── export
+│   │   │   └── --output
+│   │   └── import
+│   │   │   └── --input
+│   │   └── add
+│   │   │   └── --subject
+│   │   │   └── --role
+│   │   └── remove
+│   │   │   └── --subject
+│   │   │   └── --role
+│   │   └── --help
+│   └── --help
+└── project
+│   └── create
+│   │   └── --display-name
+│   │   └── --folder
+│   └── delete
+│   │   └── --folder
+│   └── show
+│   │   └── --folder
+│   └── get
+│   └── set
+│   │   └── --folder
+│   └── unset
+│   └── list
+│   │   └── --folder
+│   └── iam
+│   │   └── show
+│   │   │   └── --folder
+│   │   └── export
+│   │   │   └── --output
+│   │   │   └── --folder
+│   │   └── import
+│   │   │   └── --input
+│   │   │   └── --folder
+│   │   └── add
+│   │   │   └── --subject
+│   │   │   └── --role
+│   │   │   └── --folder
+│   │   └── remove
+│   │   │   └── --subject
+│   │   │   └── --role
+│   │   │   └── --folder
+│   │   └── --help
+│   └── --help
+└── cluster
+│   └── templates
+│   │   └── list
+│   │   └── --help
+│   └── versions
+│   │   └── list
+│   │   │   └── --region
+│   │   └── --help
+│   └── create
+│   │   └── --name
+│   │   └── --service-level
+│   │   └── --display-name
+│   │   └── --cluster-network
+│   │   └── --container-network
+│   │   └── --service-network
+│   │   └── --region
+│   │   └── --version
+│   │   └── --template
+│   │   └── --folder
+│   │   └── --project
+│   └── show
+│   │   └── --perf
+│   │   └── --folder
+│   │   └── --project
+│   └── show-health
+│   │   └── --folder
+│   │   └── --project
+│   └── list
+│   │   └── --folder
+│   │   └── --project
+│   └── rename
+│   │   └── --folder
+│   │   └── --project
+│   └── delete
+│   │   └── --folder
+│   │   └── --project
+│   └── upgrade
+│   │   └── --version
+│   │   └── --folder
+│   │   └── --project
+│   └── maintain
+│   │   └── --folder
+│   │   └── --project
+│   └── get-kubectl-auth
+│   │   └── --configfile
+│   │   └── --folder
+│   │   └── --project
+│   └── merge-kubectl-auth
+│   │   └── --folder
+│   │   └── --project
+│   └── iam
+│   │   └── show
+│   │   │   └── --folder
+│   │   │   └── --project
+│   │   └── export
+│   │   │   └── --output
+│   │   │   └── --folder
+│   │   │   └── --project
+│   │   └── import
+│   │   │   └── --input
+│   │   │   └── --folder
+│   │   │   └── --project
+│   │   └── add
+│   │   │   └── --subject
+│   │   │   └── --role
+│   │   │   └── --folder
+│   │   │   └── --project
+│   │   └── remove
+│   │   │   └── --subject
+│   │   │   └── --role
+│   │   │   └── --folder
+│   │   │   └── --project
+│   │   └── --help
+│   └── namespace
+│   │   └── create
+│   │   │   └── --folder
+│   │   │   └── --project
+│   │   └── delete
+│   │   │   └── --folder
+│   │   │   └── --project
+│   │   └── show
+│   │   │   └── --folder
+│   │   │   └── --project
+│   │   └── list
+│   │   │   └── --folder
+│   │   │   └── --project
+│   │   └── iam
+│   │   │   └── show
+│   │   │   └── export
+│   │   │   └── import
+│   │   │   └── add
+│   │   │   └── remove
+│   │   │   └── --help
+│   │   └── --help
+│   └── peering
+│   │   └── create
+│   │   │   └── --cluster-name
+│   │   │   └── --name
+│   │   │   └── --customer-account-id
+│   │   │   └── --customer-network-id
+│   │   │   └── --customer-network-cidr
+│   │   │   └── --customer-network-region
+│   │   │   └── --folder
+│   │   │   └── --project
+│   │   └── delete
+│   │   │   └── --folder
+│   │   │   └── --project
+│   │   └── rename
+│   │   │   └── --folder
+│   │   │   └── --project
+│   │   └── show
+│   │   │   └── --folder
+│   │   │   └── --project
+│   │   └── list
+│   │   │   └── --folder
+│   │   │   └── --project
+│   │   └── --help
+│   └── --help
+└── documentation
+└── help
+└── --non-interactive
+└── --log-file
+└── --output
+└── --detail
+└── --help
+└── --version
