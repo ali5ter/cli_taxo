@@ -16,6 +16,8 @@ from collections import defaultdict
 
 INIT_CMD = ''
 HELP_OPT = '-h'
+HELP_OPT_POSITIONS = Enum('HELP_OPT_POSITIONS', 'before after')
+HELP_OPT_POSITION = HELP_OPT_POSITIONS.after.name
 OPTIONS_TOKEN_RE = '^Options:'
 OPTIONS_RE = '^\s+?(-.+?)\s\s'
 COMMANDS_TOKEN_RE = '^(Commands:)|^(Management Commands:)'
@@ -41,6 +43,7 @@ def usage():
         "command taxonomy")
     print("\nUsage:")
     print("  cli_taxo <command_name> [--help-opt <string>] "
+        "[--help-opt-position before|after] "
         "[--commands-filter <reg_ex>] "
         "[--commands-token <reg_ex>] "
         "[--options-filters <reg_ex>] "
@@ -50,11 +53,14 @@ def usage():
         "[-O | --show-opts] "
         "[--depth <number>} "
         "[-D]")
-    print("  docker_taxo -h | --help")
+    print("  cli_taxo -h | --help")
     print("\nOptions:")
     print("  -h, --help         Show this usage description")
     print("  --help-opt         The command option string used to show the "
         "usage description text. Defaults to: ", HELP_OPT)
+    print("  --help-opt-position Placement of the command option string used to show the "
+        "usage description text. Typically the help command option is used after a "
+        "subcommand but sometime, a CLI requires it before. Defaults to: ", HELP_OPT_POSITION)
     print("  --commands-filter  The regular expression to extract the command "
         "from the description text. Defaults to: ", COMMANDS_RE)
     print("  --commands-token   The regular expression to find the line after "
@@ -160,7 +166,10 @@ def parse_options_and_commands(command, depth=-1):
                     if content is not None:
                         print(content)
                     _command = command[:-1]
-                    _command.extend([match, HELP_OPT])
+                    if HELP_OPT_POSITION == HELP_OPT_POSITIONS.after.name:
+                        _command.extend([match, HELP_OPT])
+                    elif HELP_OPT_POSITION == HELP_OPT_POSITIONS.before.name:
+                        _command.extend([HELP_OPT, match])
                     parse_options_and_commands(_command, depth)
 
     depth -= 1
@@ -209,6 +218,7 @@ def main(argv):
     try:
         opts, non_opts = getopt.gnu_getopt(argv, "ho:d:OD", [
             'help-opt=',
+            'help-opt-position=',
             'commands-filter=',
             'commands-token=',
             'options-filter=',
@@ -234,6 +244,14 @@ def main(argv):
         if opt == '--help-opt':
             global HELP_OPT
             HELP_OPT = arg
+        if opt == '--help-opt-position':
+            global HELP_OPT_POSITION
+            if arg in HELP_OPT_POSITIONS.__members__:
+                HELP_OPT_POSITION = arg
+            else:
+                print("\033[31;1mError: \033[0mPlease use the correct help option position\n")
+                usage()
+                sys.exit()
         elif opt == '--commands-filter':
             global COMMANDS_RE
             COMMANDS_RE = arg
@@ -273,6 +291,7 @@ def main(argv):
     if _DEBUG:
         eprint('INT_CMD:', INIT_CMD)
         eprint('HELP_OPT:', HELP_OPT)
+        eprint('HELP_OPT_POSITION:', HELP_OPT_POSITION)
         eprint('OPTIONS_TOKEN_RE:', OPTIONS_TOKEN_RE)
         eprint('OPTIONS_RE:', OPTIONS_RE)
         eprint('COMMANDS_TOKEN_RE:', COMMANDS_TOKEN_RE)
