@@ -1,0 +1,62 @@
+harbor
+└── change-password
+└── get-cert
+└── get-conf
+└── info
+└── job-list
+└── job-log
+└── list
+│   └── --project-id
+│   └── --sortby
+└── list-tags
+└── logs
+│   └── --sortby
+└── member-list
+│   └── --project-id
+└── policy-list
+└── project-create
+│   └── --is-public
+└── project-delete
+└── project-list
+│   └── --sortby
+└── project-show
+└── revoke-admin
+└── search
+└── set-admin
+└── show
+│   └── --project-id
+└── target-list
+└── target-ping
+└── top
+│   └── --count
+└── usage
+└── user-create
+│   └── --username
+│   └── --password
+│   └── --email
+│   └── --realname
+│   └── --comment
+└── user-delete
+└── user-list
+│   └── --sortby
+└── user-show
+└── user-update
+│   └── --email
+│   └── --realname
+│   └── --comment
+└── version
+└── whoami
+│   └── --detail
+└── bash-completion
+└── help
+└── --debug
+└── --timings
+└── --version
+└── --os-username
+└── --os-password
+└── --os-project
+└── --timeout
+└── --os-baseurl
+└── --insecure
+└── --os-cacert
+└── --os-api-version
