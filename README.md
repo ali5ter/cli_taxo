@@ -3,15 +3,17 @@ Experiments in displaying CLI command taxonomy as an aid to evaluate the develop
 
 The [cli_taxo.py](cli_taxo.py) script parses the help documentation for a CLI command in an attempt to understand:
 * The consistency of the documentation
-* The layout of subcommands and options
+* The layout (deep or shallow) of subcommands and options
+* The type of taxonomy, i.e. action based, object/resource based, mix of both
 * The consistency of the language used
 
 Assuming a successful taxonomy can successfully be established, it is output in different ways:
 * A simple ASCII tree diagram
 * Comma seperated values for integration with other tools
 * A very simple, headerless, markdown table
+* A Bash autocompletion script
 
-**This script can also generate a Bash autocomplete script. While this tab completion script is rudimentary, it can still significantly aid developer experience of a CLI where one doesn't already exist.**
+**Note: While this script can generate a Bash autocomplete script, it is rudimentary. However it can still significantly aid the developer experience of a CLI where tab completion doesn't already exist.**
 
 ## Usage
 Regular expressions are configurable by the user to parse the CLI help documentation and default to expressions that parse the `docker` help - at least the last time it was run. However, to display the taxonomy or `kubectl`, you can run
@@ -74,6 +76,6 @@ Not so much experiments, rather different ways the [cli_taxo.py](cli_taxo.py) sc
 
 [exp2](exp2) ... Scripts to generate CSV output that integrates with a tool to generate a MindMap format file. This can be viewed with tools like [FreeMind](http://freemind.sourceforge.net/wiki/index.php/Main_Page)
 
-[exp3](exp3) ... Scripts to take CSV formats from [exp2](exp2) and generate [d3 radial trees](https://bl.ocks.org/mbostock/4063550)
+[exp3](exp3) ... Scripts to take CSV formats from [exp2](exp2) and generate [radial trees](https://bl.ocks.org/mbostock/4063550) or [dendograms](https://bl.ocks.org/mbostock/4063570). Useful to quickly figure out structural aspsects of the taxo such as density or depth.
 
-[exp4](exp4) ... Scripts to generate bash auto/tab completion scripts using the wrapper scripts in [exp1](exp1)
+[exp4](exp4) ... Scripts to generate bash autocompletion scripts using the wrapper scripts in [exp1](exp1)
