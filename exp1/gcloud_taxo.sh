@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Parse cello CLI help and pretty print command taxonomy
+# Parse gcloud CLI help and pretty print command taxonomy
 # @author Alister Lewis-Bowen <bowena@vmware.com>
 
 ../cli_taxo.py gcloud \

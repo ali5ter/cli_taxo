@@ -116,11 +116,13 @@ vke
 │   │   └── --service-level
 │   │   └── --display-name
 │   │   └── --cluster-network
-│   │   └── --container-network
+│   │   └── --pod-network
 │   │   └── --service-network
 │   │   └── --region
 │   │   └── --version
 │   │   └── --template
+│   │   └── --privilegedMode
+│   │   └── --force
 │   │   └── --folder
 │   │   └── --project
 │   └── show
@@ -151,6 +153,7 @@ vke
 │   │   └── --folder
 │   │   └── --project
 │   └── merge-kubectl-auth
+│   │   └── --embed-ca
 │   │   └── --folder
 │   │   └── --project
 │   └── iam
