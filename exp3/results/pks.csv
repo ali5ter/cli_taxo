@@ -1,0 +1,12 @@
+id,value
+pks,
+pks.cluster,
+pks.clusters,
+pks.create-cluster,
+pks.delete-cluster,
+pks.get-credentials,
+pks.help,
+pks.login,
+pks.logout,
+pks.plans,
+pks.resize,
