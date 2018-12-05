@@ -7,10 +7,10 @@ The [cli_taxo.py](cli_taxo.py) script parses the help documentation for a CLI co
 * The type of taxonomy, i.e. action based, object/resource based, mix of both
 * The consistency of the language used
 
-Assuming a successful taxonomy can successfully be established, it is output in different ways:
+Assuming a taxonomy can be successfully established, it is output in different ways:
 * A simple ASCII tree diagram
-* Comma seperated values for integration with other tools
-* A very simple, headerless, markdown table
+* Comma seperated values for integration with other tools (like d3js)
+* A very simple, headerless, markdown table (useful for use in wiki's or MD docs)
 * A Bash autocompletion script
 
 **Note: While this script can generate a Bash autocomplete script, it is rudimentary. However it can still significantly aid the developer experience of a CLI where tab completion doesn't already exist.**
@@ -79,3 +79,7 @@ Not so much experiments, rather different ways the [cli_taxo.py](cli_taxo.py) sc
 [exp3](exp3) ... Scripts to take CSV formats from [exp2](exp2) and generate [radial trees](https://bl.ocks.org/mbostock/4063550) or [dendograms](https://bl.ocks.org/mbostock/4063570). Useful to quickly figure out structural aspsects of the taxo such as density or depth.
 
 [exp4](exp4) ... Scripts to generate bash autocompletion scripts using the wrapper scripts in [exp1](exp1)
+
+## Other repos that use cli_taxo
+* [Install Cloud PKS CLI using homebrew](https://github.com/ali5ter/homebrew-vke-cli) - used by CircleCi build script
+* [Cloud PKS CLI bash or zsh completion](https://github.com/ali5ter/vke-completion)
