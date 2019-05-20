@@ -1,0 +1,296 @@
+velero
+└── backup
+│   └── create
+│   │   └── --help
+│   │   └── --show-labels
+│   │   └── --wait
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── delete
+│   │   └── --all
+│   │   └── --confirm
+│   │   └── --help
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── describe
+│   │   └── --details
+│   │   └── --help
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── download
+│   │   └── --force
+│   │   └── --help
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── get
+│   │   └── --help
+│   │   └── --show-labels
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── logs
+│   │   └── --help
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── --help
+│   └── --alsologtostderr
+│   └── --logtostderr
+└── backup-location
+│   └── create
+│   │   └── --help
+│   │   └── --show-labels
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── get
+│   │   └── --help
+│   │   └── --show-labels
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── --help
+│   └── --alsologtostderr
+│   └── --logtostderr
+└── bug
+│   └── --help
+│   └── --alsologtostderr
+│   └── --logtostderr
+└── client
+│   └── config
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --alsologtostderr
+│   │   │   └── --logtostderr
+│   │   └── set
+│   │   │   └── --help
+│   │   │   └── --alsologtostderr
+│   │   │   └── --logtostderr
+│   │   └── --help
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── --help
+│   └── --alsologtostderr
+│   └── --logtostderr
+└── completion
+│   └── --help
+│   └── --alsologtostderr
+│   └── --logtostderr
+└── create
+│   └── backup
+│   │   └── --help
+│   │   └── --show-labels
+│   │   └── --wait
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── backup-location
+│   │   └── --help
+│   │   └── --show-labels
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── restore
+│   │   └── --help
+│   │   └── --show-labels
+│   │   └── --wait
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── schedule
+│   │   └── --help
+│   │   └── --show-labels
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── --help
+│   └── --alsologtostderr
+│   └── --logtostderr
+└── delete
+│   └── backup
+│   │   └── --all
+│   │   └── --confirm
+│   │   └── --help
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── restore
+│   │   └── --all
+│   │   └── --confirm
+│   │   └── --help
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── schedule
+│   │   └── --all
+│   │   └── --confirm
+│   │   └── --help
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── --help
+│   └── --alsologtostderr
+│   └── --logtostderr
+└── describe
+│   └── backups
+│   │   └── --details
+│   │   └── --help
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── restores
+│   │   └── --details
+│   │   └── --help
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── schedules
+│   │   └── --help
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── --help
+│   └── --alsologtostderr
+│   └── --logtostderr
+└── get
+│   └── backup-locations
+│   │   └── --help
+│   │   └── --show-labels
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── backups
+│   │   └── --help
+│   │   └── --show-labels
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── restores
+│   │   └── --help
+│   │   └── --show-labels
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── schedules
+│   │   └── --help
+│   │   └── --show-labels
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── snapshot-locations
+│   │   └── --help
+│   │   └── --show-labels
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── --help
+│   └── --alsologtostderr
+│   └── --logtostderr
+└── help
+│   └── --help
+│   └── --alsologtostderr
+│   └── --logtostderr
+└── install
+│   └── --dry-run
+│   └── --help
+│   └── --restore-only
+│   └── --show-labels
+│   └── --use-restic
+│   └── --use-volume-snapshots
+│   └── --wait
+│   └── --alsologtostderr
+│   └── --logtostderr
+└── plugin
+│   └── add
+│   │   └── --help
+│   │   └── --image-pull-policy
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── remove
+│   │   └── --help
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── --help
+│   └── --alsologtostderr
+│   └── --logtostderr
+└── restic
+│   └── repo
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --show-labels
+│   │   │   └── --alsologtostderr
+│   │   │   └── --logtostderr
+│   │   └── --help
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── server
+│   │   └── --help
+│   │   └── --log-level
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── --help
+│   └── --alsologtostderr
+│   └── --logtostderr
+└── restore
+│   └── create
+│   │   └── --help
+│   │   └── --show-labels
+│   │   └── --wait
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── delete
+│   │   └── --all
+│   │   └── --confirm
+│   │   └── --help
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── describe
+│   │   └── --details
+│   │   └── --help
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── get
+│   │   └── --help
+│   │   └── --show-labels
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── logs
+│   │   └── --help
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── --help
+│   └── --alsologtostderr
+│   └── --logtostderr
+└── schedule
+│   └── create
+│   │   └── --help
+│   │   └── --show-labels
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── delete
+│   │   └── --all
+│   │   └── --confirm
+│   │   └── --help
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── describe
+│   │   └── --help
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── get
+│   │   └── --help
+│   │   └── --show-labels
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── --help
+│   └── --alsologtostderr
+│   └── --logtostderr
+└── server
+│   └── --help
+│   └── --log-level
+│   └── --restore-only
+│   └── --alsologtostderr
+│   └── --logtostderr
+└── snapshot-location
+│   └── create
+│   │   └── --help
+│   │   └── --show-labels
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── get
+│   │   └── --help
+│   │   └── --show-labels
+│   │   └── --alsologtostderr
+│   │   └── --logtostderr
+│   └── --help
+│   └── --alsologtostderr
+│   └── --logtostderr
+└── version
+│   └── --client-only
+│   └── --help
+│   └── --alsologtostderr
+│   └── --logtostderr
+└── --alsologtostderr
+└── --help
+└── --logtostderr

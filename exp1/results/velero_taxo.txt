@@ -1,0 +1,61 @@
+velero
+└── backup
+│   └── create
+│   └── delete
+│   └── describe
+│   └── download
+│   └── get
+│   └── logs
+└── backup-location
+│   └── create
+│   └── get
+└── bug
+└── client
+│   └── config
+│   │   └── get
+│   │   └── set
+└── completion
+└── create
+│   └── backup
+│   └── backup-location
+│   └── restore
+│   └── schedule
+└── delete
+│   └── backup
+│   └── restore
+│   └── schedule
+└── describe
+│   └── backups
+│   └── restores
+│   └── schedules
+└── get
+│   └── backup-locations
+│   └── backups
+│   └── restores
+│   └── schedules
+│   └── snapshot-locations
+└── help
+└── install
+└── plugin
+│   └── add
+│   └── remove
+└── restic
+│   └── repo
+│   │   └── get
+│   └── server
+└── restore
+│   └── create
+│   └── delete
+│   └── describe
+│   └── get
+│   └── logs
+└── schedule
+│   └── create
+│   └── delete
+│   └── describe
+│   └── get
+└── server
+└── snapshot-location
+│   └── create
+│   └── get
+└── version
