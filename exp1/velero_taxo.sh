@@ -5,6 +5,6 @@
 ../cli_taxo.py velero \
     --commands-token '^Available Commands:$' \
     --commands-filter '^\s\s(?!-)(\S[^,\s]+)' \
-    --options-token '^Flags:$' \
-    --options-filter '^\s\s(-\S[^,\s]+)|\s(-\S[^,\s]+)\s\s' \
+    --options-token 'Flags:$' \
+    --options-filter '(--\S+)\s' \
     "$@"
