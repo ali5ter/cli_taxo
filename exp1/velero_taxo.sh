@@ -6,5 +6,5 @@
     --commands-token '^Available Commands:$' \
     --commands-filter '^\s\s(?!-)(\S[^,\s]+)' \
     --options-token 'Flags:$' \
-    --options-filter '(--\S+)\s' \
+    --options-filter '(--\S+)[^"]\s' \
     "$@"

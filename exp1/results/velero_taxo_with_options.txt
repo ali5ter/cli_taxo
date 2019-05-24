@@ -1,970 +1,894 @@
 velero
 └── backup
 │   └── create
-│   │   └── --exclude-namespaces
-│   │   └── --exclude-resources
+│   │   └── --exclude-namespace
+│   │   └── --exclude-resource
 │   │   └── --help
-│   │   └── --include-cluster-resources
-│   │   └── --include-namespaces
-│   │   └── --include-resources
-│   │   └── --label-columns
-│   │   └── --labels
-│   │   └── --output
-│   │   └── --selector
+│   │   └── --include-cluster-resource
+│   │   └── --include-namespace
+│   │   └── --include-resource
+│   │   └── --label-column
+│   │   └── --label
+│   │   └── --outpu
+│   │   └── --selecto
 │   │   └── --show-labels
-│   │   └── --snapshot-volumes
-│   │   └── --storage-location
-│   │   └── --ttl
-│   │   └── --volume-snapshot-locations
+│   │   └── --snapshot-volume
+│   │   └── --storage-locatio
+│   │   └── --tt
+│   │   └── --volume-snapshot-location
 │   │   └── --wait
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── delete
 │   │   └── --all
 │   │   └── --confirm
 │   │   └── --help
-│   │   └── --selector
+│   │   └── --selecto
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── describe
 │   │   └── --details
 │   │   └── --help
-│   │   └── --selector
+│   │   └── --selecto
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── download
 │   │   └── --force
 │   │   └── --help
-│   │   └── --output
-│   │   └── --timeout
+│   │   └── --outpu
+│   │   └── --timeou
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── get
 │   │   └── --help
-│   │   └── --label-columns
-│   │   └── --output
-│   │   └── --selector
+│   │   └── --label-column
+│   │   └── --outpu
+│   │   └── --selecto
 │   │   └── --show-labels
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── logs
 │   │   └── --help
-│   │   └── --timeout
+│   │   └── --timeou
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── --help
 │   └── --alsologtostderr
-│   └── --kubeconfig
-│   └── --kubecontext
-│   └── --log_backtrace_at
-│   └── --log_dir
+│   └── --kubeconfi
+│   └── --kubecontex
+│   └── --log_backtrace_a
+│   └── --log_di
 │   └── --logtostderr
-│   └── --namespace
-│   └── --stderrthreshold
-│   └── --v
-│   └── --vmodule
-│   └── --help"
+│   └── --namespac
+│   └── --stderrthreshol
+│   └── --vmodul
 └── backup-location
 │   └── create
-│   │   └── --bucket
-│   │   └── --config
+│   │   └── --bucke
+│   │   └── --confi
 │   │   └── --help
-│   │   └── --label-columns
-│   │   └── --labels
-│   │   └── --output
-│   │   └── --prefix
-│   │   └── --provider
+│   │   └── --label-column
+│   │   └── --label
+│   │   └── --outpu
+│   │   └── --prefi
+│   │   └── --provide
 │   │   └── --show-labels
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── get
 │   │   └── --help
-│   │   └── --label-columns
-│   │   └── --output
-│   │   └── --selector
+│   │   └── --label-column
+│   │   └── --outpu
+│   │   └── --selecto
 │   │   └── --show-labels
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── --help
 │   └── --alsologtostderr
-│   └── --kubeconfig
-│   └── --kubecontext
-│   └── --log_backtrace_at
-│   └── --log_dir
+│   └── --kubeconfi
+│   └── --kubecontex
+│   └── --log_backtrace_a
+│   └── --log_di
 │   └── --logtostderr
-│   └── --namespace
-│   └── --stderrthreshold
-│   └── --v
-│   └── --vmodule
-│   └── --help"
+│   └── --namespac
+│   └── --stderrthreshol
+│   └── --vmodul
 └── bug
 │   └── --help
 │   └── --alsologtostderr
-│   └── --kubeconfig
-│   └── --kubecontext
-│   └── --log_backtrace_at
-│   └── --log_dir
+│   └── --kubeconfi
+│   └── --kubecontex
+│   └── --log_backtrace_a
+│   └── --log_di
 │   └── --logtostderr
-│   └── --namespace
-│   └── --stderrthreshold
-│   └── --v
-│   └── --vmodule
+│   └── --namespac
+│   └── --stderrthreshol
+│   └── --vmodul
 └── client
 │   └── config
 │   │   └── get
 │   │   │   └── --help
 │   │   │   └── --alsologtostderr
-│   │   │   └── --kubeconfig
-│   │   │   └── --kubecontext
-│   │   │   └── --log_backtrace_at
-│   │   │   └── --log_dir
+│   │   │   └── --kubeconfi
+│   │   │   └── --kubecontex
+│   │   │   └── --log_backtrace_a
+│   │   │   └── --log_di
 │   │   │   └── --logtostderr
-│   │   │   └── --namespace
-│   │   │   └── --stderrthreshold
-│   │   │   └── --v
-│   │   │   └── --vmodule
+│   │   │   └── --namespac
+│   │   │   └── --stderrthreshol
+│   │   │   └── --vmodul
 │   │   └── set
 │   │   │   └── --help
 │   │   │   └── --alsologtostderr
-│   │   │   └── --kubeconfig
-│   │   │   └── --kubecontext
-│   │   │   └── --log_backtrace_at
-│   │   │   └── --log_dir
+│   │   │   └── --kubeconfi
+│   │   │   └── --kubecontex
+│   │   │   └── --log_backtrace_a
+│   │   │   └── --log_di
 │   │   │   └── --logtostderr
-│   │   │   └── --namespace
-│   │   │   └── --stderrthreshold
-│   │   │   └── --v
-│   │   │   └── --vmodule
+│   │   │   └── --namespac
+│   │   │   └── --stderrthreshol
+│   │   │   └── --vmodul
 │   │   └── --help
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
-│   │   └── --help"
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── --help
 │   └── --alsologtostderr
-│   └── --kubeconfig
-│   └── --kubecontext
-│   └── --log_backtrace_at
-│   └── --log_dir
+│   └── --kubeconfi
+│   └── --kubecontex
+│   └── --log_backtrace_a
+│   └── --log_di
 │   └── --logtostderr
-│   └── --namespace
-│   └── --stderrthreshold
-│   └── --v
-│   └── --vmodule
-│   └── --help"
+│   └── --namespac
+│   └── --stderrthreshol
+│   └── --vmodul
 └── completion
 │   └── --help
 │   └── --alsologtostderr
-│   └── --kubeconfig
-│   └── --kubecontext
-│   └── --log_backtrace_at
-│   └── --log_dir
+│   └── --kubeconfi
+│   └── --kubecontex
+│   └── --log_backtrace_a
+│   └── --log_di
 │   └── --logtostderr
-│   └── --namespace
-│   └── --stderrthreshold
-│   └── --v
-│   └── --vmodule
+│   └── --namespac
+│   └── --stderrthreshol
+│   └── --vmodul
 └── create
 │   └── backup
-│   │   └── --exclude-namespaces
-│   │   └── --exclude-resources
+│   │   └── --exclude-namespace
+│   │   └── --exclude-resource
 │   │   └── --help
-│   │   └── --include-cluster-resources
-│   │   └── --include-namespaces
-│   │   └── --include-resources
-│   │   └── --label-columns
-│   │   └── --labels
-│   │   └── --output
-│   │   └── --selector
+│   │   └── --include-cluster-resource
+│   │   └── --include-namespace
+│   │   └── --include-resource
+│   │   └── --label-column
+│   │   └── --label
+│   │   └── --outpu
+│   │   └── --selecto
 │   │   └── --show-labels
-│   │   └── --snapshot-volumes
-│   │   └── --storage-location
-│   │   └── --ttl
-│   │   └── --volume-snapshot-locations
+│   │   └── --snapshot-volume
+│   │   └── --storage-locatio
+│   │   └── --tt
+│   │   └── --volume-snapshot-location
 │   │   └── --wait
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── backup-location
-│   │   └── --bucket
-│   │   └── --config
+│   │   └── --bucke
+│   │   └── --confi
 │   │   └── --help
-│   │   └── --label-columns
-│   │   └── --labels
-│   │   └── --output
-│   │   └── --prefix
-│   │   └── --provider
+│   │   └── --label-column
+│   │   └── --label
+│   │   └── --outpu
+│   │   └── --prefi
+│   │   └── --provide
 │   │   └── --show-labels
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── restore
-│   │   └── --exclude-namespaces
-│   │   └── --exclude-resources
-│   │   └── --from-backup
-│   │   └── --from-schedule
+│   │   └── --exclude-namespace
+│   │   └── --exclude-resource
+│   │   └── --from-backu
+│   │   └── --from-schedul
 │   │   └── --help
-│   │   └── --include-cluster-resources
-│   │   └── --include-namespaces
-│   │   └── --include-resources
-│   │   └── --label-columns
-│   │   └── --labels
-│   │   └── --namespace-mappings
-│   │   └── --output
-│   │   └── --restore-volumes
-│   │   └── --selector
+│   │   └── --include-cluster-resource
+│   │   └── --include-namespace
+│   │   └── --include-resource
+│   │   └── --label-column
+│   │   └── --label
+│   │   └── --namespace-mapping
+│   │   └── --outpu
+│   │   └── --restore-volume
+│   │   └── --selecto
 │   │   └── --show-labels
 │   │   └── --wait
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── schedule
-│   │   └── --exclude-namespaces
-│   │   └── --exclude-resources
+│   │   └── --exclude-namespace
+│   │   └── --exclude-resource
 │   │   └── --help
-│   │   └── --include-cluster-resources
-│   │   └── --include-namespaces
-│   │   └── --include-resources
-│   │   └── --label-columns
-│   │   └── --labels
-│   │   └── --output
-│   │   └── --schedule
-│   │   └── --selector
+│   │   └── --include-cluster-resource
+│   │   └── --include-namespace
+│   │   └── --include-resource
+│   │   └── --label-column
+│   │   └── --label
+│   │   └── --outpu
+│   │   └── --schedul
+│   │   └── --selecto
 │   │   └── --show-labels
-│   │   └── --snapshot-volumes
-│   │   └── --storage-location
-│   │   └── --ttl
-│   │   └── --volume-snapshot-locations
+│   │   └── --snapshot-volume
+│   │   └── --storage-locatio
+│   │   └── --tt
+│   │   └── --volume-snapshot-location
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── --help
 │   └── --alsologtostderr
-│   └── --kubeconfig
-│   └── --kubecontext
-│   └── --log_backtrace_at
-│   └── --log_dir
+│   └── --kubeconfi
+│   └── --kubecontex
+│   └── --log_backtrace_a
+│   └── --log_di
 │   └── --logtostderr
-│   └── --namespace
-│   └── --stderrthreshold
-│   └── --v
-│   └── --vmodule
-│   └── --help"
+│   └── --namespac
+│   └── --stderrthreshol
+│   └── --vmodul
 └── delete
 │   └── backup
 │   │   └── --all
 │   │   └── --confirm
 │   │   └── --help
-│   │   └── --selector
+│   │   └── --selecto
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── restore
 │   │   └── --all
 │   │   └── --confirm
 │   │   └── --help
-│   │   └── --selector
+│   │   └── --selecto
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── schedule
 │   │   └── --all
 │   │   └── --confirm
 │   │   └── --help
-│   │   └── --selector
+│   │   └── --selecto
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── --help
 │   └── --alsologtostderr
-│   └── --kubeconfig
-│   └── --kubecontext
-│   └── --log_backtrace_at
-│   └── --log_dir
+│   └── --kubeconfi
+│   └── --kubecontex
+│   └── --log_backtrace_a
+│   └── --log_di
 │   └── --logtostderr
-│   └── --namespace
-│   └── --stderrthreshold
-│   └── --v
-│   └── --vmodule
-│   └── --help"
+│   └── --namespac
+│   └── --stderrthreshol
+│   └── --vmodul
 └── describe
 │   └── backups
 │   │   └── --details
 │   │   └── --help
-│   │   └── --selector
+│   │   └── --selecto
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── restores
 │   │   └── --details
 │   │   └── --help
-│   │   └── --selector
+│   │   └── --selecto
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── schedules
 │   │   └── --help
-│   │   └── --selector
+│   │   └── --selecto
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── --help
 │   └── --alsologtostderr
-│   └── --kubeconfig
-│   └── --kubecontext
-│   └── --log_backtrace_at
-│   └── --log_dir
+│   └── --kubeconfi
+│   └── --kubecontex
+│   └── --log_backtrace_a
+│   └── --log_di
 │   └── --logtostderr
-│   └── --namespace
-│   └── --stderrthreshold
-│   └── --v
-│   └── --vmodule
-│   └── --help"
+│   └── --namespac
+│   └── --stderrthreshol
+│   └── --vmodul
 └── get
 │   └── backup-locations
 │   │   └── --help
-│   │   └── --label-columns
-│   │   └── --output
-│   │   └── --selector
+│   │   └── --label-column
+│   │   └── --outpu
+│   │   └── --selecto
 │   │   └── --show-labels
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── backups
 │   │   └── --help
-│   │   └── --label-columns
-│   │   └── --output
-│   │   └── --selector
+│   │   └── --label-column
+│   │   └── --outpu
+│   │   └── --selecto
 │   │   └── --show-labels
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── restores
 │   │   └── --help
-│   │   └── --label-columns
-│   │   └── --output
-│   │   └── --selector
+│   │   └── --label-column
+│   │   └── --outpu
+│   │   └── --selecto
 │   │   └── --show-labels
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── schedules
 │   │   └── --help
-│   │   └── --label-columns
-│   │   └── --output
-│   │   └── --selector
+│   │   └── --label-column
+│   │   └── --outpu
+│   │   └── --selecto
 │   │   └── --show-labels
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── snapshot-locations
 │   │   └── --help
-│   │   └── --label-columns
-│   │   └── --output
-│   │   └── --selector
+│   │   └── --label-column
+│   │   └── --outpu
+│   │   └── --selecto
 │   │   └── --show-labels
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── --help
 │   └── --alsologtostderr
-│   └── --kubeconfig
-│   └── --kubecontext
-│   └── --log_backtrace_at
-│   └── --log_dir
+│   └── --kubeconfi
+│   └── --kubecontex
+│   └── --log_backtrace_a
+│   └── --log_di
 │   └── --logtostderr
-│   └── --namespace
-│   └── --stderrthreshold
-│   └── --v
-│   └── --vmodule
-│   └── --help"
+│   └── --namespac
+│   └── --stderrthreshol
+│   └── --vmodul
 └── help
 │   └── --help
 │   └── --alsologtostderr
-│   └── --kubeconfig
-│   └── --kubecontext
-│   └── --log_backtrace_at
-│   └── --log_dir
+│   └── --kubeconfi
+│   └── --kubecontex
+│   └── --log_backtrace_a
+│   └── --log_di
 │   └── --logtostderr
-│   └── --namespace
-│   └── --stderrthreshold
-│   └── --v
-│   └── --vmodule
+│   └── --namespac
+│   └── --stderrthreshol
+│   └── --vmodul
 └── install
-│   └── --backup-location-config
-│   └── --bucket
+│   └── --backup-location-confi
+│   └── --bucke
 │   └── --dry-run
 │   └── --help
-│   └── --image
-│   └── --label-columns
-│   └── --output
-│   └── --prefix
-│   └── --provider
+│   └── --imag
+│   └── --label-column
+│   └── --outpu
+│   └── --prefi
+│   └── --provide
 │   └── --restore-only
-│   └── --secret-file
+│   └── --secret-fil
 │   └── --show-labels
-│   └── --snapshot-location-config
+│   └── --snapshot-location-confi
 │   └── --use-restic
 │   └── --use-volume-snapshots
 │   └── --wait
 │   └── --alsologtostderr
-│   └── --kubeconfig
-│   └── --kubecontext
-│   └── --log_backtrace_at
-│   └── --log_dir
+│   └── --kubeconfi
+│   └── --kubecontex
+│   └── --log_backtrace_a
+│   └── --log_di
 │   └── --logtostderr
-│   └── --namespace
-│   └── --stderrthreshold
-│   └── --v
-│   └── --vmodule
+│   └── --namespac
+│   └── --stderrthreshol
+│   └── --vmodul
 └── plugin
 │   └── add
 │   │   └── --help
 │   │   └── --image-pull-policy
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── remove
 │   │   └── --help
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── --help
 │   └── --alsologtostderr
-│   └── --kubeconfig
-│   └── --kubecontext
-│   └── --log_backtrace_at
-│   └── --log_dir
+│   └── --kubeconfi
+│   └── --kubecontex
+│   └── --log_backtrace_a
+│   └── --log_di
 │   └── --logtostderr
-│   └── --namespace
-│   └── --stderrthreshold
-│   └── --v
-│   └── --vmodule
-│   └── --help"
+│   └── --namespac
+│   └── --stderrthreshol
+│   └── --vmodul
 └── restic
 │   └── repo
 │   │   └── get
 │   │   │   └── --help
-│   │   │   └── --label-columns
-│   │   │   └── --output
-│   │   │   └── --selector
+│   │   │   └── --label-column
+│   │   │   └── --outpu
+│   │   │   └── --selecto
 │   │   │   └── --show-labels
 │   │   │   └── --alsologtostderr
-│   │   │   └── --kubeconfig
-│   │   │   └── --kubecontext
-│   │   │   └── --log_backtrace_at
-│   │   │   └── --log_dir
+│   │   │   └── --kubeconfi
+│   │   │   └── --kubecontex
+│   │   │   └── --log_backtrace_a
+│   │   │   └── --log_di
 │   │   │   └── --logtostderr
-│   │   │   └── --namespace
-│   │   │   └── --stderrthreshold
-│   │   │   └── --v
-│   │   │   └── --vmodule
+│   │   │   └── --namespac
+│   │   │   └── --stderrthreshol
+│   │   │   └── --vmodul
 │   │   └── --help
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
-│   │   └── --help"
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── server
 │   │   └── --help
 │   │   └── --log-level
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── --help
 │   └── --alsologtostderr
-│   └── --kubeconfig
-│   └── --kubecontext
-│   └── --log_backtrace_at
-│   └── --log_dir
+│   └── --kubeconfi
+│   └── --kubecontex
+│   └── --log_backtrace_a
+│   └── --log_di
 │   └── --logtostderr
-│   └── --namespace
-│   └── --stderrthreshold
-│   └── --v
-│   └── --vmodule
-│   └── --help"
+│   └── --namespac
+│   └── --stderrthreshol
+│   └── --vmodul
 └── restore
 │   └── create
-│   │   └── --exclude-namespaces
-│   │   └── --exclude-resources
-│   │   └── --from-backup
-│   │   └── --from-schedule
+│   │   └── --exclude-namespace
+│   │   └── --exclude-resource
+│   │   └── --from-backu
+│   │   └── --from-schedul
 │   │   └── --help
-│   │   └── --include-cluster-resources
-│   │   └── --include-namespaces
-│   │   └── --include-resources
-│   │   └── --label-columns
-│   │   └── --labels
-│   │   └── --namespace-mappings
-│   │   └── --output
-│   │   └── --restore-volumes
-│   │   └── --selector
+│   │   └── --include-cluster-resource
+│   │   └── --include-namespace
+│   │   └── --include-resource
+│   │   └── --label-column
+│   │   └── --label
+│   │   └── --namespace-mapping
+│   │   └── --outpu
+│   │   └── --restore-volume
+│   │   └── --selecto
 │   │   └── --show-labels
 │   │   └── --wait
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── delete
 │   │   └── --all
 │   │   └── --confirm
 │   │   └── --help
-│   │   └── --selector
+│   │   └── --selecto
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── describe
 │   │   └── --details
 │   │   └── --help
-│   │   └── --selector
+│   │   └── --selecto
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── get
 │   │   └── --help
-│   │   └── --label-columns
-│   │   └── --output
-│   │   └── --selector
+│   │   └── --label-column
+│   │   └── --outpu
+│   │   └── --selecto
 │   │   └── --show-labels
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── logs
 │   │   └── --help
-│   │   └── --timeout
+│   │   └── --timeou
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── --help
 │   └── --alsologtostderr
-│   └── --kubeconfig
-│   └── --kubecontext
-│   └── --log_backtrace_at
-│   └── --log_dir
+│   └── --kubeconfi
+│   └── --kubecontex
+│   └── --log_backtrace_a
+│   └── --log_di
 │   └── --logtostderr
-│   └── --namespace
-│   └── --stderrthreshold
-│   └── --v
-│   └── --vmodule
-│   └── --help"
+│   └── --namespac
+│   └── --stderrthreshol
+│   └── --vmodul
 └── schedule
 │   └── create
-│   │   └── --exclude-namespaces
-│   │   └── --exclude-resources
+│   │   └── --exclude-namespace
+│   │   └── --exclude-resource
 │   │   └── --help
-│   │   └── --include-cluster-resources
-│   │   └── --include-namespaces
-│   │   └── --include-resources
-│   │   └── --label-columns
-│   │   └── --labels
-│   │   └── --output
-│   │   └── --schedule
-│   │   └── --selector
+│   │   └── --include-cluster-resource
+│   │   └── --include-namespace
+│   │   └── --include-resource
+│   │   └── --label-column
+│   │   └── --label
+│   │   └── --outpu
+│   │   └── --schedul
+│   │   └── --selecto
 │   │   └── --show-labels
-│   │   └── --snapshot-volumes
-│   │   └── --storage-location
-│   │   └── --ttl
-│   │   └── --volume-snapshot-locations
+│   │   └── --snapshot-volume
+│   │   └── --storage-locatio
+│   │   └── --tt
+│   │   └── --volume-snapshot-location
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── delete
 │   │   └── --all
 │   │   └── --confirm
 │   │   └── --help
-│   │   └── --selector
+│   │   └── --selecto
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── describe
 │   │   └── --help
-│   │   └── --selector
+│   │   └── --selecto
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── get
 │   │   └── --help
-│   │   └── --label-columns
-│   │   └── --output
-│   │   └── --selector
+│   │   └── --label-column
+│   │   └── --outpu
+│   │   └── --selecto
 │   │   └── --show-labels
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── --help
 │   └── --alsologtostderr
-│   └── --kubeconfig
-│   └── --kubecontext
-│   └── --log_backtrace_at
-│   └── --log_dir
+│   └── --kubeconfi
+│   └── --kubecontex
+│   └── --log_backtrace_a
+│   └── --log_di
 │   └── --logtostderr
-│   └── --namespace
-│   └── --stderrthreshold
-│   └── --v
-│   └── --vmodule
-│   └── --help"
+│   └── --namespac
+│   └── --stderrthreshol
+│   └── --vmodul
 └── server
-│   └── --backup-sync-period
-│   └── --client-burst
-│   └── --client-qps
-│   └── --default-backup-storage-location
-│   └── --default-backup-ttl
-│   └── --default-volume-snapshot-locations
-│   └── --disable-controllers
+│   └── --backup-sync-perio
+│   └── --client-burs
+│   └── --client-qp
+│   └── --default-backup-storage-locatio
+│   └── --default-backup-tt
+│   └── --default-volume-snapshot-location
+│   └── --disable-controller
 │   └── --help
 │   └── --log-level
-│   └── --metrics-address
-│   └── --plugin-dir
-│   └── --profiler-address
-│   └── --restic-timeout
+│   └── --metrics-addres
+│   └── --plugin-di
+│   └── --profiler-addres
+│   └── --restic-timeou
 │   └── --restore-only
-│   └── --restore-resource-priorities
-│   └── --terminating-resource-timeout
+│   └── --restore-resource-prioritie
+│   └── --terminating-resource-timeou
 │   └── --alsologtostderr
-│   └── --kubeconfig
-│   └── --kubecontext
-│   └── --log_backtrace_at
-│   └── --log_dir
+│   └── --kubeconfi
+│   └── --kubecontex
+│   └── --log_backtrace_a
+│   └── --log_di
 │   └── --logtostderr
-│   └── --namespace
-│   └── --stderrthreshold
-│   └── --v
-│   └── --vmodule
+│   └── --namespac
+│   └── --stderrthreshol
+│   └── --vmodul
 └── snapshot-location
 │   └── create
-│   │   └── --config
+│   │   └── --confi
 │   │   └── --help
-│   │   └── --label-columns
-│   │   └── --labels
-│   │   └── --output
-│   │   └── --provider
+│   │   └── --label-column
+│   │   └── --label
+│   │   └── --outpu
+│   │   └── --provide
 │   │   └── --show-labels
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── get
 │   │   └── --help
-│   │   └── --label-columns
-│   │   └── --output
-│   │   └── --selector
+│   │   └── --label-column
+│   │   └── --outpu
+│   │   └── --selecto
 │   │   └── --show-labels
 │   │   └── --alsologtostderr
-│   │   └── --kubeconfig
-│   │   └── --kubecontext
-│   │   └── --log_backtrace_at
-│   │   └── --log_dir
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
 │   │   └── --logtostderr
-│   │   └── --namespace
-│   │   └── --stderrthreshold
-│   │   └── --v
-│   │   └── --vmodule
+│   │   └── --namespac
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
 │   └── --help
 │   └── --alsologtostderr
-│   └── --kubeconfig
-│   └── --kubecontext
-│   └── --log_backtrace_at
-│   └── --log_dir
+│   └── --kubeconfi
+│   └── --kubecontex
+│   └── --log_backtrace_a
+│   └── --log_di
 │   └── --logtostderr
-│   └── --namespace
-│   └── --stderrthreshold
-│   └── --v
-│   └── --vmodule
-│   └── --help"
+│   └── --namespac
+│   └── --stderrthreshol
+│   └── --vmodul
 └── version
 │   └── --client-only
 │   └── --help
-│   └── --timeout
+│   └── --timeou
 │   └── --alsologtostderr
-│   └── --kubeconfig
-│   └── --kubecontext
-│   └── --log_backtrace_at
-│   └── --log_dir
+│   └── --kubeconfi
+│   └── --kubecontex
+│   └── --log_backtrace_a
+│   └── --log_di
 │   └── --logtostderr
-│   └── --namespace
-│   └── --stderrthreshold
-│   └── --v
-│   └── --vmodule
+│   └── --namespac
+│   └── --stderrthreshol
+│   └── --vmodul
 └── --alsologtostderr
 └── --help
-└── --kubeconfig
-└── --kubecontext
-└── --log_backtrace_at
-└── --log_dir
+└── --kubeconfi
+└── --kubecontex
+└── --log_backtrace_a
+└── --log_di
 └── --logtostderr
-└── --namespace
-└── --stderrthreshold
-└── --v
-└── --vmodule
-└── --help"
+└── --namespac
+└── --stderrthreshol
+└── --vmodul
