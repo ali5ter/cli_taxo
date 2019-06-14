@@ -1,0 +1,686 @@
+octl
+└── cluster
+│   └── create
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── delete
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── get
+│   │   └── --help
+│   │   └── --output
+│   │   └── --endpoint
+│   │   └── --token
+│   └── list
+│   │   └── --group
+│   │   └── --help
+│   │   └── --name
+│   │   └── --output
+│   │   └── --query
+│   │   └── --endpoint
+│   │   └── --token
+│   └── patch
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── update
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── agent
+│   │   └── create
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── list
+│   │   │   └── --clustername
+│   │   │   └── --group
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --query
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── patch
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── extension
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── patch
+│   │   │   └── update
+│   │   │   └── apply
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── apply
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── template
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── brm
+│   │   └── create
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── list
+│   │   │   └── --clustername
+│   │   │   └── --group
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --query
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── patch
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── backup
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── patch
+│   │   │   └── update
+│   │   │   └── apply
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── backuplocation
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── patch
+│   │   │   └── update
+│   │   │   └── apply
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── restore
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── patch
+│   │   │   └── update
+│   │   │   └── apply
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── schedule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── patch
+│   │   │   └── update
+│   │   │   └── apply
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── snapshotlocation
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── patch
+│   │   │   └── update
+│   │   │   └── apply
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── apply
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── template
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── health
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── list
+│   │   │   └── --clustername
+│   │   │   └── --group
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --query
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── inspection
+│   │   └── create
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── list
+│   │   │   └── --clustername
+│   │   │   └── --group
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --query
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── patch
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── apply
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── template
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── namespace
+│   │   └── create
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── list
+│   │   │   └── --clustername
+│   │   │   └── --group
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --query
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── patch
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── apply
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── template
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── object
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── list
+│   │   │   └── --clustername
+│   │   │   └── --group
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --query
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── provisionedcluster
+│   │   └── create
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── list
+│   │   │   └── --clustername
+│   │   │   └── --group
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --query
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── patch
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── nodepool
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── patch
+│   │   │   └── update
+│   │   │   └── apply
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── apply
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── template
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── apply
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── template
+│   │   └── --help
+│   │   └── --output
+│   │   └── --endpoint
+│   │   └── --token
+│   └── --endpoint
+│   └── --help
+│   └── --token
+└── clustergroup
+│   └── create
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── delete
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── get
+│   │   └── --help
+│   │   └── --output
+│   │   └── --endpoint
+│   │   └── --token
+│   └── list
+│   │   └── --group
+│   │   └── --help
+│   │   └── --name
+│   │   └── --output
+│   │   └── --query
+│   │   └── --endpoint
+│   │   └── --token
+│   └── patch
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── update
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── apply
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── template
+│   │   └── --help
+│   │   └── --output
+│   │   └── --endpoint
+│   │   └── --token
+│   └── --endpoint
+│   └── --help
+│   └── --token
+└── example
+│   └── create
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── delete
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── get
+│   │   └── --help
+│   │   └── --output
+│   │   └── --endpoint
+│   │   └── --token
+│   └── list
+│   │   └── --group
+│   │   └── --help
+│   │   └── --name
+│   │   └── --output
+│   │   └── --query
+│   │   └── --endpoint
+│   │   └── --token
+│   └── patch
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── update
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── subexample
+│   │   └── create
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── list
+│   │   └── patch
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── subsubexample
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── subsubexamplesingleton
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── patch
+│   │   │   └── update
+│   │   │   └── apply
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── apply
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── template
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── subexamplesingleton
+│   │   └── create
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── list
+│   │   └── patch
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── apply
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── template
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── apply
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── template
+│   │   └── --help
+│   │   └── --output
+│   │   └── --endpoint
+│   │   └── --token
+│   └── --endpoint
+│   └── --help
+│   └── --token
+└── system
+│   └── create
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── delete
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── get
+│   │   └── --help
+│   │   └── --output
+│   │   └── --endpoint
+│   │   └── --token
+│   └── list
+│   │   └── --group
+│   │   └── --help
+│   │   └── --name
+│   │   └── --output
+│   │   └── --query
+│   │   └── --endpoint
+│   │   └── --token
+│   └── patch
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── update
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── apply
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── template
+│   │   └── --help
+│   │   └── --output
+│   │   └── --endpoint
+│   │   └── --token
+│   └── --endpoint
+│   └── --help
+│   └── --token
+└── workspace
+│   └── create
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── delete
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── get
+│   │   └── --help
+│   │   └── --output
+│   │   └── --endpoint
+│   │   └── --token
+│   └── list
+│   │   └── --group
+│   │   └── --help
+│   │   └── --name
+│   │   └── --output
+│   │   └── --query
+│   │   └── --endpoint
+│   │   └── --token
+│   └── patch
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── update
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── apply
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── template
+│   │   └── --help
+│   │   └── --output
+│   │   └── --endpoint
+│   │   └── --token
+│   └── --endpoint
+│   └── --help
+│   └── --token
+└── apply
+│   └── --file
+│   └── --help
+└── --help

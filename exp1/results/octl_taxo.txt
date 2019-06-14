@@ -1,0 +1,191 @@
+octl
+└── cluster
+│   └── create
+│   └── delete
+│   └── get
+│   └── list
+│   └── patch
+│   └── update
+│   └── agent
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── patch
+│   │   └── update
+│   │   └── extension
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── patch
+│   │   │   └── update
+│   │   │   └── apply
+│   │   │   └── template
+│   │   └── apply
+│   │   └── template
+│   └── brm
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── patch
+│   │   └── update
+│   │   └── backup
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── patch
+│   │   │   └── update
+│   │   │   └── apply
+│   │   │   └── template
+│   │   └── backuplocation
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── patch
+│   │   │   └── update
+│   │   │   └── apply
+│   │   │   └── template
+│   │   └── restore
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── patch
+│   │   │   └── update
+│   │   │   └── apply
+│   │   │   └── template
+│   │   └── schedule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── patch
+│   │   │   └── update
+│   │   │   └── apply
+│   │   │   └── template
+│   │   └── snapshotlocation
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── patch
+│   │   │   └── update
+│   │   │   └── apply
+│   │   │   └── template
+│   │   └── apply
+│   │   └── template
+│   └── health
+│   │   └── get
+│   │   └── list
+│   └── inspection
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── patch
+│   │   └── update
+│   │   └── apply
+│   │   └── template
+│   └── namespace
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── patch
+│   │   └── update
+│   │   └── apply
+│   │   └── template
+│   └── object
+│   │   └── get
+│   │   └── list
+│   └── provisionedcluster
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── patch
+│   │   └── update
+│   │   └── nodepool
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── patch
+│   │   │   └── update
+│   │   │   └── apply
+│   │   │   └── template
+│   │   └── apply
+│   │   └── template
+│   └── apply
+│   └── template
+└── clustergroup
+│   └── create
+│   └── delete
+│   └── get
+│   └── list
+│   └── patch
+│   └── update
+│   └── apply
+│   └── template
+└── example
+│   └── create
+│   └── delete
+│   └── get
+│   └── list
+│   └── patch
+│   └── update
+│   └── subexample
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── patch
+│   │   └── update
+│   │   └── subsubexample
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── subsubexamplesingleton
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── patch
+│   │   │   └── update
+│   │   │   └── apply
+│   │   │   └── template
+│   │   └── apply
+│   │   └── template
+│   └── subexamplesingleton
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── patch
+│   │   └── update
+│   │   └── apply
+│   │   └── template
+│   └── apply
+│   └── template
+└── system
+│   └── create
+│   └── delete
+│   └── get
+│   └── list
+│   └── patch
+│   └── update
+│   └── apply
+│   └── template
+└── workspace
+│   └── create
+│   └── delete
+│   └── get
+│   └── list
+│   └── patch
+│   └── update
+│   └── apply
+│   └── template
+└── apply
