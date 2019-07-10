@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <map version="0.9.0">
     <node folded="false" text="octl">
+        <node text="iam" />
+        <node text="completion" />
         <node folded="false" text="clustergroup">
             <node text="get" />
             <node text="create" />
+            <node folded="false" text="clustergrouppolicy">
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node text="patch" />
+                <node text="template" />
+                <node text="apply" />
+                <node text="delete" />
+            </node>
             <node text="list" />
             <node text="update" />
             <node text="patch" />
@@ -16,6 +28,7 @@
             <node text="create" />
             <node text="list" />
             <node text="update" />
+            <node text="auth" />
             <node text="patch" />
             <node text="template" />
             <node text="apply" />
@@ -29,6 +42,16 @@
                 <node text="list" />
                 <node text="update" />
                 <node text="patch" />
+                <node folded="false" text="namespacepolicy">
+                    <node text="get" />
+                    <node text="create" />
+                    <node text="list" />
+                    <node text="update" />
+                    <node text="patch" />
+                    <node text="template" />
+                    <node text="apply" />
+                    <node text="delete" />
+                </node>
                 <node text="template" />
                 <node text="apply" />
                 <node text="delete" />
@@ -61,6 +84,16 @@
                 <node text="delete" />
             </node>
             <node text="patch" />
+            <node folded="false" text="clusterpolicy">
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node text="patch" />
+                <node text="template" />
+                <node text="apply" />
+                <node text="delete" />
+            </node>
             <node folded="false" text="brm">
                 <node folded="false" text="restore">
                     <node text="get" />
@@ -160,6 +193,16 @@
             <node text="delete" />
         </node>
         <node folded="false" text="workspace">
+            <node folded="false" text="workspacepolicy">
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node text="patch" />
+                <node text="template" />
+                <node text="apply" />
+                <node text="delete" />
+            </node>
             <node text="get" />
             <node text="create" />
             <node text="list" />
@@ -170,49 +213,6 @@
             <node text="delete" />
         </node>
         <node text="apply" />
-        <node folded="false" text="example">
-            <node text="get" />
-            <node text="create" />
-            <node text="list" />
-            <node text="update" />
-            <node text="patch" />
-            <node text="template" />
-            <node text="apply" />
-            <node folded="false" text="subexamplesingleton">
-                <node text="get" />
-                <node text="create" />
-                <node text="list" />
-                <node text="update" />
-                <node text="patch" />
-                <node text="template" />
-                <node text="apply" />
-                <node text="delete" />
-            </node>
-            <node folded="false" text="subexample">
-                <node folded="false" text="subsubexamplesingleton">
-                    <node text="get" />
-                    <node text="create" />
-                    <node text="list" />
-                    <node text="update" />
-                    <node text="patch" />
-                    <node text="template" />
-                    <node text="apply" />
-                    <node text="delete" />
-                </node>
-                <node text="get" />
-                <node text="create" />
-                <node text="list" />
-                <node text="update" />
-                <node text="patch" />
-                <node text="template" />
-                <node folded="false" text="subsubexample">
-                    <node text="list" />
-                    <node text="get" />
-                </node>
-                <node text="apply" />
-                <node text="delete" />
-            </node>
-            <node text="delete" />
-        </node>
+        <node text="cloud" />
     </node>
 </map>

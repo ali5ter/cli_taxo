@@ -1,5 +1,7 @@
 octl
+└── cloud
 └── cluster
+│   └── apply
 │   └── create
 │   └── delete
 │   └── get
@@ -7,6 +9,7 @@ octl
 │   └── patch
 │   └── update
 │   └── agent
+│   │   └── apply
 │   │   └── create
 │   │   └── delete
 │   │   └── get
@@ -14,17 +17,17 @@ octl
 │   │   └── patch
 │   │   └── update
 │   │   └── extension
+│   │   │   └── apply
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── patch
 │   │   │   └── update
-│   │   │   └── apply
 │   │   │   └── template
-│   │   └── apply
 │   │   └── template
 │   └── brm
+│   │   └── apply
 │   │   └── create
 │   │   └── delete
 │   │   └── get
@@ -32,77 +35,95 @@ octl
 │   │   └── patch
 │   │   └── update
 │   │   └── backup
+│   │   │   └── apply
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── patch
 │   │   │   └── update
-│   │   │   └── apply
 │   │   │   └── template
 │   │   └── backuplocation
+│   │   │   └── apply
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── patch
 │   │   │   └── update
-│   │   │   └── apply
 │   │   │   └── template
 │   │   └── restore
+│   │   │   └── apply
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── patch
 │   │   │   └── update
-│   │   │   └── apply
 │   │   │   └── template
 │   │   └── schedule
+│   │   │   └── apply
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── patch
 │   │   │   └── update
-│   │   │   └── apply
 │   │   │   └── template
 │   │   └── snapshotlocation
+│   │   │   └── apply
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── patch
 │   │   │   └── update
-│   │   │   └── apply
 │   │   │   └── template
+│   │   └── template
+│   └── clusterpolicy
 │   │   └── apply
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── patch
+│   │   └── update
 │   │   └── template
 │   └── health
 │   │   └── get
 │   │   └── list
 │   └── inspection
+│   │   └── apply
 │   │   └── create
 │   │   └── delete
 │   │   └── get
 │   │   └── list
 │   │   └── patch
 │   │   └── update
-│   │   └── apply
 │   │   └── template
 │   └── namespace
+│   │   └── apply
 │   │   └── create
 │   │   └── delete
 │   │   └── get
 │   │   └── list
 │   │   └── patch
 │   │   └── update
-│   │   └── apply
+│   │   └── namespacepolicy
+│   │   │   └── apply
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── patch
+│   │   │   └── update
+│   │   │   └── template
 │   │   └── template
 │   └── object
 │   │   └── get
 │   │   └── list
 │   └── provisionedcluster
+│   │   └── apply
 │   │   └── create
 │   │   └── delete
 │   │   └── get
@@ -110,82 +131,62 @@ octl
 │   │   └── patch
 │   │   └── update
 │   │   └── nodepool
+│   │   │   └── apply
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── patch
 │   │   │   └── update
-│   │   │   └── apply
 │   │   │   └── template
-│   │   └── apply
 │   │   └── template
-│   └── apply
 │   └── template
 └── clustergroup
+│   └── apply
 │   └── create
 │   └── delete
 │   └── get
 │   └── list
 │   └── patch
 │   └── update
-│   └── apply
-│   └── template
-└── example
-│   └── create
-│   └── delete
-│   └── get
-│   └── list
-│   └── patch
-│   └── update
-│   └── subexample
+│   └── clustergrouppolicy
+│   │   └── apply
 │   │   └── create
 │   │   └── delete
 │   │   └── get
 │   │   └── list
 │   │   └── patch
 │   │   └── update
-│   │   └── subsubexample
-│   │   │   └── get
-│   │   │   └── list
-│   │   └── subsubexamplesingleton
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── patch
-│   │   │   └── update
-│   │   │   └── apply
-│   │   │   └── template
-│   │   └── apply
 │   │   └── template
-│   └── subexamplesingleton
-│   │   └── create
-│   │   └── delete
-│   │   └── get
-│   │   └── list
-│   │   └── patch
-│   │   └── update
-│   │   └── apply
-│   │   └── template
-│   └── apply
 │   └── template
+└── iam
 └── system
+│   └── apply
 │   └── create
 │   └── delete
 │   └── get
 │   └── list
 │   └── patch
 │   └── update
-│   └── apply
+│   └── auth
 │   └── template
 └── workspace
+│   └── apply
 │   └── create
 │   └── delete
 │   └── get
 │   └── list
 │   └── patch
 │   └── update
-│   └── apply
+│   └── workspacepolicy
+│   │   └── apply
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── patch
+│   │   └── update
+│   │   └── template
 │   └── template
 └── apply
+└── completion

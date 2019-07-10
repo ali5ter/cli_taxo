@@ -1,5 +1,14 @@
 octl
+└── cloud
+│   └── --endpoint
+│   └── --help
+│   └── --token
 └── cluster
+│   └── apply
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
 │   └── create
 │   │   └── --file
 │   │   └── --help
@@ -7,10 +16,12 @@ octl
 │   │   └── --token
 │   └── delete
 │   │   └── --help
+│   │   └── --location
 │   │   └── --endpoint
 │   │   └── --token
 │   └── get
 │   │   └── --help
+│   │   └── --location
 │   │   └── --output
 │   │   └── --endpoint
 │   │   └── --token
@@ -33,6 +44,11 @@ octl
 │   │   └── --endpoint
 │   │   └── --token
 │   └── agent
+│   │   └── apply
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
 │   │   └── create
 │   │   │   └── --file
 │   │   │   └── --help
@@ -40,10 +56,12 @@ octl
 │   │   │   └── --token
 │   │   └── delete
 │   │   │   └── --help
+│   │   │   └── --location
 │   │   │   └── --endpoint
 │   │   │   └── --token
 │   │   └── get
 │   │   │   └── --help
+│   │   │   └── --location
 │   │   │   └── --output
 │   │   │   └── --endpoint
 │   │   │   └── --token
@@ -67,19 +85,14 @@ octl
 │   │   │   └── --endpoint
 │   │   │   └── --token
 │   │   └── extension
+│   │   │   └── apply
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── patch
 │   │   │   └── update
-│   │   │   └── apply
 │   │   │   └── template
-│   │   │   └── --help
-│   │   │   └── --endpoint
-│   │   │   └── --token
-│   │   └── apply
-│   │   │   └── --file
 │   │   │   └── --help
 │   │   │   └── --endpoint
 │   │   │   └── --token
@@ -92,6 +105,11 @@ octl
 │   │   └── --endpoint
 │   │   └── --token
 │   └── brm
+│   │   └── apply
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
 │   │   └── create
 │   │   │   └── --file
 │   │   │   └── --help
@@ -99,10 +117,12 @@ octl
 │   │   │   └── --token
 │   │   └── delete
 │   │   │   └── --help
+│   │   │   └── --location
 │   │   │   └── --endpoint
 │   │   │   └── --token
 │   │   └── get
 │   │   │   └── --help
+│   │   │   └── --location
 │   │   │   └── --output
 │   │   │   └── --endpoint
 │   │   │   └── --token
@@ -126,66 +146,110 @@ octl
 │   │   │   └── --endpoint
 │   │   │   └── --token
 │   │   └── backup
+│   │   │   └── apply
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── patch
 │   │   │   └── update
-│   │   │   └── apply
 │   │   │   └── template
 │   │   │   └── --help
 │   │   │   └── --endpoint
 │   │   │   └── --token
 │   │   └── backuplocation
+│   │   │   └── apply
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── patch
 │   │   │   └── update
-│   │   │   └── apply
 │   │   │   └── template
 │   │   │   └── --help
 │   │   │   └── --endpoint
 │   │   │   └── --token
 │   │   └── restore
+│   │   │   └── apply
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── patch
 │   │   │   └── update
-│   │   │   └── apply
 │   │   │   └── template
 │   │   │   └── --help
 │   │   │   └── --endpoint
 │   │   │   └── --token
 │   │   └── schedule
+│   │   │   └── apply
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── patch
 │   │   │   └── update
-│   │   │   └── apply
 │   │   │   └── template
 │   │   │   └── --help
 │   │   │   └── --endpoint
 │   │   │   └── --token
 │   │   └── snapshotlocation
+│   │   │   └── apply
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── patch
 │   │   │   └── update
-│   │   │   └── apply
 │   │   │   └── template
 │   │   │   └── --help
 │   │   │   └── --endpoint
 │   │   │   └── --token
+│   │   └── template
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
+│   └── clusterpolicy
 │   │   └── apply
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── create
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --location
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --location
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── list
+│   │   │   └── --clustername
+│   │   │   └── --group
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --query
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── patch
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── update
 │   │   │   └── --file
 │   │   │   └── --help
 │   │   │   └── --endpoint
@@ -201,6 +265,7 @@ octl
 │   └── health
 │   │   └── get
 │   │   │   └── --help
+│   │   │   └── --location
 │   │   │   └── --output
 │   │   │   └── --endpoint
 │   │   │   └── --token
@@ -217,6 +282,11 @@ octl
 │   │   └── --endpoint
 │   │   └── --token
 │   └── inspection
+│   │   └── apply
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
 │   │   └── create
 │   │   │   └── --file
 │   │   │   └── --help
@@ -224,10 +294,12 @@ octl
 │   │   │   └── --token
 │   │   └── delete
 │   │   │   └── --help
+│   │   │   └── --location
 │   │   │   └── --endpoint
 │   │   │   └── --token
 │   │   └── get
 │   │   │   └── --help
+│   │   │   └── --location
 │   │   │   └── --output
 │   │   │   └── --endpoint
 │   │   │   └── --token
@@ -246,11 +318,6 @@ octl
 │   │   │   └── --endpoint
 │   │   │   └── --token
 │   │   └── update
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --endpoint
-│   │   │   └── --token
-│   │   └── apply
 │   │   │   └── --file
 │   │   │   └── --help
 │   │   │   └── --endpoint
@@ -264,6 +331,11 @@ octl
 │   │   └── --endpoint
 │   │   └── --token
 │   └── namespace
+│   │   └── apply
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
 │   │   └── create
 │   │   │   └── --file
 │   │   │   └── --help
@@ -271,10 +343,12 @@ octl
 │   │   │   └── --token
 │   │   └── delete
 │   │   │   └── --help
+│   │   │   └── --location
 │   │   │   └── --endpoint
 │   │   │   └── --token
 │   │   └── get
 │   │   │   └── --help
+│   │   │   └── --location
 │   │   │   └── --output
 │   │   │   └── --endpoint
 │   │   │   └── --token
@@ -297,8 +371,15 @@ octl
 │   │   │   └── --help
 │   │   │   └── --endpoint
 │   │   │   └── --token
-│   │   └── apply
-│   │   │   └── --file
+│   │   └── namespacepolicy
+│   │   │   └── apply
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── patch
+│   │   │   └── update
+│   │   │   └── template
 │   │   │   └── --help
 │   │   │   └── --endpoint
 │   │   │   └── --token
@@ -313,6 +394,7 @@ octl
 │   └── object
 │   │   └── get
 │   │   │   └── --help
+│   │   │   └── --location
 │   │   │   └── --output
 │   │   │   └── --endpoint
 │   │   │   └── --token
@@ -329,6 +411,11 @@ octl
 │   │   └── --endpoint
 │   │   └── --token
 │   └── provisionedcluster
+│   │   └── apply
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
 │   │   └── create
 │   │   │   └── --file
 │   │   │   └── --help
@@ -336,10 +423,12 @@ octl
 │   │   │   └── --token
 │   │   └── delete
 │   │   │   └── --help
+│   │   │   └── --location
 │   │   │   └── --endpoint
 │   │   │   └── --token
 │   │   └── get
 │   │   │   └── --help
+│   │   │   └── --location
 │   │   │   └── --output
 │   │   │   └── --endpoint
 │   │   │   └── --token
@@ -363,19 +452,14 @@ octl
 │   │   │   └── --endpoint
 │   │   │   └── --token
 │   │   └── nodepool
+│   │   │   └── apply
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── patch
 │   │   │   └── update
-│   │   │   └── apply
 │   │   │   └── template
-│   │   │   └── --help
-│   │   │   └── --endpoint
-│   │   │   └── --token
-│   │   └── apply
-│   │   │   └── --file
 │   │   │   └── --help
 │   │   │   └── --endpoint
 │   │   │   └── --token
@@ -384,11 +468,6 @@ octl
 │   │   │   └── --output
 │   │   │   └── --endpoint
 │   │   │   └── --token
-│   │   └── --help
-│   │   └── --endpoint
-│   │   └── --token
-│   └── apply
-│   │   └── --file
 │   │   └── --help
 │   │   └── --endpoint
 │   │   └── --token
@@ -401,6 +480,11 @@ octl
 │   └── --help
 │   └── --token
 └── clustergroup
+│   └── apply
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
 │   └── create
 │   │   └── --file
 │   │   └── --help
@@ -408,10 +492,12 @@ octl
 │   │   └── --token
 │   └── delete
 │   │   └── --help
+│   │   └── --location
 │   │   └── --endpoint
 │   │   └── --token
 │   └── get
 │   │   └── --help
+│   │   └── --location
 │   │   └── --output
 │   │   └── --endpoint
 │   │   └── --token
@@ -433,8 +519,52 @@ octl
 │   │   └── --help
 │   │   └── --endpoint
 │   │   └── --token
-│   └── apply
-│   │   └── --file
+│   └── clustergrouppolicy
+│   │   └── apply
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── create
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --location
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --location
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── list
+│   │   │   └── --clustergroupname
+│   │   │   └── --group
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --query
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── patch
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── template
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
 │   │   └── --help
 │   │   └── --endpoint
 │   │   └── --token
@@ -446,149 +576,16 @@ octl
 │   └── --endpoint
 │   └── --help
 │   └── --token
-└── example
-│   └── create
-│   │   └── --file
-│   │   └── --help
-│   │   └── --endpoint
-│   │   └── --token
-│   └── delete
-│   │   └── --help
-│   │   └── --endpoint
-│   │   └── --token
-│   └── get
-│   │   └── --help
-│   │   └── --output
-│   │   └── --endpoint
-│   │   └── --token
-│   └── list
-│   │   └── --group
-│   │   └── --help
-│   │   └── --name
-│   │   └── --output
-│   │   └── --query
-│   │   └── --endpoint
-│   │   └── --token
-│   └── patch
-│   │   └── --file
-│   │   └── --help
-│   │   └── --endpoint
-│   │   └── --token
-│   └── update
-│   │   └── --file
-│   │   └── --help
-│   │   └── --endpoint
-│   │   └── --token
-│   └── subexample
-│   │   └── create
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --endpoint
-│   │   │   └── --token
-│   │   └── delete
-│   │   │   └── --help
-│   │   │   └── --endpoint
-│   │   │   └── --token
-│   │   └── get
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --endpoint
-│   │   │   └── --token
-│   │   └── list
-│   │   └── patch
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --endpoint
-│   │   │   └── --token
-│   │   └── update
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --endpoint
-│   │   │   └── --token
-│   │   └── subsubexample
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── --help
-│   │   │   └── --endpoint
-│   │   │   └── --token
-│   │   └── subsubexamplesingleton
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── patch
-│   │   │   └── update
-│   │   │   └── apply
-│   │   │   └── template
-│   │   │   └── --help
-│   │   │   └── --endpoint
-│   │   │   └── --token
-│   │   └── apply
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --endpoint
-│   │   │   └── --token
-│   │   └── template
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --endpoint
-│   │   │   └── --token
-│   │   └── --help
-│   │   └── --endpoint
-│   │   └── --token
-│   └── subexamplesingleton
-│   │   └── create
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --endpoint
-│   │   │   └── --token
-│   │   └── delete
-│   │   │   └── --help
-│   │   │   └── --endpoint
-│   │   │   └── --token
-│   │   └── get
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --endpoint
-│   │   │   └── --token
-│   │   └── list
-│   │   └── patch
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --endpoint
-│   │   │   └── --token
-│   │   └── update
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --endpoint
-│   │   │   └── --token
-│   │   └── apply
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --endpoint
-│   │   │   └── --token
-│   │   └── template
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --endpoint
-│   │   │   └── --token
-│   │   └── --help
-│   │   └── --endpoint
-│   │   └── --token
-│   └── apply
-│   │   └── --file
-│   │   └── --help
-│   │   └── --endpoint
-│   │   └── --token
-│   └── template
-│   │   └── --help
-│   │   └── --output
-│   │   └── --endpoint
-│   │   └── --token
+└── iam
 │   └── --endpoint
 │   └── --help
 │   └── --token
 └── system
+│   └── apply
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
 │   └── create
 │   │   └── --file
 │   │   └── --help
@@ -596,10 +593,12 @@ octl
 │   │   └── --token
 │   └── delete
 │   │   └── --help
+│   │   └── --location
 │   │   └── --endpoint
 │   │   └── --token
 │   └── get
 │   │   └── --help
+│   │   └── --location
 │   │   └── --output
 │   │   └── --endpoint
 │   │   └── --token
@@ -621,8 +620,7 @@ octl
 │   │   └── --help
 │   │   └── --endpoint
 │   │   └── --token
-│   └── apply
-│   │   └── --file
+│   └── auth
 │   │   └── --help
 │   │   └── --endpoint
 │   │   └── --token
@@ -635,6 +633,11 @@ octl
 │   └── --help
 │   └── --token
 └── workspace
+│   └── apply
+│   │   └── --file
+│   │   └── --help
+│   │   └── --endpoint
+│   │   └── --token
 │   └── create
 │   │   └── --file
 │   │   └── --help
@@ -642,10 +645,12 @@ octl
 │   │   └── --token
 │   └── delete
 │   │   └── --help
+│   │   └── --location
 │   │   └── --endpoint
 │   │   └── --token
 │   └── get
 │   │   └── --help
+│   │   └── --location
 │   │   └── --output
 │   │   └── --endpoint
 │   │   └── --token
@@ -667,8 +672,52 @@ octl
 │   │   └── --help
 │   │   └── --endpoint
 │   │   └── --token
-│   └── apply
-│   │   └── --file
+│   └── workspacepolicy
+│   │   └── apply
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── create
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --location
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --location
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── list
+│   │   │   └── --group
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --query
+│   │   │   └── --workspacename
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── patch
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --endpoint
+│   │   │   └── --token
+│   │   └── template
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --endpoint
+│   │   │   └── --token
 │   │   └── --help
 │   │   └── --endpoint
 │   │   └── --token
@@ -682,5 +731,7 @@ octl
 │   └── --token
 └── apply
 │   └── --file
+│   └── --help
+└── completion
 │   └── --help
 └── --help
