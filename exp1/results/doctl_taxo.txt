@@ -1,0 +1,215 @@
+doctl
+└── account
+│   └── get
+│   └── ratelimit
+└── auth
+│   └── init
+│   └── switch
+└── completion
+│   └── bash
+│   └── zsh
+└── compute
+│   └── action
+│   │   └── get
+│   │   └── list
+│   │   └── wait
+│   └── cdn
+│   │   └── create
+│   │   └── delete
+│   │   └── flush
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   └── certificate
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   └── domain
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── records
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── update
+│   └── droplet
+│   │   └── actions
+│   │   └── backups
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── kernels
+│   │   └── list
+│   │   └── neighbors
+│   │   └── snapshots
+│   │   └── tag
+│   │   └── untag
+│   └── droplet-action
+│   │   └── change-kernel
+│   │   └── disable-backups
+│   │   └── enable-backups
+│   │   └── enable-ipv6
+│   │   └── enable-private-networking
+│   │   └── get
+│   │   └── password-reset
+│   │   └── power-cycle
+│   │   └── power-off
+│   │   └── power-on
+│   │   └── reboot
+│   │   └── rebuild
+│   │   └── rename
+│   │   └── resize
+│   │   └── restore
+│   │   └── shutdown
+│   │   └── snapshot
+│   └── firewall
+│   │   └── add-droplets
+│   │   └── add-rules
+│   │   └── add-tags
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── list-by-droplet
+│   │   └── remove-droplets
+│   │   └── remove-rules
+│   │   └── remove-tags
+│   │   └── update
+│   └── floating-ip
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   └── floating-ip-action
+│   │   └── assign
+│   │   └── get
+│   │   └── unassign
+│   └── image
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── list-application
+│   │   └── list-distribution
+│   │   └── list-user
+│   │   └── update
+│   └── image-action
+│   │   └── get
+│   │   └── transfer
+│   └── load-balancer
+│   │   └── add-droplets
+│   │   └── add-forwarding-rules
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── remove-droplets
+│   │   └── remove-forwarding-rules
+│   │   └── update
+│   └── plugin
+│   │   └── list
+│   │   └── run
+│   └── region
+│   │   └── list
+│   └── size
+│   │   └── list
+│   └── snapshot
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   └── ssh
+│   └── ssh-key
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── import
+│   │   └── list
+│   │   └── update
+│   └── tag
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   └── volume
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── snapshot
+│   └── volume-action
+│   │   └── attach
+│   │   └── detach
+│   │   └── detach-by-droplet-id
+│   │   └── resize
+└── databases
+│   └── backups
+│   └── connection
+│   └── create
+│   └── db
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   └── delete
+│   └── get
+│   └── list
+│   └── maintenance-window
+│   │   └── get
+│   │   └── update
+│   └── migrate
+│   └── pool
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   └── replica
+│   │   └── connection
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   └── resize
+│   └── user
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+└── help
+└── kubernetes
+│   └── cluster
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── get-upgrades
+│   │   └── kubeconfig
+│   │   │   └── remove
+│   │   │   └── save
+│   │   │   └── show
+│   │   └── list
+│   │   └── node-pool
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── delete-node
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── replace-node
+│   │   │   └── update
+│   │   └── update
+│   │   └── upgrade
+│   └── options
+│   │   └── regions
+│   │   └── sizes
+│   │   └── versions
+└── projects
+│   └── create
+│   └── delete
+│   └── get
+│   └── list
+│   └── resources
+│   │   └── assign
+│   │   └── get
+│   │   └── list
+│   └── update
+└── version

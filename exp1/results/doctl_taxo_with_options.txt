@@ -1,0 +1,2263 @@
+doctl
+└── account
+│   └── get
+│   │   └── --format
+│   │   └── --help
+│   │   └── --no-header
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   └── ratelimit
+│   │   └── --format
+│   │   └── --help
+│   │   └── --no-header
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   └── --help
+│   └── --access-token
+│   └── --api-url
+│   └── --config
+│   └── --context
+│   └── --output
+│   └── --trace
+│   └── --verbose
+│   └── --help"
+└── auth
+│   └── init
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   └── switch
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   └── --help
+│   └── --access-token
+│   └── --api-url
+│   └── --config
+│   └── --context
+│   └── --output
+│   └── --trace
+│   └── --verbose
+│   └── --help"
+└── completion
+│   └── bash
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   └── zsh
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   └── --help
+│   └── --access-token
+│   └── --api-url
+│   └── --config
+│   └── --context
+│   └── --output
+│   └── --trace
+│   └── --verbose
+│   └── --help"
+└── compute
+│   └── action
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --action-type
+│   │   │   └── --after
+│   │   │   └── --before
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --region
+│   │   │   └── --resource-type
+│   │   │   └── --status
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── wait
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --poll-timeout
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── cdn
+│   │   └── create
+│   │   │   └── --certificate-id
+│   │   │   └── --domain
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --ttl
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── flush
+│   │   │   └── --files
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── update
+│   │   │   └── --certificate-id
+│   │   │   └── --domain
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --ttl
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── certificate
+│   │   └── create
+│   │   │   └── --certificate-chain-path
+│   │   │   └── --dns-names
+│   │   │   └── --help
+│   │   │   └── --leaf-certificate-path
+│   │   │   └── --name
+│   │   │   └── --private-key-path
+│   │   │   └── --type
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── domain
+│   │   └── create
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --ip-address
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── records
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   │   └── --help"
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── droplet
+│   │   └── actions
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── backups
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── create
+│   │   │   └── --enable-backups
+│   │   │   └── --enable-ipv6
+│   │   │   └── --enable-monitoring
+│   │   │   └── --enable-private-networking
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --image
+│   │   │   └── --no-header
+│   │   │   └── --region
+│   │   │   └── --size
+│   │   │   └── --ssh-keys
+│   │   │   └── --tag-name
+│   │   │   └── --tag-names
+│   │   │   └── --user-data
+│   │   │   └── --user-data-file
+│   │   │   └── --volumes
+│   │   │   └── --wait
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --tag-name
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --template
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── kernels
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --region
+│   │   │   └── --tag-name
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── neighbors
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── snapshots
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── tag
+│   │   │   └── --help
+│   │   │   └── --tag-name
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── untag
+│   │   │   └── --help
+│   │   │   └── --tag-name
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── droplet-action
+│   │   └── change-kernel
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --kernel-id
+│   │   │   └── --no-header
+│   │   │   └── --wait
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── disable-backups
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --wait
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── enable-backups
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --wait
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── enable-ipv6
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --wait
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── enable-private-networking
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --wait
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --action-id
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── password-reset
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --wait
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── power-cycle
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --wait
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── power-off
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --wait
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── power-on
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --wait
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── reboot
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --wait
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── rebuild
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --image
+│   │   │   └── --no-header
+│   │   │   └── --wait
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── rename
+│   │   │   └── --droplet-name
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --wait
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── resize
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --resize-disk
+│   │   │   └── --size
+│   │   │   └── --wait
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── restore
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --image-id
+│   │   │   └── --no-header
+│   │   │   └── --wait
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── shutdown
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --wait
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── snapshot
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --snapshot-name
+│   │   │   └── --wait
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── firewall
+│   │   └── add-droplets
+│   │   │   └── --droplet-ids
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── add-rules
+│   │   │   └── --help
+│   │   │   └── --inbound-rules
+│   │   │   └── --outbound-rules
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── add-tags
+│   │   │   └── --help
+│   │   │   └── --tag-names
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── create
+│   │   │   └── --droplet-ids
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --inbound-rules
+│   │   │   └── --name
+│   │   │   └── --no-header
+│   │   │   └── --outbound-rules
+│   │   │   └── --tag-names
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list-by-droplet
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── remove-droplets
+│   │   │   └── --droplet-ids
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── remove-rules
+│   │   │   └── --help
+│   │   │   └── --inbound-rules
+│   │   │   └── --outbound-rules
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── remove-tags
+│   │   │   └── --help
+│   │   │   └── --tag-names
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── update
+│   │   │   └── --droplet-ids
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --inbound-rules
+│   │   │   └── --name
+│   │   │   └── --no-header
+│   │   │   └── --outbound-rules
+│   │   │   └── --tag-names
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── floating-ip
+│   │   └── create
+│   │   │   └── --droplet-id
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --region
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --region
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── floating-ip-action
+│   │   └── assign
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── unassign
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── image
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --public
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list-application
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --public
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list-distribution
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --public
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list-user
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --public
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── update
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --image-name
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── image-action
+│   │   └── get
+│   │   │   └── --action-id
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── transfer
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --region
+│   │   │   └── --wait
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── load-balancer
+│   │   └── add-droplets
+│   │   │   └── --droplet-ids
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── add-forwarding-rules
+│   │   │   └── --forwarding-rules
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── create
+│   │   │   └── --algorithm
+│   │   │   └── --droplet-ids
+│   │   │   └── --forwarding-rules
+│   │   │   └── --health-check
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --redirect-http-to-https
+│   │   │   └── --region
+│   │   │   └── --sticky-sessions
+│   │   │   └── --tag-name
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── remove-droplets
+│   │   │   └── --droplet-ids
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── remove-forwarding-rules
+│   │   │   └── --forwarding-rules
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── update
+│   │   │   └── --algorithm
+│   │   │   └── --droplet-ids
+│   │   │   └── --forwarding-rules
+│   │   │   └── --health-check
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --redirect-http-to-https
+│   │   │   └── --region
+│   │   │   └── --sticky-sessions
+│   │   │   └── --tag-name
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── plugin
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── run
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── region
+│   │   └── list
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── size
+│   │   └── list
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── snapshot
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --region
+│   │   │   └── --resource
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── ssh
+│   │   └── --help
+│   │   └── --ssh-agent-forwarding
+│   │   └── --ssh-command
+│   │   └── --ssh-key-path
+│   │   └── --ssh-port
+│   │   └── --ssh-private-ip
+│   │   └── --ssh-user
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   └── ssh-key
+│   │   └── create
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --public-key
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── import
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --public-key-file
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── update
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --key-name
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── tag
+│   │   └── create
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── volume
+│   │   └── create
+│   │   │   └── --desc
+│   │   │   └── --format
+│   │   │   └── --fs-label
+│   │   │   └── --fs-type
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --region
+│   │   │   └── --size
+│   │   │   └── --snapshot
+│   │   │   └── --tag
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --region
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── snapshot
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --snapshot-desc
+│   │   │   └── --snapshot-name
+│   │   │   └── --tag
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── volume-action
+│   │   └── attach
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── detach
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── detach-by-droplet-id
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── resize
+│   │   │   └── --help
+│   │   │   └── --region
+│   │   │   └── --size
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── --help
+│   └── --access-token
+│   └── --api-url
+│   └── --config
+│   └── --context
+│   └── --output
+│   └── --trace
+│   └── --verbose
+│   └── --help"
+└── databases
+│   └── backups
+│   │   └── --format
+│   │   └── --help
+│   │   └── --no-header
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   └── connection
+│   │   └── --format
+│   │   └── --help
+│   │   └── --no-header
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   └── create
+│   │   └── --engine
+│   │   └── --help
+│   │   └── --num-nodes
+│   │   └── --private-network-uuid
+│   │   └── --region
+│   │   └── --size
+│   │   └── --version
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   └── db
+│   │   └── create
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── delete
+│   │   └── --force
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   └── get
+│   │   └── --format
+│   │   └── --help
+│   │   └── --no-header
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   └── list
+│   │   └── --format
+│   │   └── --help
+│   │   └── --no-header
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   └── maintenance-window
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── update
+│   │   │   └── --day
+│   │   │   └── --help
+│   │   │   └── --hour
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── migrate
+│   │   └── --help
+│   │   └── --private-network-uuid
+│   │   └── --region
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   └── pool
+│   │   └── create
+│   │   │   └── --db
+│   │   │   └── --help
+│   │   │   └── --mode
+│   │   │   └── --size
+│   │   │   └── --user
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── replica
+│   │   └── connection
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── create
+│   │   │   └── --help
+│   │   │   └── --private-network-uuid
+│   │   │   └── --region
+│   │   │   └── --size
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── resize
+│   │   └── --help
+│   │   └── --num-nodes
+│   │   └── --size
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   └── user
+│   │   └── create
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── --help
+│   └── --access-token
+│   └── --api-url
+│   └── --config
+│   └── --context
+│   └── --output
+│   └── --trace
+│   └── --verbose
+│   └── --help"
+└── help
+│   └── --help
+│   └── --access-token
+│   └── --api-url
+│   └── --config
+│   └── --context
+│   └── --output
+│   └── --trace
+│   └── --verbose
+└── kubernetes
+│   └── cluster
+│   │   └── create
+│   │   │   └── --auto-upgrade
+│   │   │   └── --count
+│   │   │   └── --help
+│   │   │   └── --maintenance-window
+│   │   │   └── --node-pool
+│   │   │   └── --region
+│   │   │   └── --set-current-context
+│   │   │   └── --size
+│   │   │   └── --tag
+│   │   │   └── --update-kubeconfig
+│   │   │   └── --version
+│   │   │   └── --wait
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --update-kubeconfig
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get-upgrades
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── kubeconfig
+│   │   │   └── remove
+│   │   │   └── save
+│   │   │   └── show
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   │   └── --help"
+│   │   └── list
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── node-pool
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── delete-node
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── replace-node
+│   │   │   └── update
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   │   └── --help"
+│   │   └── update
+│   │   │   └── --auto-upgrade
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --maintenance-window
+│   │   │   └── --set-current-context
+│   │   │   └── --tag
+│   │   │   └── --update-kubeconfig
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── upgrade
+│   │   │   └── --help
+│   │   │   └── --version
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── options
+│   │   └── regions
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── sizes
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── versions
+│   │   │   └── --help
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── --help
+│   └── --access-token
+│   └── --api-url
+│   └── --config
+│   └── --context
+│   └── --output
+│   └── --trace
+│   └── --verbose
+│   └── --help"
+└── projects
+│   └── create
+│   │   └── --description
+│   │   └── --environment
+│   │   └── --format
+│   │   └── --help
+│   │   └── --name
+│   │   └── --no-header
+│   │   └── --purpose
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   └── delete
+│   │   └── --force
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   └── get
+│   │   └── --format
+│   │   └── --help
+│   │   └── --no-header
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   └── list
+│   │   └── --format
+│   │   └── --help
+│   │   └── --no-header
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   └── resources
+│   │   └── assign
+│   │   │   └── --help
+│   │   │   └── --resource
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --format
+│   │   │   └── --help
+│   │   │   └── --no-header
+│   │   │   └── --access-token
+│   │   │   └── --api-url
+│   │   │   └── --config
+│   │   │   └── --context
+│   │   │   └── --output
+│   │   │   └── --trace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   │   └── --help"
+│   └── update
+│   │   └── --description
+│   │   └── --environment
+│   │   └── --format
+│   │   └── --help
+│   │   └── --is_default
+│   │   └── --name
+│   │   └── --no-header
+│   │   └── --purpose
+│   │   └── --access-token
+│   │   └── --api-url
+│   │   └── --config
+│   │   └── --context
+│   │   └── --output
+│   │   └── --trace
+│   │   └── --verbose
+│   └── --help
+│   └── --access-token
+│   └── --api-url
+│   └── --config
+│   └── --context
+│   └── --output
+│   └── --trace
+│   └── --verbose
+│   └── --help"
+└── version
+│   └── --help
+│   └── --access-token
+│   └── --api-url
+│   └── --config
+│   └── --context
+│   └── --output
+│   └── --trace
+│   └── --verbose
+└── --access-token
+└── --api-url
+└── --config
+└── --context
+└── --help
+└── --output
+└── --trace
+└── --verbose
+└── --help"
