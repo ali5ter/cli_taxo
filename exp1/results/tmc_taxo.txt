@@ -1,38 +1,19 @@
-octl
-└── cloud
+tmc
+└── account
 └── cluster
 │   └── apply
+│   └── attach
 │   └── create
 │   └── delete
 │   └── get
 │   └── list
-│   └── patch
 │   └── update
-│   └── agent
+│   └── dataprotection
 │   │   └── apply
 │   │   └── create
 │   │   └── delete
 │   │   └── get
 │   │   └── list
-│   │   └── patch
-│   │   └── update
-│   │   └── extension
-│   │   │   └── apply
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── patch
-│   │   │   └── update
-│   │   │   └── template
-│   │   └── template
-│   └── brm
-│   │   └── apply
-│   │   └── create
-│   │   └── delete
-│   │   └── get
-│   │   └── list
-│   │   └── patch
 │   │   └── update
 │   │   └── backup
 │   │   │   └── apply
@@ -40,8 +21,8 @@ octl
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
-│   │   │   └── patch
 │   │   │   └── update
+│   │   │   └── schema
 │   │   │   └── template
 │   │   └── backuplocation
 │   │   │   └── apply
@@ -49,8 +30,8 @@ octl
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
-│   │   │   └── patch
 │   │   │   └── update
+│   │   │   └── schema
 │   │   │   └── template
 │   │   └── restore
 │   │   │   └── apply
@@ -58,8 +39,8 @@ octl
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
-│   │   │   └── patch
 │   │   │   └── update
+│   │   │   └── schema
 │   │   │   └── template
 │   │   └── schedule
 │   │   │   └── apply
@@ -67,8 +48,8 @@ octl
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
-│   │   │   └── patch
 │   │   │   └── update
+│   │   │   └── schema
 │   │   │   └── template
 │   │   └── snapshotlocation
 │   │   │   └── apply
@@ -76,19 +57,13 @@ octl
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
-│   │   │   └── patch
 │   │   │   └── update
+│   │   │   └── schema
 │   │   │   └── template
+│   │   └── schema
 │   │   └── template
-│   └── clusterpolicy
-│   │   └── apply
-│   │   └── create
-│   │   └── delete
-│   │   └── get
-│   │   └── list
-│   │   └── patch
-│   │   └── update
-│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
 │   └── health
 │   │   └── get
 │   │   └── list
@@ -98,95 +73,152 @@ octl
 │   │   └── delete
 │   │   └── get
 │   │   └── list
-│   │   └── patch
 │   │   └── update
+│   │   └── schema
 │   │   └── template
+│   │   │   └── get
+│   │   │   └── list
 │   └── namespace
 │   │   └── apply
 │   │   └── create
 │   │   └── delete
 │   │   └── get
 │   │   └── list
-│   │   └── patch
 │   │   └── update
-│   │   └── namespacepolicy
+│   │   └── policy
 │   │   │   └── apply
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
-│   │   │   └── patch
 │   │   │   └── update
+│   │   │   └── schema
 │   │   │   └── template
+│   │   └── iam
+│   │   │   └── get-policy
+│   │   │   └── patch-policy
+│   │   │   └── test-permission
+│   │   │   └── update-policy
+│   │   └── schema
 │   │   └── template
+│   │   │   └── get
+│   │   │   └── list
 │   └── object
 │   │   └── get
 │   │   └── list
+│   └── policy
+│   │   └── apply
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
 │   └── provisionedcluster
 │   │   └── apply
 │   │   └── create
 │   │   └── delete
 │   │   └── get
 │   │   └── list
-│   │   └── patch
 │   │   └── update
+│   │   └── kubeconfig
+│   │   │   └── get
+│   │   │   └── get-admin
 │   │   └── nodepool
 │   │   │   └── apply
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
-│   │   │   └── patch
 │   │   │   └── update
+│   │   │   └── schema
 │   │   │   └── template
+│   │   └── schema
 │   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── iam
+│   │   └── get-policy
+│   │   └── patch-policy
+│   │   └── test-permission
+│   │   └── update-policy
+│   └── options
+│   │   └── list
+│   └── schema
 │   └── template
+│   │   └── get
+│   │   └── list
 └── clustergroup
 │   └── apply
 │   └── create
 │   └── delete
 │   └── get
 │   └── list
-│   └── patch
 │   └── update
-│   └── clustergrouppolicy
+│   └── policy
 │   │   └── apply
 │   │   └── create
 │   │   └── delete
 │   │   └── get
 │   │   └── list
-│   │   └── patch
 │   │   └── update
+│   │   └── schema
 │   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── iam
+│   │   └── get-policy
+│   │   └── patch-policy
+│   │   └── test-permission
+│   │   └── update-policy
+│   └── schema
 │   └── template
-└── iam
-└── system
-│   └── apply
-│   └── create
-│   └── delete
-│   └── get
-│   └── list
-│   └── patch
-│   └── update
-│   └── auth
-│   └── template
+│   │   └── get
+│   │   └── list
+└── organization
+│   └── iam
+│   │   └── get-policy
+│   │   └── patch-policy
+│   │   └── test-permission
+│   │   └── update-policy
+└── provider
 └── workspace
 │   └── apply
 │   └── create
 │   └── delete
 │   └── get
 │   └── list
-│   └── patch
 │   └── update
-│   └── workspacepolicy
+│   └── policy
 │   │   └── apply
 │   │   └── create
 │   │   └── delete
 │   │   └── get
 │   │   └── list
-│   │   └── patch
 │   │   └── update
+│   │   └── schema
 │   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── iam
+│   │   └── get-policy
+│   │   └── patch-policy
+│   │   └── test-permission
+│   │   └── update-policy
+│   └── schema
 │   └── template
+│   │   └── get
+│   │   └── list
 └── apply
+└── login
+│   └── switch
+└── update
 └── completion
+└── configure
+└── iam
+└── options
+└── system
+└── version

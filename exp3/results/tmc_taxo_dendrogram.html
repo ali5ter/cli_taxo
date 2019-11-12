@@ -41,7 +41,7 @@ var tree = d3.cluster()
 var stratify = d3.stratify()
     .parentId(function(d) { return d.id.substring(0, d.id.lastIndexOf(".")); });
 
-d3.csv("octl.csv", function(error, data) {
+d3.csv("tmc.csv", function(error, data) {
   if (error) throw error;
 
   var root = stratify(data)

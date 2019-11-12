@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # @author Alister Lewis-Bowen <bowena@vmware.com>
 
-./generate_radial_tree_svg.sh octl
-./generate_dendrogram_svg.sh octl
+./generate_mindmap_format.sh tmc "$@"
