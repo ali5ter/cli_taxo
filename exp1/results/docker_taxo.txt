@@ -1,89 +1,178 @@
 docker
-└─  attach
-└─  build
-└─  commit
-└─  cp
-└─  create
-└─  deploy
-└─  diff
-└─  events
-└─  exec
-└─  export
-└─  history
-└─  images
-└─  import
-└─  info
-└─  inspect
-└─  kill
-└─  load
-└─  login
-└─  logout
-└─  logs
-└─  network
-│    └─  connect
-│    └─  create
-│    └─  disconnect
-│    └─  inspect
-│    └─  ls
-│    └─  rm
-└─  node
-│    └─  demote
-│    └─  inspect
-│    └─  ls
-│    └─  promote
-│    └─  rm
-│    └─  ps
-│    └─  update
-└─  pause
-└─  plugin
-│    └─  disable
-│    └─  enable
-│    └─  inspect
-│    └─  install
-│    └─  ls
-│    └─  rm
-│    └─  set
-│    └─  push
-└─  port
-└─  ps
-└─  pull
-└─  push
-└─  rename
-└─  restart
-└─  rm
-└─  rmi
-└─  run
-└─  save
-└─  search
-└─  service
-│    └─  create
-│    └─  inspect
-│    └─  ps
-│    └─  ls
-│    └─  rm
-│    └─  scale
-│    └─  update
-└─  stack
-│    └─  config
-│    └─  deploy
-│    └─  rm
-│    └─  ps
-└─  start
-└─  stats
-└─  stop
-└─  swarm
-│    └─  init
-│    └─  join
-│    └─  update
-│    └─  leave
-└─  tag
-└─  top
-└─  unpause
-└─  update
-└─  version
-└─  volume
-│    └─  create
-│    └─  inspect
-│    └─  ls
-│    └─  rm
-└─  wait
+└── builder
+│   └── build
+│   └── prune
+└── checkpoint
+│   └── create
+│   └── ls
+│   └── rm
+└── config
+│   └── create
+│   └── inspect
+│   └── ls
+│   └── rm
+└── container
+│   └── attach
+│   └── commit
+│   └── cp
+│   └── create
+│   └── diff
+│   └── exec
+│   └── export
+│   └── inspect
+│   └── kill
+│   └── logs
+│   └── ls
+│   └── pause
+│   └── port
+│   └── prune
+│   └── rename
+│   └── restart
+│   └── rm
+│   └── run
+│   └── start
+│   └── stats
+│   └── stop
+│   └── top
+│   └── unpause
+│   └── update
+│   └── wait
+└── context
+│   └── create
+│   └── export
+│   └── import
+│   └── inspect
+│   └── ls
+│   └── rm
+│   └── update
+│   └── use
+└── image
+│   └── build
+│   └── history
+│   └── import
+│   └── inspect
+│   └── load
+│   └── ls
+│   └── prune
+│   └── pull
+│   └── push
+│   └── rm
+│   └── save
+│   └── tag
+└── network
+│   └── connect
+│   └── create
+│   └── disconnect
+│   └── inspect
+│   └── ls
+│   └── prune
+│   └── rm
+└── node
+│   └── demote
+│   └── inspect
+│   └── ls
+│   └── promote
+│   └── ps
+│   └── rm
+│   └── update
+└── plugin
+│   └── create
+│   └── disable
+│   └── enable
+│   └── inspect
+│   └── install
+│   └── ls
+│   └── push
+│   └── rm
+│   └── set
+│   └── upgrade
+└── secret
+│   └── create
+│   └── inspect
+│   └── ls
+│   └── rm
+└── service
+│   └── create
+│   └── inspect
+│   └── logs
+│   └── ls
+│   └── ps
+│   └── rm
+│   └── rollback
+│   └── scale
+│   └── update
+└── stack
+│   └── deploy
+│   └── ls
+│   └── ps
+│   └── rm
+│   └── services
+└── swarm
+│   └── ca
+│   └── init
+│   └── join
+│   └── leave
+│   └── unlock
+│   └── update
+└── system
+│   └── df
+│   └── events
+│   └── info
+│   └── prune
+└── trust
+│   └── key
+│   │   └── generate
+│   │   └── load
+│   └── signer
+│   │   └── add
+│   │   └── remove
+│   └── inspect
+│   └── revoke
+│   └── sign
+└── volume
+│   └── create
+│   └── inspect
+│   └── ls
+│   └── prune
+│   └── rm
+└── attach
+└── build
+└── commit
+└── cp
+└── create
+└── deploy
+└── diff
+└── events
+└── exec
+└── export
+└── history
+└── images
+└── import
+└── info
+└── inspect
+└── kill
+└── load
+└── login
+└── logout
+└── logs
+└── pause
+└── port
+└── ps
+└── pull
+└── push
+└── rename
+└── restart
+└── rm
+└── rmi
+└── run
+└── save
+└── search
+└── start
+└── stats
+└── stop
+└── tag
+└── top
+└── unpause
+└── update
+└── version
+└── wait

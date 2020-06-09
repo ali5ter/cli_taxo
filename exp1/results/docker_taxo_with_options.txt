@@ -1,0 +1,838 @@
+docker
+└── --config string
+└── -c, --context string
+└── -D, --debug
+└── -H, --host list
+└── -l, --log-level string
+└── --tls
+└── --tlscacert string
+└── --tlscert string
+└── --tlskey string
+└── --tlsverify
+└── -v, --version
+└── builder
+│   └── build
+│   │   └── --add-host list
+│   │   └── --build-arg list
+│   │   └── --cache-from strings
+│   │   └── --cgroup-parent string
+│   │   └── --compress
+│   │   └── --cpu-period int
+│   │   └── --cpu-quota int
+│   │   └── -c, --cpu-shares int
+│   │   └── --cpuset-cpus string
+│   │   └── --cpuset-mems string
+│   │   └── --disable-content-trust
+│   │   └── -f, --file string
+│   │   └── --force-rm
+│   │   └── --iidfile string
+│   │   └── --isolation string
+│   │   └── --label list
+│   │   └── -m, --memory bytes
+│   │   └── --memory-swap bytes
+│   │   └── --network string
+│   │   └── --no-cache
+│   │   └── --platform string
+│   │   └── --pull
+│   │   └── -q, --quiet
+│   │   └── --rm
+│   │   └── --security-opt strings
+│   │   └── --shm-size bytes
+│   │   └── --squash
+│   │   └── --stream
+│   │   └── -t, --tag list
+│   │   └── --target string
+│   │   └── --ulimit ulimit
+│   └── prune
+│   │   └── -a, --all
+│   │   └── --filter filter
+│   │   └── -f, --force
+│   │   └── --keep-storage bytes
+└── checkpoint
+│   └── create
+│   │   └── --checkpoint-dir string
+│   │   └── --leave-running
+│   └── ls
+│   │   └── --checkpoint-dir string
+│   └── rm
+│   │   └── --checkpoint-dir string
+└── config
+│   └── create
+│   │   └── -l, --label list
+│   │   └── --template-driver string
+│   └── inspect
+│   │   └── -f, --format string
+│   │   └── --pretty
+│   └── ls
+│   │   └── -f, --filter filter
+│   │   └── --format string
+│   │   └── -q, --quiet
+│   └── rm
+└── container
+│   └── attach
+│   │   └── --detach-keys string
+│   │   └── --no-stdin
+│   │   └── --sig-proxy
+│   └── commit
+│   │   └── -a, --author string
+│   │   └── -c, --change list
+│   │   └── -m, --message string
+│   │   └── -p, --pause
+│   └── cp
+│   │   └── -a, --archive
+│   │   └── -L, --follow-link
+│   └── create
+│   └── diff
+│   └── exec
+│   │   └── -d, --detach
+│   │   └── --detach-keys string
+│   │   └── -e, --env list
+│   │   └── -i, --interactive
+│   │   └── --privileged
+│   │   └── -t, --tty
+│   │   └── -u, --user string
+│   │   └── -w, --workdir string
+│   └── export
+│   │   └── -o, --output string
+│   └── inspect
+│   │   └── -f, --format string
+│   │   └── -s, --size
+│   └── kill
+│   │   └── -s, --signal string
+│   └── logs
+│   │   └── --details
+│   │   └── -f, --follow
+│   │   └── --since string
+│   │   └── --tail string
+│   │   └── -t, --timestamps
+│   │   └── --until string
+│   └── ls
+│   │   └── -a, --all
+│   │   └── -f, --filter filter
+│   │   └── --format string
+│   │   └── -n, --last int
+│   │   └── -l, --latest
+│   │   └── --no-trunc
+│   │   └── -q, --quiet
+│   │   └── -s, --size
+│   └── pause
+│   └── port
+│   └── prune
+│   │   └── --filter filter
+│   │   └── -f, --force
+│   └── rename
+│   └── restart
+│   │   └── -t, --time int
+│   └── rm
+│   │   └── -f, --force
+│   │   └── -l, --link
+│   │   └── -v, --volumes
+│   └── run
+│   └── start
+│   │   └── -a, --attach
+│   │   └── --checkpoint string
+│   │   └── --checkpoint-dir string
+│   │   └── --detach-keys string
+│   │   └── -i, --interactive
+│   └── stats
+│   │   └── -a, --all
+│   │   └── --format string
+│   │   └── --no-stream
+│   │   └── --no-trunc
+│   └── stop
+│   │   └── -t, --time int
+│   └── top
+│   └── unpause
+│   └── update
+│   │   └── --blkio-weight uint16
+│   │   └── --cpu-period int
+│   │   └── --cpu-quota int
+│   │   └── --cpu-rt-period int
+│   │   └── --cpu-rt-runtime int
+│   │   └── -c, --cpu-shares int
+│   │   └── --cpus decimal
+│   │   └── --cpuset-cpus string
+│   │   └── --cpuset-mems string
+│   │   └── --kernel-memory bytes
+│   │   └── -m, --memory bytes
+│   │   └── --memory-reservation bytes
+│   │   └── --memory-swap bytes
+│   │   └── --pids-limit int
+│   │   └── --restart string
+│   └── wait
+└── context
+│   └── create
+│   │   └── --default-stack-orchestrator string
+│   │   └── --description string
+│   │   └── --docker stringToString
+│   │   └── --from string
+│   │   └── --kubernetes stringToString
+│   └── export
+│   │   └── --kubeconfig
+│   └── import
+│   └── inspect
+│   │   └── -f, --format string
+│   └── ls
+│   │   └── --format string
+│   │   └── -q, --quiet
+│   └── rm
+│   │   └── -f, --force
+│   └── update
+│   │   └── --default-stack-orchestrator string
+│   │   └── --description string
+│   │   └── --docker stringToString
+│   │   └── --kubernetes stringToString
+│   └── use
+└── image
+│   └── build
+│   │   └── --add-host list
+│   │   └── --build-arg list
+│   │   └── --cache-from strings
+│   │   └── --cgroup-parent string
+│   │   └── --compress
+│   │   └── --cpu-period int
+│   │   └── --cpu-quota int
+│   │   └── -c, --cpu-shares int
+│   │   └── --cpuset-cpus string
+│   │   └── --cpuset-mems string
+│   │   └── --disable-content-trust
+│   │   └── -f, --file string
+│   │   └── --force-rm
+│   │   └── --iidfile string
+│   │   └── --isolation string
+│   │   └── --label list
+│   │   └── -m, --memory bytes
+│   │   └── --memory-swap bytes
+│   │   └── --network string
+│   │   └── --no-cache
+│   │   └── --platform string
+│   │   └── --pull
+│   │   └── -q, --quiet
+│   │   └── --rm
+│   │   └── --security-opt strings
+│   │   └── --shm-size bytes
+│   │   └── --squash
+│   │   └── --stream
+│   │   └── -t, --tag list
+│   │   └── --target string
+│   │   └── --ulimit ulimit
+│   └── history
+│   │   └── --format string
+│   │   └── -H, --human
+│   │   └── --no-trunc
+│   │   └── -q, --quiet
+│   └── import
+│   │   └── -c, --change list
+│   │   └── -m, --message string
+│   │   └── --platform string
+│   └── inspect
+│   │   └── -f, --format string
+│   └── load
+│   │   └── -i, --input string
+│   │   └── -q, --quiet
+│   └── ls
+│   │   └── -a, --all
+│   │   └── --digests
+│   │   └── -f, --filter filter
+│   │   └── --format string
+│   │   └── --no-trunc
+│   │   └── -q, --quiet
+│   └── prune
+│   │   └── -a, --all
+│   │   └── --filter filter
+│   │   └── -f, --force
+│   └── pull
+│   │   └── -a, --all-tags
+│   │   └── --disable-content-trust
+│   │   └── --platform string
+│   │   └── -q, --quiet
+│   └── push
+│   │   └── --disable-content-trust
+│   └── rm
+│   │   └── -f, --force
+│   │   └── --no-prune
+│   └── save
+│   │   └── -o, --output string
+│   └── tag
+└── network
+│   └── connect
+│   │   └── --alias strings
+│   │   └── --driver-opt strings
+│   │   └── --ip string
+│   │   └── --ip6 string
+│   │   └── --link list
+│   │   └── --link-local-ip strings
+│   └── create
+│   │   └── --attachable
+│   │   └── --aux-address map
+│   │   └── --config-from string
+│   │   └── --config-only
+│   │   └── -d, --driver string
+│   │   └── --gateway strings
+│   │   └── --ingress
+│   │   └── --internal
+│   │   └── --ip-range strings
+│   │   └── --ipam-driver string
+│   │   └── --ipam-opt map
+│   │   └── --ipv6
+│   │   └── --label list
+│   │   └── -o, --opt map
+│   │   └── --scope string
+│   │   └── --subnet strings
+│   └── disconnect
+│   │   └── -f, --force
+│   └── inspect
+│   │   └── -f, --format string
+│   │   └── -v, --verbose
+│   └── ls
+│   │   └── -f, --filter filter
+│   │   └── --format string
+│   │   └── --no-trunc
+│   │   └── -q, --quiet
+│   └── prune
+│   │   └── --filter filter
+│   │   └── -f, --force
+│   └── rm
+└── node
+│   └── demote
+│   └── inspect
+│   │   └── -f, --format string
+│   │   └── --pretty
+│   └── ls
+│   │   └── -f, --filter filter
+│   │   └── --format string
+│   │   └── -q, --quiet
+│   └── promote
+│   └── ps
+│   │   └── -f, --filter filter
+│   │   └── --format string
+│   │   └── --no-resolve
+│   │   └── --no-trunc
+│   │   └── -q, --quiet
+│   └── rm
+│   │   └── -f, --force
+│   └── update
+│   │   └── --availability string
+│   │   └── --label-add list
+│   │   └── --label-rm list
+│   │   └── --role string
+└── plugin
+│   └── create
+│   │   └── --compress
+│   └── disable
+│   │   └── -f, --force
+│   └── enable
+│   │   └── --timeout int
+│   └── inspect
+│   │   └── -f, --format string
+│   └── install
+│   │   └── --alias string
+│   │   └── --disable
+│   │   └── --disable-content-trust
+│   │   └── --grant-all-permissions
+│   └── ls
+│   │   └── -f, --filter filter
+│   │   └── --format string
+│   │   └── --no-trunc
+│   │   └── -q, --quiet
+│   └── push
+│   │   └── --disable-content-trust
+│   └── rm
+│   │   └── -f, --force
+│   └── set
+│   └── upgrade
+│   │   └── --disable-content-trust
+│   │   └── --grant-all-permissions
+│   │   └── --skip-remote-check
+└── secret
+│   └── create
+│   │   └── -d, --driver string
+│   │   └── -l, --label list
+│   │   └── --template-driver string
+│   └── inspect
+│   │   └── -f, --format string
+│   │   └── --pretty
+│   └── ls
+│   │   └── -f, --filter filter
+│   │   └── --format string
+│   │   └── -q, --quiet
+│   └── rm
+└── service
+│   └── create
+│   │   └── --config config
+│   │   └── --constraint list
+│   │   └── --container-label list
+│   │   └── --credential-spec credential-spec
+│   │   └── -d, --detach
+│   │   └── --dns list
+│   │   └── --dns-option list
+│   │   └── --dns-search list
+│   │   └── --endpoint-mode string
+│   │   └── --entrypoint command
+│   │   └── -e, --env list
+│   │   └── --env-file list
+│   │   └── --generic-resource list
+│   │   └── --group list
+│   │   └── --health-cmd string
+│   │   └── --health-interval duration
+│   │   └── --health-retries int
+│   │   └── --health-start-period duration
+│   │   └── --health-timeout duration
+│   │   └── --host list
+│   │   └── --hostname string
+│   │   └── --init
+│   │   └── --isolation string
+│   │   └── -l, --label list
+│   │   └── --limit-cpu decimal
+│   │   └── --limit-memory bytes
+│   │   └── --log-driver string
+│   │   └── --log-opt list
+│   │   └── --mode string
+│   │   └── --mount mount
+│   │   └── --name string
+│   │   └── --network network
+│   │   └── --no-healthcheck
+│   │   └── --no-resolve-image
+│   │   └── --placement-pref pref
+│   │   └── -p, --publish port
+│   │   └── -q, --quiet
+│   │   └── --read-only
+│   │   └── --replicas uint
+│   │   └── --replicas-max-per-node uint
+│   │   └── --reserve-cpu decimal
+│   │   └── --reserve-memory bytes
+│   │   └── --restart-condition string
+│   │   └── --restart-delay duration
+│   │   └── --restart-max-attempts uint
+│   │   └── --restart-window duration
+│   │   └── --rollback-delay duration
+│   │   └── --rollback-failure-action string
+│   │   └── --rollback-max-failure-ratio float
+│   │   └── --rollback-monitor duration
+│   │   └── --rollback-order string
+│   │   └── --rollback-parallelism uint
+│   │   └── --secret secret
+│   │   └── --stop-grace-period duration
+│   │   └── --stop-signal string
+│   │   └── --sysctl list
+│   │   └── -t, --tty
+│   │   └── --update-delay duration
+│   │   └── --update-failure-action string
+│   │   └── --update-max-failure-ratio float
+│   │   └── --update-monitor duration
+│   │   └── --update-order string
+│   │   └── --update-parallelism uint
+│   │   └── -u, --user string
+│   │   └── --with-registry-auth
+│   │   └── -w, --workdir string
+│   └── inspect
+│   │   └── -f, --format string
+│   │   └── --pretty
+│   └── logs
+│   │   └── --details
+│   │   └── -f, --follow
+│   │   └── --no-resolve
+│   │   └── --no-task-ids
+│   │   └── --no-trunc
+│   │   └── --raw
+│   │   └── --since string
+│   │   └── --tail string
+│   │   └── -t, --timestamps
+│   └── ls
+│   │   └── -f, --filter filter
+│   │   └── --format string
+│   │   └── -q, --quiet
+│   └── ps
+│   │   └── -f, --filter filter
+│   │   └── --format string
+│   │   └── --no-resolve
+│   │   └── --no-trunc
+│   │   └── -q, --quiet
+│   └── rm
+│   └── rollback
+│   │   └── -d, --detach
+│   │   └── -q, --quiet
+│   └── scale
+│   │   └── -d, --detach
+│   └── update
+│   │   └── --args command
+│   │   └── --config-add config
+│   │   └── --config-rm list
+│   │   └── --constraint-add list
+│   │   └── --constraint-rm list
+│   │   └── --container-label-add list
+│   │   └── --container-label-rm list
+│   │   └── --credential-spec credential-spec
+│   │   └── -d, --detach
+│   │   └── --dns-add list
+│   │   └── --dns-option-add list
+│   │   └── --dns-option-rm list
+│   │   └── --dns-rm list
+│   │   └── --dns-search-add list
+│   │   └── --dns-search-rm list
+│   │   └── --endpoint-mode string
+│   │   └── --entrypoint command
+│   │   └── --env-add list
+│   │   └── --env-rm list
+│   │   └── --force
+│   │   └── --generic-resource-add list
+│   │   └── --generic-resource-rm list
+│   │   └── --group-add list
+│   │   └── --group-rm list
+│   │   └── --health-cmd string
+│   │   └── --health-interval duration
+│   │   └── --health-retries int
+│   │   └── --health-start-period duration
+│   │   └── --health-timeout duration
+│   │   └── --host-add list
+│   │   └── --host-rm list
+│   │   └── --hostname string
+│   │   └── --image string
+│   │   └── --init
+│   │   └── --isolation string
+│   │   └── --label-add list
+│   │   └── --label-rm list
+│   │   └── --limit-cpu decimal
+│   │   └── --limit-memory bytes
+│   │   └── --log-driver string
+│   │   └── --log-opt list
+│   │   └── --mount-add mount
+│   │   └── --mount-rm list
+│   │   └── --network-add network
+│   │   └── --network-rm list
+│   │   └── --no-healthcheck
+│   │   └── --no-resolve-image
+│   │   └── --placement-pref-add pref
+│   │   └── --placement-pref-rm pref
+│   │   └── --publish-add port
+│   │   └── --publish-rm port
+│   │   └── -q, --quiet
+│   │   └── --read-only
+│   │   └── --replicas uint
+│   │   └── --replicas-max-per-node uint
+│   │   └── --reserve-cpu decimal
+│   │   └── --reserve-memory bytes
+│   │   └── --restart-condition string
+│   │   └── --restart-delay duration
+│   │   └── --restart-max-attempts uint
+│   │   └── --restart-window duration
+│   │   └── --rollback
+│   │   └── --rollback-delay duration
+│   │   └── --rollback-failure-action string
+│   │   └── --rollback-max-failure-ratio float
+│   │   └── --rollback-monitor duration
+│   │   └── --rollback-order string
+│   │   └── --rollback-parallelism uint
+│   │   └── --secret-add secret
+│   │   └── --secret-rm list
+│   │   └── --stop-grace-period duration
+│   │   └── --stop-signal string
+│   │   └── --sysctl-add list
+│   │   └── --sysctl-rm list
+│   │   └── -t, --tty
+│   │   └── --update-delay duration
+│   │   └── --update-failure-action string
+│   │   └── --update-max-failure-ratio float
+│   │   └── --update-monitor duration
+│   │   └── --update-order string
+│   │   └── --update-parallelism uint
+│   │   └── -u, --user string
+│   │   └── --with-registry-auth
+│   │   └── -w, --workdir string
+└── stack
+│   └── --orchestrator string
+│   └── deploy
+│   │   └── --bundle-file string
+│   │   └── -c, --compose-file strings
+│   │   └── --orchestrator string
+│   │   └── --prune
+│   │   └── --resolve-image string
+│   │   └── --with-registry-auth
+│   └── ls
+│   │   └── --format string
+│   │   └── --orchestrator string
+│   └── ps
+│   │   └── -f, --filter filter
+│   │   └── --format string
+│   │   └── --no-resolve
+│   │   └── --no-trunc
+│   │   └── --orchestrator string
+│   │   └── -q, --quiet
+│   └── rm
+│   │   └── --orchestrator string
+│   └── services
+│   │   └── -f, --filter filter
+│   │   └── --format string
+│   │   └── --orchestrator string
+│   │   └── -q, --quiet
+└── swarm
+│   └── ca
+│   │   └── --ca-cert pem-file
+│   │   └── --ca-key pem-file
+│   │   └── --cert-expiry duration
+│   │   └── -d, --detach
+│   │   └── --external-ca external-ca
+│   │   └── -q, --quiet
+│   │   └── --rotate
+│   └── init
+│   │   └── --advertise-addr string
+│   │   └── --autolock
+│   │   └── --availability string
+│   │   └── --cert-expiry duration
+│   │   └── --data-path-addr string
+│   │   └── --data-path-port uint32
+│   │   └── --default-addr-pool ipNetSlice
+│   │   └── --default-addr-pool-mask-length uint32
+│   │   └── --dispatcher-heartbeat duration
+│   │   └── --external-ca external-ca
+│   │   └── --force-new-cluster
+│   │   └── --listen-addr node-addr
+│   │   └── --max-snapshots uint
+│   │   └── --snapshot-interval uint
+│   │   └── --task-history-limit int
+│   └── join
+│   │   └── --advertise-addr string
+│   │   └── --availability string
+│   │   └── --data-path-addr string
+│   │   └── --listen-addr node-addr
+│   │   └── --token string
+│   └── leave
+│   │   └── -f, --force
+│   └── unlock
+│   └── update
+│   │   └── --autolock
+│   │   └── --cert-expiry duration
+│   │   └── --dispatcher-heartbeat duration
+│   │   └── --external-ca external-ca
+│   │   └── --max-snapshots uint
+│   │   └── --snapshot-interval uint
+│   │   └── --task-history-limit int
+└── system
+│   └── df
+│   │   └── --format string
+│   │   └── -v, --verbose
+│   └── events
+│   │   └── -f, --filter filter
+│   │   └── --format string
+│   │   └── --since string
+│   │   └── --until string
+│   └── info
+│   │   └── -f, --format string
+│   └── prune
+│   │   └── -a, --all
+│   │   └── --filter filter
+│   │   └── -f, --force
+│   │   └── --volumes
+└── trust
+│   └── key
+│   │   └── generate
+│   │   │   └── --dir string
+│   │   └── load
+│   │   │   └── --name string
+│   └── signer
+│   │   └── add
+│   │   │   └── --key list
+│   │   └── remove
+│   │   │   └── -f, --force
+│   └── inspect
+│   │   └── --pretty
+│   └── revoke
+│   │   └── -y, --yes
+│   └── sign
+│   │   └── --local
+└── volume
+│   └── create
+│   │   └── -d, --driver string
+│   │   └── --label list
+│   │   └── -o, --opt map
+│   └── inspect
+│   │   └── -f, --format string
+│   └── ls
+│   │   └── -f, --filter filter
+│   │   └── --format string
+│   │   └── -q, --quiet
+│   └── prune
+│   │   └── --filter filter
+│   │   └── -f, --force
+│   └── rm
+│   │   └── -f, --force
+└── attach
+│   └── --detach-keys string
+│   └── --no-stdin
+│   └── --sig-proxy
+└── build
+│   └── --add-host list
+│   └── --build-arg list
+│   └── --cache-from strings
+│   └── --cgroup-parent string
+│   └── --compress
+│   └── --cpu-period int
+│   └── --cpu-quota int
+│   └── -c, --cpu-shares int
+│   └── --cpuset-cpus string
+│   └── --cpuset-mems string
+│   └── --disable-content-trust
+│   └── -f, --file string
+│   └── --force-rm
+│   └── --iidfile string
+│   └── --isolation string
+│   └── --label list
+│   └── -m, --memory bytes
+│   └── --memory-swap bytes
+│   └── --network string
+│   └── --no-cache
+│   └── --platform string
+│   └── --pull
+│   └── -q, --quiet
+│   └── --rm
+│   └── --security-opt strings
+│   └── --shm-size bytes
+│   └── --squash
+│   └── --stream
+│   └── -t, --tag list
+│   └── --target string
+│   └── --ulimit ulimit
+└── commit
+│   └── -a, --author string
+│   └── -c, --change list
+│   └── -m, --message string
+│   └── -p, --pause
+└── cp
+│   └── -a, --archive
+│   └── -L, --follow-link
+└── create
+└── deploy
+│   └── --bundle-file string
+│   └── -c, --compose-file strings
+│   └── --namespace string
+│   └── --prune
+│   └── --resolve-image string
+│   └── --with-registry-auth
+└── diff
+└── events
+│   └── -f, --filter filter
+│   └── --format string
+│   └── --since string
+│   └── --until string
+└── exec
+│   └── -d, --detach
+│   └── --detach-keys string
+│   └── -e, --env list
+│   └── -i, --interactive
+│   └── --privileged
+│   └── -t, --tty
+│   └── -u, --user string
+│   └── -w, --workdir string
+└── export
+│   └── -o, --output string
+└── history
+│   └── --format string
+│   └── -H, --human
+│   └── --no-trunc
+│   └── -q, --quiet
+└── images
+│   └── -a, --all
+│   └── --digests
+│   └── -f, --filter filter
+│   └── --format string
+│   └── --no-trunc
+│   └── -q, --quiet
+└── import
+│   └── -c, --change list
+│   └── -m, --message string
+│   └── --platform string
+└── info
+│   └── -f, --format string
+└── inspect
+│   └── -f, --format string
+│   └── -s, --size
+│   └── --type string
+└── kill
+│   └── -s, --signal string
+└── load
+│   └── -i, --input string
+│   └── -q, --quiet
+└── login
+│   └── -p, --password string
+│   └── --password-stdin
+│   └── -u, --username string
+└── logout
+└── logs
+│   └── --details
+│   └── -f, --follow
+│   └── --since string
+│   └── --tail string
+│   └── -t, --timestamps
+│   └── --until string
+└── pause
+└── port
+└── ps
+│   └── -a, --all
+│   └── -f, --filter filter
+│   └── --format string
+│   └── -n, --last int
+│   └── -l, --latest
+│   └── --no-trunc
+│   └── -q, --quiet
+│   └── -s, --size
+└── pull
+│   └── -a, --all-tags
+│   └── --disable-content-trust
+│   └── --platform string
+│   └── -q, --quiet
+└── push
+│   └── --disable-content-trust
+└── rename
+└── restart
+│   └── -t, --time int
+└── rm
+│   └── -f, --force
+│   └── -l, --link
+│   └── -v, --volumes
+└── rmi
+│   └── -f, --force
+│   └── --no-prune
+└── run
+└── save
+│   └── -o, --output string
+└── search
+│   └── -f, --filter filter
+│   └── --format string
+│   └── --limit int
+│   └── --no-trunc
+└── start
+│   └── -a, --attach
+│   └── --checkpoint string
+│   └── --checkpoint-dir string
+│   └── --detach-keys string
+│   └── -i, --interactive
+└── stats
+│   └── -a, --all
+│   └── --format string
+│   └── --no-stream
+│   └── --no-trunc
+└── stop
+│   └── -t, --time int
+└── tag
+└── top
+└── unpause
+└── update
+│   └── --blkio-weight uint16
+│   └── --cpu-period int
+│   └── --cpu-quota int
+│   └── --cpu-rt-period int
+│   └── --cpu-rt-runtime int
+│   └── -c, --cpu-shares int
+│   └── --cpus decimal
+│   └── --cpuset-cpus string
+│   └── --cpuset-mems string
+│   └── --kernel-memory bytes
+│   └── -m, --memory bytes
+│   └── --memory-reservation bytes
+│   └── --memory-swap bytes
+│   └── --pids-limit int
+│   └── --restart string
+└── version
+│   └── -f, --format string
+│   └── --kubeconfig string
+└── wait

@@ -9,8 +9,8 @@ The [cli_taxo.py](cli_taxo.py) script parses the help documentation for a CLI co
 
 Assuming a taxonomy can be successfully established, it is output in different ways:
 * A simple ASCII tree diagram
-* Comma seperated values for integration with other tools (like d3js)
-* A very simple, headerless, markdown table (useful for use in wiki's or MD docs)
+* Comma separated values for integration with other tools (like d3js)
+* A very simple, header-less, markdown table (useful for use in wiki's or MD docs)
 * A Bash autocompletion script
 
 **Note: While this script can generate a Bash autocomplete script, it is rudimentary. However it can still significantly aid the developer experience of a CLI where tab completion doesn't already exist.**
@@ -76,9 +76,16 @@ Not so much experiments, rather different ways the [cli_taxo.py](cli_taxo.py) sc
 
 [exp2](exp2) ... Scripts to generate CSV output that integrates with a tool to generate a MindMap format file. This can be viewed with tools like [FreeMind](http://freemind.sourceforge.net/wiki/index.php/Main_Page)
 
-[exp3](exp3) ... Scripts to take CSV formats from [exp2](exp2) and generate [radial trees](https://bl.ocks.org/mbostock/4063550) or [dendograms](https://bl.ocks.org/mbostock/4063570). Useful to quickly figure out structural aspsects of the taxo such as density or depth.
+[exp3](exp3) ... Scripts to take CSV formats from [exp2](exp2) and generate [radial trees](https://bl.ocks.org/mbostock/4063550) or [dendograms](https://bl.ocks.org/mbostock/4063570). Useful to quickly figure out structural aspects of the taxo such as density or depth.
 
 [exp4](exp4) ... Scripts to generate bash autocompletion scripts using the wrapper scripts in [exp1](exp1)
+
+## Quick start taxo diagrams
+As a convenience, a couple of scripts are supplied to regenerate the taxonomy trees for CLI commands that might have been updated and displaying the diagrams for them.
+
+[build_taxo_for](build_taxo_for) runs the required experiments above to generate the taxo tree, csv and diagrams for a specific CLI command that already has supporting scripts.
+
+[show_taxo_for](show_taxo_for) builds and runs the container in [exp3](exp3) to serve the SVG diagrams and opens the URL to the specific CLI commands radial illustration.
 
 ## Other repos that use cli_taxo
 * [Install Cloud PKS CLI using homebrew](https://github.com/ali5ter/homebrew-vke-cli) - used by CircleCi build script

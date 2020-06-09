@@ -8,7 +8,6 @@
         <node text="describe" />
         <node text="replace" />
         <node text="annotate" />
-        <node text="proxy" />
         <node folded="false" text="set">
             <node text="image" />
             <node text="serviceaccount" />
@@ -17,25 +16,16 @@
             <node text="resources" />
             <node text="subject" />
         </node>
-        <node text="run-container" />
         <node folded="false" text="apply">
             <node text="edit-last-applied" />
             <node text="set-last-applied" />
             <node text="view-last-applied" />
         </node>
         <node text="cp" />
-        <node text="help" />
-        <node text="completion" />
-        <node text="scale" />
-        <node text="autoscale" />
-        <node folded="false" text="certificate">
-            <node text="deny" />
-            <node text="approve" />
-        </node>
-        <node text="attach" />
+        <node text="diff" />
         <node folded="false" text="create">
             <node text="configmap" />
-            <node text="poddisruptionbudget" />
+            <node text="cronjob" />
             <node folded="false" text="service">
                 <node text="clusterip" />
                 <node text="externalname" />
@@ -44,13 +34,14 @@
             </node>
             <node text="clusterrolebinding" />
             <node text="serviceaccount" />
+            <node text="quota" />
             <node folded="false" text="secret">
                 <node text="generic" />
                 <node text="tls" />
                 <node text="docker-registry" />
             </node>
             <node text="namespace" />
-            <node text="quota" />
+            <node text="poddisruptionbudget" />
             <node text="priorityclass" />
             <node text="rolebinding" />
             <node text="job" />
@@ -58,10 +49,19 @@
             <node text="deployment" />
             <node text="clusterrole" />
         </node>
+        <node text="completion" />
+        <node text="scale" />
+        <node text="autoscale" />
+        <node folded="false" text="certificate">
+            <node text="deny" />
+            <node text="approve" />
+        </node>
+        <node text="explain" />
         <node text="exec" />
         <node text="label" />
-        <node text="explain" />
+        <node text="attach" />
         <node text="version" />
+        <node text="api-resources" />
         <node folded="false" text="config">
             <node text="set-context" />
             <node text="rename-context" />
@@ -77,6 +77,7 @@
             <node text="unset" />
             <node text="view" />
         </node>
+        <node text="kustomize" />
         <node text="cordon" />
         <node text="run" />
         <node text="get" />
@@ -85,14 +86,19 @@
             <node text="can-i" />
             <node text="reconcile" />
         </node>
-        <node text="rolling-update" />
+        <node text="proxy" />
         <node folded="false" text="rollout">
             <node text="status" />
             <node text="pause" />
-            <node text="undo" />
             <node text="resume" />
+            <node text="undo" />
+            <node text="restart" />
             <node text="history" />
         </node>
+        <node folded="false" text="alpha">
+            <node text="debug" />
+        </node>
+        <node text="wait" />
         <node text="convert" />
         <node text="drain" />
         <node text="api-versions" />

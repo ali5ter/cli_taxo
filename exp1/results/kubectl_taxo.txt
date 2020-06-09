@@ -3,6 +3,7 @@ kubectl
 │   └── clusterrole
 │   └── clusterrolebinding
 │   └── configmap
+│   └── cronjob
 │   └── deployment
 │   └── job
 │   └── namespace
@@ -30,18 +31,17 @@ kubectl
 │   └── selector
 │   └── serviceaccount
 │   └── subject
-└── run-container
-└── get
 └── explain
+└── get
 └── edit
 └── delete
 └── rollout
 │   └── history
 │   └── pause
+│   └── restart
 │   └── resume
 │   └── status
 │   └── undo
-└── rolling-update
 └── scale
 └── autoscale
 └── certificate
@@ -66,16 +66,22 @@ kubectl
 └── auth
 │   └── can-i
 │   └── reconcile
+└── diff
 └── apply
 │   └── edit-last-applied
 │   └── set-last-applied
 │   └── view-last-applied
 └── patch
 └── replace
+└── wait
 └── convert
+└── kustomize
 └── label
 └── annotate
 └── completion
+└── alpha
+│   └── debug
+└── api-resources
 └── api-versions
 └── config
 │   └── current-context
@@ -91,6 +97,5 @@ kubectl
 │   └── unset
 │   └── use-context
 │   └── view
-└── help
 └── plugin
 └── version
