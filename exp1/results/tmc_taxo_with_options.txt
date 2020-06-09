@@ -1,35 +1,71 @@
 tmc
 └── account
-│   └── --access-token
-│   └── --endpoint
-│   └── --help
-└── cluster
-│   └── apply
-│   │   └── --file
+│   └── provider
+│   │   └── credential
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── iam
+│   │   │   └── schema
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── permissiontemplate
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
 │   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
-│   │   └── --verbosity
-│   └── attach
-│   │   └── --access-token
-│   │   └── --endpoint
-│   │   └── --verbosity
+│   └── --help
+└── audit
 │   └── create
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── delete
 │   │   └── --help
-│   │   └── --location
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── get
 │   │   └── --help
-│   │   └── --location
 │   │   └── --output
-│   │   └── --access-token
-│   │   └── --endpoint
+│   │   └── --verbosity
+│   └── get-user-info
+│   │   └── --help
+│   │   └── --verbosity
+│   └── list
+│   │   └── --help
+│   │   └── --max-size
+│   │   └── --name
+│   │   └── --offset
+│   │   └── --output
+│   │   └── --verbosity
+│   └── schema
+│   │   └── --help
+│   │   └── --output
+│   │   └── --verbosity
+│   └── template
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
+│   └── --help
+│   └── --verbosity
+└── cluster
+│   └── attach
+│   │   └── --verbosity
+│   └── create
+│   │   └── --verbosity
+│   └── delete
+│   │   └── --forget
+│   │   └── --help
+│   │   └── --verbosity
+│   └── get
+│   │   └── --help
+│   │   └── --output
 │   │   └── --verbosity
 │   └── list
 │   │   └── --group
@@ -38,450 +74,153 @@ tmc
 │   │   └── --name
 │   │   └── --offset
 │   │   └── --output
-│   │   └── --query
-│   │   └── --access-token
-│   │   └── --endpoint
+│   │   └── --verbosity
+│   └── reattach
+│   │   └── --help
+│   │   └── --http-proxy-password
+│   │   └── --http-proxy-url
+│   │   └── --http-proxy-username
+│   │   └── --kubeconfig
+│   │   └── --name
+│   │   └── --skip-verify
 │   │   └── --verbosity
 │   └── update
-│   │   └── --file
-│   │   └── --help
-│   │   └── --interactive
-│   │   └── --location
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
-│   └── dataprotection
-│   │   └── apply
-│   │   │   └── --file
+│   └── upgrade
+│   │   └── --help
+│   │   └── --include-all-families
+│   │   └── --latest
+│   │   └── --verbosity
+│   └── validate
+│   │   └── --help
+│   │   └── --kubeconfig
+│   │   └── --verbosity
+│   └── auth
+│   │   └── serverconfig
+│   │   │   └── get
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
-│   │   └── create
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── delete
+│   │   └── token
+│   │   └── userconfig
+│   │   │   └── get
 │   │   │   └── --help
-│   │   │   └── --location
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
+│   └── effective-policy-set
 │   │   └── get
 │   │   │   └── --help
-│   │   │   └── --location
 │   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── list
-│   │   │   └── --clustername
-│   │   │   └── --group
-│   │   │   └── --help
-│   │   │   └── --max-size
-│   │   │   └── --name
-│   │   │   └── --offset
-│   │   │   └── --output
-│   │   │   └── --query
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── update
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --interactive
-│   │   │   └── --location
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── backup
-│   │   │   └── apply
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── update
-│   │   │   └── schema
-│   │   │   └── template
-│   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── backuplocation
-│   │   │   └── apply
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── update
-│   │   │   └── schema
-│   │   │   └── template
-│   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── restore
-│   │   │   └── apply
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── update
-│   │   │   └── schema
-│   │   │   └── template
-│   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── schedule
-│   │   │   └── apply
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── update
-│   │   │   └── schema
-│   │   │   └── template
-│   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── snapshotlocation
-│   │   │   └── apply
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── update
-│   │   │   └── schema
-│   │   │   └── template
-│   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── schema
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── template
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
-│   │   └── --verbosity
-│   └── health
-│   │   └── get
-│   │   │   └── --help
-│   │   │   └── --location
-│   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── list
-│   │   │   └── --clustername
-│   │   │   └── --group
-│   │   │   └── --help
-│   │   │   └── --max-size
-│   │   │   └── --name
-│   │   │   └── --offset
-│   │   │   └── --output
-│   │   │   └── --query
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── inspection
-│   │   └── apply
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
 │   │   └── create
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── delete
 │   │   │   └── --help
-│   │   │   └── --location
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── get
 │   │   │   └── --help
-│   │   │   └── --location
 │   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── list
-│   │   │   └── --clustername
-│   │   │   └── --group
+│   │   │   └── --cluster-name
 │   │   │   └── --help
 │   │   │   └── --max-size
 │   │   │   └── --name
 │   │   │   └── --offset
 │   │   │   └── --output
-│   │   │   └── --query
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── update
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --interactive
-│   │   │   └── --location
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── schema
 │   │   │   └── --help
 │   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── template
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
+│   │   └── --verbosity
+│   └── logs
+│   │   └── --help
+│   │   └── --kubeconfig
+│   │   └── --output
+│   │   └── --verbosity
+│   └── managed-resources
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --kubeconfig
+│   │   │   └── --verbosity
+│   │   └── retain
+│   │   │   └── --help
+│   │   │   └── --kubeconfig
+│   │   │   └── --namespace
+│   │   │   └── --verbosity
+│   │   └── --help
 │   │   └── --verbosity
 │   └── namespace
-│   │   └── apply
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
+│   │   └── attach
 │   │   │   └── --verbosity
 │   │   └── create
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── delete
 │   │   │   └── --help
-│   │   │   └── --location
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── get
 │   │   │   └── --help
-│   │   │   └── --location
 │   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── list
-│   │   │   └── --clustername
-│   │   │   └── --group
+│   │   │   └── --cluster-name
 │   │   │   └── --help
 │   │   │   └── --max-size
 │   │   │   └── --name
 │   │   │   └── --offset
 │   │   │   └── --output
-│   │   │   └── --query
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
+│   │   │   └── --workspace-name
 │   │   │   └── --verbosity
 │   │   └── update
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --interactive
-│   │   │   └── --location
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── policy
-│   │   │   └── apply
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── update
-│   │   │   └── schema
-│   │   │   └── template
-│   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── iam
+│   │   │   └── add-binding
 │   │   │   └── get-policy
-│   │   │   └── patch-policy
+│   │   │   └── remove-binding
 │   │   │   └── test-permission
 │   │   │   └── update-policy
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── schema
 │   │   │   └── --help
 │   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── template
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── object
-│   │   └── get
-│   │   │   └── --help
-│   │   │   └── --location
-│   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
 │   │   └── list
-│   │   │   └── --clustername
-│   │   │   └── --group
+│   │   │   └── --cluster-name
 │   │   │   └── --help
 │   │   │   └── --max-size
 │   │   │   └── --name
 │   │   │   └── --offset
 │   │   │   └── --output
 │   │   │   └── --query
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
-│   │   └── --verbosity
-│   └── policy
-│   │   └── apply
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── create
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── delete
-│   │   │   └── --help
-│   │   │   └── --location
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── get
-│   │   │   └── --help
-│   │   │   └── --location
-│   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── list
-│   │   │   └── --clustername
-│   │   │   └── --group
-│   │   │   └── --help
-│   │   │   └── --max-size
-│   │   │   └── --name
-│   │   │   └── --offset
-│   │   │   └── --output
-│   │   │   └── --query
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── update
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --interactive
-│   │   │   └── --location
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── schema
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── template
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── provisionedcluster
-│   │   └── apply
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── create
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── delete
-│   │   │   └── --help
-│   │   │   └── --location
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── get
-│   │   │   └── --help
-│   │   │   └── --location
-│   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── list
-│   │   │   └── --clustername
-│   │   │   └── --group
-│   │   │   └── --help
-│   │   │   └── --max-size
-│   │   │   └── --name
-│   │   │   └── --offset
-│   │   │   └── --output
-│   │   │   └── --query
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
-│   │   └── update
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --interactive
-│   │   │   └── --location
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
 │   │   └── kubeconfig
 │   │   │   └── get
 │   │   │   └── get-admin
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── nodepool
-│   │   │   └── apply
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── get
@@ -490,461 +229,537 @@ tmc
 │   │   │   └── schema
 │   │   │   └── template
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
+│   │   │   └── --verbosity
+│   │   └── versions
+│   │   │   └── get
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
+│   └── security-policy
+│   │   └── create
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --interactive
 │   │   │   └── --verbosity
 │   │   └── schema
 │   │   │   └── --help
 │   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── template
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── iam
+│   │   └── add-binding
+│   │   │   └── --groups
+│   │   │   └── --help
+│   │   │   └── --role
+│   │   │   └── --users
+│   │   │   └── --verbosity
 │   │   └── get-policy
 │   │   │   └── --help
-│   │   │   └── --location
 │   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
-│   │   └── patch-policy
-│   │   │   └── --file
+│   │   └── remove-binding
+│   │   │   └── --group
 │   │   │   └── --help
-│   │   │   └── --location
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
+│   │   │   └── --role
+│   │   │   └── --user
 │   │   │   └── --verbosity
 │   │   └── test-permission
 │   │   │   └── --help
-│   │   │   └── --location
 │   │   │   └── --permission
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── update-policy
 │   │   │   └── --file
 │   │   │   └── --help
-│   │   │   └── --location
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
+│   │   │   └── --interactive
 │   │   │   └── --verbosity
 │   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── options
 │   │   └── list
 │   │   │   └── --help
 │   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── schema
 │   │   └── --help
 │   │   └── --output
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── template
 │   │   └── get
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── list
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
-│   └── --access-token
-│   └── --endpoint
 │   └── --help
 │   └── --verbosity
 └── clustergroup
-│   └── apply
-│   │   └── --file
-│   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
-│   │   └── --verbosity
 │   └── create
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── delete
 │   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── get
 │   │   └── --help
 │   │   └── --output
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── list
-│   │   └── --group
 │   │   └── --help
 │   │   └── --max-size
 │   │   └── --name
 │   │   └── --offset
 │   │   └── --output
-│   │   └── --query
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── update
-│   │   └── --file
-│   │   └── --help
-│   │   └── --interactive
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
-│   └── policy
-│   │   └── apply
-│   │   │   └── --file
+│   └── effective-policy-set
+│   │   └── get
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
+│   │   │   └── --output
 │   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
+│   └── security-policy
 │   │   └── create
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
 │   │   └── delete
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── get
 │   │   │   └── --help
 │   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── list
-│   │   │   └── --clustergroupname
-│   │   │   └── --group
+│   │   │   └── --clustergroup-name
 │   │   │   └── --help
-│   │   │   └── --max-size
 │   │   │   └── --name
-│   │   │   └── --offset
 │   │   │   └── --output
-│   │   │   └── --query
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── update
 │   │   │   └── --file
 │   │   │   └── --help
 │   │   │   └── --interactive
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── schema
 │   │   │   └── --help
 │   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── template
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── iam
+│   │   └── add-binding
+│   │   │   └── --groups
+│   │   │   └── --help
+│   │   │   └── --role
+│   │   │   └── --users
+│   │   │   └── --verbosity
 │   │   └── get-policy
 │   │   │   └── --help
 │   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
-│   │   └── patch-policy
-│   │   │   └── --file
+│   │   └── remove-binding
+│   │   │   └── --group
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
+│   │   │   └── --role
+│   │   │   └── --user
 │   │   │   └── --verbosity
 │   │   └── test-permission
 │   │   │   └── --help
 │   │   │   └── --permission
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── update-policy
 │   │   │   └── --file
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
+│   │   │   └── --interactive
 │   │   │   └── --verbosity
 │   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── schema
 │   │   └── --help
 │   │   └── --output
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── template
 │   │   └── get
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── list
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
-│   └── --access-token
-│   └── --endpoint
+│   └── --help
+│   └── --verbosity
+└── effectiveiampolicy
+│   └── list
+│   │   └── --help
+│   │   └── --max-size
+│   │   └── --name
+│   │   └── --offset
+│   │   └── --output
+│   │   └── --state
+│   │   └── --target-resource-rid
+│   │   └── --target-resource-uid
+│   │   └── --verbosity
+│   └── --help
+│   └── --verbosity
+└── effectivepolicy
+│   └── list
+│   │   └── --help
+│   │   └── --max-size
+│   │   └── --name
+│   │   └── --offset
+│   │   └── --output
+│   │   └── --state
+│   │   └── --target-resource-rid
+│   │   └── --target-resource-uid
+│   │   └── --verbosity
 │   └── --help
 │   └── --verbosity
 └── organization
+│   └── effective-policy-set
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── --help
+│   └── image-policy
+│   │   └── create
+│   │   └── delete
+│   │   │   └── --help
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --interactive
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── --help
+│   └── network-policy
+│   │   └── create
+│   │   └── delete
+│   │   │   └── --help
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --interactive
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── --help
+│   └── security-policy
+│   │   └── create
+│   │   └── delete
+│   │   │   └── --help
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --interactive
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── --help
 │   └── iam
+│   │   └── add-binding
+│   │   │   └── --groups
+│   │   │   └── --help
+│   │   │   └── --role
+│   │   │   └── --users
 │   │   └── get-policy
 │   │   │   └── --help
 │   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   └── patch-policy
-│   │   │   └── --file
+│   │   └── remove-binding
+│   │   │   └── --group
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
+│   │   │   └── --role
+│   │   │   └── --user
 │   │   └── test-permission
 │   │   │   └── --help
 │   │   │   └── --permission
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   └── update-policy
 │   │   │   └── --file
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
+│   │   │   └── --interactive
 │   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
-│   └── --access-token
-│   └── --endpoint
-│   └── --help
-└── provider
-│   └── --access-token
-│   └── --endpoint
 │   └── --help
 └── workspace
-│   └── apply
-│   │   └── --file
-│   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
-│   │   └── --verbosity
 │   └── create
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── delete
 │   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── get
 │   │   └── --help
 │   │   └── --output
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── list
-│   │   └── --group
 │   │   └── --help
 │   │   └── --max-size
 │   │   └── --name
 │   │   └── --offset
 │   │   └── --output
-│   │   └── --query
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── update
-│   │   └── --file
-│   │   └── --help
-│   │   └── --interactive
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
-│   └── policy
-│   │   └── apply
-│   │   │   └── --file
+│   └── effective-policy-set
+│   │   └── get
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
+│   │   │   └── --output
 │   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
+│   └── image-policy
 │   │   └── create
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
-│   │   │   └── --verbosity
 │   │   └── delete
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── get
 │   │   │   └── --help
 │   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── list
-│   │   │   └── --group
 │   │   │   └── --help
-│   │   │   └── --max-size
 │   │   │   └── --name
-│   │   │   └── --offset
 │   │   │   └── --output
-│   │   │   └── --query
-│   │   │   └── --workspacename
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
+│   │   │   └── --workspace-name
 │   │   │   └── --verbosity
 │   │   └── update
 │   │   │   └── --file
 │   │   │   └── --help
 │   │   │   └── --interactive
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── schema
 │   │   │   └── --help
 │   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── template
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
+│   │   └── --verbosity
+│   └── network-policy
+│   │   └── create
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --workspace-name
+│   │   │   └── --verbosity
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --interactive
+│   │   │   └── --verbosity
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── --help
 │   │   └── --verbosity
 │   └── iam
+│   │   └── add-binding
+│   │   │   └── --groups
+│   │   │   └── --help
+│   │   │   └── --role
+│   │   │   └── --users
+│   │   │   └── --verbosity
 │   │   └── get-policy
 │   │   │   └── --help
 │   │   │   └── --output
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
-│   │   └── patch-policy
-│   │   │   └── --file
+│   │   └── remove-binding
+│   │   │   └── --group
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
+│   │   │   └── --role
+│   │   │   └── --user
 │   │   │   └── --verbosity
 │   │   └── test-permission
 │   │   │   └── --help
 │   │   │   └── --permission
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── update-policy
 │   │   │   └── --file
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
+│   │   │   └── --interactive
 │   │   │   └── --verbosity
 │   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── schema
 │   │   └── --help
 │   │   └── --output
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
 │   └── template
 │   │   └── get
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── list
 │   │   │   └── --help
-│   │   │   └── --access-token
-│   │   │   └── --endpoint
 │   │   │   └── --verbosity
 │   │   └── --help
-│   │   └── --access-token
-│   │   └── --endpoint
 │   │   └── --verbosity
-│   └── --access-token
-│   └── --endpoint
 │   └── --help
 │   └── --verbosity
-└── apply
-│   └── --file
-│   └── --help
 └── login
 │   └── switch
 │   │   └── --context-name
 │   │   └── --help
-│   └── --api-token
-│   └── --endpoint
 │   └── --help
 │   └── --name
 │   └── --no-configure
 └── update
-│   └── --endpoint
 │   └── --help
 └── completion
+│   └── bash
+│   │   └── --help
+│   └── zsh
+│   │   └── --help
 │   └── --help
 └── configure
 │   └── --help
 └── iam
-│   └── --access-token
-│   └── --endpoint
+│   └── currentuser
+│   │   └── --help
+│   └── directory
+│   └── role
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
 │   └── --help
 └── options
-│   └── --access-token
-│   └── --endpoint
+│   └── policytype
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── policyrecipe
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── policyrecipeversion
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
 │   └── --help
 └── system
-│   └── --access-token
-│   └── --endpoint
+│   └── context
+│   │   └── create
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --no-configure
+│   │   └── current
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── delete
+│   │   │   └── --help
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   └── use
+│   │   │   └── --help
+│   │   └── configure
+│   │   │   └── --help
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── --help
 │   └── --help
 └── version
 │   └── --help

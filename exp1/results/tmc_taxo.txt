@@ -1,102 +1,70 @@
 tmc
 └── account
+│   └── provider
+│   │   └── credential
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── iam
+│   │   │   └── schema
+│   │   │   └── template
+│   │   └── permissiontemplate
+│   │   │   └── get
+│   │   │   └── list
+└── audit
+│   └── create
+│   └── delete
+│   └── get
+│   └── get-user-info
+│   └── list
+│   └── schema
+│   └── template
+│   │   └── get
+│   │   └── list
 └── cluster
-│   └── apply
 │   └── attach
 │   └── create
 │   └── delete
 │   └── get
 │   └── list
+│   └── reattach
 │   └── update
-│   └── dataprotection
-│   │   └── apply
-│   │   └── create
-│   │   └── delete
+│   └── upgrade
+│   └── validate
+│   └── auth
+│   │   └── serverconfig
+│   │   │   └── get
+│   │   └── token
+│   │   └── userconfig
+│   │   │   └── get
+│   └── effective-policy-set
 │   │   └── get
-│   │   └── list
-│   │   └── update
-│   │   └── backup
-│   │   │   └── apply
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── update
-│   │   │   └── schema
-│   │   │   └── template
-│   │   └── backuplocation
-│   │   │   └── apply
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── update
-│   │   │   └── schema
-│   │   │   └── template
-│   │   └── restore
-│   │   │   └── apply
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── update
-│   │   │   └── schema
-│   │   │   └── template
-│   │   └── schedule
-│   │   │   └── apply
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── update
-│   │   │   └── schema
-│   │   │   └── template
-│   │   └── snapshotlocation
-│   │   │   └── apply
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── update
-│   │   │   └── schema
-│   │   │   └── template
-│   │   └── schema
-│   │   └── template
-│   │   │   └── get
-│   │   │   └── list
-│   └── health
-│   │   └── get
-│   │   └── list
 │   └── inspection
-│   │   └── apply
 │   │   └── create
 │   │   └── delete
 │   │   └── get
 │   │   └── list
-│   │   └── update
 │   │   └── schema
 │   │   └── template
 │   │   │   └── get
 │   │   │   └── list
+│   └── logs
+│   └── managed-resources
+│   │   └── list
+│   │   └── retain
 │   └── namespace
-│   │   └── apply
+│   │   └── attach
 │   │   └── create
 │   │   └── delete
 │   │   └── get
 │   │   └── list
 │   │   └── update
-│   │   └── policy
-│   │   │   └── apply
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── update
-│   │   │   └── schema
-│   │   │   └── template
 │   │   └── iam
+│   │   │   └── add-binding
 │   │   │   └── get-policy
-│   │   │   └── patch-policy
+│   │   │   └── remove-binding
 │   │   │   └── test-permission
 │   │   │   └── update-policy
 │   │   └── schema
@@ -104,31 +72,12 @@ tmc
 │   │   │   └── get
 │   │   │   └── list
 │   └── object
-│   │   └── get
 │   │   └── list
-│   └── policy
-│   │   └── apply
-│   │   └── create
-│   │   └── delete
-│   │   └── get
-│   │   └── list
-│   │   └── update
-│   │   └── schema
-│   │   └── template
-│   │   │   └── get
-│   │   │   └── list
 │   └── provisionedcluster
-│   │   └── apply
-│   │   └── create
-│   │   └── delete
-│   │   └── get
-│   │   └── list
-│   │   └── update
 │   │   └── kubeconfig
 │   │   │   └── get
 │   │   │   └── get-admin
 │   │   └── nodepool
-│   │   │   └── apply
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── get
@@ -136,13 +85,22 @@ tmc
 │   │   │   └── update
 │   │   │   └── schema
 │   │   │   └── template
+│   │   └── versions
+│   │   │   └── get
+│   └── security-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
 │   │   └── schema
 │   │   └── template
 │   │   │   └── get
 │   │   │   └── list
 │   └── iam
+│   │   └── add-binding
 │   │   └── get-policy
-│   │   └── patch-policy
+│   │   └── remove-binding
 │   │   └── test-permission
 │   │   └── update-policy
 │   └── options
@@ -152,14 +110,14 @@ tmc
 │   │   └── get
 │   │   └── list
 └── clustergroup
-│   └── apply
 │   └── create
 │   └── delete
 │   └── get
 │   └── list
 │   └── update
-│   └── policy
-│   │   └── apply
+│   └── effective-policy-set
+│   │   └── get
+│   └── security-policy
 │   │   └── create
 │   │   └── delete
 │   │   └── get
@@ -170,30 +128,43 @@ tmc
 │   │   │   └── get
 │   │   │   └── list
 │   └── iam
+│   │   └── add-binding
 │   │   └── get-policy
-│   │   └── patch-policy
+│   │   └── remove-binding
 │   │   └── test-permission
 │   │   └── update-policy
 │   └── schema
 │   └── template
 │   │   └── get
 │   │   └── list
+└── effectiveiampolicy
+│   └── list
+└── effectivepolicy
+│   └── list
 └── organization
-│   └── iam
-│   │   └── get-policy
-│   │   └── patch-policy
-│   │   └── test-permission
-│   │   └── update-policy
-└── provider
-└── workspace
-│   └── apply
-│   └── create
-│   └── delete
-│   └── get
-│   └── list
-│   └── update
-│   └── policy
-│   │   └── apply
+│   └── effective-policy-set
+│   │   └── get
+│   └── image-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── network-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── security-policy
 │   │   └── create
 │   │   └── delete
 │   │   └── get
@@ -204,21 +175,81 @@ tmc
 │   │   │   └── get
 │   │   │   └── list
 │   └── iam
+│   │   └── add-binding
 │   │   └── get-policy
-│   │   └── patch-policy
+│   │   └── remove-binding
+│   │   └── test-permission
+│   │   └── update-policy
+└── workspace
+│   └── create
+│   └── delete
+│   └── get
+│   └── list
+│   └── update
+│   └── effective-policy-set
+│   │   └── get
+│   └── image-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── network-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── iam
+│   │   └── add-binding
+│   │   └── get-policy
+│   │   └── remove-binding
 │   │   └── test-permission
 │   │   └── update-policy
 │   └── schema
 │   └── template
 │   │   └── get
 │   │   └── list
-└── apply
 └── login
 │   └── switch
 └── update
 └── completion
+│   └── bash
+│   └── zsh
 └── configure
 └── iam
+│   └── currentuser
+│   └── directory
+│   └── role
+│   │   └── get
+│   │   └── list
 └── options
+│   └── policytype
+│   │   └── get
+│   │   └── list
+│   │   └── policyrecipe
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── policyrecipeversion
 └── system
+│   └── context
+│   │   └── create
+│   │   └── current
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── use
+│   │   └── configure
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
 └── version
