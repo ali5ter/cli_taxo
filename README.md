@@ -87,6 +87,10 @@ As a convenience, a couple of scripts are supplied to regenerate the taxonomy tr
 
 [show_taxo_for](show_taxo_for) builds and runs the container in [exp3](exp3) to serve the SVG diagrams and opens the URL to the specific CLI commands radial illustration.
 
+Examples of these radial diagrams:
+![docker radial diagram](images/docker_taxo_radial.png)
+![kubectl radial diagram](images/kubectl_taxo_radial.png)
+
 ## Other repos that use cli_taxo
 * [Install Cloud PKS CLI using homebrew](https://github.com/ali5ter/homebrew-vke-cli) - used by CircleCi build script
 * [Cloud PKS CLI bash or zsh completion](https://github.com/ali5ter/vke-completion)
