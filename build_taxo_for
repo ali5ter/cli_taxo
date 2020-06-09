@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# @file build_taxo_for
+# Build a taxo diagram for a particular CLI
+# Usage: ./build_taxo_for cli_command
+# @author Alister Lewis-Bowen <bowena@vmware.com>
+
+[[ -n $DEBUG ]] && set -x
+set -eou pipefail
+
+CLI="${1-null}"
+
+if [[ "$CLI" == 'null' ]]; then
+    read -p "✋ You forgot to say which CLI? " -r
+    echo
+    CLI="$REPLY"
+else
+    CLI="$1"
+fi
+
+echo -n "Generating taxonomy tree for $CLI... "
+cd exp1 && ./"$CLI"_taxo.sh > results/"$CLI"_taxo.txt && ./"$CLI"_taxo.sh -O > results/"$CLI"_taxo_with_options.txt
+
+echo -en "✅\nExporting tree to csv... "
+cd ../exp2 && ./"$CLI"_taxo.sh
+
+echo -en "✅\nCreating diagram... "
+cd ../exp3 && ./"$CLI"_taxo.sh && ./generate_results_index.sh
+
+echo -e "✅\n"
+
+cd .. || exit 1
+
+read -p "✋ Do you want to view the diagram now... [y/N] " -n 1 -r
+echo
+[[ $REPLY =~ ^[Yy]$ ]] && ./show_taxo_for "$CLI"

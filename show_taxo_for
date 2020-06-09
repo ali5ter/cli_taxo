@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# @file show_taxo_for
+# Show a taxo diagram for a particular CLI
+# Usage: ./show_taxo_for cli_command
+# @author Alister Lewis-Bowen <bowena@vmware.com>
+
+[[ -n $DEBUG ]] && set -x
+set -eou pipefail
+
+CLI="${1-null}"
+
+if [[ "$CLI" == 'null' ]]; then
+    read -p "✋ You forgot to say which CLI? " -r
+    echo
+    CLI="$REPLY"
+else
+    CLI="$1"
+fi
+
+cd exp3 || exit 1
+
+echo "Running docker container to serve taxonomy diagram for $CLI... "
+docker build -t ali5ter/cli-taxo-diagrams:1.0 .
+docker ps -a | grep ali5ter/cli-taxo-diagrams > /dev/null 2>&1 && {
+    docker ps -a | grep ali5ter/cli-taxo-diagrams | \
+        awk '{print $1}' | \
+        xargs docker rm -fv > /dev/null 2>&1
+}
+docker run -d -p8080:80 ali5ter/cli-taxo-diagrams:1.0
+open "http://localhost:8080/${CLI}_taxo_radial_tree.html"
+
+cd .. || exit 1
