@@ -32,13 +32,17 @@ docker
 │   │   └── --memory-swap bytes
 │   │   └── --network string
 │   │   └── --no-cache
+│   │   └── -o, --output stringArray
 │   │   └── --platform string
+│   │   └── --progress string
 │   │   └── --pull
 │   │   └── -q, --quiet
 │   │   └── --rm
+│   │   └── --secret stringArray
 │   │   └── --security-opt strings
 │   │   └── --shm-size bytes
 │   │   └── --squash
+│   │   └── --ssh stringArray
 │   │   └── --stream
 │   │   └── -t, --tag list
 │   │   └── --target string
@@ -205,13 +209,17 @@ docker
 │   │   └── --memory-swap bytes
 │   │   └── --network string
 │   │   └── --no-cache
+│   │   └── -o, --output stringArray
 │   │   └── --platform string
+│   │   └── --progress string
 │   │   └── --pull
 │   │   └── -q, --quiet
 │   │   └── --rm
+│   │   └── --secret stringArray
 │   │   └── --security-opt strings
 │   │   └── --shm-size bytes
 │   │   └── --squash
+│   │   └── --ssh stringArray
 │   │   └── --stream
 │   │   └── -t, --tag list
 │   │   └── --target string
@@ -681,13 +689,17 @@ docker
 │   └── --memory-swap bytes
 │   └── --network string
 │   └── --no-cache
+│   └── -o, --output stringArray
 │   └── --platform string
+│   └── --progress string
 │   └── --pull
 │   └── -q, --quiet
 │   └── --rm
+│   └── --secret stringArray
 │   └── --security-opt strings
 │   └── --shm-size bytes
 │   └── --squash
+│   └── --ssh stringArray
 │   └── --stream
 │   └── -t, --tag list
 │   └── --target string

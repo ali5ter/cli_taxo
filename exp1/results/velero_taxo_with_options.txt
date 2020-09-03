@@ -1,14 +1,17 @@
 velero
 └── backup
 │   └── create
+│   │   └── --default-volumes-to-resti
 │   │   └── --exclude-namespace
 │   │   └── --exclude-resource
+│   │   └── --from-schedul
 │   │   └── --help
 │   │   └── --include-cluster-resource
 │   │   └── --include-namespace
 │   │   └── --include-resource
 │   │   └── --label-column
 │   │   └── --label
+│   │   └── --ordered-resource
 │   │   └── --outpu
 │   │   └── --selecto
 │   │   └── --show-labels
@@ -17,13 +20,20 @@ velero
 │   │   └── --tt
 │   │   └── --volume-snapshot-location
 │   │   └── --wait
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── delete
@@ -31,40 +41,65 @@ velero
 │   │   └── --confirm
 │   │   └── --help
 │   │   └── --selecto
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── describe
+│   │   └── --cacer
 │   │   └── --details
 │   │   └── --help
+│   │   └── --insecure-skip-tls-verify
 │   │   └── --selecto
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── download
+│   │   └── --cacer
 │   │   └── --force
 │   │   └── --help
+│   │   └── --insecure-skip-tls-verify
 │   │   └── --outpu
 │   │   └── --timeou
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── get
@@ -73,40 +108,66 @@ velero
 │   │   └── --outpu
 │   │   └── --selecto
 │   │   └── --show-labels
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── logs
+│   │   └── --cacer
 │   │   └── --help
+│   │   └── --insecure-skip-tls-verify
 │   │   └── --timeou
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── --help
+│   └── --add_dir_header
 │   └── --alsologtostderr
+│   └── --feature
 │   └── --kubeconfi
 │   └── --kubecontex
 │   └── --log_backtrace_a
 │   └── --log_di
+│   └── --log_fil
+│   └── --log_file_max_siz
 │   └── --logtostderr
+│   └── --maste
 │   └── --namespac
+│   └── --skip_headers
+│   └── --skip_log_headers
 │   └── --stderrthreshol
 │   └── --vmodul
 └── backup-location
 │   └── create
+│   │   └── --access-mode
+│   │   └── --backup-sync-perio
 │   │   └── --bucke
+│   │   └── --cacer
 │   │   └── --confi
 │   │   └── --help
 │   │   └── --label-column
@@ -115,13 +176,21 @@ velero
 │   │   └── --prefi
 │   │   └── --provide
 │   │   └── --show-labels
+│   │   └── --validation-frequenc
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── get
@@ -130,101 +199,160 @@ velero
 │   │   └── --outpu
 │   │   └── --selecto
 │   │   └── --show-labels
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── --help
+│   └── --add_dir_header
 │   └── --alsologtostderr
+│   └── --feature
 │   └── --kubeconfi
 │   └── --kubecontex
 │   └── --log_backtrace_a
 │   └── --log_di
+│   └── --log_fil
+│   └── --log_file_max_siz
 │   └── --logtostderr
+│   └── --maste
 │   └── --namespac
+│   └── --skip_headers
+│   └── --skip_log_headers
 │   └── --stderrthreshol
 │   └── --vmodul
 └── bug
 │   └── --help
+│   └── --add_dir_header
 │   └── --alsologtostderr
+│   └── --feature
 │   └── --kubeconfi
 │   └── --kubecontex
 │   └── --log_backtrace_a
 │   └── --log_di
+│   └── --log_fil
+│   └── --log_file_max_siz
 │   └── --logtostderr
+│   └── --maste
 │   └── --namespac
+│   └── --skip_headers
+│   └── --skip_log_headers
 │   └── --stderrthreshol
 │   └── --vmodul
 └── client
 │   └── config
 │   │   └── get
 │   │   │   └── --help
+│   │   │   └── --add_dir_header
 │   │   │   └── --alsologtostderr
+│   │   │   └── --feature
 │   │   │   └── --kubeconfi
 │   │   │   └── --kubecontex
 │   │   │   └── --log_backtrace_a
 │   │   │   └── --log_di
+│   │   │   └── --log_fil
+│   │   │   └── --log_file_max_siz
 │   │   │   └── --logtostderr
+│   │   │   └── --maste
 │   │   │   └── --namespac
+│   │   │   └── --skip_headers
+│   │   │   └── --skip_log_headers
 │   │   │   └── --stderrthreshol
 │   │   │   └── --vmodul
 │   │   └── set
 │   │   │   └── --help
+│   │   │   └── --add_dir_header
 │   │   │   └── --alsologtostderr
+│   │   │   └── --feature
 │   │   │   └── --kubeconfi
 │   │   │   └── --kubecontex
 │   │   │   └── --log_backtrace_a
 │   │   │   └── --log_di
+│   │   │   └── --log_fil
+│   │   │   └── --log_file_max_siz
 │   │   │   └── --logtostderr
+│   │   │   └── --maste
 │   │   │   └── --namespac
+│   │   │   └── --skip_headers
+│   │   │   └── --skip_log_headers
 │   │   │   └── --stderrthreshol
 │   │   │   └── --vmodul
 │   │   └── --help
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── --help
+│   └── --add_dir_header
 │   └── --alsologtostderr
+│   └── --feature
 │   └── --kubeconfi
 │   └── --kubecontex
 │   └── --log_backtrace_a
 │   └── --log_di
+│   └── --log_fil
+│   └── --log_file_max_siz
 │   └── --logtostderr
+│   └── --maste
 │   └── --namespac
+│   └── --skip_headers
+│   └── --skip_log_headers
 │   └── --stderrthreshol
 │   └── --vmodul
 └── completion
 │   └── --help
+│   └── --add_dir_header
 │   └── --alsologtostderr
+│   └── --feature
 │   └── --kubeconfi
 │   └── --kubecontex
 │   └── --log_backtrace_a
 │   └── --log_di
+│   └── --log_fil
+│   └── --log_file_max_siz
 │   └── --logtostderr
+│   └── --maste
 │   └── --namespac
+│   └── --skip_headers
+│   └── --skip_log_headers
 │   └── --stderrthreshol
 │   └── --vmodul
 └── create
 │   └── backup
+│   │   └── --default-volumes-to-resti
 │   │   └── --exclude-namespace
 │   │   └── --exclude-resource
+│   │   └── --from-schedul
 │   │   └── --help
 │   │   └── --include-cluster-resource
 │   │   └── --include-namespace
 │   │   └── --include-resource
 │   │   └── --label-column
 │   │   └── --label
+│   │   └── --ordered-resource
 │   │   └── --outpu
 │   │   └── --selecto
 │   │   └── --show-labels
@@ -233,17 +361,27 @@ velero
 │   │   └── --tt
 │   │   └── --volume-snapshot-location
 │   │   └── --wait
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── backup-location
+│   │   └── --access-mode
+│   │   └── --backup-sync-perio
 │   │   └── --bucke
+│   │   └── --cacer
 │   │   └── --confi
 │   │   └── --help
 │   │   └── --label-column
@@ -252,16 +390,25 @@ velero
 │   │   └── --prefi
 │   │   └── --provide
 │   │   └── --show-labels
+│   │   └── --validation-frequenc
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── restore
+│   │   └── --allow-partially-faile
 │   │   └── --exclude-namespace
 │   │   └── --exclude-resource
 │   │   └── --from-backu
@@ -278,16 +425,24 @@ velero
 │   │   └── --selecto
 │   │   └── --show-labels
 │   │   └── --wait
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── schedule
+│   │   └── --default-volumes-to-resti
 │   │   └── --exclude-namespace
 │   │   └── --exclude-resource
 │   │   └── --help
@@ -296,6 +451,7 @@ velero
 │   │   └── --include-resource
 │   │   └── --label-column
 │   │   └── --label
+│   │   └── --ordered-resource
 │   │   └── --outpu
 │   │   └── --schedul
 │   │   └── --selecto
@@ -304,23 +460,61 @@ velero
 │   │   └── --storage-locatio
 │   │   └── --tt
 │   │   └── --volume-snapshot-location
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
+│   └── snapshot-location
+│   │   └── --confi
+│   │   └── --help
+│   │   └── --label-column
+│   │   └── --label
+│   │   └── --outpu
+│   │   └── --provide
+│   │   └── --show-labels
+│   │   └── --add_dir_header
+│   │   └── --alsologtostderr
+│   │   └── --feature
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
+│   │   └── --logtostderr
+│   │   └── --maste
+│   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── --help
+│   └── --add_dir_header
 │   └── --alsologtostderr
+│   └── --feature
 │   └── --kubeconfi
 │   └── --kubecontex
 │   └── --log_backtrace_a
 │   └── --log_di
+│   └── --log_fil
+│   └── --log_file_max_siz
 │   └── --logtostderr
+│   └── --maste
 │   └── --namespac
+│   └── --skip_headers
+│   └── --skip_log_headers
 │   └── --stderrthreshol
 │   └── --vmodul
 └── delete
@@ -329,13 +523,20 @@ velero
 │   │   └── --confirm
 │   │   └── --help
 │   │   └── --selecto
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── restore
@@ -343,13 +544,20 @@ velero
 │   │   └── --confirm
 │   │   └── --help
 │   │   └── --selecto
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── schedule
@@ -357,72 +565,118 @@ velero
 │   │   └── --confirm
 │   │   └── --help
 │   │   └── --selecto
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── --help
+│   └── --add_dir_header
 │   └── --alsologtostderr
+│   └── --feature
 │   └── --kubeconfi
 │   └── --kubecontex
 │   └── --log_backtrace_a
 │   └── --log_di
+│   └── --log_fil
+│   └── --log_file_max_siz
 │   └── --logtostderr
+│   └── --maste
 │   └── --namespac
+│   └── --skip_headers
+│   └── --skip_log_headers
 │   └── --stderrthreshol
 │   └── --vmodul
 └── describe
 │   └── backups
+│   │   └── --cacer
 │   │   └── --details
 │   │   └── --help
+│   │   └── --insecure-skip-tls-verify
 │   │   └── --selecto
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── restores
+│   │   └── --cacer
 │   │   └── --details
 │   │   └── --help
+│   │   └── --insecure-skip-tls-verify
 │   │   └── --selecto
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── schedules
 │   │   └── --help
 │   │   └── --selecto
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── --help
+│   └── --add_dir_header
 │   └── --alsologtostderr
+│   └── --feature
 │   └── --kubeconfi
 │   └── --kubecontex
 │   └── --log_backtrace_a
 │   └── --log_di
+│   └── --log_fil
+│   └── --log_file_max_siz
 │   └── --logtostderr
+│   └── --maste
 │   └── --namespac
+│   └── --skip_headers
+│   └── --skip_log_headers
 │   └── --stderrthreshol
 │   └── --vmodul
 └── get
@@ -432,13 +686,20 @@ velero
 │   │   └── --outpu
 │   │   └── --selecto
 │   │   └── --show-labels
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── backups
@@ -447,13 +708,40 @@ velero
 │   │   └── --outpu
 │   │   └── --selecto
 │   │   └── --show-labels
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
+│   └── plugins
+│   │   └── --help
+│   │   └── --outpu
+│   │   └── --timeou
+│   │   └── --add_dir_header
+│   │   └── --alsologtostderr
+│   │   └── --feature
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
+│   │   └── --logtostderr
+│   │   └── --maste
+│   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── restores
@@ -462,13 +750,20 @@ velero
 │   │   └── --outpu
 │   │   └── --selecto
 │   │   └── --show-labels
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── schedules
@@ -477,13 +772,20 @@ velero
 │   │   └── --outpu
 │   │   └── --selecto
 │   │   └── --show-labels
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── snapshot-locations
@@ -492,94 +794,180 @@ velero
 │   │   └── --outpu
 │   │   └── --selecto
 │   │   └── --show-labels
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── --help
+│   └── --add_dir_header
 │   └── --alsologtostderr
+│   └── --feature
 │   └── --kubeconfi
 │   └── --kubecontex
 │   └── --log_backtrace_a
 │   └── --log_di
+│   └── --log_fil
+│   └── --log_file_max_siz
 │   └── --logtostderr
+│   └── --maste
 │   └── --namespac
+│   └── --skip_headers
+│   └── --skip_log_headers
 │   └── --stderrthreshol
 │   └── --vmodul
 └── help
 │   └── --help
+│   └── --add_dir_header
 │   └── --alsologtostderr
+│   └── --feature
 │   └── --kubeconfi
 │   └── --kubecontex
 │   └── --log_backtrace_a
 │   └── --log_di
+│   └── --log_fil
+│   └── --log_file_max_siz
 │   └── --logtostderr
+│   └── --maste
 │   └── --namespac
+│   └── --skip_headers
+│   └── --skip_log_headers
 │   └── --stderrthreshol
 │   └── --vmodul
 └── install
 │   └── --backup-location-confi
 │   └── --bucke
+│   └── --cacer
+│   └── --crds-only
+│   └── --default-restic-prune-frequenc
+│   └── --default-volumes-to-restic
 │   └── --dry-run
 │   └── --help
 │   └── --imag
 │   └── --label-column
+│   └── --no-default-backup-location
+│   └── --no-secret
 │   └── --outpu
+│   └── --plugin
+│   └── --pod-annotation
 │   └── --prefi
 │   └── --provide
+│   └── --restic-pod-cpu-limi
+│   └── --restic-pod-cpu-reques
+│   └── --restic-pod-mem-limi
+│   └── --restic-pod-mem-reques
 │   └── --restore-only
+│   └── --sa-annotation
 │   └── --secret-fil
 │   └── --show-labels
 │   └── --snapshot-location-confi
 │   └── --use-restic
 │   └── --use-volume-snapshots
+│   └── --velero-pod-cpu-limi
+│   └── --velero-pod-cpu-reques
+│   └── --velero-pod-mem-limi
+│   └── --velero-pod-mem-reques
 │   └── --wait
+│   └── --add_dir_header
 │   └── --alsologtostderr
+│   └── --feature
 │   └── --kubeconfi
 │   └── --kubecontex
 │   └── --log_backtrace_a
 │   └── --log_di
+│   └── --log_fil
+│   └── --log_file_max_siz
 │   └── --logtostderr
+│   └── --maste
 │   └── --namespac
+│   └── --skip_headers
+│   └── --skip_log_headers
 │   └── --stderrthreshol
 │   └── --vmodul
 └── plugin
 │   └── add
 │   │   └── --help
 │   │   └── --image-pull-policy
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
+│   │   └── --stderrthreshol
+│   │   └── --vmodul
+│   └── get
+│   │   └── --help
+│   │   └── --outpu
+│   │   └── --timeou
+│   │   └── --add_dir_header
+│   │   └── --alsologtostderr
+│   │   └── --feature
+│   │   └── --kubeconfi
+│   │   └── --kubecontex
+│   │   └── --log_backtrace_a
+│   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
+│   │   └── --logtostderr
+│   │   └── --maste
+│   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── remove
 │   │   └── --help
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── --help
+│   └── --add_dir_header
 │   └── --alsologtostderr
+│   └── --feature
 │   └── --kubeconfi
 │   └── --kubecontex
 │   └── --log_backtrace_a
 │   └── --log_di
+│   └── --log_fil
+│   └── --log_file_max_siz
 │   └── --logtostderr
+│   └── --maste
 │   └── --namespac
+│   └── --skip_headers
+│   └── --skip_log_headers
 │   └── --stderrthreshol
 │   └── --vmodul
 └── restic
@@ -590,49 +978,59 @@ velero
 │   │   │   └── --outpu
 │   │   │   └── --selecto
 │   │   │   └── --show-labels
+│   │   │   └── --add_dir_header
 │   │   │   └── --alsologtostderr
+│   │   │   └── --feature
 │   │   │   └── --kubeconfi
 │   │   │   └── --kubecontex
 │   │   │   └── --log_backtrace_a
 │   │   │   └── --log_di
+│   │   │   └── --log_fil
+│   │   │   └── --log_file_max_siz
 │   │   │   └── --logtostderr
+│   │   │   └── --maste
 │   │   │   └── --namespac
+│   │   │   └── --skip_headers
+│   │   │   └── --skip_log_headers
 │   │   │   └── --stderrthreshol
 │   │   │   └── --vmodul
 │   │   └── --help
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
-│   │   └── --stderrthreshol
-│   │   └── --vmodul
-│   └── server
-│   │   └── --help
-│   │   └── --log-level
-│   │   └── --alsologtostderr
-│   │   └── --kubeconfi
-│   │   └── --kubecontex
-│   │   └── --log_backtrace_a
-│   │   └── --log_di
-│   │   └── --logtostderr
-│   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── --help
+│   └── --add_dir_header
 │   └── --alsologtostderr
+│   └── --feature
 │   └── --kubeconfi
 │   └── --kubecontex
 │   └── --log_backtrace_a
 │   └── --log_di
+│   └── --log_fil
+│   └── --log_file_max_siz
 │   └── --logtostderr
+│   └── --maste
 │   └── --namespac
+│   └── --skip_headers
+│   └── --skip_log_headers
 │   └── --stderrthreshol
 │   └── --vmodul
 └── restore
 │   └── create
+│   │   └── --allow-partially-faile
 │   │   └── --exclude-namespace
 │   │   └── --exclude-resource
 │   │   └── --from-backu
@@ -649,13 +1047,20 @@ velero
 │   │   └── --selecto
 │   │   └── --show-labels
 │   │   └── --wait
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── delete
@@ -663,26 +1068,42 @@ velero
 │   │   └── --confirm
 │   │   └── --help
 │   │   └── --selecto
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── describe
+│   │   └── --cacer
 │   │   └── --details
 │   │   └── --help
+│   │   └── --insecure-skip-tls-verify
 │   │   └── --selecto
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── get
@@ -691,39 +1112,63 @@ velero
 │   │   └── --outpu
 │   │   └── --selecto
 │   │   └── --show-labels
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── logs
+│   │   └── --cacer
 │   │   └── --help
+│   │   └── --insecure-skip-tls-verify
 │   │   └── --timeou
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── --help
+│   └── --add_dir_header
 │   └── --alsologtostderr
+│   └── --feature
 │   └── --kubeconfi
 │   └── --kubecontex
 │   └── --log_backtrace_a
 │   └── --log_di
+│   └── --log_fil
+│   └── --log_file_max_siz
 │   └── --logtostderr
+│   └── --maste
 │   └── --namespac
+│   └── --skip_headers
+│   └── --skip_log_headers
 │   └── --stderrthreshol
 │   └── --vmodul
 └── schedule
 │   └── create
+│   │   └── --default-volumes-to-resti
 │   │   └── --exclude-namespace
 │   │   └── --exclude-resource
 │   │   └── --help
@@ -732,6 +1177,7 @@ velero
 │   │   └── --include-resource
 │   │   └── --label-column
 │   │   └── --label
+│   │   └── --ordered-resource
 │   │   └── --outpu
 │   │   └── --schedul
 │   │   └── --selecto
@@ -740,13 +1186,20 @@ velero
 │   │   └── --storage-locatio
 │   │   └── --tt
 │   │   └── --volume-snapshot-location
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── delete
@@ -754,25 +1207,39 @@ velero
 │   │   └── --confirm
 │   │   └── --help
 │   │   └── --selecto
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── describe
 │   │   └── --help
 │   │   └── --selecto
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── get
@@ -781,49 +1248,37 @@ velero
 │   │   └── --outpu
 │   │   └── --selecto
 │   │   └── --show-labels
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── --help
+│   └── --add_dir_header
 │   └── --alsologtostderr
+│   └── --feature
 │   └── --kubeconfi
 │   └── --kubecontex
 │   └── --log_backtrace_a
 │   └── --log_di
+│   └── --log_fil
+│   └── --log_file_max_siz
 │   └── --logtostderr
+│   └── --maste
 │   └── --namespac
-│   └── --stderrthreshol
-│   └── --vmodul
-└── server
-│   └── --backup-sync-perio
-│   └── --client-burs
-│   └── --client-qp
-│   └── --default-backup-storage-locatio
-│   └── --default-backup-tt
-│   └── --default-volume-snapshot-location
-│   └── --disable-controller
-│   └── --help
-│   └── --log-level
-│   └── --metrics-addres
-│   └── --plugin-di
-│   └── --profiler-addres
-│   └── --restic-timeou
-│   └── --restore-only
-│   └── --restore-resource-prioritie
-│   └── --terminating-resource-timeou
-│   └── --alsologtostderr
-│   └── --kubeconfi
-│   └── --kubecontex
-│   └── --log_backtrace_a
-│   └── --log_di
-│   └── --logtostderr
-│   └── --namespac
+│   └── --skip_headers
+│   └── --skip_log_headers
 │   └── --stderrthreshol
 │   └── --vmodul
 └── snapshot-location
@@ -835,13 +1290,20 @@ velero
 │   │   └── --outpu
 │   │   └── --provide
 │   │   └── --show-labels
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── get
@@ -850,45 +1312,73 @@ velero
 │   │   └── --outpu
 │   │   └── --selecto
 │   │   └── --show-labels
+│   │   └── --add_dir_header
 │   │   └── --alsologtostderr
+│   │   └── --feature
 │   │   └── --kubeconfi
 │   │   └── --kubecontex
 │   │   └── --log_backtrace_a
 │   │   └── --log_di
+│   │   └── --log_fil
+│   │   └── --log_file_max_siz
 │   │   └── --logtostderr
+│   │   └── --maste
 │   │   └── --namespac
+│   │   └── --skip_headers
+│   │   └── --skip_log_headers
 │   │   └── --stderrthreshol
 │   │   └── --vmodul
 │   └── --help
+│   └── --add_dir_header
 │   └── --alsologtostderr
+│   └── --feature
 │   └── --kubeconfi
 │   └── --kubecontex
 │   └── --log_backtrace_a
 │   └── --log_di
+│   └── --log_fil
+│   └── --log_file_max_siz
 │   └── --logtostderr
+│   └── --maste
 │   └── --namespac
+│   └── --skip_headers
+│   └── --skip_log_headers
 │   └── --stderrthreshol
 │   └── --vmodul
 └── version
 │   └── --client-only
 │   └── --help
 │   └── --timeou
+│   └── --add_dir_header
 │   └── --alsologtostderr
+│   └── --feature
 │   └── --kubeconfi
 │   └── --kubecontex
 │   └── --log_backtrace_a
 │   └── --log_di
+│   └── --log_fil
+│   └── --log_file_max_siz
 │   └── --logtostderr
+│   └── --maste
 │   └── --namespac
+│   └── --skip_headers
+│   └── --skip_log_headers
 │   └── --stderrthreshol
 │   └── --vmodul
+└── --add_dir_header
 └── --alsologtostderr
+└── --feature
 └── --help
 └── --kubeconfi
 └── --kubecontex
 └── --log_backtrace_a
 └── --log_di
+└── --log_fil
+└── --log_file_max_siz
 └── --logtostderr
+└── --maste
 └── --namespac
+└── --skip_headers
+└── --skip_log_headers
 └── --stderrthreshol
 └── --vmodul

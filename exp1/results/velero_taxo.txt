@@ -20,6 +20,7 @@ velero
 │   └── backup-location
 │   └── restore
 │   └── schedule
+│   └── snapshot-location
 └── delete
 │   └── backup
 │   └── restore
@@ -31,6 +32,7 @@ velero
 └── get
 │   └── backup-locations
 │   └── backups
+│   └── plugins
 │   └── restores
 │   └── schedules
 │   └── snapshot-locations
@@ -38,11 +40,11 @@ velero
 └── install
 └── plugin
 │   └── add
+│   └── get
 │   └── remove
 └── restic
 │   └── repo
 │   │   └── get
-│   └── server
 └── restore
 │   └── create
 │   └── delete
@@ -54,7 +56,6 @@ velero
 │   └── delete
 │   └── describe
 │   └── get
-└── server
 └── snapshot-location
 │   └── create
 │   └── get

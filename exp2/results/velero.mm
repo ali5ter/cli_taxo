@@ -6,7 +6,6 @@
             <node folded="false" text="repo">
                 <node text="get" />
             </node>
-            <node text="server" />
         </node>
         <node text="help" />
         <node folded="false" text="schedule">
@@ -17,15 +16,17 @@
         </node>
         <node folded="false" text="get">
             <node text="backup-locations" />
-            <node text="backups" />
-            <node text="schedules" />
-            <node text="snapshot-locations" />
             <node text="restores" />
+            <node text="plugins" />
+            <node text="schedules" />
+            <node text="backups" />
+            <node text="snapshot-locations" />
         </node>
         <node folded="false" text="create">
             <node text="backup-location" />
             <node text="schedule" />
             <node text="backup" />
+            <node text="snapshot-location" />
             <node text="restore" />
         </node>
         <node folded="false" text="describe">
@@ -36,8 +37,8 @@
         <node folded="false" text="plugin">
             <node text="add" />
             <node text="remove" />
+            <node text="get" />
         </node>
-        <node text="server" />
         <node folded="false" text="snapshot-location">
             <node text="create" />
             <node text="get" />

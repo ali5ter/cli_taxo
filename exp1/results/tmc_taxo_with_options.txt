@@ -107,6 +107,105 @@ tmc
 │   │   │   └── --verbosity
 │   │   └── --help
 │   │   └── --verbosity
+│   └── custom-policy
+│   │   └── create
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --interactive
+│   │   │   └── --verbosity
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
+│   └── dataprotection
+│   │   └── create
+│   │   │   └── --verbosity
+│   │   └── delete
+│   │   │   └── --delete-backups
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── backup
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── schema
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── backuplocation
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── restore
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── schema
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── schedule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── schema
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── snapshotlocation
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
 │   └── effective-policy-set
 │   │   └── get
 │   │   │   └── --help
@@ -202,6 +301,37 @@ tmc
 │   │   │   └── --verbosity
 │   │   └── --help
 │   │   └── --verbosity
+│   └── namespace-quota-policy
+│   │   └── create
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --interactive
+│   │   │   └── --verbosity
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
 │   └── object
 │   │   └── list
 │   │   │   └── --cluster-name
@@ -218,6 +348,10 @@ tmc
 │   │   └── kubeconfig
 │   │   │   └── get
 │   │   │   └── get-admin
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── node
+│   │   │   └── validate
 │   │   │   └── --help
 │   │   │   └── --verbosity
 │   │   └── nodepool
@@ -336,10 +470,72 @@ tmc
 │   │   └── --verbosity
 │   └── update
 │   │   └── --verbosity
+│   └── custom-policy
+│   │   └── create
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --clustergroup-name
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --interactive
+│   │   │   └── --verbosity
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
 │   └── effective-policy-set
 │   │   └── get
 │   │   │   └── --help
 │   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
+│   └── namespace-quota-policy
+│   │   └── create
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --clustergroup-name
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --interactive
+│   │   │   └── --verbosity
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
 │   │   │   └── --verbosity
 │   │   └── --help
 │   │   └── --verbosity
@@ -444,12 +640,58 @@ tmc
 │   └── --help
 │   └── --verbosity
 └── organization
+│   └── custom-policy
+│   │   └── create
+│   │   └── delete
+│   │   │   └── --help
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --interactive
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── --help
 │   └── effective-policy-set
 │   │   └── get
 │   │   │   └── --help
 │   │   │   └── --output
 │   │   └── --help
 │   └── image-policy
+│   │   └── create
+│   │   └── delete
+│   │   │   └── --help
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --interactive
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── --help
+│   └── namespace-quota-policy
 │   │   └── create
 │   │   └── delete
 │   │   │   └── --help
@@ -540,6 +782,55 @@ tmc
 │   │   │   └── --help
 │   │   │   └── --interactive
 │   │   └── --help
+│   └── --help
+└── policy
+│   └── insight
+│   │   └── list
+│   │   │   └── --category
+│   │   │   └── --cluster-group
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --issue-type
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --namespace
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --policy-name
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
+│   └── --help
+└── provider
+│   └── backuplocation
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
+│   └── snapshotlocation
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --account
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
 │   └── --help
 └── workspace
 │   └── create
@@ -709,6 +1000,65 @@ tmc
 │   │   └── --verbosity
 │   └── --help
 └── options
+│   └── integration
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
+│   └── policydefinition
+│   │   └── create
+│   │   │   └── --definition-type
+│   │   │   └── --description
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --object-file
+│   │   │   └── --object-type
+│   │   │   └── --verbosity
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── policydefinitionversion
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
 │   └── policytype
 │   │   └── get
 │   │   │   └── --help

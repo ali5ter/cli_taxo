@@ -58,8 +58,32 @@
             </node>
             <node text="get" />
             <node text="create" />
+            <node folded="false" text="namespace-quota-policy">
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="delete" />
+                <node text="schema" />
+            </node>
             <node text="list" />
             <node text="update" />
+            <node folded="false" text="custom-policy">
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="delete" />
+                <node text="schema" />
+            </node>
             <node folded="false" text="effective-policy-set">
                 <node text="get" />
             </node>
@@ -77,6 +101,9 @@
         <node folded="false" text="cluster">
             <node text="logs" />
             <node folded="false" text="provisionedcluster">
+                <node folded="false" text="node">
+                    <node text="validate" />
+                </node>
                 <node folded="false" text="versions">
                     <node text="get" />
                 </node>
@@ -132,7 +159,51 @@
                 <node text="list" />
                 <node text="get" />
             </node>
-            <node text="schema" />
+            <node folded="false" text="dataprotection">
+                <node folded="false" text="restore">
+                    <node text="get" />
+                    <node text="create" />
+                    <node text="list" />
+                    <node text="update" />
+                    <node text="template" />
+                    <node text="delete" />
+                    <node text="schema" />
+                </node>
+                <node text="get" />
+                <node folded="false" text="snapshotlocation">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node folded="false" text="backuplocation">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="create" />
+                <node folded="false" text="schedule">
+                    <node text="get" />
+                    <node text="create" />
+                    <node text="list" />
+                    <node text="template" />
+                    <node text="delete" />
+                    <node text="schema" />
+                </node>
+                <node text="list" />
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="schema" />
+                <node folded="false" text="backup">
+                    <node text="get" />
+                    <node text="create" />
+                    <node text="list" />
+                    <node text="update" />
+                    <node text="template" />
+                    <node text="delete" />
+                    <node text="schema" />
+                </node>
+                <node text="delete" />
+            </node>
             <node text="reattach" />
             <node folded="false" text="security-policy">
                 <node text="get" />
@@ -164,7 +235,32 @@
                 <node text="get" />
             </node>
             <node text="validate" />
+            <node folded="false" text="namespace-quota-policy">
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="delete" />
+                <node text="schema" />
+            </node>
             <node text="list" />
+            <node folded="false" text="custom-policy">
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="delete" />
+                <node text="schema" />
+            </node>
+            <node text="schema" />
             <node folded="false" text="inspection">
                 <node text="get" />
                 <node text="create" />
@@ -231,6 +327,21 @@
             <node text="schema" />
             <node text="delete" />
         </node>
+        <node folded="false" text="provider">
+            <node folded="false" text="backuplocation">
+                <node text="list" />
+                <node text="get" />
+            </node>
+            <node folded="false" text="snapshotlocation">
+                <node text="list" />
+                <node text="get" />
+            </node>
+        </node>
+        <node folded="false" text="policy">
+            <node folded="false" text="insight">
+                <node text="list" />
+            </node>
+        </node>
         <node folded="false" text="organization">
             <node folded="false" text="iam">
                 <node text="remove-binding" />
@@ -238,6 +349,42 @@
                 <node text="get-policy" />
                 <node text="add-binding" />
                 <node text="update-policy" />
+            </node>
+            <node folded="false" text="security-policy">
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="delete" />
+                <node text="schema" />
+            </node>
+            <node folded="false" text="namespace-quota-policy">
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="delete" />
+                <node text="schema" />
+            </node>
+            <node folded="false" text="custom-policy">
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="delete" />
+                <node text="schema" />
             </node>
             <node folded="false" text="image-policy">
                 <node text="get" />
@@ -253,18 +400,6 @@
             </node>
             <node folded="false" text="effective-policy-set">
                 <node text="get" />
-            </node>
-            <node folded="false" text="security-policy">
-                <node text="get" />
-                <node text="create" />
-                <node text="list" />
-                <node text="update" />
-                <node folded="false" text="template">
-                    <node text="list" />
-                    <node text="get" />
-                </node>
-                <node text="delete" />
-                <node text="schema" />
             </node>
             <node folded="false" text="network-policy">
                 <node text="get" />
@@ -299,12 +434,32 @@
             </node>
         </node>
         <node folded="false" text="options">
+            <node folded="false" text="policydefinition">
+                <node folded="false" text="policydefinitionversion">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="schema" />
+                <node text="delete" />
+            </node>
             <node folded="false" text="policytype">
                 <node folded="false" text="policyrecipe">
                     <node text="policyrecipeversion" />
                     <node text="list" />
                     <node text="get" />
                 </node>
+                <node text="list" />
+                <node text="get" />
+            </node>
+            <node folded="false" text="integration">
                 <node text="list" />
                 <node text="get" />
             </node>

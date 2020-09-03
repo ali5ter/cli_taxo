@@ -39,6 +39,54 @@ tmc
 │   │   └── token
 │   │   └── userconfig
 │   │   │   └── get
+│   └── custom-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── dataprotection
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── backup
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── schema
+│   │   │   └── template
+│   │   └── backuplocation
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── restore
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── schema
+│   │   │   └── template
+│   │   └── schedule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── schema
+│   │   │   └── template
+│   │   └── snapshotlocation
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
 │   └── effective-policy-set
 │   │   └── get
 │   └── inspection
@@ -71,12 +119,24 @@ tmc
 │   │   └── template
 │   │   │   └── get
 │   │   │   └── list
+│   └── namespace-quota-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
 │   └── object
 │   │   └── list
 │   └── provisionedcluster
 │   │   └── kubeconfig
 │   │   │   └── get
 │   │   │   └── get-admin
+│   │   └── node
+│   │   │   └── validate
 │   │   └── nodepool
 │   │   │   └── create
 │   │   │   └── delete
@@ -115,8 +175,28 @@ tmc
 │   └── get
 │   └── list
 │   └── update
+│   └── custom-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
 │   └── effective-policy-set
 │   │   └── get
+│   └── namespace-quota-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
 │   └── security-policy
 │   │   └── create
 │   │   └── delete
@@ -142,9 +222,29 @@ tmc
 └── effectivepolicy
 │   └── list
 └── organization
+│   └── custom-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
 │   └── effective-policy-set
 │   │   └── get
 │   └── image-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── namespace-quota-policy
 │   │   └── create
 │   │   └── delete
 │   │   └── get
@@ -180,6 +280,16 @@ tmc
 │   │   └── remove-binding
 │   │   └── test-permission
 │   │   └── update-policy
+└── policy
+│   └── insight
+│   │   └── list
+└── provider
+│   └── backuplocation
+│   │   └── get
+│   │   └── list
+│   └── snapshotlocation
+│   │   └── get
+│   │   └── list
 └── workspace
 │   └── create
 │   └── delete
@@ -232,6 +342,22 @@ tmc
 │   │   └── get
 │   │   └── list
 └── options
+│   └── integration
+│   │   └── get
+│   │   └── list
+│   └── policydefinition
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── policydefinitionversion
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
 │   └── policytype
 │   │   └── get
 │   │   └── list
