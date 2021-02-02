@@ -32,18 +32,12 @@ docker
 │   │   └── --memory-swap bytes
 │   │   └── --network string
 │   │   └── --no-cache
-│   │   └── -o, --output stringArray
-│   │   └── --platform string
-│   │   └── --progress string
 │   │   └── --pull
 │   │   └── -q, --quiet
 │   │   └── --rm
-│   │   └── --secret stringArray
 │   │   └── --security-opt strings
 │   │   └── --shm-size bytes
 │   │   └── --squash
-│   │   └── --ssh stringArray
-│   │   └── --stream
 │   │   └── -t, --tag list
 │   │   └── --target string
 │   │   └── --ulimit ulimit
@@ -91,6 +85,7 @@ docker
 │   │   └── -d, --detach
 │   │   └── --detach-keys string
 │   │   └── -e, --env list
+│   │   └── --env-file list
 │   │   └── -i, --interactive
 │   │   └── --privileged
 │   │   └── -t, --tty
@@ -107,7 +102,7 @@ docker
 │   │   └── --details
 │   │   └── -f, --follow
 │   │   └── --since string
-│   │   └── --tail string
+│   │   └── -n, --tail string
 │   │   └── -t, --timestamps
 │   │   └── --until string
 │   └── ls
@@ -165,28 +160,6 @@ docker
 │   │   └── --restart string
 │   └── wait
 └── context
-│   └── create
-│   │   └── --default-stack-orchestrator string
-│   │   └── --description string
-│   │   └── --docker stringToString
-│   │   └── --from string
-│   │   └── --kubernetes stringToString
-│   └── export
-│   │   └── --kubeconfig
-│   └── import
-│   └── inspect
-│   │   └── -f, --format string
-│   └── ls
-│   │   └── --format string
-│   │   └── -q, --quiet
-│   └── rm
-│   │   └── -f, --force
-│   └── update
-│   │   └── --default-stack-orchestrator string
-│   │   └── --description string
-│   │   └── --docker stringToString
-│   │   └── --kubernetes stringToString
-│   └── use
 └── image
 │   └── build
 │   │   └── --add-host list
@@ -209,18 +182,12 @@ docker
 │   │   └── --memory-swap bytes
 │   │   └── --network string
 │   │   └── --no-cache
-│   │   └── -o, --output stringArray
-│   │   └── --platform string
-│   │   └── --progress string
 │   │   └── --pull
 │   │   └── -q, --quiet
 │   │   └── --rm
-│   │   └── --secret stringArray
 │   │   └── --security-opt strings
 │   │   └── --shm-size bytes
 │   │   └── --squash
-│   │   └── --ssh stringArray
-│   │   └── --stream
 │   │   └── -t, --tag list
 │   │   └── --target string
 │   │   └── --ulimit ulimit
@@ -255,13 +222,32 @@ docker
 │   │   └── --platform string
 │   │   └── -q, --quiet
 │   └── push
+│   │   └── -a, --all-tags
 │   │   └── --disable-content-trust
+│   │   └── -q, --quiet
 │   └── rm
 │   │   └── -f, --force
 │   │   └── --no-prune
 │   └── save
 │   │   └── -o, --output string
 │   └── tag
+└── manifest
+│   └── annotate
+│   │   └── --arch string
+│   │   └── --os string
+│   │   └── --os-features strings
+│   │   └── --os-version string
+│   │   └── --variant string
+│   └── create
+│   │   └── -a, --amend
+│   │   └── --insecure
+│   └── inspect
+│   │   └── --insecure
+│   │   └── -v, --verbose
+│   └── push
+│   │   └── --insecure
+│   │   └── -p, --purge
+│   └── rm
 └── network
 │   └── connect
 │   │   └── --alias strings
@@ -367,6 +353,8 @@ docker
 │   └── rm
 └── service
 │   └── create
+│   │   └── --cap-add list
+│   │   └── --cap-drop list
 │   │   └── --config config
 │   │   └── --constraint list
 │   │   └── --container-label list
@@ -393,8 +381,10 @@ docker
 │   │   └── -l, --label list
 │   │   └── --limit-cpu decimal
 │   │   └── --limit-memory bytes
+│   │   └── --limit-pids int
 │   │   └── --log-driver string
 │   │   └── --log-opt list
+│   │   └── --max-concurrent uint
 │   │   └── --mode string
 │   │   └── --mount mount
 │   │   └── --name string
@@ -424,6 +414,7 @@ docker
 │   │   └── --stop-signal string
 │   │   └── --sysctl list
 │   │   └── -t, --tty
+│   │   └── --ulimit ulimit
 │   │   └── --update-delay duration
 │   │   └── --update-failure-action string
 │   │   └── --update-max-failure-ratio float
@@ -444,7 +435,7 @@ docker
 │   │   └── --no-trunc
 │   │   └── --raw
 │   │   └── --since string
-│   │   └── --tail string
+│   │   └── -n, --tail string
 │   │   └── -t, --timestamps
 │   └── ls
 │   │   └── -f, --filter filter
@@ -464,6 +455,8 @@ docker
 │   │   └── -d, --detach
 │   └── update
 │   │   └── --args command
+│   │   └── --cap-add list
+│   │   └── --cap-drop list
 │   │   └── --config-add config
 │   │   └── --config-rm list
 │   │   └── --constraint-add list
@@ -502,8 +495,10 @@ docker
 │   │   └── --label-rm list
 │   │   └── --limit-cpu decimal
 │   │   └── --limit-memory bytes
+│   │   └── --limit-pids int
 │   │   └── --log-driver string
 │   │   └── --log-opt list
+│   │   └── --max-concurrent uint
 │   │   └── --mount-add mount
 │   │   └── --mount-rm list
 │   │   └── --network-add network
@@ -538,6 +533,8 @@ docker
 │   │   └── --sysctl-add list
 │   │   └── --sysctl-rm list
 │   │   └── -t, --tty
+│   │   └── --ulimit-add ulimit
+│   │   └── --ulimit-rm list
 │   │   └── --update-delay duration
 │   │   └── --update-failure-action string
 │   │   └── --update-max-failure-ratio float
@@ -550,7 +547,6 @@ docker
 └── stack
 │   └── --orchestrator string
 │   └── deploy
-│   │   └── --bundle-file string
 │   │   └── -c, --compose-file strings
 │   │   └── --orchestrator string
 │   │   └── --prune
@@ -689,18 +685,12 @@ docker
 │   └── --memory-swap bytes
 │   └── --network string
 │   └── --no-cache
-│   └── -o, --output stringArray
-│   └── --platform string
-│   └── --progress string
 │   └── --pull
 │   └── -q, --quiet
 │   └── --rm
-│   └── --secret stringArray
 │   └── --security-opt strings
 │   └── --shm-size bytes
 │   └── --squash
-│   └── --ssh stringArray
-│   └── --stream
 │   └── -t, --tag list
 │   └── --target string
 │   └── --ulimit ulimit
@@ -713,13 +703,6 @@ docker
 │   └── -a, --archive
 │   └── -L, --follow-link
 └── create
-└── deploy
-│   └── --bundle-file string
-│   └── -c, --compose-file strings
-│   └── --namespace string
-│   └── --prune
-│   └── --resolve-image string
-│   └── --with-registry-auth
 └── diff
 └── events
 │   └── -f, --filter filter
@@ -730,6 +713,7 @@ docker
 │   └── -d, --detach
 │   └── --detach-keys string
 │   └── -e, --env list
+│   └── --env-file list
 │   └── -i, --interactive
 │   └── --privileged
 │   └── -t, --tty
@@ -765,15 +749,12 @@ docker
 │   └── -i, --input string
 │   └── -q, --quiet
 └── login
-│   └── -p, --password string
-│   └── --password-stdin
-│   └── -u, --username string
 └── logout
 └── logs
 │   └── --details
 │   └── -f, --follow
 │   └── --since string
-│   └── --tail string
+│   └── -n, --tail string
 │   └── -t, --timestamps
 │   └── --until string
 └── pause
@@ -793,7 +774,9 @@ docker
 │   └── --platform string
 │   └── -q, --quiet
 └── push
+│   └── -a, --all-tags
 │   └── --disable-content-trust
+│   └── -q, --quiet
 └── rename
 └── restart
 │   └── -t, --time int
@@ -845,6 +828,4 @@ docker
 │   └── --pids-limit int
 │   └── --restart string
 └── version
-│   └── -f, --format string
-│   └── --kubeconfig string
 └── wait

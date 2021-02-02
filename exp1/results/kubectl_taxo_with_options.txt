@@ -4,6 +4,7 @@ kubectl
 │   │   └── --aggregation-rule=
 │   │   └── --allow-missing-template-keys=true
 │   │   └── --dry-run='none'
+│   │   └── --field-manager='kubectl-create'
 │   │   └── --non-resource-url=[]
 │   │   └── -o, --output=''
 │   │   └── --resource=[]
@@ -16,6 +17,7 @@ kubectl
 │   │   └── --allow-missing-template-keys=true
 │   │   └── --clusterrole=''
 │   │   └── --dry-run='none'
+│   │   └── --field-manager='kubectl-create'
 │   │   └── --group=[]
 │   │   └── -o, --output=''
 │   │   └── --save-config=false
@@ -26,6 +28,7 @@ kubectl
 │   │   └── --allow-missing-template-keys=true
 │   │   └── --append-hash=false
 │   │   └── --dry-run='none'
+│   │   └── --field-manager='kubectl-create'
 │   │   └── --from-env-file=''
 │   │   └── --from-file=[]
 │   │   └── --from-literal=[]
@@ -36,6 +39,7 @@ kubectl
 │   └── cronjob
 │   │   └── --allow-missing-template-keys=true
 │   │   └── --dry-run='none'
+│   │   └── --field-manager='kubectl-create'
 │   │   └── --image=''
 │   │   └── -o, --output=''
 │   │   └── --restart=''
@@ -46,14 +50,30 @@ kubectl
 │   └── deployment
 │   │   └── --allow-missing-template-keys=true
 │   │   └── --dry-run='none'
+│   │   └── --field-manager='kubectl-create'
 │   │   └── --image=[]
 │   │   └── -o, --output=''
+│   │   └── --port=-1
+│   │   └── -r, --replicas=1
+│   │   └── --save-config=false
+│   │   └── --template=''
+│   │   └── --validate=true
+│   └── ingress
+│   │   └── --allow-missing-template-keys=true
+│   │   └── --annotation=[]
+│   │   └── --class=''
+│   │   └── --default-backend=''
+│   │   └── --dry-run='none'
+│   │   └── --field-manager='kubectl-create'
+│   │   └── -o, --output=''
+│   │   └── --rule=[]
 │   │   └── --save-config=false
 │   │   └── --template=''
 │   │   └── --validate=true
 │   └── job
 │   │   └── --allow-missing-template-keys=true
 │   │   └── --dry-run='none'
+│   │   └── --field-manager='kubectl-create'
 │   │   └── --from=''
 │   │   └── --image=''
 │   │   └── -o, --output=''
@@ -63,6 +83,7 @@ kubectl
 │   └── namespace
 │   │   └── --allow-missing-template-keys=true
 │   │   └── --dry-run='none'
+│   │   └── --field-manager='kubectl-create'
 │   │   └── -o, --output=''
 │   │   └── --save-config=false
 │   │   └── --template=''
@@ -70,6 +91,7 @@ kubectl
 │   └── poddisruptionbudget
 │   │   └── --allow-missing-template-keys=true
 │   │   └── --dry-run='none'
+│   │   └── --field-manager='kubectl-create'
 │   │   └── --max-unavailable=''
 │   │   └── --min-available=''
 │   │   └── -o, --output=''
@@ -81,9 +103,10 @@ kubectl
 │   │   └── --allow-missing-template-keys=true
 │   │   └── --description=''
 │   │   └── --dry-run='none'
+│   │   └── --field-manager='kubectl-create'
 │   │   └── --global-default=false
 │   │   └── -o, --output=''
-│   │   └── --preemption-policy=''
+│   │   └── --preemption-policy='PreemptLowerPriority'
 │   │   └── --save-config=false
 │   │   └── --template=''
 │   │   └── --validate=true
@@ -91,6 +114,7 @@ kubectl
 │   └── quota
 │   │   └── --allow-missing-template-keys=true
 │   │   └── --dry-run='none'
+│   │   └── --field-manager='kubectl-create'
 │   │   └── --hard=''
 │   │   └── -o, --output=''
 │   │   └── --save-config=false
@@ -100,6 +124,7 @@ kubectl
 │   └── role
 │   │   └── --allow-missing-template-keys=true
 │   │   └── --dry-run='none'
+│   │   └── --field-manager='kubectl-create'
 │   │   └── -o, --output=''
 │   │   └── --resource=[]
 │   │   └── --resource-name=[]
@@ -111,6 +136,7 @@ kubectl
 │   │   └── --allow-missing-template-keys=true
 │   │   └── --clusterrole=''
 │   │   └── --dry-run='none'
+│   │   └── --field-manager='kubectl-create'
 │   │   └── --group=[]
 │   │   └── -o, --output=''
 │   │   └── --role=''
@@ -127,6 +153,7 @@ kubectl
 │   │   │   └── --docker-server='https
 │   │   │   └── --docker-username=''
 │   │   │   └── --dry-run='none'
+│   │   │   └── --field-manager='kubectl-create'
 │   │   │   └── --from-file=[]
 │   │   │   └── -o, --output=''
 │   │   │   └── --save-config=false
@@ -136,6 +163,7 @@ kubectl
 │   │   │   └── --allow-missing-template-keys=true
 │   │   │   └── --append-hash=false
 │   │   │   └── --dry-run='none'
+│   │   │   └── --field-manager='kubectl-create'
 │   │   │   └── --from-env-file=''
 │   │   │   └── --from-file=[]
 │   │   │   └── --from-literal=[]
@@ -149,6 +177,7 @@ kubectl
 │   │   │   └── --append-hash=false
 │   │   │   └── --cert=''
 │   │   │   └── --dry-run='none'
+│   │   │   └── --field-manager='kubectl-create'
 │   │   │   └── --key=''
 │   │   │   └── -o, --output=''
 │   │   │   └── --save-config=false
@@ -159,6 +188,7 @@ kubectl
 │   │   │   └── --allow-missing-template-keys=true
 │   │   │   └── --clusterip=''
 │   │   │   └── --dry-run='none'
+│   │   │   └── --field-manager='kubectl-create'
 │   │   │   └── -o, --output=''
 │   │   │   └── --save-config=false
 │   │   │   └── --tcp=[]
@@ -168,6 +198,7 @@ kubectl
 │   │   │   └── --allow-missing-template-keys=true
 │   │   │   └── --dry-run='none'
 │   │   │   └── --external-name=''
+│   │   │   └── --field-manager='kubectl-create'
 │   │   │   └── -o, --output=''
 │   │   │   └── --save-config=false
 │   │   │   └── --tcp=[]
@@ -176,6 +207,7 @@ kubectl
 │   │   └── loadbalancer
 │   │   │   └── --allow-missing-template-keys=true
 │   │   │   └── --dry-run='none'
+│   │   │   └── --field-manager='kubectl-create'
 │   │   │   └── -o, --output=''
 │   │   │   └── --save-config=false
 │   │   │   └── --tcp=[]
@@ -184,6 +216,7 @@ kubectl
 │   │   └── nodeport
 │   │   │   └── --allow-missing-template-keys=true
 │   │   │   └── --dry-run='none'
+│   │   │   └── --field-manager='kubectl-create'
 │   │   │   └── --node-port=0
 │   │   │   └── -o, --output=''
 │   │   │   └── --save-config=false
@@ -193,6 +226,7 @@ kubectl
 │   └── serviceaccount
 │   │   └── --allow-missing-template-keys=true
 │   │   └── --dry-run='none'
+│   │   └── --field-manager='kubectl-create'
 │   │   └── -o, --output=''
 │   │   └── --save-config=false
 │   │   └── --template=''
@@ -200,6 +234,7 @@ kubectl
 │   └── --allow-missing-template-keys=true
 │   └── --dry-run='none'
 │   └── --edit=false
+│   └── --field-manager='kubectl-create'
 │   └── -f, --filename=[]
 │   └── -k, --kustomize=''
 │   └── -o, --output=''
@@ -216,6 +251,7 @@ kubectl
 │   └── --cluster-ip=''
 │   └── --dry-run='none'
 │   └── --external-ip=''
+│   └── --field-manager='kubectl-expose'
 │   └── -f, --filename=[]
 │   └── --generator='service/v2'
 │   └── -k, --kustomize=''
@@ -236,12 +272,14 @@ kubectl
 │   └── --type=''
 └── run
 │   └── --allow-missing-template-keys=true
+│   └── --annotations=[]
 │   └── --attach=false
-│   └── --cascade=true
+│   └── --cascade='background'
 │   └── --command=false
 │   └── --dry-run='none'
 │   └── --env=[]
 │   └── --expose=false
+│   └── --field-manager='kubectl-run'
 │   └── -f, --filename=[]
 │   └── --force=false
 │   └── --grace-period=-1
@@ -256,6 +294,7 @@ kubectl
 │   └── --overrides=''
 │   └── --pod-running-timeout=1m0s
 │   └── --port=''
+│   └── --privileged=false
 │   └── --quiet=false
 │   └── --record=false
 │   └── -R, --recursive=false
@@ -276,6 +315,7 @@ kubectl
 │   │   └── -c, --containers='*'
 │   │   └── --dry-run='none'
 │   │   └── -e, --env=[]
+│   │   └── --field-manager='kubectl-set'
 │   │   └── -f, --filename=[]
 │   │   └── --from=''
 │   │   └── --keys=[]
@@ -293,6 +333,7 @@ kubectl
 │   │   └── --all=false
 │   │   └── --allow-missing-template-keys=true
 │   │   └── --dry-run='none'
+│   │   └── --field-manager='kubectl-set'
 │   │   └── -f, --filename=[]
 │   │   └── -k, --kustomize=''
 │   │   └── --local=false
@@ -306,6 +347,7 @@ kubectl
 │   │   └── --allow-missing-template-keys=true
 │   │   └── -c, --containers='*'
 │   │   └── --dry-run='none'
+│   │   └── --field-manager='kubectl-set'
 │   │   └── -f, --filename=[]
 │   │   └── -k, --kustomize=''
 │   │   └── --limits=''
@@ -320,6 +362,7 @@ kubectl
 │   │   └── --all=false
 │   │   └── --allow-missing-template-keys=true
 │   │   └── --dry-run='none'
+│   │   └── --field-manager='kubectl-set'
 │   │   └── -f, --filename=[]
 │   │   └── --local=false
 │   │   └── -o, --output=''
@@ -331,6 +374,7 @@ kubectl
 │   │   └── --all=false
 │   │   └── --allow-missing-template-keys=true
 │   │   └── --dry-run='none'
+│   │   └── --field-manager='kubectl-set'
 │   │   └── -f, --filename=[]
 │   │   └── -k, --kustomize=''
 │   │   └── --local=false
@@ -342,6 +386,7 @@ kubectl
 │   │   └── --all=false
 │   │   └── --allow-missing-template-keys=true
 │   │   └── --dry-run='none'
+│   │   └── --field-manager='kubectl-set'
 │   │   └── -f, --filename=[]
 │   │   └── --group=[]
 │   │   └── -k, --kustomize=''
@@ -378,6 +423,7 @@ kubectl
 │   └── --watch-only=false
 └── edit
 │   └── --allow-missing-template-keys=true
+│   └── --field-manager='kubectl-edit'
 │   └── -f, --filename=[]
 │   └── -k, --kustomize=''
 │   └── -o, --output=''
@@ -391,7 +437,7 @@ kubectl
 └── delete
 │   └── --all=false
 │   └── -A, --all-namespaces=false
-│   └── --cascade=true
+│   └── --cascade='background'
 │   └── --dry-run='none'
 │   └── --field-selector=''
 │   └── -f, --filename=[]
@@ -417,6 +463,7 @@ kubectl
 │   │   └── --template=''
 │   └── pause
 │   │   └── --allow-missing-template-keys=true
+│   │   └── --field-manager='kubectl-rollout'
 │   │   └── -f, --filename=[]
 │   │   └── -k, --kustomize=''
 │   │   └── -o, --output=''
@@ -424,6 +471,7 @@ kubectl
 │   │   └── --template=''
 │   └── restart
 │   │   └── --allow-missing-template-keys=true
+│   │   └── --field-manager='kubectl-rollout'
 │   │   └── -f, --filename=[]
 │   │   └── -k, --kustomize=''
 │   │   └── -o, --output=''
@@ -431,6 +479,7 @@ kubectl
 │   │   └── --template=''
 │   └── resume
 │   │   └── --allow-missing-template-keys=true
+│   │   └── --field-manager='kubectl-rollout'
 │   │   └── -f, --filename=[]
 │   │   └── -k, --kustomize=''
 │   │   └── -o, --output=''
@@ -456,6 +505,7 @@ kubectl
 │   └── --all=false
 │   └── --allow-missing-template-keys=true
 │   └── --current-replicas=-1
+│   └── --dry-run='none'
 │   └── -f, --filename=[]
 │   └── -k, --kustomize=''
 │   └── -o, --output=''
@@ -470,8 +520,8 @@ kubectl
 │   └── --allow-missing-template-keys=true
 │   └── --cpu-percent=-1
 │   └── --dry-run='none'
+│   └── --field-manager='kubectl-autoscale'
 │   └── -f, --filename=[]
-│   └── --generator='horizontalpodautoscaler/v1'
 │   └── -k, --kustomize=''
 │   └── --max=-1
 │   └── --min=-1
@@ -509,20 +559,12 @@ kubectl
 │   │   └── --template=''
 └── top
 │   └── node
-│   │   └── --heapster-namespace='kube-system'
-│   │   └── --heapster-port=''
-│   │   └── --heapster-scheme='http'
-│   │   └── --heapster-service='heapster'
 │   │   └── --no-headers=false
 │   │   └── -l, --selector=''
 │   │   └── --sort-by=''
 │   └── pod
 │   │   └── -A, --all-namespaces=false
 │   │   └── --containers=false
-│   │   └── --heapster-namespace='kube-system'
-│   │   └── --heapster-port=''
-│   │   └── --heapster-scheme='http'
-│   │   └── --heapster-service='heapster'
 │   │   └── --no-headers=false
 │   │   └── -l, --selector=''
 │   │   └── --sort-by=''
@@ -533,7 +575,7 @@ kubectl
 │   └── --dry-run='none'
 │   └── -l, --selector=''
 └── drain
-│   └── --delete-local-data=false
+│   └── --delete-emptydir-data=false
 │   └── --disable-eviction=false
 │   └── --dry-run='none'
 │   └── --force=false
@@ -547,6 +589,7 @@ kubectl
 │   └── --all=false
 │   └── --allow-missing-template-keys=true
 │   └── --dry-run='none'
+│   └── --field-manager='kubectl-taint'
 │   └── -o, --output=''
 │   └── --overwrite=false
 │   └── -l, --selector=''
@@ -622,16 +665,34 @@ kubectl
 │   │   └── --remove-extra-permissions=false
 │   │   └── --remove-extra-subjects=false
 │   │   └── --template=''
+└── debug
+│   └── --arguments-only=false
+│   └── --attach=false
+│   └── -c, --container=''
+│   └── --copy-to=''
+│   └── --env=[]
+│   └── --image=''
+│   └── --image-pull-policy=''
+│   └── --quiet=false
+│   └── --replace=false
+│   └── --same-node=false
+│   └── --set-image=[]
+│   └── --share-processes=true
+│   └── -i, --stdin=false
+│   └── --target=''
+│   └── -t, --tty=false
 └── diff
-│   └── --field-manager='kubectl'
+│   └── --field-manager='kubectl-client-side-apply'
 │   └── -f, --filename=[]
 │   └── --force-conflicts=false
 │   └── -k, --kustomize=''
 │   └── -R, --recursive=false
+│   └── -l, --selector=''
 │   └── --server-side=false
 └── apply
 │   └── edit-last-applied
 │   │   └── --allow-missing-template-keys=true
+│   │   └── --field-manager='kubectl-client-side-apply'
 │   │   └── -f, --filename=[]
 │   │   └── -k, --kustomize=''
 │   │   └── -o, --output=''
@@ -655,9 +716,9 @@ kubectl
 │   │   └── -l, --selector=''
 │   └── --all=false
 │   └── --allow-missing-template-keys=true
-│   └── --cascade=true
+│   └── --cascade='background'
 │   └── --dry-run='none'
-│   └── --field-manager='kubectl'
+│   └── --field-manager='kubectl-client-side-apply'
 │   └── -f, --filename=[]
 │   └── --force=false
 │   └── --force-conflicts=false
@@ -679,19 +740,22 @@ kubectl
 └── patch
 │   └── --allow-missing-template-keys=true
 │   └── --dry-run='none'
+│   └── --field-manager='kubectl-patch'
 │   └── -f, --filename=[]
 │   └── -k, --kustomize=''
 │   └── --local=false
 │   └── -o, --output=''
 │   └── -p, --patch=''
+│   └── --patch-file=''
 │   └── --record=false
 │   └── -R, --recursive=false
 │   └── --template=''
 │   └── --type='strategic'
 └── replace
 │   └── --allow-missing-template-keys=true
-│   └── --cascade=true
+│   └── --cascade='background'
 │   └── --dry-run='none'
+│   └── --field-manager='kubectl-replace'
 │   └── -f, --filename=[]
 │   └── --force=false
 │   └── --grace-period=-1
@@ -717,21 +781,12 @@ kubectl
 │   └── -l, --selector=''
 │   └── --template=''
 │   └── --timeout=30s
-└── convert
-│   └── --allow-missing-template-keys=true
-│   └── -f, --filename=[]
-│   └── -k, --kustomize=''
-│   └── --local=true
-│   └── -o, --output='yaml'
-│   └── --output-version=''
-│   └── -R, --recursive=false
-│   └── --template=''
-│   └── --validate=true
 └── kustomize
 └── label
 │   └── --all=false
 │   └── --allow-missing-template-keys=true
 │   └── --dry-run='none'
+│   └── --field-manager='kubectl-label'
 │   └── --field-selector=''
 │   └── -f, --filename=[]
 │   └── -k, --kustomize=''
@@ -748,9 +803,11 @@ kubectl
 │   └── --all=false
 │   └── --allow-missing-template-keys=true
 │   └── --dry-run='none'
+│   └── --field-manager='kubectl-annotate'
 │   └── --field-selector=''
 │   └── -f, --filename=[]
 │   └── -k, --kustomize=''
+│   └── --list=false
 │   └── --local=false
 │   └── -o, --output=''
 │   └── --overwrite=false
@@ -760,18 +817,6 @@ kubectl
 │   └── -l, --selector=''
 │   └── --template=''
 └── completion
-└── alpha
-│   └── debug
-│   │   └── --arguments-only=false
-│   │   └── --attach=false
-│   │   └── --container=''
-│   │   └── --env=[]
-│   │   └── --image=''
-│   │   └── --image-pull-policy='IfNotPresent'
-│   │   └── --quiet=false
-│   │   └── -i, --stdin=false
-│   │   └── --target=''
-│   │   └── -t, --tty=false
 └── api-resources
 │   └── --api-group=''
 │   └── --cached=false
@@ -785,10 +830,12 @@ kubectl
 │   └── current-context
 │   └── delete-cluster
 │   └── delete-context
+│   └── delete-user
 │   └── get-clusters
 │   └── get-contexts
 │   │   └── --no-headers=false
 │   │   └── -o, --output=''
+│   └── get-users
 │   └── rename-context
 │   └── set
 │   │   └── --set-raw-bytes=false

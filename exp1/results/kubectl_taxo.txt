@@ -5,6 +5,7 @@ kubectl
 │   └── configmap
 │   └── cronjob
 │   └── deployment
+│   └── ingress
 │   └── job
 │   └── namespace
 │   └── poddisruptionbudget
@@ -66,6 +67,7 @@ kubectl
 └── auth
 │   └── can-i
 │   └── reconcile
+└── debug
 └── diff
 └── apply
 │   └── edit-last-applied
@@ -74,21 +76,20 @@ kubectl
 └── patch
 └── replace
 └── wait
-└── convert
 └── kustomize
 └── label
 └── annotate
 └── completion
-└── alpha
-│   └── debug
 └── api-resources
 └── api-versions
 └── config
 │   └── current-context
 │   └── delete-cluster
 │   └── delete-context
+│   └── delete-user
 │   └── get-clusters
 │   └── get-contexts
+│   └── get-users
 │   └── rename-context
 │   └── set
 │   └── set-cluster

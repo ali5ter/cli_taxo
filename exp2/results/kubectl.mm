@@ -41,11 +41,12 @@
                 <node text="docker-registry" />
             </node>
             <node text="namespace" />
-            <node text="poddisruptionbudget" />
+            <node text="ingress" />
             <node text="priorityclass" />
             <node text="rolebinding" />
             <node text="job" />
             <node text="role" />
+            <node text="poddisruptionbudget" />
             <node text="deployment" />
             <node text="clusterrole" />
         </node>
@@ -68,12 +69,14 @@
             <node text="set" />
             <node text="get-contexts" />
             <node text="set-cluster" />
+            <node text="get-users" />
             <node text="use-context" />
             <node text="set-credentials" />
             <node text="delete-context" />
             <node text="delete-cluster" />
             <node text="get-clusters" />
             <node text="current-context" />
+            <node text="delete-user" />
             <node text="unset" />
             <node text="view" />
         </node>
@@ -95,17 +98,14 @@
             <node text="restart" />
             <node text="history" />
         </node>
-        <node folded="false" text="alpha">
-            <node text="debug" />
-        </node>
         <node text="wait" />
-        <node text="convert" />
         <node text="drain" />
         <node text="api-versions" />
         <node text="plugin" />
         <node text="edit" />
         <node text="taint" />
         <node text="patch" />
+        <node text="debug" />
         <node text="port-forward" />
         <node text="uncordon" />
         <node folded="false" text="top">

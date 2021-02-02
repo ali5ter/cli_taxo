@@ -88,7 +88,6 @@
         </node>
         <node text="attach" />
         <node text="create" />
-        <node text="exec" />
         <node folded="false" text="system">
             <node text="df" />
             <node text="info" />
@@ -137,7 +136,7 @@
             <node text="promote" />
         </node>
         <node text="run" />
-        <node text="deploy" />
+        <node text="exec" />
         <node text="inspect" />
         <node text="stop" />
         <node text="update" />
@@ -181,16 +180,14 @@
             <node text="build" />
             <node text="prune" />
         </node>
-        <node folded="false" text="context">
-            <node text="use" />
+        <node folded="false" text="manifest">
+            <node text="annotate" />
+            <node text="push" />
             <node text="create" />
             <node text="inspect" />
-            <node text="update" />
-            <node text="export" />
-            <node text="ls" />
             <node text="rm" />
-            <node text="import" />
         </node>
+        <node text="context" />
         <node text="push" />
         <node text="commit" />
         <node text="login" />

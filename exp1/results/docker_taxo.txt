@@ -38,14 +38,6 @@ docker
 │   └── update
 │   └── wait
 └── context
-│   └── create
-│   └── export
-│   └── import
-│   └── inspect
-│   └── ls
-│   └── rm
-│   └── update
-│   └── use
 └── image
 │   └── build
 │   └── history
@@ -59,6 +51,12 @@ docker
 │   └── rm
 │   └── save
 │   └── tag
+└── manifest
+│   └── annotate
+│   └── create
+│   └── inspect
+│   └── push
+│   └── rm
 └── network
 │   └── connect
 │   └── create
@@ -140,7 +138,6 @@ docker
 └── commit
 └── cp
 └── create
-└── deploy
 └── diff
 └── events
 └── exec

@@ -38,14 +38,6 @@ docker,container,unpause
 docker,container,update
 docker,container,wait
 docker,context
-docker,context,create
-docker,context,export
-docker,context,import
-docker,context,inspect
-docker,context,ls
-docker,context,rm
-docker,context,update
-docker,context,use
 docker,image
 docker,image,build
 docker,image,history
@@ -59,6 +51,12 @@ docker,image,push
 docker,image,rm
 docker,image,save
 docker,image,tag
+docker,manifest
+docker,manifest,annotate
+docker,manifest,create
+docker,manifest,inspect
+docker,manifest,push
+docker,manifest,rm
 docker,network
 docker,network,connect
 docker,network,create
@@ -140,7 +138,6 @@ docker,build
 docker,commit
 docker,cp
 docker,create
-docker,deploy
 docker,diff
 docker,events
 docker,exec
