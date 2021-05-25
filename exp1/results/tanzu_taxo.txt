@@ -1,0 +1,77 @@
+tanzu
+└── builder
+│   └── cli
+│   │   └── add-plugin
+│   │   └── compile
+│   └── init
+└── test
+│   └── fetch
+│   └── plugin
+│   │   └── alpha
+│   │   └── builder
+│   │   └── cluster
+│   │   └── login
+│   │   └── package
+│   │   └── pinniped-auth
+└── package
+│   └── configure
+│   └── delete
+│   └── install
+│   └── list
+│   └── repository
+│   │   └── delete
+│   │   └── install
+│   │   └── list
+└── cluster
+│   └── create
+│   └── credentials
+│   │   └── update
+│   └── delete
+│   └── get
+│   └── kubeconfig
+│   │   └── get
+│   └── list
+│   └── scale
+│   └── upgrade
+└── kubernetes-release
+│   └── get
+│   └── os
+│   │   └── get
+└── management-cluster
+│   └── create
+│   └── credentials
+│   │   └── update
+│   └── delete
+│   └── get
+│   └── import
+│   └── kubeconfig
+│   │   └── get
+│   └── permissions
+│   │   └── aws
+│   │   │   └── set
+│   └── register
+│   └── upgrade
+└── completion
+└── config
+│   └── init
+│   └── server
+│   │   └── delete
+│   │   └── list
+│   └── show
+└── init
+└── login
+└── plugin
+│   └── clean
+│   └── delete
+│   └── describe
+│   └── install
+│   └── list
+│   └── repo
+│   │   └── add
+│   │   └── delete
+│   │   └── list
+│   │   └── update
+│   └── upgrade
+└── update
+└── version
+└── alpha

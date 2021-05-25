@@ -13,9 +13,39 @@
             <node text="delete" />
             <node text="schema" />
         </node>
-        <node folded="false" text="completion">
-            <node text="zsh" />
-            <node text="bash" />
+        <node folded="false" text="iam">
+            <node folded="false" text="role">
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="delete" />
+                <node text="schema" />
+            </node>
+            <node folded="false" text="currentuser">
+                <node folded="false" text="feature">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node folded="false" text="preference">
+                    <node text="get" />
+                    <node text="create" />
+                    <node text="update" />
+                    <node text="template" />
+                    <node text="delete" />
+                    <node text="schema" />
+                </node>
+            </node>
+            <node folded="false" text="effective">
+                <node text="list" />
+            </node>
+            <node folded="false" text="permission">
+                <node text="list" />
+            </node>
         </node>
         <node folded="false" text="account">
             <node folded="false" text="credential">
@@ -44,6 +74,10 @@
             </node>
         </node>
         <node text="configure" />
+        <node folded="false" text="completion">
+            <node text="zsh" />
+            <node text="bash" />
+        </node>
         <node folded="false" text="clustergroup">
             <node folded="false" text="iam">
                 <node text="remove-binding" />
@@ -117,10 +151,15 @@
                 <node text="list" />
                 <node text="get" />
             </node>
+            <node folded="false" text="extension">
+                <node text="list" />
+                <node text="get" />
+            </node>
             <node text="get" />
             <node text="create" />
             <node text="register" />
             <node text="list" />
+            <node text="update" />
             <node text="reregister" />
             <node folded="false" text="provisioner">
                 <node folded="false" text="iam">
@@ -506,6 +545,10 @@
             <node text="switch" />
         </node>
         <node folded="false" text="system">
+            <node folded="false" text="root-ca">
+                <node text="add" />
+                <node text="remove" />
+            </node>
             <node folded="false" text="context">
                 <node text="use" />
                 <node text="configure" />
@@ -524,12 +567,10 @@
         <node folded="false" text="dataprotection">
             <node folded="false" text="provider">
                 <node folded="false" text="backuplocation">
-                    <node text="get" />
-                    <node text="create" />
+                    <node text="schema" />
                     <node text="list" />
                     <node text="template" />
-                    <node text="delete" />
-                    <node text="schema" />
+                    <node text="get" />
                 </node>
                 <node text="list" />
                 <node text="get" />

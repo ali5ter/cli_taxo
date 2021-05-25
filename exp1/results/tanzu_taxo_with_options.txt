@@ -1,0 +1,311 @@
+tanzu
+└── builder
+│   └── cli
+│   │   └── add-plugin
+│   │   │   └── --dry-run
+│   │   │   └── --help
+│   │   └── compile
+│   │   │   └── --artifacts
+│   │   │   └── --corepath
+│   │   │   └── --help
+│   │   │   └── --ldflags
+│   │   │   └── --match
+│   │   │   └── --path
+│   │   │   └── --target
+│   │   │   └── --version
+│   │   └── --help
+│   └── init
+│   │   └── --dry-run
+│   │   └── --help
+│   └── --help
+└── test
+│   └── fetch
+│   │   └── --help
+│   │   └── --local
+│   └── plugin
+│   │   └── alpha
+│   │   │   └── --help
+│   │   └── builder
+│   │   │   └── --help
+│   │   └── cluster
+│   │   │   └── --help
+│   │   └── login
+│   │   │   └── --help
+│   │   └── package
+│   │   │   └── --help
+│   │   └── pinniped-auth
+│   │   │   └── --help
+│   │   └── --help
+│   └── --help
+└── package
+│   └── configure
+│   │   └── --help
+│   │   └── --package-version
+│   └── delete
+│   │   └── --cluster
+│   │   └── --force
+│   │   └── --help
+│   │   └── --namespace
+│   │   └── --package-version
+│   │   └── --paths
+│   │   └── --teardown
+│   │   └── --url
+│   └── install
+│   │   └── --cluster
+│   │   └── --config
+│   │   └── --help
+│   │   └── --namespace
+│   │   └── --package-version
+│   │   └── --paths
+│   │   └── --url
+│   └── list
+│   │   └── --help
+│   │   └── --output
+│   └── repository
+│   │   └── delete
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   └── install
+│   │   │   └── --default
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   └── list
+│   │   │   └── --help
+│   │   └── --help
+│   └── --help
+└── cluster
+│   └── create
+│   │   └── --dry-run
+│   │   └── --file
+│   │   └── --help
+│   │   └── --tkr
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── credentials
+│   │   └── update
+│   │   │   └── --help
+│   │   │   └── --namespace
+│   │   │   └── --vsphere-password
+│   │   │   └── --vsphere-user
+│   │   │   └── --log-file
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── delete
+│   │   └── --help
+│   │   └── --namespace
+│   │   └── --yes
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── get
+│   │   └── --disable-grouping
+│   │   └── --disable-no-echo
+│   │   └── --help
+│   │   └── --namespace
+│   │   └── --show-all-conditions
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── kubeconfig
+│   │   └── get
+│   │   │   └── --admin
+│   │   │   └── --export-file
+│   │   │   └── --help
+│   │   │   └── --namespace
+│   │   │   └── --log-file
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── list
+│   │   └── --help
+│   │   └── --include-management-cluster
+│   │   └── --namespace
+│   │   └── --output
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── scale
+│   │   └── --controlplane-machine-count
+│   │   └── --help
+│   │   └── --namespace
+│   │   └── --worker-machine-count
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── upgrade
+│   │   └── --help
+│   │   └── --namespace
+│   │   └── --os-arch
+│   │   └── --os-name
+│   │   └── --os-version
+│   │   └── --timeout
+│   │   └── --tkr
+│   │   └── --yes
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── --help
+│   └── --log-file
+│   └── --verbose
+└── kubernetes-release
+│   └── get
+│   │   └── --help
+│   └── os
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --region
+│   │   └── --help
+│   └── --help
+└── management-cluster
+│   └── create
+│   │   └── --bind
+│   │   └── --browser
+│   │   └── --file
+│   │   └── --help
+│   │   └── --timeout
+│   │   └── --ui
+│   │   └── --use-existing-bootstrap-cluster
+│   │   └── --yes
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── credentials
+│   │   └── update
+│   │   │   └── --cascading
+│   │   │   └── --help
+│   │   │   └── --vsphere-password
+│   │   │   └── --vsphere-user
+│   │   │   └── --log-file
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── delete
+│   │   └── --force
+│   │   └── --help
+│   │   └── --timeout
+│   │   └── --use-existing-cleanup-cluster
+│   │   └── --yes
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── get
+│   │   └── --disable-grouping
+│   │   └── --disable-no-echo
+│   │   └── --help
+│   │   └── --show-all-conditions
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── import
+│   │   └── --file
+│   │   └── --help
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── kubeconfig
+│   │   └── get
+│   │   │   └── --admin
+│   │   │   └── --export-file
+│   │   │   └── --help
+│   │   │   └── --log-file
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── permissions
+│   │   └── aws
+│   │   │   └── set
+│   │   │   └── --help
+│   │   │   └── --log-file
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── register
+│   │   └── --help
+│   │   └── --tmc-registration-url
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── upgrade
+│   │   └── --help
+│   │   └── --os-arch
+│   │   └── --os-name
+│   │   └── --os-version
+│   │   └── --timeout
+│   │   └── --yes
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── --help
+│   └── --log-file
+│   └── --verbose
+└── completion
+│   └── --help
+└── config
+│   └── init
+│   │   └── --help
+│   └── server
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --yes
+│   │   └── list
+│   │   │   └── --help
+│   │   └── --help
+│   └── show
+│   │   └── --help
+│   └── --help
+└── init
+│   └── --help
+└── login
+│   └── --apiToken
+│   └── --context
+│   └── --endpoint
+│   └── --help
+│   └── --kubeconfig
+│   └── --name
+│   └── --server
+└── plugin
+│   └── clean
+│   │   └── --help
+│   │   └── --local
+│   └── delete
+│   │   └── --help
+│   │   └── --local
+│   └── describe
+│   │   └── --help
+│   │   └── --local
+│   └── install
+│   │   └── --help
+│   │   └── --version
+│   │   └── --local
+│   └── list
+│   │   └── --help
+│   │   └── --local
+│   └── repo
+│   │   └── add
+│   │   │   └── --gcp-bucket-name
+│   │   │   └── --gcp-root-path
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --local
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --local
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --local
+│   │   └── update
+│   │   │   └── --gcp-bucket-name
+│   │   │   └── --gcp-root-path
+│   │   │   └── --help
+│   │   │   └── --local
+│   │   └── --help
+│   │   └── --local
+│   └── upgrade
+│   │   └── --help
+│   │   └── --local
+│   └── --help
+│   └── --local
+└── update
+│   └── --help
+│   └── --local
+│   └── --yes
+└── version
+│   └── --help
+└── alpha
+│   └── --help
+└── --help

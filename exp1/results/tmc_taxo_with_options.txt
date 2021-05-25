@@ -116,6 +116,7 @@ tmc
 │   │   └── --verbosity
 │   └── reattach
 │   │   └── --help
+│   │   └── --http-proxy-noauth
 │   │   └── --http-proxy-password
 │   │   └── --http-proxy-url
 │   │   └── --http-proxy-username
@@ -919,8 +920,6 @@ tmc
 │   │   │   └── --output
 │   │   │   └── --verbosity
 │   │   └── backuplocation
-│   │   │   └── create
-│   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── schema
@@ -964,11 +963,28 @@ tmc
 │   │   └── --offset
 │   │   └── --output
 │   │   └── --verbosity
+│   └── update
+│   │   └── --verbosity
 │   └── deregister
 │   │   └── --force
 │   │   └── --help
 │   │   └── --kubeconfig
 │   │   └── --output
+│   │   └── --verbosity
+│   └── extension
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --all
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── --help
 │   │   └── --verbosity
 │   └── provisioner
 │   │   └── create
@@ -1034,6 +1050,7 @@ tmc
 │   │   └── --default-cluster-group
 │   │   └── --help
 │   │   └── --kubeconfig
+│   │   └── --kubernetes-provider-type
 │   │   └── --output
 │   │   └── --skip-verify
 │   │   └── --verbosity
@@ -1254,103 +1271,6 @@ tmc
 │   │   │   └── --help
 │   │   └── --help
 │   └── --help
-└── policy
-│   └── effective
-│   │   └── list
-│   │   │   └── --all
-│   │   │   └── --help
-│   │   │   └── --max-size
-│   │   │   └── --name
-│   │   │   └── --offset
-│   │   │   └── --output
-│   │   │   └── --phase
-│   │   │   └── --target-resource-rid
-│   │   │   └── --target-resource-uid
-│   │   │   └── --verbosity
-│   │   └── --help
-│   │   └── --verbosity
-│   └── insight
-│   │   └── list
-│   │   │   └── --all
-│   │   │   └── --category
-│   │   │   └── --cluster-group
-│   │   │   └── --cluster-name
-│   │   │   └── --help
-│   │   │   └── --issue-type
-│   │   │   └── --max-size
-│   │   │   └── --name
-│   │   │   └── --namespace
-│   │   │   └── --offset
-│   │   │   └── --output
-│   │   │   └── --policy-name
-│   │   │   └── --verbosity
-│   │   └── --help
-│   │   └── --verbosity
-│   └── templates
-│   │   └── create
-│   │   │   └── --description
-│   │   │   └── --dry-run
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --object-file
-│   │   │   └── --object-type
-│   │   │   └── --template-type
-│   │   │   └── --verbosity
-│   │   └── delete
-│   │   │   └── --force
-│   │   │   └── --help
-│   │   │   └── --verbosity
-│   │   └── get
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --verbosity
-│   │   └── list
-│   │   │   └── --all
-│   │   │   └── --help
-│   │   │   └── --max-size
-│   │   │   └── --name
-│   │   │   └── --offset
-│   │   │   └── --output
-│   │   │   └── --verbosity
-│   │   └── update
-│   │   └── schema
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --verbosity
-│   │   └── template
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── --help
-│   │   │   └── --verbosity
-│   │   └── version
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── --help
-│   │   │   └── --verbosity
-│   │   └── --help
-│   │   └── --verbosity
-│   └── type
-│   │   └── get
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --verbosity
-│   │   └── list
-│   │   │   └── --all
-│   │   │   └── --help
-│   │   │   └── --max-size
-│   │   │   └── --name
-│   │   │   └── --offset
-│   │   │   └── --output
-│   │   │   └── --verbosity
-│   │   └── recipe
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── version
-│   │   │   └── --help
-│   │   │   └── --verbosity
-│   │   └── --help
-│   │   └── --verbosity
-│   └── --help
 └── workspace
 │   └── create
 │   │   └── --verbosity
@@ -1491,6 +1411,175 @@ tmc
 │   └── --no-configure
 └── update
 │   └── --help
+└── iam
+│   └── currentuser
+│   │   └── feature
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── preference
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── update
+│   │   │   └── schema
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── --help
+│   └── effective
+│   │   └── list
+│   │   │   └── --all
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --phase
+│   │   │   └── --target-resource-uid
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
+│   └── permission
+│   │   └── list
+│   │   │   └── --all
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --resources
+│   │   └── --help
+│   └── role
+│   │   └── create
+│   │   │   └── --verbosity
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --all
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── update
+│   │   │   └── --verbosity
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
+│   └── --help
+└── policy
+│   └── effective
+│   │   └── list
+│   │   │   └── --all
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --phase
+│   │   │   └── --target-resource-rid
+│   │   │   └── --target-resource-uid
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
+│   └── insight
+│   │   └── list
+│   │   │   └── --all
+│   │   │   └── --category
+│   │   │   └── --cluster-group
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --issue-type
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --namespace
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --policy-name
+│   │   │   └── --workspace-name
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
+│   └── templates
+│   │   └── create
+│   │   │   └── --description
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --object-file
+│   │   │   └── --object-type
+│   │   │   └── --template-type
+│   │   │   └── --verbosity
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --all
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── update
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── version
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
+│   └── type
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --all
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── recipe
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── version
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
+│   └── --help
 └── completion
 │   └── bash
 │   │   └── --help
@@ -1535,6 +1624,13 @@ tmc
 │   │   └── template
 │   │   │   └── get
 │   │   │   └── list
+│   │   │   └── --help
+│   │   └── --help
+│   └── root-ca
+│   │   └── add
+│   │   │   └── --custom-cert-file
+│   │   │   └── --help
+│   │   └── remove
 │   │   │   └── --help
 │   │   └── --help
 │   └── --help
