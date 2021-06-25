@@ -86,39 +86,13 @@
                 <node text="add-binding" />
                 <node text="update-policy" />
             </node>
-            <node folded="false" text="security-policy">
-                <node text="get" />
-                <node text="create" />
-                <node text="list" />
-                <node text="update" />
-                <node folded="false" text="template">
-                    <node text="list" />
-                    <node text="get" />
-                </node>
-                <node text="delete" />
-                <node text="schema" />
-            </node>
             <node text="get" />
             <node text="create" />
-            <node folded="false" text="namespace-quota-policy">
-                <node text="get" />
-                <node text="create" />
-                <node text="list" />
-                <node text="update" />
-                <node folded="false" text="template">
-                    <node text="list" />
-                    <node text="get" />
-                </node>
-                <node text="delete" />
-                <node text="schema" />
-            </node>
             <node text="list" />
-            <node text="update" />
-            <node folded="false" text="custom-policy">
+            <node folded="false" text="integration">
                 <node text="get" />
                 <node text="create" />
                 <node text="list" />
-                <node text="update" />
                 <node folded="false" text="template">
                     <node text="list" />
                     <node text="get" />
@@ -126,6 +100,7 @@
                 <node text="delete" />
                 <node text="schema" />
             </node>
+            <node text="update" />
             <node folded="false" text="template">
                 <node text="list" />
                 <node text="get" />
@@ -244,62 +219,8 @@
                 <node text="list" />
                 <node text="get" />
             </node>
-            <node folded="false" text="dataprotection">
-                <node folded="false" text="restore">
-                    <node text="get" />
-                    <node text="create" />
-                    <node text="list" />
-                    <node text="template" />
-                    <node text="delete" />
-                    <node text="schema" />
-                </node>
-                <node text="get" />
-                <node folded="false" text="snapshotlocation">
-                    <node text="list" />
-                    <node text="get" />
-                </node>
-                <node folded="false" text="backuplocation">
-                    <node text="list" />
-                    <node text="get" />
-                </node>
-                <node text="create" />
-                <node folded="false" text="schedule">
-                    <node text="get" />
-                    <node text="create" />
-                    <node text="list" />
-                    <node text="template" />
-                    <node text="delete" />
-                    <node text="schema" />
-                </node>
-                <node text="list" />
-                <node folded="false" text="template">
-                    <node text="list" />
-                    <node text="get" />
-                </node>
-                <node text="schema" />
-                <node folded="false" text="backup">
-                    <node text="get" />
-                    <node text="create" />
-                    <node text="list" />
-                    <node text="template" />
-                    <node text="delete" />
-                    <node text="schema" />
-                </node>
-                <node text="delete" />
-            </node>
+            <node text="schema" />
             <node text="reattach" />
-            <node folded="false" text="security-policy">
-                <node text="get" />
-                <node text="create" />
-                <node text="list" />
-                <node text="update" />
-                <node folded="false" text="template">
-                    <node text="list" />
-                    <node text="get" />
-                </node>
-                <node text="delete" />
-                <node text="schema" />
-            </node>
             <node text="get" />
             <node folded="false" text="object">
                 <node text="list" />
@@ -343,32 +264,50 @@
                 <node text="list" />
                 <node text="get" />
             </node>
-            <node folded="false" text="namespace-quota-policy">
-                <node text="get" />
-                <node text="create" />
-                <node text="list" />
-                <node text="update" />
-                <node folded="false" text="template">
-                    <node text="list" />
-                    <node text="get" />
-                </node>
-                <node text="delete" />
-                <node text="schema" />
-            </node>
             <node text="list" />
-            <node folded="false" text="custom-policy">
+            <node folded="false" text="dataprotection">
+                <node folded="false" text="restore">
+                    <node text="get" />
+                    <node text="create" />
+                    <node text="list" />
+                    <node text="template" />
+                    <node text="delete" />
+                    <node text="schema" />
+                </node>
                 <node text="get" />
+                <node folded="false" text="snapshotlocation">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node folded="false" text="backuplocation">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
                 <node text="create" />
+                <node folded="false" text="schedule">
+                    <node text="get" />
+                    <node text="create" />
+                    <node text="list" />
+                    <node text="template" />
+                    <node text="delete" />
+                    <node text="schema" />
+                </node>
                 <node text="list" />
-                <node text="update" />
                 <node folded="false" text="template">
                     <node text="list" />
                     <node text="get" />
                 </node>
-                <node text="delete" />
                 <node text="schema" />
+                <node folded="false" text="backup">
+                    <node text="get" />
+                    <node text="create" />
+                    <node text="list" />
+                    <node text="template" />
+                    <node text="delete" />
+                    <node text="schema" />
+                </node>
+                <node text="delete" />
             </node>
-            <node text="schema" />
             <node folded="false" text="inspection">
                 <node folded="false" text="scan">
                     <node text="get" />
@@ -397,33 +336,9 @@
             <node text="create" />
             <node text="list" />
             <node text="update" />
-            <node folded="false" text="image-policy">
-                <node text="get" />
-                <node text="create" />
-                <node text="list" />
-                <node text="update" />
-                <node folded="false" text="template">
-                    <node text="list" />
-                    <node text="get" />
-                </node>
-                <node text="delete" />
-                <node text="schema" />
-            </node>
             <node folded="false" text="template">
                 <node text="list" />
                 <node text="get" />
-            </node>
-            <node folded="false" text="network-policy">
-                <node text="get" />
-                <node text="create" />
-                <node text="list" />
-                <node text="update" />
-                <node folded="false" text="template">
-                    <node text="list" />
-                    <node text="get" />
-                </node>
-                <node text="delete" />
-                <node text="schema" />
             </node>
             <node text="schema" />
             <node text="delete" />
@@ -469,70 +384,10 @@
                 <node text="add-binding" />
                 <node text="update-policy" />
             </node>
-            <node folded="false" text="security-policy">
-                <node text="get" />
-                <node text="create" />
-                <node text="list" />
-                <node text="update" />
-                <node folded="false" text="template">
-                    <node text="list" />
-                    <node text="get" />
-                </node>
-                <node text="delete" />
-                <node text="schema" />
-            </node>
-            <node folded="false" text="namespace-quota-policy">
-                <node text="get" />
-                <node text="create" />
-                <node text="list" />
-                <node text="update" />
-                <node folded="false" text="template">
-                    <node text="list" />
-                    <node text="get" />
-                </node>
-                <node text="delete" />
-                <node text="schema" />
-            </node>
             <node folded="false" text="integration">
                 <node text="get" />
                 <node text="create" />
                 <node text="list" />
-                <node folded="false" text="template">
-                    <node text="list" />
-                    <node text="get" />
-                </node>
-                <node text="delete" />
-                <node text="schema" />
-            </node>
-            <node folded="false" text="custom-policy">
-                <node text="get" />
-                <node text="create" />
-                <node text="list" />
-                <node text="update" />
-                <node folded="false" text="template">
-                    <node text="list" />
-                    <node text="get" />
-                </node>
-                <node text="delete" />
-                <node text="schema" />
-            </node>
-            <node folded="false" text="image-policy">
-                <node text="get" />
-                <node text="create" />
-                <node text="list" />
-                <node text="update" />
-                <node folded="false" text="template">
-                    <node text="list" />
-                    <node text="get" />
-                </node>
-                <node text="delete" />
-                <node text="schema" />
-            </node>
-            <node folded="false" text="network-policy">
-                <node text="get" />
-                <node text="create" />
-                <node text="list" />
-                <node text="update" />
                 <node folded="false" text="template">
                     <node text="list" />
                     <node text="get" />
@@ -567,10 +422,13 @@
         <node folded="false" text="dataprotection">
             <node folded="false" text="provider">
                 <node folded="false" text="backuplocation">
-                    <node text="schema" />
-                    <node text="list" />
-                    <node text="template" />
                     <node text="get" />
+                    <node text="create" />
+                    <node text="list" />
+                    <node text="update" />
+                    <node text="template" />
+                    <node text="delete" />
+                    <node text="schema" />
                 </node>
                 <node text="list" />
                 <node text="get" />

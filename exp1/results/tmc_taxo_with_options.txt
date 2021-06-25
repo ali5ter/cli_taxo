@@ -519,54 +519,6 @@ tmc
 │   │   └── --management-cluster-name
 │   │   └── --provisioner-name
 │   │   └── --verbosity
-│   └── custom-policy
-│   │   └── create
-│   │   └── delete
-│   │   │   └── --cluster-name
-│   │   │   └── --help
-│   │   │   └── --management-cluster-name
-│   │   │   └── --provisioner-name
-│   │   │   └── --verbosity
-│   │   └── get
-│   │   │   └── --cluster-name
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --management-cluster-name
-│   │   │   └── --provisioner-name
-│   │   │   └── --verbosity
-│   │   └── list
-│   │   │   └── --cluster-name
-│   │   │   └── --help
-│   │   │   └── --name
-│   │   │   └── --output
-│   │   │   └── --management-cluster-name
-│   │   │   └── --provisioner-name
-│   │   │   └── --verbosity
-│   │   └── update
-│   │   │   └── --cluster-name
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --interactive
-│   │   │   └── --management-cluster-name
-│   │   │   └── --provisioner-name
-│   │   │   └── --verbosity
-│   │   └── schema
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --management-cluster-name
-│   │   │   └── --provisioner-name
-│   │   │   └── --verbosity
-│   │   └── template
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── --help
-│   │   │   └── --management-cluster-name
-│   │   │   └── --provisioner-name
-│   │   │   └── --verbosity
-│   │   └── --help
-│   │   └── --management-cluster-name
-│   │   └── --provisioner-name
-│   │   └── --verbosity
 │   └── iam
 │   │   └── add-binding
 │   │   │   └── --groups
@@ -600,102 +552,6 @@ tmc
 │   │   │   └── --file
 │   │   │   └── --help
 │   │   │   └── --interactive
-│   │   │   └── --management-cluster-name
-│   │   │   └── --provisioner-name
-│   │   │   └── --verbosity
-│   │   └── --help
-│   │   └── --management-cluster-name
-│   │   └── --provisioner-name
-│   │   └── --verbosity
-│   └── namespace-quota-policy
-│   │   └── create
-│   │   └── delete
-│   │   │   └── --cluster-name
-│   │   │   └── --help
-│   │   │   └── --management-cluster-name
-│   │   │   └── --provisioner-name
-│   │   │   └── --verbosity
-│   │   └── get
-│   │   │   └── --cluster-name
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --management-cluster-name
-│   │   │   └── --provisioner-name
-│   │   │   └── --verbosity
-│   │   └── list
-│   │   │   └── --cluster-name
-│   │   │   └── --help
-│   │   │   └── --name
-│   │   │   └── --output
-│   │   │   └── --management-cluster-name
-│   │   │   └── --provisioner-name
-│   │   │   └── --verbosity
-│   │   └── update
-│   │   │   └── --cluster-name
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --interactive
-│   │   │   └── --management-cluster-name
-│   │   │   └── --provisioner-name
-│   │   │   └── --verbosity
-│   │   └── schema
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --management-cluster-name
-│   │   │   └── --provisioner-name
-│   │   │   └── --verbosity
-│   │   └── template
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── --help
-│   │   │   └── --management-cluster-name
-│   │   │   └── --provisioner-name
-│   │   │   └── --verbosity
-│   │   └── --help
-│   │   └── --management-cluster-name
-│   │   └── --provisioner-name
-│   │   └── --verbosity
-│   └── security-policy
-│   │   └── create
-│   │   └── delete
-│   │   │   └── --cluster-name
-│   │   │   └── --help
-│   │   │   └── --management-cluster-name
-│   │   │   └── --provisioner-name
-│   │   │   └── --verbosity
-│   │   └── get
-│   │   │   └── --cluster-name
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --management-cluster-name
-│   │   │   └── --provisioner-name
-│   │   │   └── --verbosity
-│   │   └── list
-│   │   │   └── --cluster-name
-│   │   │   └── --help
-│   │   │   └── --name
-│   │   │   └── --output
-│   │   │   └── --management-cluster-name
-│   │   │   └── --provisioner-name
-│   │   │   └── --verbosity
-│   │   └── update
-│   │   │   └── --cluster-name
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --interactive
-│   │   │   └── --management-cluster-name
-│   │   │   └── --provisioner-name
-│   │   │   └── --verbosity
-│   │   └── schema
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --management-cluster-name
-│   │   │   └── --provisioner-name
-│   │   │   └── --verbosity
-│   │   └── template
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── --help
 │   │   │   └── --management-cluster-name
 │   │   │   └── --provisioner-name
 │   │   │   └── --verbosity
@@ -760,8 +616,9 @@ tmc
 │   │   └── --verbosity
 │   └── update
 │   │   └── --verbosity
-│   └── custom-policy
+│   └── integration
 │   │   └── create
+│   │   │   └── --verbosity
 │   │   └── delete
 │   │   │   └── --cluster-group-name
 │   │   │   └── --help
@@ -772,16 +629,13 @@ tmc
 │   │   │   └── --output
 │   │   │   └── --verbosity
 │   │   └── list
+│   │   │   └── --all
 │   │   │   └── --cluster-group-name
 │   │   │   └── --help
+│   │   │   └── --max-size
 │   │   │   └── --name
+│   │   │   └── --offset
 │   │   │   └── --output
-│   │   │   └── --verbosity
-│   │   └── update
-│   │   │   └── --cluster-group-name
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --interactive
 │   │   │   └── --verbosity
 │   │   └── schema
 │   │   │   └── --help
@@ -822,74 +676,6 @@ tmc
 │   │   │   └── --verbosity
 │   │   └── --help
 │   │   └── --verbosity
-│   └── namespace-quota-policy
-│   │   └── create
-│   │   └── delete
-│   │   │   └── --cluster-group-name
-│   │   │   └── --help
-│   │   │   └── --verbosity
-│   │   └── get
-│   │   │   └── --cluster-group-name
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --verbosity
-│   │   └── list
-│   │   │   └── --cluster-group-name
-│   │   │   └── --help
-│   │   │   └── --name
-│   │   │   └── --output
-│   │   │   └── --verbosity
-│   │   └── update
-│   │   │   └── --cluster-group-name
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --interactive
-│   │   │   └── --verbosity
-│   │   └── schema
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --verbosity
-│   │   └── template
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── --help
-│   │   │   └── --verbosity
-│   │   └── --help
-│   │   └── --verbosity
-│   └── security-policy
-│   │   └── create
-│   │   └── delete
-│   │   │   └── --cluster-group-name
-│   │   │   └── --help
-│   │   │   └── --verbosity
-│   │   └── get
-│   │   │   └── --cluster-group-name
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --verbosity
-│   │   └── list
-│   │   │   └── --cluster-group-name
-│   │   │   └── --help
-│   │   │   └── --name
-│   │   │   └── --output
-│   │   │   └── --verbosity
-│   │   └── update
-│   │   │   └── --cluster-group-name
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --interactive
-│   │   │   └── --verbosity
-│   │   └── schema
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --verbosity
-│   │   └── template
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── --help
-│   │   │   └── --verbosity
-│   │   └── --help
-│   │   └── --verbosity
 │   └── schema
 │   │   └── --help
 │   │   └── --output
@@ -920,8 +706,11 @@ tmc
 │   │   │   └── --output
 │   │   │   └── --verbosity
 │   │   └── backuplocation
+│   │   │   └── create
+│   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
+│   │   │   └── update
 │   │   │   └── schema
 │   │   │   └── template
 │   │   │   └── --help
@@ -1133,29 +922,6 @@ tmc
 │   │   │   └── --verbosity
 │   │   └── --help
 │   │   └── --verbosity
-│   └── custom-policy
-│   │   └── create
-│   │   └── delete
-│   │   │   └── --help
-│   │   └── get
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   └── list
-│   │   │   └── --help
-│   │   │   └── --name
-│   │   │   └── --output
-│   │   └── update
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --interactive
-│   │   └── schema
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   └── template
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── --help
-│   │   └── --help
 │   └── iam
 │   │   └── add-binding
 │   │   │   └── --groups
@@ -1177,98 +943,6 @@ tmc
 │   │   │   └── --file
 │   │   │   └── --help
 │   │   │   └── --interactive
-│   │   └── --help
-│   └── image-policy
-│   │   └── create
-│   │   └── delete
-│   │   │   └── --help
-│   │   └── get
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   └── list
-│   │   │   └── --help
-│   │   │   └── --name
-│   │   │   └── --output
-│   │   └── update
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --interactive
-│   │   └── schema
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   └── template
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── --help
-│   │   └── --help
-│   └── namespace-quota-policy
-│   │   └── create
-│   │   └── delete
-│   │   │   └── --help
-│   │   └── get
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   └── list
-│   │   │   └── --help
-│   │   │   └── --name
-│   │   │   └── --output
-│   │   └── update
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --interactive
-│   │   └── schema
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   └── template
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── --help
-│   │   └── --help
-│   └── network-policy
-│   │   └── create
-│   │   └── delete
-│   │   │   └── --help
-│   │   └── get
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   └── list
-│   │   │   └── --help
-│   │   │   └── --name
-│   │   │   └── --output
-│   │   └── update
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --interactive
-│   │   └── schema
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   └── template
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── --help
-│   │   └── --help
-│   └── security-policy
-│   │   └── create
-│   │   └── delete
-│   │   │   └── --help
-│   │   └── get
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   └── list
-│   │   │   └── --help
-│   │   │   └── --name
-│   │   │   └── --output
-│   │   └── update
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --interactive
-│   │   └── schema
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   └── template
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── --help
 │   │   └── --help
 │   └── --help
 └── workspace
@@ -1316,74 +990,6 @@ tmc
 │   │   │   └── --file
 │   │   │   └── --help
 │   │   │   └── --interactive
-│   │   │   └── --verbosity
-│   │   └── --help
-│   │   └── --verbosity
-│   └── image-policy
-│   │   └── create
-│   │   └── delete
-│   │   │   └── --help
-│   │   │   └── --workspace-name
-│   │   │   └── --verbosity
-│   │   └── get
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --workspace-name
-│   │   │   └── --verbosity
-│   │   └── list
-│   │   │   └── --help
-│   │   │   └── --name
-│   │   │   └── --output
-│   │   │   └── --workspace-name
-│   │   │   └── --verbosity
-│   │   └── update
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --interactive
-│   │   │   └── --workspace-name
-│   │   │   └── --verbosity
-│   │   └── schema
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --verbosity
-│   │   └── template
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── --help
-│   │   │   └── --verbosity
-│   │   └── --help
-│   │   └── --verbosity
-│   └── network-policy
-│   │   └── create
-│   │   └── delete
-│   │   │   └── --help
-│   │   │   └── --workspace-name
-│   │   │   └── --verbosity
-│   │   └── get
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --workspace-name
-│   │   │   └── --verbosity
-│   │   └── list
-│   │   │   └── --help
-│   │   │   └── --name
-│   │   │   └── --output
-│   │   │   └── --workspace-name
-│   │   │   └── --verbosity
-│   │   └── update
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --interactive
-│   │   │   └── --workspace-name
-│   │   │   └── --verbosity
-│   │   └── schema
-│   │   │   └── --help
-│   │   │   └── --output
-│   │   │   └── --verbosity
-│   │   └── template
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── --help
 │   │   │   └── --verbosity
 │   │   └── --help
 │   │   └── --verbosity

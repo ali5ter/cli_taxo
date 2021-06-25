@@ -1,0 +1,70 @@
+tkg
+└── add
+│   └── management-cluster
+│   │   └── --help
+│   │   └── --quiet
+│   └── --help
+│   └── --quiet
+└── config
+│   └── cluster
+│   │   └── --help
+│   │   └── --quiet
+│   └── --help
+│   └── --quiet
+└── create
+│   └── cluster
+│   │   └── --dry-run
+│   │   └── --help
+│   │   └── --quiet
+│   └── --help
+│   └── --quiet
+└── delete
+│   └── cluster
+│   │   └── --help
+│   │   └── --yes
+│   │   └── --quiet
+│   └── management-cluster
+│   │   └── --force
+│   │   └── --help
+│   │   └── --use-existing-cleanup-cluster
+│   │   └── --yes
+│   │   └── --quiet
+│   └── --help
+│   └── --quiet
+└── get
+│   └── cluster
+│   │   └── --help
+│   │   └── --quiet
+│   └── credentials
+│   │   └── --help
+│   │   └── --quiet
+│   └── management-cluster
+│   │   └── --help
+│   │   └── --quiet
+│   └── --help
+│   └── --quiet
+└── help
+│   └── --help
+│   └── --quiet
+└── init
+│   └── --help
+│   └── --ui
+│   └── --use-existing-bootstrap-cluster
+│   └── --quiet
+└── scale
+│   └── cluster
+│   │   └── --help
+│   │   └── --quiet
+│   └── --help
+│   └── --quiet
+└── set
+│   └── management-cluster
+│   │   └── --help
+│   │   └── --quiet
+│   └── --help
+│   └── --quiet
+└── version
+│   └── --help
+│   └── --quiet
+└── --help
+└── --quiet

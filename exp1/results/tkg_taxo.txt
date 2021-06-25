@@ -1,0 +1,21 @@
+tkg
+└── add
+│   └── management-cluster
+└── config
+│   └── cluster
+└── create
+│   └── cluster
+└── delete
+│   └── cluster
+│   └── management-cluster
+└── get
+│   └── cluster
+│   └── credentials
+│   └── management-cluster
+└── help
+└── init
+└── scale
+│   └── cluster
+└── set
+│   └── management-cluster
+└── version
