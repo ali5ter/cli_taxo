@@ -144,12 +144,42 @@ tmc
 │   │   │   └── list
 │   └── object
 │   │   └── list
+│   └── custom-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
 │   └── iam
 │   │   └── add-binding
 │   │   └── get-policy
 │   │   └── remove-binding
 │   │   └── test-permission
 │   │   └── update-policy
+│   └── namespace-quota-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── security-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
 │   └── options
 │   │   └── list
 │   └── schema
@@ -171,12 +201,42 @@ tmc
 │   │   └── template
 │   │   │   └── get
 │   │   │   └── list
+│   └── custom-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
 │   └── iam
 │   │   └── add-binding
 │   │   └── get-policy
 │   │   └── remove-binding
 │   │   └── test-permission
 │   │   └── update-policy
+│   └── namespace-quota-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── security-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
 │   └── schema
 │   └── template
 │   │   └── get
@@ -252,12 +312,62 @@ tmc
 │   │   └── template
 │   │   │   └── get
 │   │   │   └── list
+│   └── custom-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
 │   └── iam
 │   │   └── add-binding
 │   │   └── get-policy
 │   │   └── remove-binding
 │   │   └── test-permission
 │   │   └── update-policy
+│   └── image-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── namespace-quota-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── network-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── security-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
 └── workspace
 │   └── create
 │   └── delete
@@ -270,6 +380,26 @@ tmc
 │   │   └── remove-binding
 │   │   └── test-permission
 │   │   └── update-policy
+│   └── image-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── network-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
 │   └── schema
 │   └── template
 │   │   └── get

@@ -3,15 +3,34 @@
     <node folded="false" text="tanzu">
         <node text="completion" />
         <node folded="false" text="package">
-            <node folded="false" text="repository">
+            <node folded="false" text="available">
                 <node text="list" />
-                <node text="install" />
+                <node text="get" />
+            </node>
+            <node folded="false" text="repository">
+                <node text="add" />
+                <node text="get" />
+                <node text="list" />
+                <node text="update" />
                 <node text="delete" />
             </node>
-            <node text="list" />
-            <node text="configure" />
             <node text="install" />
-            <node text="delete" />
+            <node folded="false" text="installed">
+                <node text="create" />
+                <node text="get" />
+                <node text="list" />
+                <node text="update" />
+                <node text="delete" />
+            </node>
+        </node>
+        <node folded="false" text="config">
+            <node text="init" />
+            <node folded="false" text="server">
+                <node text="list" />
+                <node text="delete" />
+            </node>
+            <node text="set" />
+            <node text="get" />
         </node>
         <node folded="false" text="builder">
             <node text="init" />
@@ -36,6 +55,11 @@
         </node>
         <node text="update" />
         <node folded="false" text="cluster">
+            <node folded="false" text="node-pool">
+                <node text="set" />
+                <node text="list" />
+                <node text="delete" />
+            </node>
             <node text="scale" />
             <node text="get" />
             <node text="create" />
@@ -51,33 +75,44 @@
         </node>
         <node text="init" />
         <node text="version" />
-        <node folded="false" text="test">
-            <node text="fetch" />
-            <node folded="false" text="plugin">
-                <node text="pinniped-auth" />
-                <node text="package" />
-                <node text="builder" />
-                <node text="cluster" />
-                <node text="alpha" />
-                <node text="login" />
+        <node folded="false" text="diagnostics">
+            <node folded="false" text="completion">
+                <node text="fish" />
+                <node text="zsh" />
+                <node text="powershell" />
+                <node text="bash" />
             </node>
+            <node text="collect" />
         </node>
-        <node text="alpha" />
+        <node text="login" />
         <node folded="false" text="kubernetes-release">
+            <node text="deactivate" />
+            <node text="activate" />
             <node folded="false" text="os">
                 <node text="get" />
             </node>
             <node text="get" />
         </node>
-        <node folded="false" text="config">
-            <node text="init" />
-            <node text="show" />
-            <node folded="false" text="server">
-                <node text="list" />
-                <node text="delete" />
-            </node>
+        <node folded="false" text="conformance">
+            <node text="status" />
+            <node text="retrieve" />
+            <node text="logs" />
+            <node text="results" />
+            <node text="version" />
+            <node text="run" />
+            <node text="gen" />
+            <node text="delete" />
         </node>
-        <node text="login" />
+        <node folded="false" text="standalone-cluster">
+            <node folded="false" text="completion">
+                <node text="fish" />
+                <node text="zsh" />
+                <node text="powershell" />
+                <node text="bash" />
+            </node>
+            <node text="create" />
+            <node text="delete" />
+        </node>
         <node folded="false" text="management-cluster">
             <node text="upgrade" />
             <node text="get" />
@@ -86,16 +121,15 @@
             <node folded="false" text="kubeconfig">
                 <node text="get" />
             </node>
-            <node text="import" />
             <node folded="false" text="credentials">
                 <node text="update" />
             </node>
+            <node text="delete" />
             <node folded="false" text="permissions">
                 <node folded="false" text="aws">
                     <node text="set" />
                 </node>
             </node>
-            <node text="delete" />
         </node>
     </node>
 </map>

@@ -2,76 +2,25 @@ tanzu
 └── builder
 │   └── cli
 │   │   └── add-plugin
+│   │   │   └── --description
 │   │   │   └── --dry-run
 │   │   │   └── --help
 │   │   └── compile
 │   │   │   └── --artifacts
 │   │   │   └── --corepath
+│   │   │   └── --goprivate
 │   │   │   └── --help
 │   │   │   └── --ldflags
 │   │   │   └── --match
 │   │   │   └── --path
+│   │   │   └── --tags
 │   │   │   └── --target
 │   │   │   └── --version
 │   │   └── --help
 │   └── init
 │   │   └── --dry-run
 │   │   └── --help
-│   └── --help
-└── test
-│   └── fetch
-│   │   └── --help
-│   │   └── --local
-│   └── plugin
-│   │   └── alpha
-│   │   │   └── --help
-│   │   └── builder
-│   │   │   └── --help
-│   │   └── cluster
-│   │   │   └── --help
-│   │   └── login
-│   │   │   └── --help
-│   │   └── package
-│   │   │   └── --help
-│   │   └── pinniped-auth
-│   │   │   └── --help
-│   │   └── --help
-│   └── --help
-└── package
-│   └── configure
-│   │   └── --help
-│   │   └── --package-version
-│   └── delete
-│   │   └── --cluster
-│   │   └── --force
-│   │   └── --help
-│   │   └── --namespace
-│   │   └── --package-version
-│   │   └── --paths
-│   │   └── --teardown
-│   │   └── --url
-│   └── install
-│   │   └── --cluster
-│   │   └── --config
-│   │   └── --help
-│   │   └── --namespace
-│   │   └── --package-version
-│   │   └── --paths
-│   │   └── --url
-│   └── list
-│   │   └── --help
-│   │   └── --output
-│   └── repository
-│   │   └── delete
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   └── install
-│   │   │   └── --default
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   └── list
-│   │   │   └── --help
-│   │   └── --help
+│   │   └── --repo-type
 │   └── --help
 └── cluster
 │   └── create
@@ -99,11 +48,11 @@ tanzu
 │   │   └── --log-file
 │   │   └── --verbose
 │   └── get
-│   │   └── --disable-grouping
-│   │   └── --disable-no-echo
 │   │   └── --help
 │   │   └── --namespace
 │   │   └── --show-all-conditions
+│   │   └── --show-details
+│   │   └── --show-group-members
 │   │   └── --log-file
 │   │   └── --verbose
 │   └── kubeconfig
@@ -122,6 +71,28 @@ tanzu
 │   │   └── --include-management-cluster
 │   │   └── --namespace
 │   │   └── --output
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── node-pool
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --namespace
+│   │   │   └── --log-file
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --namespace
+│   │   │   └── --output
+│   │   │   └── --log-file
+│   │   │   └── --verbose
+│   │   └── set
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --namespace
+│   │   │   └── --log-file
+│   │   │   └── --verbose
+│   │   └── --help
 │   │   └── --log-file
 │   │   └── --verbose
 │   └── scale
@@ -145,20 +116,176 @@ tanzu
 │   └── --help
 │   └── --log-file
 │   └── --verbose
-└── kubernetes-release
-│   └── get
+└── conformance
+│   └── delete
+│   │   └── --all
+│   │   └── --context
 │   │   └── --help
+│   │   └── --kubeconfig
+│   │   └── --namespace
+│   │   └── --rbac
+│   │   └── --wait
+│   │   └── --wait-output
+│   │   └── --verbose
+│   └── gen
+│   │   └── --aggregator-node-selector
+│   │   └── --config
+│   │   └── --context
+│   │   └── --dns-namespace
+│   │   └── --dns-pod-labels
+│   │   └── --e2e-focus
+│   │   └── --e2e-repo-config
+│   │   └── --e2e-skip
+│   │   └── --help
+│   │   └── --image-pull-policy
+│   │   └── --kube-conformance-image
+│   │   └── --kubeconfig
+│   │   └── --kubernetes-version
+│   │   └── --mode
+│   │   └── --namespace
+│   │   └── --plugin
+│   │   └── --plugin-env
+│   │   └── --plugin-image
+│   │   └── --rbac
+│   │   └── --show-default-podspec
+│   │   └── --sonobuoy-image
+│   │   └── --ssh-key
+│   │   └── --ssh-user
+│   │   └── --systemd-logs-image
+│   │   └── --timeout
+│   │   └── --verbose
+│   └── logs
+│   │   └── --context
+│   │   └── --follow
+│   │   └── --help
+│   │   └── --kubeconfig
+│   │   └── --namespace
+│   │   └── --plugin
+│   │   └── --verbose
+│   └── results
+│   │   └── --help
+│   │   └── --mode
+│   │   └── --node
+│   │   └── --plugin
+│   │   └── --skip-prefix
+│   │   └── --verbose
+│   └── retrieve
+│   │   └── --context
+│   │   └── --extract
+│   │   └── --filename
+│   │   └── --help
+│   │   └── --kubeconfig
+│   │   └── --namespace
+│   │   └── --verbose
+│   └── run
+│   │   └── --aggregator-node-selector
+│   │   └── --config
+│   │   └── --context
+│   │   └── --dns-namespace
+│   │   └── --dns-pod-labels
+│   │   └── --e2e-focus
+│   │   └── --e2e-repo-config
+│   │   └── --e2e-skip
+│   │   └── --file
+│   │   └── --help
+│   │   └── --image-pull-policy
+│   │   └── --kube-conformance-image
+│   │   └── --kubeconfig
+│   │   └── --kubernetes-version
+│   │   └── --mode
+│   │   └── --namespace
+│   │   └── --plugin
+│   │   └── --plugin-env
+│   │   └── --plugin-image
+│   │   └── --rbac
+│   │   └── --show-default-podspec
+│   │   └── --skip-preflight
+│   │   └── --sonobuoy-image
+│   │   └── --ssh-key
+│   │   └── --ssh-user
+│   │   └── --systemd-logs-image
+│   │   └── --timeout
+│   │   └── --wait
+│   │   └── --wait-output
+│   │   └── --verbose
+│   └── status
+│   │   └── --context
+│   │   └── --help
+│   │   └── --json
+│   │   └── --kubeconfig
+│   │   └── --namespace
+│   │   └── --show-all
+│   │   └── --verbose
+│   └── version
+│   │   └── --help
+│   │   └── --verbose
+│   └── --help
+│   └── --verbose
+└── diagnostics
+│   └── collect
+│   │   └── --bootstrap-cluster-name
+│   │   └── --bootstrap-cluster-skip
+│   │   └── --help
+│   │   └── --management-cluster-context
+│   │   └── --management-cluster-kubeconfig
+│   │   └── --management-cluster-name
+│   │   └── --management-cluster-skip
+│   │   └── --output-dir
+│   │   └── --work-dir
+│   │   └── --workload-cluster-infra
+│   │   └── --workload-cluster-name
+│   │   └── --workload-cluster-namespace
+│   │   └── --workload-cluster-standalone
+│   └── completion
+│   │   └── bash
+│   │   │   └── --help
+│   │   │   └── --no-descriptions
+│   │   └── fish
+│   │   │   └── --help
+│   │   │   └── --no-descriptions
+│   │   └── powershell
+│   │   │   └── --help
+│   │   │   └── --no-descriptions
+│   │   └── zsh
+│   │   │   └── --help
+│   │   │   └── --no-descriptions
+│   │   └── --help
+│   └── --help
+└── kubernetes-release
+│   └── activate
+│   │   └── --help
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── deactivate
+│   │   └── --help
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── get
+│   │   └── --all
+│   │   └── --help
+│   │   └── --output
+│   │   └── --log-file
+│   │   └── --verbose
 │   └── os
 │   │   └── get
 │   │   │   └── --help
+│   │   │   └── --output
 │   │   │   └── --region
+│   │   │   └── --log-file
+│   │   │   └── --verbose
 │   │   └── --help
+│   │   └── --log-file
+│   │   └── --verbose
 │   └── --help
+│   └── --log-file
+│   └── --verbose
 └── management-cluster
 │   └── create
 │   │   └── --bind
 │   │   └── --browser
+│   │   └── --dry-run
 │   │   └── --file
+│   │   └── --force-config-update
 │   │   └── --help
 │   │   └── --timeout
 │   │   └── --ui
@@ -186,15 +313,10 @@ tanzu
 │   │   └── --log-file
 │   │   └── --verbose
 │   └── get
-│   │   └── --disable-grouping
-│   │   └── --disable-no-echo
 │   │   └── --help
 │   │   └── --show-all-conditions
-│   │   └── --log-file
-│   │   └── --verbose
-│   └── import
-│   │   └── --file
-│   │   └── --help
+│   │   └── --show-details
+│   │   └── --show-group-members
 │   │   └── --log-file
 │   │   └── --verbose
 │   └── kubeconfig
@@ -233,9 +355,200 @@ tanzu
 │   └── --help
 │   └── --log-file
 │   └── --verbose
+└── package
+│   └── available
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --values-schema
+│   │   │   └── --all-namespaces
+│   │   │   └── --kubeconfig
+│   │   │   └── --log-file
+│   │   │   └── --namespace
+│   │   │   └── --output
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --all-namespaces
+│   │   │   └── --kubeconfig
+│   │   │   └── --log-file
+│   │   │   └── --namespace
+│   │   │   └── --output
+│   │   │   └── --verbose
+│   │   └── --all-namespaces
+│   │   └── --help
+│   │   └── --kubeconfig
+│   │   └── --namespace
+│   │   └── --output
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── install
+│   │   └── --create-namespace
+│   │   └── --help
+│   │   └── --kubeconfig
+│   │   └── --namespace
+│   │   └── --package-name
+│   │   └── --poll-interval
+│   │   └── --poll-timeout
+│   │   └── --service-account-name
+│   │   └── --values-file
+│   │   └── --version
+│   │   └── --wait
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── installed
+│   │   └── create
+│   │   │   └── --create-namespace
+│   │   │   └── --help
+│   │   │   └── --namespace
+│   │   │   └── --package-name
+│   │   │   └── --poll-interval
+│   │   │   └── --poll-timeout
+│   │   │   └── --service-account-name
+│   │   │   └── --values-file
+│   │   │   └── --version
+│   │   │   └── --wait
+│   │   │   └── --kubeconfig
+│   │   │   └── --log-file
+│   │   │   └── --verbose
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --namespace
+│   │   │   └── --poll-interval
+│   │   │   └── --poll-timeout
+│   │   │   └── --yes
+│   │   │   └── --kubeconfig
+│   │   │   └── --log-file
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --namespace
+│   │   │   └── --output
+│   │   │   └── --values-file
+│   │   │   └── --kubeconfig
+│   │   │   └── --log-file
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --all-namespaces
+│   │   │   └── --help
+│   │   │   └── --namespace
+│   │   │   └── --output
+│   │   │   └── --kubeconfig
+│   │   │   └── --log-file
+│   │   │   └── --verbose
+│   │   └── update
+│   │   │   └── --help
+│   │   │   └── --install
+│   │   │   └── --namespace
+│   │   │   └── --package-name
+│   │   │   └── --poll-interval
+│   │   │   └── --poll-timeout
+│   │   │   └── --values-file
+│   │   │   └── --version
+│   │   │   └── --wait
+│   │   │   └── --kubeconfig
+│   │   │   └── --log-file
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --kubeconfig
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── repository
+│   │   └── add
+│   │   │   └── --create-namespace
+│   │   │   └── --help
+│   │   │   └── --url
+│   │   │   └── --kubeconfig
+│   │   │   └── --log-file
+│   │   │   └── --namespace
+│   │   │   └── --verbose
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --kubeconfig
+│   │   │   └── --log-file
+│   │   │   └── --namespace
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --kubeconfig
+│   │   │   └── --log-file
+│   │   │   └── --namespace
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --all-namespaces
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --kubeconfig
+│   │   │   └── --log-file
+│   │   │   └── --namespace
+│   │   │   └── --verbose
+│   │   └── update
+│   │   │   └── --create
+│   │   │   └── --create-namespace
+│   │   │   └── --help
+│   │   │   └── --url
+│   │   │   └── --kubeconfig
+│   │   │   └── --log-file
+│   │   │   └── --namespace
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --kubeconfig
+│   │   └── --namespace
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── --help
+│   └── --log-file
+│   └── --verbose
+└── standalone-cluster
+│   └── completion
+│   │   └── bash
+│   │   │   └── --help
+│   │   │   └── --no-descriptions
+│   │   │   └── --log-file
+│   │   │   └── --verbose
+│   │   └── fish
+│   │   │   └── --help
+│   │   │   └── --no-descriptions
+│   │   │   └── --log-file
+│   │   │   └── --verbose
+│   │   └── powershell
+│   │   │   └── --help
+│   │   │   └── --no-descriptions
+│   │   │   └── --log-file
+│   │   │   └── --verbose
+│   │   └── zsh
+│   │   │   └── --help
+│   │   │   └── --no-descriptions
+│   │   │   └── --log-file
+│   │   │   └── --verbose
+│   │   └── --help
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── create
+│   │   └── --bind
+│   │   └── --browser
+│   │   └── --file
+│   │   └── --help
+│   │   └── --infrastructure
+│   │   └── --ui
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── delete
+│   │   └── --config
+│   │   └── --force
+│   │   └── --help
+│   │   └── --yes
+│   │   └── --log-file
+│   │   └── --verbose
+│   └── --help
+│   └── --log-file
+│   └── --verbose
 └── completion
 │   └── --help
 └── config
+│   └── get
+│   │   └── --help
 │   └── init
 │   │   └── --help
 │   └── server
@@ -244,8 +557,9 @@ tanzu
 │   │   │   └── --yes
 │   │   └── list
 │   │   │   └── --help
+│   │   │   └── --output
 │   │   └── --help
-│   └── show
+│   └── set
 │   │   └── --help
 │   └── --help
 └── init
@@ -274,6 +588,7 @@ tanzu
 │   │   └── --local
 │   └── list
 │   │   └── --help
+│   │   └── --output
 │   │   └── --local
 │   └── repo
 │   │   └── add
@@ -287,6 +602,7 @@ tanzu
 │   │   │   └── --local
 │   │   └── list
 │   │   │   └── --help
+│   │   │   └── --output
 │   │   │   └── --local
 │   │   └── update
 │   │   │   └── --gcp-bucket-name
@@ -305,7 +621,5 @@ tanzu
 │   └── --local
 │   └── --yes
 └── version
-│   └── --help
-└── alpha
 │   └── --help
 └── --help

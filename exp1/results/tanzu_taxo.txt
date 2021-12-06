@@ -4,24 +4,6 @@ tanzu
 │   │   └── add-plugin
 │   │   └── compile
 │   └── init
-└── test
-│   └── fetch
-│   └── plugin
-│   │   └── alpha
-│   │   └── builder
-│   │   └── cluster
-│   │   └── login
-│   │   └── package
-│   │   └── pinniped-auth
-└── package
-│   └── configure
-│   └── delete
-│   └── install
-│   └── list
-│   └── repository
-│   │   └── delete
-│   │   └── install
-│   │   └── list
 └── cluster
 │   └── create
 │   └── credentials
@@ -31,9 +13,31 @@ tanzu
 │   └── kubeconfig
 │   │   └── get
 │   └── list
+│   └── node-pool
+│   │   └── delete
+│   │   └── list
+│   │   └── set
 │   └── scale
 │   └── upgrade
+└── conformance
+│   └── delete
+│   └── gen
+│   └── logs
+│   └── results
+│   └── retrieve
+│   └── run
+│   └── status
+│   └── version
+└── diagnostics
+│   └── collect
+│   └── completion
+│   │   └── bash
+│   │   └── fish
+│   │   └── powershell
+│   │   └── zsh
 └── kubernetes-release
+│   └── activate
+│   └── deactivate
 │   └── get
 │   └── os
 │   │   └── get
@@ -43,7 +47,6 @@ tanzu
 │   │   └── update
 │   └── delete
 │   └── get
-│   └── import
 │   └── kubeconfig
 │   │   └── get
 │   └── permissions
@@ -51,13 +54,39 @@ tanzu
 │   │   │   └── set
 │   └── register
 │   └── upgrade
+└── package
+│   └── available
+│   │   └── get
+│   │   └── list
+│   └── install
+│   └── installed
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   └── repository
+│   │   └── add
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+└── standalone-cluster
+│   └── completion
+│   │   └── bash
+│   │   └── fish
+│   │   └── powershell
+│   │   └── zsh
+│   └── create
+│   └── delete
 └── completion
 └── config
+│   └── get
 │   └── init
 │   └── server
 │   │   └── delete
 │   │   └── list
-│   └── show
+│   └── set
 └── init
 └── login
 └── plugin
@@ -74,4 +103,3 @@ tanzu
 │   └── upgrade
 └── update
 └── version
-└── alpha
