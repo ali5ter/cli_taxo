@@ -15,6 +15,11 @@ Assuming a taxonomy can be successfully established, it is output in different w
 
 **Note: While this script can generate a Bash autocomplete script, it is rudimentary. However it can still significantly aid the developer experience of a CLI where tab completion doesn't already exist.**
 
+## Python 2 warning
+I have not ported [cli_taxo.py](cli_taxo.py) to Python 3. Keep meaning to. Sorry. 
+
+I have found [PyEnv](https://github.com/pyenv/pyenv) very useful to control Python versions and map them to particular folders where I need a certain version to run. For [cli_taxo.py](cli_taxo.py) I use PyEnv to set the local Python version to 2.7.18.
+
 ## Usage
 Regular expressions are configurable by the user to parse the CLI help documentation and default to expressions that parse the `docker` help - at least the last time it was run. However, to display the taxonomy or `kubectl`, you can run
 ```
