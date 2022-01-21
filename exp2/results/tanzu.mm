@@ -44,6 +44,7 @@
             <node text="clean" />
             <node text="describe" />
             <node text="list" />
+            <node text="sync" />
             <node folded="false" text="repo">
                 <node text="add" />
                 <node text="list" />

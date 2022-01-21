@@ -411,6 +411,15 @@ tmc
 │   │   │   └── --management-cluster-name
 │   │   │   └── --provisioner-name
 │   │   │   └── --verbosity
+│   │   └── tanzupackage
+│   │   │   └── install
+│   │   │   └── metadata
+│   │   │   └── package
+│   │   │   └── repository
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
 │   │   └── iam
 │   │   │   └── add-binding
 │   │   │   └── get-policy

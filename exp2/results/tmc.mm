@@ -231,6 +231,12 @@
                 <node text="list" />
                 <node text="update" />
                 <node text="attach" />
+                <node folded="false" text="tanzupackage">
+                    <node text="package" />
+                    <node text="repository" />
+                    <node text="install" />
+                    <node text="metadata" />
+                </node>
                 <node folded="false" text="template">
                     <node text="list" />
                     <node text="get" />
