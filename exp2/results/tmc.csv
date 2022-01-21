@@ -116,6 +116,11 @@ tmc,cluster,namespace,delete
 tmc,cluster,namespace,get
 tmc,cluster,namespace,list
 tmc,cluster,namespace,update
+tmc,cluster,namespace,tanzupackage
+tmc,cluster,namespace,tanzupackage,install
+tmc,cluster,namespace,tanzupackage,metadata
+tmc,cluster,namespace,tanzupackage,package
+tmc,cluster,namespace,tanzupackage,repository
 tmc,cluster,namespace,iam
 tmc,cluster,namespace,iam,add-binding
 tmc,cluster,namespace,iam,get-policy

@@ -116,6 +116,11 @@ tmc
 │   │   └── get
 │   │   └── list
 │   │   └── update
+│   │   └── tanzupackage
+│   │   │   └── install
+│   │   │   └── metadata
+│   │   │   └── package
+│   │   │   └── repository
 │   │   └── iam
 │   │   │   └── add-binding
 │   │   │   └── get-policy

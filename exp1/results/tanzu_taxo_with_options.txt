@@ -611,6 +611,9 @@ tanzu
 │   │   │   └── --local
 │   │   └── --help
 │   │   └── --local
+│   └── sync
+│   │   └── --help
+│   │   └── --local
 │   └── upgrade
 │   │   └── --help
 │   │   └── --local
