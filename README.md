@@ -86,11 +86,13 @@ Not so much experiments, rather different ways the [cli_taxo.py](cli_taxo.py) sc
 [exp4](exp4) ... Scripts to generate bash autocompletion scripts using the wrapper scripts in [exp1](exp1)
 
 ## Quick start taxo diagrams
-As a convenience, a couple of scripts are supplied to regenerate the taxonomy trees for CLI commands that might have been updated and displaying the diagrams for them.
+As a convenience, a couple of scripts are supplied to regenerate the taxonomy trees for CLI commands that might have been updated and displaying the diagrams for them. 
+
+Note that for these to display the diagrams, the scripts run a container to deploy httpd to show the SVGs. You will need a running docker runtime and CLI. Docker Desktop on MacOS works well and is installed with homebrew using `brew install --cask docker`.
 
 [build_taxo_for](build_taxo_for) runs the required experiments above to generate the taxo tree, csv and diagrams for a specific CLI command that already has supporting scripts.
 
-[show_taxo_for](show_taxo_for) builds and runs the container in [exp3](exp3) to serve the SVG diagrams and opens the URL to the specific CLI commands radial illustration.
+[show_taxo_for](show_taxo_for) builds and runs a container to show the SVG diagram.
 
 Examples of these radial diagrams:
 ![docker radial diagram](images/docker_taxo_radial.png)
