@@ -118,7 +118,9 @@ tmc
 │   │   └── --help
 │   │   └── --kubeconfig
 │   │   └── --name
+│   │   └── --proxy-name
 │   │   └── --skip-verify
+│   │   └── --use-proxy
 │   │   └── --management-cluster-name
 │   │   └── --provisioner-name
 │   │   └── --verbosity
@@ -1098,10 +1100,13 @@ tmc
 │   │   └── --skip-verify
 │   │   └── --verbosity
 │   └── reregister
+│   │   └── --default-workload-cluster-proxy-name
 │   │   └── --help
 │   │   └── --kubeconfig
 │   │   └── --output
+│   │   └── --proxy-name
 │   │   └── --skip-verify
+│   │   └── --use-proxy
 │   │   └── --verbosity
 │   └── iam
 │   │   └── add-binding
@@ -1585,6 +1590,14 @@ tmc
 │   │   │   └── --output
 │   │   │   └── --verbosity
 │   │   └── update
+│   │   │   └── --description
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --object-file
+│   │   │   └── --object-type
+│   │   │   └── --template-type
 │   │   │   └── --verbosity
 │   │   └── schema
 │   │   │   └── --help
