@@ -1,0 +1,860 @@
+eksctl
+└── anywhere
+└── associate
+│   └── identityprovider
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --wait
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── --color
+│   └── --help
+│   └── --verbose
+│   └── --help'
+└── completion
+│   └── bash
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── fish
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── powershell
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── zsh
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── --color
+│   └── --help
+│   └── --verbose
+│   └── --help'
+└── create
+│   └── addon
+│   │   └── --name
+│   │   └── --version
+│   │   └── --service-account-role-arn
+│   │   └── --force
+│   │   └── --wait
+│   │   └── --attach-policy-arn
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── cluster
+│   │   └── --name
+│   │   └── --tags
+│   │   └── --region
+│   │   └── --with-oidc
+│   │   └── --zones
+│   │   └── --version
+│   │   └── --config-file
+│   │   └── --timeout
+│   │   └── --fargate
+│   │   └── --dry-run
+│   │   └── --nodegroup-name
+│   │   └── --without-nodegroup
+│   │   └── --node-type
+│   │   └── --nodes
+│   │   └── --nodes-min
+│   │   └── --nodes-max
+│   │   └── --node-volume-size
+│   │   └── --node-volume-type
+│   │   └── --max-pods-per-node
+│   │   └── --ssh-access
+│   │   └── --ssh-public-key
+│   │   └── --enable-ssm
+│   │   └── --node-ami
+│   │   └── --node-ami-family
+│   │   └── --node-private-networking
+│   │   └── --node-security-groups
+│   │   └── --node-labels
+│   │   └── --node-zones
+│   │   └── --instance-prefix
+│   │   └── --instance-name
+│   │   └── --disable-pod-imds
+│   │   └── --managed
+│   │   └── --spot
+│   │   └── --instance-types
+│   │   └── --asg-access
+│   │   └── --external-dns-access
+│   │   └── --full-ecr-access
+│   │   └── --appmesh-access
+│   │   └── --appmesh-preview-access
+│   │   └── --alb-ingress-access
+│   │   └── --install-neuron-plugin
+│   │   └── --install-nvidia-plugin
+│   │   └── --vpc-cidr
+│   │   └── --vpc-private-subnets
+│   │   └── --vpc-public-subnets
+│   │   └── --vpc-from-kops-cluster
+│   │   └── --vpc-nat-mode
+│   │   └── --instance-selector-vcpus
+│   │   └── --instance-selector-memory
+│   │   └── --instance-selector-cpu-architecture
+│   │   └── --instance-selector-gpus
+│   │   └── --profile
+│   │   └── --cfn-role-arn
+│   │   └── --cfn-disable-rollback
+│   │   └── --kubeconfig
+│   │   └── --authenticator-role-arn
+│   │   └── --set-kubeconfig-context
+│   │   └── --auto-kubeconfig
+│   │   └── --write-kubeconfig
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── fargateprofile
+│   │   └── --name
+│   │   └── --namespace
+│   │   └── --labels
+│   │   └── --tags
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── iamidentitymapping
+│   │   └── --account
+│   │   └── --username
+│   │   └── --group
+│   │   └── --service-name
+│   │   └── --namespace
+│   │   └── --arn
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── iamserviceaccount
+│   │   └── --cluster
+│   │   └── --name
+│   │   └── --namespace
+│   │   └── --attach-policy-arn
+│   │   └── --attach-role-arn
+│   │   └── --role-name
+│   │   └── --role-only
+│   │   └── --tags
+│   │   └── --override-existing-serviceaccounts
+│   │   └── --include
+│   │   └── --exclude
+│   │   └── --approve
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --cfn-role-arn
+│   │   └── --cfn-disable-rollback
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── nodegroup
+│   │   └── --cluster
+│   │   └── --tags
+│   │   └── --region
+│   │   └── --version
+│   │   └── --config-file
+│   │   └── --include
+│   │   └── --exclude
+│   │   └── --update-auth-configmap
+│   │   └── --timeout
+│   │   └── --subnet-ids
+│   │   └── --dry-run
+│   │   └── --skip-outdated-addons-check
+│   │   └── --name
+│   │   └── --node-type
+│   │   └── --nodes
+│   │   └── --nodes-min
+│   │   └── --nodes-max
+│   │   └── --node-volume-size
+│   │   └── --node-volume-type
+│   │   └── --max-pods-per-node
+│   │   └── --ssh-access
+│   │   └── --ssh-public-key
+│   │   └── --enable-ssm
+│   │   └── --node-ami
+│   │   └── --node-ami-family
+│   │   └── --node-private-networking
+│   │   └── --node-security-groups
+│   │   └── --node-labels
+│   │   └── --node-zones
+│   │   └── --instance-prefix
+│   │   └── --instance-name
+│   │   └── --disable-pod-imds
+│   │   └── --managed
+│   │   └── --spot
+│   │   └── --instance-types
+│   │   └── --asg-access
+│   │   └── --external-dns-access
+│   │   └── --full-ecr-access
+│   │   └── --appmesh-access
+│   │   └── --appmesh-preview-access
+│   │   └── --alb-ingress-access
+│   │   └── --install-neuron-plugin
+│   │   └── --install-nvidia-plugin
+│   │   └── --instance-selector-vcpus
+│   │   └── --instance-selector-memory
+│   │   └── --instance-selector-cpu-architecture
+│   │   └── --instance-selector-gpus
+│   │   └── --profile
+│   │   └── --cfn-role-arn
+│   │   └── --cfn-disable-rollback
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── --color
+│   └── --help
+│   └── --verbose
+│   └── --help'
+└── delete
+│   └── addon
+│   │   └── --name
+│   │   └── --preserve
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── cluster
+│   │   └── --name
+│   │   └── --region
+│   │   └── --wait
+│   │   └── --force
+│   │   └── --disable-nodegroup-eviction
+│   │   └── --config-file
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --cfn-role-arn
+│   │   └── --cfn-disable-rollback
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── fargateprofile
+│   │   └── --name
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --wait
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── iamidentitymapping
+│   │   └── --all
+│   │   └── --arn
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --timeout
+│   │   └── --account
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── iamserviceaccount
+│   │   └── --cluster
+│   │   └── --name
+│   │   └── --namespace
+│   │   └── --include
+│   │   └── --exclude
+│   │   └── --only-missing
+│   │   └── --approve
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --wait
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --cfn-role-arn
+│   │   └── --cfn-disable-rollback
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── nodegroup
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --name
+│   │   └── --config-file
+│   │   └── --approve
+│   │   └── --include
+│   │   └── --exclude
+│   │   └── --only-missing
+│   │   └── --update-auth-configmap
+│   │   └── --drain
+│   │   └── --max-grace-period
+│   │   └── --disable-eviction
+│   │   └── --wait
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --cfn-role-arn
+│   │   └── --cfn-disable-rollback
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── --color
+│   └── --help
+│   └── --verbose
+│   └── --help'
+└── deregister
+│   └── cluster
+│   │   └── --name
+│   │   └── --region
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── --color
+│   └── --help
+│   └── --verbose
+│   └── --help'
+└── disassociate
+│   └── identityprovider
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --wait
+│   │   └── --timeout
+│   │   └── --name
+│   │   └── --type
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── --color
+│   └── --help
+│   └── --verbose
+│   └── --help'
+└── drain
+│   └── nodegroup
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --name
+│   │   └── --config-file
+│   │   └── --approve
+│   │   └── --include
+│   │   └── --exclude
+│   │   └── --only-missing
+│   │   └── --undo
+│   │   └── --max-grace-period
+│   │   └── --disable-eviction
+│   │   └── --timeout
+│   │   └── --node-drain-wait-period
+│   │   └── --profile
+│   │   └── --cfn-role-arn
+│   │   └── --cfn-disable-rollback
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── --color
+│   └── --help
+│   └── --verbose
+│   └── --help'
+└── enable
+│   └── flux
+│   │   └── --config-file
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── --color
+│   └── --help
+│   └── --verbose
+│   └── --help'
+└── get
+│   └── addon
+│   │   └── --name
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --chunk-size
+│   │   └── --output
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── cluster
+│   │   └── --name
+│   │   └── --all-regions
+│   │   └── --region
+│   │   └── --chunk-size
+│   │   └── --output
+│   │   └── --timeout
+│   │   └── --config-file
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── fargateprofile
+│   │   └── --name
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --timeout
+│   │   └── --chunk-size
+│   │   └── --output
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── iamidentitymapping
+│   │   └── --arn
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --chunk-size
+│   │   └── --output
+│   │   └── --config-file
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── iamserviceaccount
+│   │   └── --cluster
+│   │   └── --namespace
+│   │   └── --name
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --chunk-size
+│   │   └── --output
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── identityprovider
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --chunk-size
+│   │   └── --output
+│   │   └── --name
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── labels
+│   │   └── --cluster
+│   │   └── --nodegroup
+│   │   └── --region
+│   │   └── --timeout
+│   │   └── --config-file
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── nodegroup
+│   │   └── --cluster
+│   │   └── --name
+│   │   └── --region
+│   │   └── --chunk-size
+│   │   └── --output
+│   │   └── --timeout
+│   │   └── --config-file
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── --color
+│   └── --help
+│   └── --verbose
+│   └── --help'
+└── help
+│   └── --color
+│   └── --help
+│   └── --verbose
+│   └── --help'
+└── info
+│   └── --output
+│   └── --color
+│   └── --help
+│   └── --verbose
+│   └── --help'
+└── register
+│   └── cluster
+│   │   └── --name
+│   │   └── --provider
+│   │   └── --role-arn
+│   │   └── --region
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── --color
+│   └── --help
+│   └── --verbose
+│   └── --help'
+└── scale
+│   └── nodegroup
+│   │   └── --cluster
+│   │   └── --name
+│   │   └── --config-file
+│   │   └── --nodes
+│   │   └── --nodes-max
+│   │   └── --nodes-min
+│   │   └── --region
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --cfn-role-arn
+│   │   └── --cfn-disable-rollback
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── --color
+│   └── --help
+│   └── --verbose
+│   └── --help'
+└── set
+│   └── labels
+│   │   └── --cluster
+│   │   └── --nodegroup
+│   │   └── --labels
+│   │   └── --region
+│   │   └── --timeout
+│   │   └── --config-file
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── --color
+│   └── --help
+│   └── --verbose
+│   └── --help'
+└── unset
+│   └── labels
+│   │   └── --cluster
+│   │   └── --nodegroup
+│   │   └── --labels
+│   │   └── --region
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── --color
+│   └── --help
+│   └── --verbose
+│   └── --help'
+└── update
+│   └── addon
+│   │   └── --name
+│   │   └── --version
+│   │   └── --service-account-role-arn
+│   │   └── --force
+│   │   └── --wait
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── cluster
+│   │   └── --name
+│   │   └── --region
+│   │   └── --version
+│   │   └── --config-file
+│   │   └── --approve
+│   │   └── --timeout
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── iamserviceaccount
+│   │   └── --cluster
+│   │   └── --name
+│   │   └── --namespace
+│   │   └── --attach-policy-arn
+│   │   └── --include
+│   │   └── --exclude
+│   │   └── --approve
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --cfn-role-arn
+│   │   └── --cfn-disable-rollback
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── nodegroup
+│   │   └── --config-file
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── --color
+│   └── --help
+│   └── --verbose
+│   └── --help'
+└── upgrade
+│   └── cluster
+│   │   └── --name
+│   │   └── --region
+│   │   └── --version
+│   │   └── --config-file
+│   │   └── --approve
+│   │   └── --timeout
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── nodegroup
+│   │   └── --name
+│   │   └── --launch-template-version
+│   │   └── --kubernetes-version
+│   │   └── --force-upgrade
+│   │   └── --release-version
+│   │   └── --wait
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── --color
+│   └── --help
+│   └── --verbose
+│   └── --help'
+└── utils
+│   └── associate-iam-oidc-provider
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --approve
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── describe-addon-versions
+│   │   └── --name
+│   │   └── --kubernetes-version
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── describe-stacks
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --all
+│   │   └── --events
+│   │   └── --trail
+│   │   └── --output
+│   │   └── --config-file
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── enable-secrets-encryption
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --approve
+│   │   └── --timeout
+│   │   └── --key-arn
+│   │   └── --encrypt-existing-secrets
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── install-vpc-controllers
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --approve
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── nodegroup-health
+│   │   └── --cluster
+│   │   └── --name
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── schema
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── set-public-access-cidrs
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --approve
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── update-aws-node
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --approve
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── update-cluster-endpoints
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --approve
+│   │   └── --timeout
+│   │   └── --private-access
+│   │   └── --public-access
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── update-cluster-logging
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --approve
+│   │   └── --timeout
+│   │   └── --enable-types
+│   │   └── --disable-types
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── update-coredns
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --approve
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── update-kube-proxy
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --config-file
+│   │   └── --approve
+│   │   └── --timeout
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── update-legacy-subnet-settings
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --timeout
+│   │   └── --config-file
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── write-kubeconfig
+│   │   └── --cluster
+│   │   └── --region
+│   │   └── --timeout
+│   │   └── --config-file
+│   │   └── --kubeconfig
+│   │   └── --authenticator-role-arn
+│   │   └── --set-kubeconfig-context
+│   │   └── --auto-kubeconfig
+│   │   └── --profile
+│   │   └── --color
+│   │   └── --help
+│   │   └── --verbose
+│   │   └── --help'
+│   └── --color
+│   └── --help
+│   └── --verbose
+│   └── --help'
+└── version
+│   └── --output
+│   └── --color
+│   └── --help
+│   └── --verbose
+│   └── --help'
+└── --color
+└── --help
+└── --verbose
+└── --help'

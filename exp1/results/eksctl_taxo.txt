@@ -1,0 +1,75 @@
+eksctl
+└── anywhere
+└── associate
+│   └── identityprovider
+└── completion
+│   └── bash
+│   └── fish
+│   └── powershell
+│   └── zsh
+└── create
+│   └── addon
+│   └── cluster
+│   └── fargateprofile
+│   └── iamidentitymapping
+│   └── iamserviceaccount
+│   └── nodegroup
+└── delete
+│   └── addon
+│   └── cluster
+│   └── fargateprofile
+│   └── iamidentitymapping
+│   └── iamserviceaccount
+│   └── nodegroup
+└── deregister
+│   └── cluster
+└── disassociate
+│   └── identityprovider
+└── drain
+│   └── nodegroup
+└── enable
+│   └── flux
+└── get
+│   └── addon
+│   └── cluster
+│   └── fargateprofile
+│   └── iamidentitymapping
+│   └── iamserviceaccount
+│   └── identityprovider
+│   └── labels
+│   └── nodegroup
+└── help
+└── info
+└── register
+│   └── cluster
+└── scale
+│   └── nodegroup
+└── set
+│   └── labels
+└── unset
+│   └── labels
+└── update
+│   └── addon
+│   └── cluster
+│   └── iamserviceaccount
+│   └── nodegroup
+└── upgrade
+│   └── cluster
+│   └── nodegroup
+└── utils
+│   └── associate-iam-oidc-provider
+│   └── describe-addon-versions
+│   └── describe-stacks
+│   └── enable-secrets-encryption
+│   └── install-vpc-controllers
+│   └── nodegroup-health
+│   └── schema
+│   └── set-public-access-cidrs
+│   └── update-aws-node
+│   └── update-cluster-endpoints
+│   └── update-cluster-logging
+│   └── update-coredns
+│   └── update-kube-proxy
+│   └── update-legacy-subnet-settings
+│   └── write-kubeconfig
+└── version
