@@ -231,11 +231,17 @@
                 <node text="list" />
                 <node text="update" />
                 <node text="attach" />
-                <node folded="false" text="tanzupackage">
-                    <node text="package" />
-                    <node text="repository" />
-                    <node text="install" />
-                    <node text="metadata" />
+                <node folded="false" text="tmc">
+                    <node text="iam" />
+                    <node text="get" />
+                    <node text="create" />
+                    <node text="list" />
+                    <node text="update" />
+                    <node text="attach" />
+                    <node text="tmc" />
+                    <node text="template" />
+                    <node text="schema" />
+                    <node text="delete" />
                 </node>
                 <node folded="false" text="template">
                     <node text="list" />
@@ -257,6 +263,23 @@
                 <node text="schema" />
             </node>
             <node text="attach" />
+            <node folded="false" text="secret">
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node folded="false" text="registry">
+                    <node text="create" />
+                    <node text="update" />
+                    <node text="template" />
+                </node>
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="schema" />
+                <node text="delete" />
+            </node>
             <node folded="false" text="template">
                 <node text="list" />
                 <node text="get" />
@@ -336,6 +359,34 @@
                     <node text="get" />
                 </node>
             </node>
+            <node folded="false" text="tanzupackage">
+                <node folded="false" text="package">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node folded="false" text="repository">
+                    <node text="get" />
+                    <node text="create" />
+                    <node text="list" />
+                    <node text="update" />
+                    <node text="template" />
+                    <node text="delete" />
+                    <node text="schema" />
+                </node>
+                <node folded="false" text="install">
+                    <node text="get" />
+                    <node text="create" />
+                    <node text="list" />
+                    <node text="update" />
+                    <node text="template" />
+                    <node text="delete" />
+                    <node text="schema" />
+                </node>
+                <node folded="false" text="metadata">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+            </node>
             <node text="validate" />
             <node folded="false" text="nodepool">
                 <node folded="false" text="iam">
@@ -378,6 +429,17 @@
                 <node text="create" />
                 <node text="list" />
                 <node text="update" />
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="delete" />
+                <node text="schema" />
+            </node>
+            <node folded="false" text="secretexport">
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
                 <node folded="false" text="template">
                     <node text="list" />
                     <node text="get" />

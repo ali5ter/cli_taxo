@@ -413,15 +413,6 @@ tmc
 │   │   │   └── --management-cluster-name
 │   │   │   └── --provisioner-name
 │   │   │   └── --verbosity
-│   │   └── tanzupackage
-│   │   │   └── install
-│   │   │   └── metadata
-│   │   │   └── package
-│   │   │   └── repository
-│   │   │   └── --help
-│   │   │   └── --management-cluster-name
-│   │   │   └── --provisioner-name
-│   │   │   └── --verbosity
 │   │   └── iam
 │   │   │   └── add-binding
 │   │   │   └── get-policy
@@ -449,6 +440,21 @@ tmc
 │   │   └── --management-cluster-name
 │   │   └── --provisioner-name
 │   │   └── --verbosity
+│   │   └── tmc
+│   │   │   └── attach
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── iam
+│   │   │   └── schema
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   │   └── tmc
 │   └── nodepool
 │   │   └── create
 │   │   │   └── --management-cluster-name
@@ -519,6 +525,160 @@ tmc
 │   │   │   └── --offset
 │   │   │   └── --output
 │   │   │   └── --query
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --management-cluster-name
+│   │   └── --provisioner-name
+│   │   └── --verbosity
+│   └── secret
+│   │   └── create
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── delete
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --namespace-name
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── get
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --namespace-name
+│   │   │   └── --output
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --all
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --namespace-name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --secret-type
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── update
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── registry
+│   │   │   └── create
+│   │   │   └── update
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --management-cluster-name
+│   │   └── --provisioner-name
+│   │   └── --verbosity
+│   └── secretexport
+│   │   └── create
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── delete
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --namespace-name
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── get
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --namespace-name
+│   │   │   └── --output
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --all
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --namespace-name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --management-cluster-name
+│   │   └── --provisioner-name
+│   │   └── --verbosity
+│   └── tanzupackage
+│   │   └── install
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── schema
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── metadata
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── package
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── repository
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── schema
+│   │   │   └── template
+│   │   │   └── --help
 │   │   │   └── --management-cluster-name
 │   │   │   └── --provisioner-name
 │   │   │   └── --verbosity

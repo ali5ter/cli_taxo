@@ -116,11 +116,6 @@ tmc
 │   │   └── get
 │   │   └── list
 │   │   └── update
-│   │   └── tanzupackage
-│   │   │   └── install
-│   │   │   └── metadata
-│   │   │   └── package
-│   │   │   └── repository
 │   │   └── iam
 │   │   │   └── add-binding
 │   │   │   └── get-policy
@@ -131,6 +126,17 @@ tmc
 │   │   └── template
 │   │   │   └── get
 │   │   │   └── list
+│   │   └── tmc
+│   │   │   └── attach
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── iam
+│   │   │   └── schema
+│   │   │   └── template
+│   │   │   └── tmc
 │   └── nodepool
 │   │   └── create
 │   │   └── delete
@@ -149,6 +155,52 @@ tmc
 │   │   │   └── list
 │   └── object
 │   │   └── list
+│   └── secret
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── registry
+│   │   │   └── create
+│   │   │   └── update
+│   │   │   └── template
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── secretexport
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── tanzupackage
+│   │   └── install
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── schema
+│   │   │   └── template
+│   │   └── metadata
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── package
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── repository
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── schema
+│   │   │   └── template
 │   └── custom-policy
 │   │   └── create
 │   │   └── delete
