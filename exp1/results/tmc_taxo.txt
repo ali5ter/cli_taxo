@@ -199,6 +199,8 @@ tmc
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── update
+│   │   │   └── disable
+│   │   │   └── enable
 │   │   │   └── schema
 │   │   │   └── template
 │   └── custom-policy

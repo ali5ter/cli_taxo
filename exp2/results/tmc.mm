@@ -365,13 +365,15 @@
                     <node text="get" />
                 </node>
                 <node folded="false" text="repository">
+                    <node text="enable" />
                     <node text="get" />
                     <node text="create" />
                     <node text="list" />
                     <node text="update" />
+                    <node text="disable" />
                     <node text="template" />
-                    <node text="delete" />
                     <node text="schema" />
+                    <node text="delete" />
                 </node>
                 <node folded="false" text="install">
                     <node text="get" />
