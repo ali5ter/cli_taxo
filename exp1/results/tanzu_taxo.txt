@@ -1,106 +1,51 @@
 tanzu
 └── builder
 │   └── cli
-│   │   └── add-plugin
 │   │   └── compile
 │   └── init
-└── cluster
-│   └── create
-│   └── credentials
-│   │   └── update
-│   └── delete
+│   └── publish
+└── ceip-participation
 │   └── get
-│   └── kubeconfig
-│   │   └── get
-│   └── list
-│   └── node-pool
-│   │   └── delete
-│   │   └── list
-│   │   └── set
-│   └── scale
-│   └── upgrade
-└── conformance
-│   └── delete
-│   └── gen
-│   └── logs
-│   └── results
-│   └── retrieve
-│   └── run
-│   └── status
-│   └── version
-└── diagnostics
-│   └── collect
-│   └── completion
-│   │   └── bash
-│   │   └── fish
-│   │   └── powershell
-│   │   └── zsh
-└── kubernetes-release
-│   └── activate
-│   └── deactivate
-│   └── get
-│   └── os
-│   │   └── get
-└── management-cluster
-│   └── create
-│   └── credentials
-│   │   └── update
-│   └── delete
-│   └── get
-│   └── kubeconfig
-│   │   └── get
-│   └── permissions
-│   │   └── aws
-│   │   │   └── set
-│   └── register
-│   └── upgrade
-└── package
-│   └── available
-│   │   └── get
-│   │   └── list
-│   └── install
-│   └── installed
-│   │   └── create
-│   │   └── delete
-│   │   └── get
-│   │   └── list
-│   │   └── update
-│   └── repository
-│   │   └── add
-│   │   └── delete
-│   │   └── get
-│   │   └── list
-│   │   └── update
-└── standalone-cluster
-│   └── completion
-│   │   └── bash
-│   │   └── fish
-│   │   └── powershell
-│   │   └── zsh
-│   └── create
-│   └── delete
+│   └── set
 └── completion
 └── config
-│   └── get
-│   └── init
-│   └── server
+│   └── cert
+│   │   └── add
 │   │   └── delete
 │   │   └── list
+│   │   └── update
+│   └── eula
+│   │   └── accept
+│   │   └── show
+│   └── get
+│   └── init
 │   └── set
+│   └── unset
+└── context
+│   └── create
+│   └── delete
+│   └── get
+│   └── list
+│   └── use
 └── init
 └── login
 └── plugin
 │   └── clean
 │   └── delete
 │   └── describe
+│   └── group
+│   │   └── get
+│   │   └── search
 │   └── install
 │   └── list
-│   └── repo
-│   │   └── add
+│   └── search
+│   └── source
 │   │   └── delete
+│   │   └── init
 │   │   └── list
 │   │   └── update
 │   └── sync
 │   └── upgrade
-└── update
 └── version
+└── kubernetes
+└── mission-control

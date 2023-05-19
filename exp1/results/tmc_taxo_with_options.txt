@@ -22,6 +22,10 @@ tmc
 │   │   │   └── --verbosity
 │   │   └── update
 │   │   │   └── --verbosity
+│   │   └── permission-template
+│   │   │   └── generate
+│   │   │   └── --help
+│   │   │   └── --verbosity
 │   │   └── iam
 │   │   │   └── add-binding
 │   │   │   └── get-policy
@@ -286,6 +290,84 @@ tmc
 │   │   └── --management-cluster-name
 │   │   └── --provisioner-name
 │   │   └── --verbosity
+│   └── fluxcd
+│   │   └── continuousdelivery
+│   │   │   └── get
+│   │   │   └── disable
+│   │   │   └── enable
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── gitrepository
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── schema
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── helm
+│   │   │   └── list
+│   │   │   └── disable
+│   │   │   └── enable
+│   │   │   └── schema
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── helmrelease
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── schema
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── helmrepository
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── kustomization
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── schema
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── sourcesecret
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── schema
+│   │   │   └── template
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --management-cluster-name
+│   │   └── --provisioner-name
+│   │   └── --verbosity
 │   └── inspection
 │   │   └── scan
 │   │   │   └── create
@@ -372,9 +454,9 @@ tmc
 │   │   │   └── --provisioner-name
 │   │   │   └── --verbosity
 │   │   └── --help
+│   │   └── --verbosity
 │   │   └── --management-cluster-name
 │   │   └── --provisioner-name
-│   │   └── --verbosity
 │   └── namespace
 │   │   └── attach
 │   │   │   └── --management-cluster-name
@@ -776,6 +858,54 @@ tmc
 │   │   └── --management-cluster-name
 │   │   └── --provisioner-name
 │   │   └── --verbosity
+│   └── mutation-policy
+│   │   └── create
+│   │   └── delete
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── get
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── update
+│   │   │   └── --cluster-name
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --interactive
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --management-cluster-name
+│   │   └── --provisioner-name
+│   │   └── --verbosity
 │   └── namespace-quota-policy
 │   │   └── create
 │   │   └── delete
@@ -1023,6 +1153,40 @@ tmc
 │   │   │   └── --verbosity
 │   │   └── --help
 │   │   └── --verbosity
+│   └── mutation-policy
+│   │   └── create
+│   │   └── delete
+│   │   │   └── --cluster-group-name
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── get
+│   │   │   └── --cluster-group-name
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --cluster-group-name
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── update
+│   │   │   └── --cluster-group-name
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --interactive
+│   │   │   └── --verbosity
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
 │   └── namespace-quota-policy
 │   │   └── create
 │   │   └── delete
@@ -1133,6 +1297,104 @@ tmc
 │   │   └── --help
 │   │   └── --verbosity
 │   └── --help
+└── ekscluster
+│   └── create
+│   │   └── --verbosity
+│   └── delete
+│   │   └── --credential-name
+│   │   └── --force
+│   │   └── --help
+│   │   └── --region
+│   │   └── --verbosity
+│   └── get
+│   │   └── --credential-name
+│   │   └── --help
+│   │   └── --output
+│   │   └── --region
+│   │   └── --verbosity
+│   └── list
+│   │   └── --all
+│   │   └── --credential-name
+│   │   └── --help
+│   │   └── --max-size
+│   │   └── --name
+│   │   └── --offset
+│   │   └── --output
+│   │   └── --region
+│   │   └── --verbosity
+│   └── update
+│   │   └── --verbosity
+│   └── nodepool
+│   │   └── create
+│   │   │   └── --verbosity
+│   │   └── delete
+│   │   │   └── --credential-name
+│   │   │   └── --eks-cluster-name
+│   │   │   └── --help
+│   │   │   └── --region
+│   │   │   └── --verbosity
+│   │   └── get
+│   │   │   └── --credential-name
+│   │   │   └── --eks-cluster-name
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --region
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --all
+│   │   │   └── --credential-name
+│   │   │   └── --eks-cluster-name
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --region
+│   │   │   └── --verbosity
+│   │   └── update
+│   │   │   └── --verbosity
+│   │   └── iam
+│   │   │   └── add-binding
+│   │   │   └── get-policy
+│   │   │   └── remove-binding
+│   │   │   └── test-permission
+│   │   │   └── update-policy
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
+│   └── options
+│   │   └── list
+│   │   │   └── --credential-name
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
+│   └── schema
+│   │   └── --help
+│   │   └── --output
+│   │   └── --verbosity
+│   └── template
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --verbosity
+│   └── --help
+│   └── --verbosity
 └── integration
 │   └── get
 │   │   └── --help
@@ -1216,16 +1478,20 @@ tmc
 │   │   │   └── --management-cluster-name
 │   │   │   └── --verbosity
 │   │   └── tanzukubernetescluster
+│   │   │   └── create
+│   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── manage
 │   │   │   └── unmanage
 │   │   │   └── update
+│   │   │   └── upgrade
+│   │   │   └── nodepool
 │   │   │   └── schema
 │   │   │   └── template
 │   │   │   └── --help
-│   │   │   └── --provisioner-name
 │   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
 │   │   │   └── --verbosity
 │   │   └── iam
 │   │   │   └── add-binding
@@ -1314,6 +1580,18 @@ tmc
 │   └── --help
 │   └── --verbosity
 └── organization
+│   └── helm
+│   │   └── chart
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── chartmetadata
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── --help
 │   └── integration
 │   │   └── create
 │   │   │   └── --verbosity
@@ -1411,6 +1689,29 @@ tmc
 │   │   │   └── list
 │   │   │   └── --help
 │   │   └── --help
+│   └── mutation-policy
+│   │   └── create
+│   │   └── delete
+│   │   │   └── --help
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --interactive
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── --help
 │   └── namespace-quota-policy
 │   │   └── create
 │   │   └── delete
@@ -1481,6 +1782,141 @@ tmc
 │   │   │   └── --help
 │   │   └── --help
 │   └── --help
+└── tanzukubernetescluster
+│   └── create
+│   │   └── --management-cluster-name
+│   │   └── --provisioner-name
+│   │   └── --verbosity
+│   └── delete
+│   │   └── --force
+│   │   └── --help
+│   │   └── --management-cluster-name
+│   │   └── --provisioner-name
+│   │   └── --verbosity
+│   └── get
+│   │   └── --help
+│   │   └── --output
+│   │   └── --management-cluster-name
+│   │   └── --provisioner-name
+│   │   └── --verbosity
+│   └── list
+│   │   └── --all
+│   │   └── --help
+│   │   └── --max-size
+│   │   └── --name
+│   │   └── --offset
+│   │   └── --output
+│   │   └── --management-cluster-name
+│   │   └── --provisioner-name
+│   │   └── --verbosity
+│   └── manage
+│   │   └── --cluster-group
+│   │   └── --help
+│   │   └── --proxy-name
+│   │   └── --management-cluster-name
+│   │   └── --provisioner-name
+│   │   └── --verbosity
+│   └── unmanage
+│   │   └── --help
+│   │   └── --management-cluster-name
+│   │   └── --provisioner-name
+│   │   └── --verbosity
+│   └── update
+│   │   └── --management-cluster-name
+│   │   └── --provisioner-name
+│   │   └── --verbosity
+│   └── upgrade
+│   │   └── --help
+│   │   └── --include-all-families
+│   │   └── --latest
+│   │   └── --management-cluster-name
+│   │   └── --provisioner-name
+│   │   └── --verbosity
+│   └── nodepool
+│   │   └── create
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --tanzu-kubernetes-cluster-name
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --tanzu-kubernetes-cluster-name
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --all
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --tanzu-kubernetes-cluster-name
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── update
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── iam
+│   │   │   └── add-binding
+│   │   │   └── get-policy
+│   │   │   └── remove-binding
+│   │   │   └── test-permission
+│   │   │   └── update-policy
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── schema
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --management-cluster-name
+│   │   └── --provisioner-name
+│   │   └── --verbosity
+│   └── schema
+│   │   └── --help
+│   │   └── --output
+│   │   └── --management-cluster-name
+│   │   └── --provisioner-name
+│   │   └── --verbosity
+│   └── template
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── --help
+│   │   └── --management-cluster-name
+│   │   └── --provisioner-name
+│   │   └── --verbosity
+│   └── --help
+│   └── --management-cluster-name
+│   └── --provisioner-name
+│   └── --verbosity
 └── workspace
 │   └── create
 │   │   └── --verbosity
@@ -1612,6 +2048,10 @@ tmc
 │   │   └── --verbosity
 │   └── --help
 │   └── --verbosity
+└── apply
+│   └── --dry-run
+│   └── --file
+│   └── --help
 └── login
 │   └── switch
 │   │   └── --context-name
@@ -1691,6 +2131,19 @@ tmc
 │   │   │   └── --verbosity
 │   │   └── --help
 │   │   └── --verbosity
+│   └── rolesbyidentity
+│   │   └── list
+│   │   │   └── --all
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --resource-uid
+│   │   │   └── --role
+│   │   │   └── --subject-name
+│   │   │   └── --subject-type
+│   │   └── --help
 │   └── --help
 └── policy
 │   └── effective

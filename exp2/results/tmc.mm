@@ -14,6 +14,9 @@
             <node text="schema" />
         </node>
         <node folded="false" text="iam">
+            <node folded="false" text="rolesbyidentity">
+                <node text="list" />
+            </node>
             <node folded="false" text="role">
                 <node text="get" />
                 <node text="create" />
@@ -60,6 +63,9 @@
                 <node text="create" />
                 <node text="list" />
                 <node text="update" />
+                <node folded="false" text="permission-template">
+                    <node text="generate" />
+                </node>
                 <node folded="false" text="template">
                     <node text="list" />
                     <node text="get" />
@@ -78,6 +84,40 @@
             <node text="zsh" />
             <node text="bash" />
         </node>
+        <node folded="false" text="tanzukubernetescluster">
+            <node text="upgrade" />
+            <node text="get" />
+            <node text="create" />
+            <node text="manage" />
+            <node text="list" />
+            <node text="update" />
+            <node text="unmanage" />
+            <node folded="false" text="template">
+                <node text="list" />
+                <node text="get" />
+            </node>
+            <node text="schema" />
+            <node folded="false" text="nodepool">
+                <node folded="false" text="iam">
+                    <node text="remove-binding" />
+                    <node text="test-permission" />
+                    <node text="get-policy" />
+                    <node text="add-binding" />
+                    <node text="update-policy" />
+                </node>
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="schema" />
+                <node text="delete" />
+            </node>
+            <node text="delete" />
+        </node>
         <node folded="false" text="clustergroup">
             <node folded="false" text="iam">
                 <node text="remove-binding" />
@@ -86,6 +126,7 @@
                 <node text="add-binding" />
                 <node text="update-policy" />
             </node>
+            <node text="schema" />
             <node folded="false" text="security-policy">
                 <node text="get" />
                 <node text="create" />
@@ -141,14 +182,58 @@
                 <node text="list" />
                 <node text="get" />
             </node>
+            <node folded="false" text="mutation-policy">
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="delete" />
+                <node text="schema" />
+            </node>
+            <node text="delete" />
+        </node>
+        <node folded="false" text="ekscluster">
+            <node text="get" />
+            <node text="create" />
+            <node text="list" />
+            <node text="update" />
+            <node folded="false" text="template">
+                <node text="list" />
+                <node text="get" />
+            </node>
             <node text="schema" />
+            <node folded="false" text="options">
+                <node text="list" />
+            </node>
+            <node folded="false" text="nodepool">
+                <node folded="false" text="iam">
+                    <node text="remove-binding" />
+                    <node text="test-permission" />
+                    <node text="get-policy" />
+                    <node text="add-binding" />
+                    <node text="update-policy" />
+                </node>
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="schema" />
+                <node text="delete" />
+            </node>
             <node text="delete" />
         </node>
         <node folded="false" text="integration">
             <node text="list" />
             <node text="get" />
         </node>
-        <node text="update" />
         <node folded="false" text="managementcluster">
             <node text="deregister" />
             <node folded="false" text="iam">
@@ -182,13 +267,17 @@
                 </node>
                 <node text="get" />
                 <node folded="false" text="tanzukubernetescluster">
+                    <node text="upgrade" />
                     <node text="get" />
+                    <node text="create" />
                     <node text="manage" />
                     <node text="list" />
                     <node text="update" />
                     <node text="unmanage" />
                     <node text="template" />
                     <node text="schema" />
+                    <node text="nodepool" />
+                    <node text="delete" />
                 </node>
                 <node text="list" />
                 <node text="update" />
@@ -205,6 +294,60 @@
         </node>
         <node folded="false" text="cluster">
             <node text="logs" />
+            <node folded="false" text="fluxcd">
+                <node folded="false" text="gitrepository">
+                    <node text="get" />
+                    <node text="create" />
+                    <node text="list" />
+                    <node text="update" />
+                    <node text="template" />
+                    <node text="delete" />
+                    <node text="schema" />
+                </node>
+                <node folded="false" text="sourcesecret">
+                    <node text="get" />
+                    <node text="create" />
+                    <node text="list" />
+                    <node text="update" />
+                    <node text="template" />
+                    <node text="delete" />
+                    <node text="schema" />
+                </node>
+                <node folded="false" text="helmrelease">
+                    <node text="get" />
+                    <node text="create" />
+                    <node text="list" />
+                    <node text="update" />
+                    <node text="template" />
+                    <node text="delete" />
+                    <node text="schema" />
+                </node>
+                <node folded="false" text="continuousdelivery">
+                    <node text="enable" />
+                    <node text="disable" />
+                    <node text="get" />
+                </node>
+                <node folded="false" text="helmrepository">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node folded="false" text="helm">
+                    <node text="enable" />
+                    <node text="disable" />
+                    <node text="list" />
+                    <node text="template" />
+                    <node text="schema" />
+                </node>
+                <node folded="false" text="kustomization">
+                    <node text="get" />
+                    <node text="create" />
+                    <node text="list" />
+                    <node text="update" />
+                    <node text="template" />
+                    <node text="delete" />
+                    <node text="schema" />
+                </node>
+            </node>
             <node folded="false" text="iam">
                 <node text="remove-binding" />
                 <node text="test-permission" />
@@ -359,6 +502,18 @@
                     <node text="get" />
                 </node>
             </node>
+            <node folded="false" text="mutation-policy">
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="delete" />
+                <node text="schema" />
+            </node>
             <node folded="false" text="tanzupackage">
                 <node folded="false" text="package">
                     <node text="list" />
@@ -509,6 +664,7 @@
             <node text="schema" />
             <node text="delete" />
         </node>
+        <node text="apply" />
         <node folded="false" text="policy">
             <node folded="false" text="templates">
                 <node text="get" />
@@ -585,6 +741,18 @@
                 <node text="delete" />
                 <node text="schema" />
             </node>
+            <node folded="false" text="mutation-policy">
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="delete" />
+                <node text="schema" />
+            </node>
             <node folded="false" text="custom-policy">
                 <node text="get" />
                 <node text="create" />
@@ -621,6 +789,16 @@
                 <node text="delete" />
                 <node text="schema" />
             </node>
+            <node folded="false" text="helm">
+                <node folded="false" text="chartmetadata">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node folded="false" text="chart">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+            </node>
         </node>
         <node folded="false" text="login">
             <node text="switch" />
@@ -645,6 +823,7 @@
                 <node text="delete" />
             </node>
         </node>
+        <node text="update" />
         <node folded="false" text="dataprotection">
             <node folded="false" text="provider">
                 <node folded="false" text="backuplocation">

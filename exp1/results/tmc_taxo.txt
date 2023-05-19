@@ -6,6 +6,8 @@ tmc
 │   │   └── get
 │   │   └── list
 │   │   └── update
+│   │   └── permission-template
+│   │   │   └── generate
 │   │   └── iam
 │   │   │   └── add-binding
 │   │   │   └── get-policy
@@ -87,6 +89,52 @@ tmc
 │   └── extension
 │   │   └── get
 │   │   └── list
+│   └── fluxcd
+│   │   └── continuousdelivery
+│   │   │   └── get
+│   │   │   └── disable
+│   │   │   └── enable
+│   │   └── gitrepository
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── schema
+│   │   │   └── template
+│   │   └── helm
+│   │   │   └── list
+│   │   │   └── disable
+│   │   │   └── enable
+│   │   │   └── schema
+│   │   │   └── template
+│   │   └── helmrelease
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── schema
+│   │   │   └── template
+│   │   └── helmrepository
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── kustomization
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── schema
+│   │   │   └── template
+│   │   └── sourcesecret
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── schema
+│   │   │   └── template
 │   └── inspection
 │   │   └── scan
 │   │   │   └── create
@@ -219,6 +267,16 @@ tmc
 │   │   └── remove-binding
 │   │   └── test-permission
 │   │   └── update-policy
+│   └── mutation-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
 │   └── namespace-quota-policy
 │   │   └── create
 │   │   └── delete
@@ -276,6 +334,16 @@ tmc
 │   │   └── remove-binding
 │   │   └── test-permission
 │   │   └── update-policy
+│   └── mutation-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
 │   └── namespace-quota-policy
 │   │   └── create
 │   │   └── delete
@@ -312,6 +380,34 @@ tmc
 │   │   │   └── update
 │   │   │   └── schema
 │   │   │   └── template
+└── ekscluster
+│   └── create
+│   └── delete
+│   └── get
+│   └── list
+│   └── update
+│   └── nodepool
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── iam
+│   │   │   └── add-binding
+│   │   │   └── get-policy
+│   │   │   └── remove-binding
+│   │   │   └── test-permission
+│   │   │   └── update-policy
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── options
+│   │   └── list
+│   └── schema
+│   └── template
+│   │   └── get
+│   │   └── list
 └── integration
 │   └── get
 │   └── list
@@ -332,11 +428,15 @@ tmc
 │   │   └── list
 │   │   └── update
 │   │   └── tanzukubernetescluster
+│   │   │   └── create
+│   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── manage
 │   │   │   └── unmanage
 │   │   │   └── update
+│   │   │   └── upgrade
+│   │   │   └── nodepool
 │   │   │   └── schema
 │   │   │   └── template
 │   │   └── iam
@@ -362,6 +462,13 @@ tmc
 │   │   └── get
 │   │   └── list
 └── organization
+│   └── helm
+│   │   └── chart
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── chartmetadata
+│   │   │   └── get
+│   │   │   └── list
 │   └── integration
 │   │   └── create
 │   │   └── delete
@@ -388,6 +495,16 @@ tmc
 │   │   └── test-permission
 │   │   └── update-policy
 │   └── image-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── mutation-policy
 │   │   └── create
 │   │   └── delete
 │   │   └── get
@@ -427,6 +544,35 @@ tmc
 │   │   └── template
 │   │   │   └── get
 │   │   │   └── list
+└── tanzukubernetescluster
+│   └── create
+│   └── delete
+│   └── get
+│   └── list
+│   └── manage
+│   └── unmanage
+│   └── update
+│   └── upgrade
+│   └── nodepool
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   │   └── iam
+│   │   │   └── add-binding
+│   │   │   └── get-policy
+│   │   │   └── remove-binding
+│   │   │   └── test-permission
+│   │   │   └── update-policy
+│   │   └── schema
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── schema
+│   └── template
+│   │   └── get
+│   │   └── list
 └── workspace
 │   └── create
 │   └── delete
@@ -463,6 +609,7 @@ tmc
 │   └── template
 │   │   └── get
 │   │   └── list
+└── apply
 └── login
 │   └── switch
 └── update
@@ -492,6 +639,8 @@ tmc
 │   │   └── template
 │   │   │   └── get
 │   │   │   └── list
+│   └── rolesbyidentity
+│   │   └── list
 └── policy
 │   └── effective
 │   │   └── list

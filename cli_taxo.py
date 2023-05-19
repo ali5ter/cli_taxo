@@ -18,12 +18,15 @@ INIT_CMD = ''
 HELP_OPT = '-h'
 HELP_OPT_POSITIONS = Enum('HELP_OPT_POSITIONS', 'before after')
 HELP_OPT_POSITION = HELP_OPT_POSITIONS.after.name
+USAGE_TOKEN_RE = '^(Usage:)|^(Usage of)'
+USAGE_RE = '^\s+?(\w+?)\s+'
 OPTIONS_TOKEN_RE = '^Options:'
 OPTIONS_RE = '^\s+?(-.+?)\s\s'
 COMMANDS_TOKEN_RE = '^(Commands:)|^(Management Commands:)'
 COMMANDS_RE = '^\s+(\w+?)\s+'
 SHOW_OPTIONS = False
 SHOW_COMMANDS = True
+SHOW_USAGE = True
 EXCLUDE_HELP_OPTS = False
 OUTPUT_FORMATS = Enum('OUTPUT_FORMATS', 'tree csv table bash zsh')
 OUTPUT_FORMAT = OUTPUT_FORMATS.tree.name
@@ -115,7 +118,10 @@ def parse_options_and_commands(command, depth=-1):
             '  '*depth+Fore.GREEN,
             ' '.join(map(str, command)),
             Fore.RESET))
-
+    if USAGE_TOKEN_RE:
+        found_usage = False
+    else:
+        found_usage = True
     if OPTIONS_TOKEN_RE:
         found_options = False
     else:
@@ -136,6 +142,7 @@ def parse_options_and_commands(command, depth=-1):
         if _DEBUG:
             eprint("\n{:s}[{:s}{:s}] Line >>{:s}<<{:s}".format(
                 '  '*depth+Style.DIM,
+                'U✓' if found_usage else 'U ',
                 'C✓' if found_commands else 'C ',
                 'O✓' if found_options else 'O ',
                 line, Style.RESET_ALL))
@@ -171,6 +178,19 @@ def parse_options_and_commands(command, depth=-1):
                     elif HELP_OPT_POSITION == HELP_OPT_POSITIONS.before.name:
                         _command.extend([HELP_OPT, match])
                     parse_options_and_commands(_command, depth)
+
+        # if _USAGE_TOKEN_RE.search(line) and not found_usage:
+        #     found_usage = True
+        # if _USAGE_RE.search(line) and SHOW_USAGE and found_usage:
+        #     for match in _USAGE_RE.search(line).groups():
+        #         if _DEBUG:
+        #             eprint('{:s}  Usage match: >>{:s}<<'.format(
+        #                 '  '*depth, match))
+        #         if match and not (_HELP_RE.search(match)
+        #             and EXCLUDE_HELP_OPTS):
+        #             content = format_item(depth, command, match)
+        #             if content is not None:
+        #                 print(content)  
 
     depth -= 1
 
