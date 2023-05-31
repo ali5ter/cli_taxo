@@ -3,7 +3,6 @@ tanzu
 │   └── cli
 │   │   └── compile
 │   │   │   └── --artifacts
-│   │   │   └── --corepath
 │   │   │   └── --goprivate
 │   │   │   └── --help
 │   │   │   └── --ldflags
@@ -17,6 +16,29 @@ tanzu
 │   │   └── --dry-run
 │   │   └── --help
 │   │   └── --repo-type
+│   └── inventory
+│   │   └── init
+│   │   │   └── --help
+│   │   │   └── --override
+│   │   │   └── --plugin-inventory-image-tag
+│   │   │   └── --repository
+│   │   └── plugin
+│   │   │   └── activate
+│   │   │   └── add
+│   │   │   └── --help
+│   │   └── --help
+│   └── plugin
+│   │   └── build
+│   │   │   └── --binary-artifacts
+│   │   │   └── --goflags
+│   │   │   └── --help
+│   │   │   └── --ldflags
+│   │   │   └── --match
+│   │   │   └── --os-arch
+│   │   │   └── --path
+│   │   │   └── --plugin-scope-association-file
+│   │   │   └── --version
+│   │   └── --help
 │   └── publish
 │   │   └── --help
 │   │   └── --input-artifact-dir
@@ -28,6 +50,11 @@ tanzu
 │   │   └── --plugins
 │   │   └── --type
 │   │   └── --version
+│   └── --help
+└── test
+│   └── fetch
+│   │   └── --help
+│   │   └── --local
 │   └── --help
 └── ceip-participation
 │   └── get
@@ -74,7 +101,9 @@ tanzu
 └── context
 │   └── create
 │   │   └── --endpoint
+│   │   └── --endpoint-ca-certificate
 │   │   └── --help
+│   │   └── --insecure-skip-tls-verify
 │   │   └── --kubeconfig
 │   │   └── --kubecontext
 │   │   └── --name
@@ -89,6 +118,9 @@ tanzu
 │   │   └── --help
 │   │   └── --output
 │   │   └── --target
+│   └── unset
+│   │   └── --help
+│   │   └── --target
 │   └── use
 │   │   └── --help
 │   └── --help
@@ -98,7 +130,9 @@ tanzu
 │   └── --apiToken
 │   └── --context
 │   └── --endpoint
+│   └── --endpoint-ca-certificate
 │   └── --help
+│   └── --insecure-skip-tls-verify
 │   └── --kubeconfig
 │   └── --name
 │   └── --server
@@ -160,4 +194,676 @@ tanzu
 │   └── --help
 └── kubernetes
 └── mission-control
+│   └── account
+│   │   └── credential
+│   │   │   └── capability
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── input-template
+│   │   │   └── list
+│   │   │   └── provider
+│   │   │   └── update
+│   │   │   └── --help
+│   │   └── --help
+│   └── apply
+│   │   └── --dry-run
+│   │   └── --file
+│   │   └── --help
+│   └── audit
+│   │   └── create
+│   │   │   └── --data-values-file
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --template
+│   │   └── delete
+│   │   │   └── --help
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── --help
+│   └── cluster
+│   │   └── attach
+│   │   │   └── --continue-bootstrap
+│   │   │   └── --file
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --kubeconfig
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --skip-verify
+│   │   └── create
+│   │   │   └── --data-values-file
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --template
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   └── extension
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --output
+│   │   │   └── --provisioner-name
+│   │   └── kubeconfig
+│   │   │   └── get
+│   │   │   └── --help
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --provisioner-name
+│   │   └── logs
+│   │   │   └── --help
+│   │   │   └── --kubeconfig
+│   │   │   └── --output
+│   │   └── namespace
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   │   └── --help
+│   │   └── nodepool
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   │   └── --help
+│   │   └── object
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── options
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── reattach
+│   │   │   └── --help
+│   │   │   └── --kubeconfig
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --proxy-name
+│   │   │   └── --skip-verify
+│   │   │   └── --use-proxy
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   └── upgrade
+│   │   │   └── --help
+│   │   │   └── --include-all-families
+│   │   │   └── --latest
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   └── validate
+│   │   │   └── --help
+│   │   │   └── --kubeconfig
+│   │   └── --help
+│   └── clustergroup
+│   │   └── create
+│   │   │   └── --data-values-file
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --template
+│   │   └── delete
+│   │   │   └── --help
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   └── --help
+│   └── continuousdelivery
+│   │   └── disable
+│   │   │   └── --cluster-group-name
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --scope
+│   │   └── enable
+│   │   │   └── --cluster-group-name
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --scope
+│   │   └── get
+│   │   │   └── --cluster-group-name
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --output
+│   │   │   └── --provisioner-name
+│   │   │   └── --scope
+│   │   └── gitrepository
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   │   └── --help
+│   │   └── kustomization
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   │   └── --help
+│   │   └── list
+│   │   │   └── --cluster-group-name
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --max-size
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --provisioner-name
+│   │   │   └── --scope
+│   │   └── --help
+│   └── data-protection
+│   │   └── backup
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── --help
+│   │   └── disable
+│   │   │   └── --cluster-name
+│   │   │   └── --delete-backups
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   └── enable
+│   │   │   └── --data-values-file
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --template
+│   │   └── restore
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── --help
+│   │   └── schedule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── --help
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── --help
+│   └── ekscluster
+│   │   └── create
+│   │   │   └── --data-values-file
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --template
+│   │   └── delete
+│   │   │   └── --credential-name
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --region
+│   │   └── get
+│   │   │   └── --credential-name
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --region
+│   │   └── list
+│   │   │   └── --credential-name
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --region
+│   │   └── nodepool
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   │   └── --help
+│   │   └── options
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   └── --help
+│   └── events
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --query
+│   │   └── stream
+│   │   │   └── --help
+│   │   └── --help
+│   └── helm
+│   │   └── chart
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── disable
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --scope
+│   │   └── enable
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --scope
+│   │   └── list
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --max-size
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --provisioner-name
+│   │   │   └── --scope
+│   │   └── release
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   │   └── --help
+│   │   └── repository
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── --help
+│   └── iam
+│   │   └── add-binding
+│   │   │   └── --cluster
+│   │   │   └── --groups
+│   │   │   └── --help
+│   │   │   └── --management-cluster
+│   │   │   └── --name
+│   │   │   └── --provisioner
+│   │   │   └── --role
+│   │   │   └── --scope
+│   │   │   └── --users
+│   │   └── list
+│   │   │   └── --cluster
+│   │   │   └── --direct
+│   │   │   └── --help
+│   │   │   └── --management-cluster
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --provisioner
+│   │   │   └── --scope
+│   │   └── role
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── --help
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── --help
+│   └── inspection
+│   │   └── scan
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── --help
+│   └── integration
+│   │   └── create
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   └── delete
+│   │   │   └── --cluster-group-name
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --org
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── get
+│   │   │   └── --cluster-group-name
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --org
+│   │   │   └── --output
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── list
+│   │   │   └── --cluster
+│   │   │   └── --cluster-group
+│   │   │   └── --cluster-group-name
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --org
+│   │   │   └── --output
+│   │   │   └── --provisioner-name
+│   │   │   └── --verbosity
+│   │   └── options
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   │   └── --verbosity
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   └── --help
+│   └── management-cluster
+│   │   └── create
+│   │   │   └── --data-values-file
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --template
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   └── deregister
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --kubeconfig
+│   │   │   └── --output
+│   │   └── extension
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   └── provisioner
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── --help
+│   │   └── register
+│   │   │   └── --continue-bootstrap
+│   │   │   └── --default-cluster-group
+│   │   │   └── --default-workload-cluster-image-registry
+│   │   │   └── --default-workload-cluster-proxy-name
+│   │   │   └── --help
+│   │   │   └── --image-registry
+│   │   │   └── --kubeconfig
+│   │   │   └── --kubernetes-provider-type
+│   │   │   └── --output
+│   │   │   └── --proxy-name
+│   │   │   └── --skip-verify
+│   │   └── reregister
+│   │   │   └── --default-workload-cluster-proxy-name
+│   │   │   └── --help
+│   │   │   └── --kubeconfig
+│   │   │   └── --output
+│   │   │   └── --proxy-name
+│   │   │   └── --skip-verify
+│   │   │   └── --use-proxy
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   └── --help
+│   └── policy
+│   │   └── create
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --scope
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --name
+│   │   │   └── --provisioner-name
+│   │   │   └── --scope
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --provisioner-name
+│   │   │   └── --scope
+│   │   └── insight
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── list
+│   │   │   └── --direct
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --provisioner-name
+│   │   │   └── --scope
+│   │   └── recipe
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── type
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --scope
+│   │   └── --help
+│   └── secret
+│   │   └── create
+│   │   │   └── --data-values-file
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --template
+│   │   └── delete
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --namespace-name
+│   │   │   └── --provisioner-name
+│   │   └── export
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── --help
+│   │   └── get
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --namespace-name
+│   │   │   └── --output
+│   │   │   └── --provisioner-name
+│   │   └── list
+│   │   │   └── --cluster-name
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --namespace-name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --provisioner-name
+│   │   │   └── --secret-type
+│   │   └── registry
+│   │   │   └── create
+│   │   │   └── template
+│   │   │   └── update
+│   │   │   └── --help
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   └── --help
+│   └── setting
+│   │   └── create
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --scope
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --name
+│   │   │   └── --provisioner-name
+│   │   │   └── --scope
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --provisioner-name
+│   │   │   └── --scope
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --provisioner-name
+│   │   │   └── --scope
+│   │   └── type
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --scope
+│   │   └── --help
+│   └── tanzupackage
+│   │   └── install
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   │   └── --help
+│   │   └── metadata
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── package
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── repository
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── disable
+│   │   │   └── enable
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   │   └── --help
+│   │   └── --help
+│   └── workspace
+│   │   └── create
+│   │   │   └── --data-values-file
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --template
+│   │   └── delete
+│   │   │   └── --help
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   └── --help
+│   └── --help
 └── --help

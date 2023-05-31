@@ -3,7 +3,16 @@ tanzu
 │   └── cli
 │   │   └── compile
 │   └── init
+│   └── inventory
+│   │   └── init
+│   │   └── plugin
+│   │   │   └── activate
+│   │   │   └── add
+│   └── plugin
+│   │   └── build
 │   └── publish
+└── test
+│   └── fetch
 └── ceip-participation
 │   └── get
 │   └── set
@@ -26,6 +35,7 @@ tanzu
 │   └── delete
 │   └── get
 │   └── list
+│   └── unset
 │   └── use
 └── init
 └── login
@@ -49,3 +59,274 @@ tanzu
 └── version
 └── kubernetes
 └── mission-control
+│   └── account
+│   │   └── credential
+│   │   │   └── capability
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── input-template
+│   │   │   └── list
+│   │   │   └── provider
+│   │   │   └── update
+│   └── apply
+│   └── audit
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── cluster
+│   │   └── attach
+│   │   └── create
+│   │   └── delete
+│   │   └── extension
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── get
+│   │   └── kubeconfig
+│   │   │   └── get
+│   │   └── list
+│   │   └── logs
+│   │   └── namespace
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   └── nodepool
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   └── object
+│   │   │   └── list
+│   │   └── options
+│   │   │   └── list
+│   │   └── reattach
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── update
+│   │   └── upgrade
+│   │   └── validate
+│   └── clustergroup
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── update
+│   └── continuousdelivery
+│   │   └── disable
+│   │   └── enable
+│   │   └── get
+│   │   └── gitrepository
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   └── kustomization
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   └── list
+│   └── data-protection
+│   │   └── backup
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   └── disable
+│   │   └── enable
+│   │   └── restore
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   └── schedule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── ekscluster
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── nodepool
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   └── options
+│   │   │   └── list
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── update
+│   └── events
+│   │   └── list
+│   │   └── stream
+│   └── helm
+│   │   └── chart
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── disable
+│   │   └── enable
+│   │   └── list
+│   │   └── release
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   └── repository
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── iam
+│   │   └── add-binding
+│   │   └── list
+│   │   └── role
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   └── inspection
+│   │   └── scan
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   └── integration
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── options
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── update
+│   └── management-cluster
+│   │   └── create
+│   │   └── delete
+│   │   └── deregister
+│   │   └── extension
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── get
+│   │   └── list
+│   │   └── provisioner
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   └── register
+│   │   └── reregister
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── update
+│   └── policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── insight
+│   │   │   └── list
+│   │   └── list
+│   │   └── recipe
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── type
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── update
+│   └── secret
+│   │   └── create
+│   │   └── delete
+│   │   └── export
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   └── get
+│   │   └── list
+│   │   └── registry
+│   │   │   └── create
+│   │   │   └── template
+│   │   │   └── update
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── update
+│   └── setting
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── type
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── update
+│   └── tanzupackage
+│   │   └── install
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   └── metadata
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── package
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── repository
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── disable
+│   │   │   └── enable
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   └── workspace
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── update
