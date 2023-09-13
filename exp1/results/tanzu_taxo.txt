@@ -13,9 +13,22 @@ tanzu
 │   └── publish
 └── test
 │   └── fetch
-└── ceip-participation
-│   └── get
-│   └── set
+└── apps
+│   └── workload
+│   │   └── apply
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── tail
+│   │   └── update
+└── telemetry
+│   └── metadata
+│   │   └── status
+│   │   └── update
+│   └── participation
+│   │   └── status
+│   │   └── update
 └── completion
 └── config
 │   └── cert
@@ -38,7 +51,6 @@ tanzu
 │   └── unset
 │   └── use
 └── init
-└── login
 └── plugin
 │   └── clean
 │   └── delete
@@ -50,7 +62,6 @@ tanzu
 │   └── list
 │   └── search
 │   └── source
-│   │   └── delete
 │   │   └── init
 │   │   └── list
 │   │   └── update
@@ -58,6 +69,15 @@ tanzu
 │   └── upgrade
 └── version
 └── kubernetes
+│   └── apps
+│   │   └── workload
+│   │   │   └── apply
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── tail
+│   │   │   └── update
 └── mission-control
 │   └── account
 │   │   └── credential
@@ -69,6 +89,27 @@ tanzu
 │   │   │   └── list
 │   │   │   └── provider
 │   │   │   └── update
+│   └── agentartifacts
+│   │   └── list
+│   └── aks-cluster
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── nodepool
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   └── options
+│   │   │   └── list
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── update
+│   │   └── upgrade
 │   └── apply
 │   └── audit
 │   │   └── create
@@ -164,9 +205,11 @@ tanzu
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── template
+│   │   │   └── update
 │   │   └── template
 │   │   │   └── get
 │   │   │   └── list
+│   │   └── update
 │   └── ekscluster
 │   │   └── create
 │   │   └── delete
@@ -236,7 +279,6 @@ tanzu
 │   │   │   └── list
 │   │   └── update
 │   └── management-cluster
-│   │   └── create
 │   │   └── delete
 │   │   └── deregister
 │   │   └── extension
@@ -270,6 +312,13 @@ tanzu
 │   │   │   └── get
 │   │   │   └── list
 │   │   └── update
+│   └── provider-aks-cluster
+│   │   └── list
+│   │   └── manage
+│   │   └── unmanage
+│   └── provider-eks-cluster
+│   │   └── manage
+│   │   └── unmanage
 │   └── secret
 │   │   └── create
 │   │   └── delete
@@ -293,6 +342,8 @@ tanzu
 │   │   └── create
 │   │   └── delete
 │   │   └── get
+│   │   └── insight
+│   │   │   └── list
 │   │   └── list
 │   │   └── type
 │   │   │   └── get
@@ -321,6 +372,14 @@ tanzu
 │   │   │   └── list
 │   │   │   └── template
 │   │   │   └── update
+│   │   └── tap
+│   │   │   └── accept-eula
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── validate-eula
 │   └── workspace
 │   │   └── create
 │   │   └── delete

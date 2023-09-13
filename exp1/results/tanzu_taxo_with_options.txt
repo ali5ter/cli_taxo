@@ -56,10 +56,215 @@ tanzu
 │   │   └── --help
 │   │   └── --local
 │   └── --help
-└── ceip-participation
-│   └── get
+└── apps
+│   └── workload
+│   │   └── apply
+│   │   │   └── --annotation
+│   │   │   └── --app
+│   │   │   └── --build-env
+│   │   │   └── --debug
+│   │   │   └── --dry-run
+│   │   │   └── --env
+│   │   │   └── --file
+│   │   │   └── --git-branch
+│   │   │   └── --git-commit
+│   │   │   └── --git-repo
+│   │   │   └── --git-tag
+│   │   │   └── --help
+│   │   │   └── --image
+│   │   │   └── --label
+│   │   │   └── --limit-cpu
+│   │   │   └── --limit-memory
+│   │   │   └── --live-update
+│   │   │   └── --local-path
+│   │   │   └── --maven-artifact
+│   │   │   └── --maven-group
+│   │   │   └── --maven-type
+│   │   │   └── --maven-version
+│   │   │   └── --namespace
+│   │   │   └── --param
+│   │   │   └── --param-yaml
+│   │   │   └── --registry-ca-cert
+│   │   │   └── --registry-password
+│   │   │   └── --registry-token
+│   │   │   └── --registry-username
+│   │   │   └── --request-cpu
+│   │   │   └── --request-memory
+│   │   │   └── --service-account
+│   │   │   └── --service-ref
+│   │   │   └── --source-image
+│   │   │   └── --sub-path
+│   │   │   └── --tail
+│   │   │   └── --tail-timestamp
+│   │   │   └── --type
+│   │   │   └── --update-strategy
+│   │   │   └── --wait
+│   │   │   └── --wait-timeout
+│   │   │   └── --yes
+│   │   │   └── --context
+│   │   │   └── --kubeconfig
+│   │   │   └── --no-color
+│   │   │   └── --verbose
+│   │   └── create
+│   │   │   └── --annotation
+│   │   │   └── --app
+│   │   │   └── --build-env
+│   │   │   └── --debug
+│   │   │   └── --dry-run
+│   │   │   └── --env
+│   │   │   └── --file
+│   │   │   └── --git-branch
+│   │   │   └── --git-commit
+│   │   │   └── --git-repo
+│   │   │   └── --git-tag
+│   │   │   └── --help
+│   │   │   └── --image
+│   │   │   └── --label
+│   │   │   └── --limit-cpu
+│   │   │   └── --limit-memory
+│   │   │   └── --live-update
+│   │   │   └── --local-path
+│   │   │   └── --maven-artifact
+│   │   │   └── --maven-group
+│   │   │   └── --maven-type
+│   │   │   └── --maven-version
+│   │   │   └── --namespace
+│   │   │   └── --param
+│   │   │   └── --param-yaml
+│   │   │   └── --registry-ca-cert
+│   │   │   └── --registry-password
+│   │   │   └── --registry-token
+│   │   │   └── --registry-username
+│   │   │   └── --request-cpu
+│   │   │   └── --request-memory
+│   │   │   └── --service-account
+│   │   │   └── --service-ref
+│   │   │   └── --source-image
+│   │   │   └── --sub-path
+│   │   │   └── --tail
+│   │   │   └── --tail-timestamp
+│   │   │   └── --type
+│   │   │   └── --wait
+│   │   │   └── --wait-timeout
+│   │   │   └── --yes
+│   │   │   └── --context
+│   │   │   └── --kubeconfig
+│   │   │   └── --no-color
+│   │   │   └── --verbose
+│   │   └── delete
+│   │   │   └── --all
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --namespace
+│   │   │   └── --wait
+│   │   │   └── --wait-timeout
+│   │   │   └── --yes
+│   │   │   └── --context
+│   │   │   └── --kubeconfig
+│   │   │   └── --no-color
+│   │   │   └── --verbose
+│   │   └── get
+│   │   │   └── --export
+│   │   │   └── --help
+│   │   │   └── --namespace
+│   │   │   └── --output
+│   │   │   └── --context
+│   │   │   └── --kubeconfig
+│   │   │   └── --no-color
+│   │   │   └── --verbose
+│   │   └── list
+│   │   │   └── --all-namespaces
+│   │   │   └── --app
+│   │   │   └── --help
+│   │   │   └── --namespace
+│   │   │   └── --output
+│   │   │   └── --context
+│   │   │   └── --kubeconfig
+│   │   │   └── --no-color
+│   │   │   └── --verbose
+│   │   └── tail
+│   │   │   └── --component
+│   │   │   └── --help
+│   │   │   └── --namespace
+│   │   │   └── --since
+│   │   │   └── --timestamp
+│   │   │   └── --context
+│   │   │   └── --kubeconfig
+│   │   │   └── --no-color
+│   │   │   └── --verbose
+│   │   └── update
+│   │   │   └── --annotation
+│   │   │   └── --app
+│   │   │   └── --build-env
+│   │   │   └── --debug
+│   │   │   └── --dry-run
+│   │   │   └── --env
+│   │   │   └── --file
+│   │   │   └── --git-branch
+│   │   │   └── --git-commit
+│   │   │   └── --git-repo
+│   │   │   └── --git-tag
+│   │   │   └── --help
+│   │   │   └── --image
+│   │   │   └── --label
+│   │   │   └── --limit-cpu
+│   │   │   └── --limit-memory
+│   │   │   └── --live-update
+│   │   │   └── --local-path
+│   │   │   └── --maven-artifact
+│   │   │   └── --maven-group
+│   │   │   └── --maven-type
+│   │   │   └── --maven-version
+│   │   │   └── --namespace
+│   │   │   └── --param
+│   │   │   └── --param-yaml
+│   │   │   └── --registry-ca-cert
+│   │   │   └── --registry-password
+│   │   │   └── --registry-token
+│   │   │   └── --registry-username
+│   │   │   └── --request-cpu
+│   │   │   └── --request-memory
+│   │   │   └── --service-account
+│   │   │   └── --service-ref
+│   │   │   └── --source-image
+│   │   │   └── --sub-path
+│   │   │   └── --tail
+│   │   │   └── --tail-timestamp
+│   │   │   └── --type
+│   │   │   └── --wait
+│   │   │   └── --wait-timeout
+│   │   │   └── --yes
+│   │   │   └── --context
+│   │   │   └── --kubeconfig
+│   │   │   └── --no-color
+│   │   │   └── --verbose
 │   │   └── --help
-│   └── set
+│   │   └── --context
+│   │   └── --kubeconfig
+│   │   └── --no-color
+│   │   └── --verbose
+│   └── --context
+│   └── --help
+│   └── --kubeconfig
+│   └── --no-color
+│   └── --verbose
+└── telemetry
+│   └── metadata
+│   │   └── status
+│   │   │   └── --help
+│   │   └── update
+│   │   │   └── --csp-org-id
+│   │   │   └── --entitlement-account-number
+│   │   │   └── --env-is-prod
+│   │   │   └── --help
+│   │   └── --help
+│   └── participation
+│   │   └── status
+│   │   │   └── --help
+│   │   └── update
+│   │   │   └── --CEIP-opt-Out
+│   │   │   └── --CEIP-opt-in
+│   │   │   └── --help
 │   │   └── --help
 │   └── --help
 └── completion
@@ -106,7 +311,6 @@ tanzu
 │   │   └── --insecure-skip-tls-verify
 │   │   └── --kubeconfig
 │   │   └── --kubecontext
-│   │   └── --name
 │   └── delete
 │   │   └── --help
 │   │   └── --yes
@@ -126,16 +330,6 @@ tanzu
 │   └── --help
 └── init
 │   └── --help
-└── login
-│   └── --apiToken
-│   └── --context
-│   └── --endpoint
-│   └── --endpoint-ca-certificate
-│   └── --help
-│   └── --insecure-skip-tls-verify
-│   └── --kubeconfig
-│   └── --name
-│   └── --server
 └── plugin
 │   └── clean
 │   │   └── --help
@@ -167,14 +361,11 @@ tanzu
 │   │   └── --output
 │   └── search
 │   │   └── --help
-│   │   └── --local
 │   │   └── --name
 │   │   └── --output
 │   │   └── --show-details
 │   │   └── --target
 │   └── source
-│   │   └── delete
-│   │   │   └── --help
 │   │   └── init
 │   │   │   └── --help
 │   │   └── list
@@ -193,6 +384,26 @@ tanzu
 └── version
 │   └── --help
 └── kubernetes
+│   └── apps
+│   │   └── workload
+│   │   │   └── apply
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── tail
+│   │   │   └── update
+│   │   │   └── --help
+│   │   │   └── --context
+│   │   │   └── --kubeconfig
+│   │   │   └── --no-color
+│   │   │   └── --verbose
+│   │   └── --context
+│   │   └── --help
+│   │   └── --kubeconfig
+│   │   └── --no-color
+│   │   └── --verbose
+│   └── --help
 └── mission-control
 │   └── account
 │   │   └── credential
@@ -205,6 +416,64 @@ tanzu
 │   │   │   └── provider
 │   │   │   └── update
 │   │   │   └── --help
+│   │   └── --help
+│   └── agentartifacts
+│   │   └── list
+│   │   │   └── --extension-name
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── --help
+│   └── aks-cluster
+│   │   └── create
+│   │   │   └── --data-values-file
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --template
+│   │   └── delete
+│   │   │   └── --credential-name
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --resource-group
+│   │   │   └── --subscription-id
+│   │   └── get
+│   │   │   └── --credential-name
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --resource-group
+│   │   │   └── --subscription-id
+│   │   └── list
+│   │   │   └── --credential-name
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --resource-group
+│   │   │   └── --subscription-id
+│   │   └── nodepool
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   │   └── --help
+│   │   └── options
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   └── upgrade
+│   │   │   └── --credential-name
+│   │   │   └── --help
+│   │   │   └── --resource-group
+│   │   │   └── --subscription-id
 │   │   └── --help
 │   └── apply
 │   │   └── --dry-run
@@ -302,6 +571,7 @@ tanzu
 │   │   │   └── --help
 │   │   └── reattach
 │   │   │   └── --help
+│   │   │   └── --image-registry
 │   │   │   └── --kubeconfig
 │   │   │   └── --management-cluster-name
 │   │   │   └── --provisioner-name
@@ -343,6 +613,7 @@ tanzu
 │   │   │   └── --name
 │   │   │   └── --offset
 │   │   │   └── --output
+│   │   │   └── --query
 │   │   └── template
 │   │   │   └── get
 │   │   │   └── list
@@ -433,11 +704,17 @@ tanzu
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── template
+│   │   │   └── update
 │   │   │   └── --help
 │   │   └── template
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── --help
+│   │   └── update
+│   │   │   └── --data-values-file
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --template
 │   │   └── --help
 │   └── ekscluster
 │   │   └── create
@@ -499,18 +776,21 @@ tanzu
 │   │   │   └── list
 │   │   │   └── --help
 │   │   └── disable
+│   │   │   └── --cluster-group-name
 │   │   │   └── --cluster-name
 │   │   │   └── --help
 │   │   │   └── --management-cluster-name
 │   │   │   └── --provisioner-name
 │   │   │   └── --scope
 │   │   └── enable
+│   │   │   └── --cluster-group-name
 │   │   │   └── --cluster-name
 │   │   │   └── --help
 │   │   │   └── --management-cluster-name
 │   │   │   └── --provisioner-name
 │   │   │   └── --scope
 │   │   └── list
+│   │   │   └── --cluster-group-name
 │   │   │   └── --cluster-name
 │   │   │   └── --help
 │   │   │   └── --management-cluster-name
@@ -621,12 +901,6 @@ tanzu
 │   │   │   └── --help
 │   │   └── --help
 │   └── management-cluster
-│   │   └── create
-│   │   │   └── --data-values-file
-│   │   │   └── --dry-run
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --template
 │   │   └── delete
 │   │   │   └── --force
 │   │   │   └── --help
@@ -657,19 +931,19 @@ tanzu
 │   │   │   └── --help
 │   │   └── register
 │   │   │   └── --continue-bootstrap
-│   │   │   └── --default-cluster-group
+│   │   │   └── --data-values-file
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --kubeconfig
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --skip-verify
+│   │   │   └── --template
+│   │   └── reregister
 │   │   │   └── --default-workload-cluster-image-registry
 │   │   │   └── --default-workload-cluster-proxy-name
 │   │   │   └── --help
 │   │   │   └── --image-registry
-│   │   │   └── --kubeconfig
-│   │   │   └── --kubernetes-provider-type
-│   │   │   └── --output
-│   │   │   └── --proxy-name
-│   │   │   └── --skip-verify
-│   │   └── reregister
-│   │   │   └── --default-workload-cluster-proxy-name
-│   │   │   └── --help
 │   │   │   └── --kubeconfig
 │   │   │   └── --output
 │   │   │   └── --proxy-name
@@ -726,19 +1000,77 @@ tanzu
 │   │   │   └── --help
 │   │   │   └── --scope
 │   │   └── --help
+│   └── provider-aks-cluster
+│   │   └── list
+│   │   │   └── --credential-name
+│   │   │   └── --help
+│   │   │   └── --manageable
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --resource-group
+│   │   │   └── --subscription-id
+│   │   └── manage
+│   │   │   └── --agent-name
+│   │   │   └── --cluster-group
+│   │   │   └── --credential-name
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --proxy-name
+│   │   │   └── --resource-group-name
+│   │   │   └── --subscription-id
+│   │   └── unmanage
+│   │   │   └── --agent-name
+│   │   │   └── --cluster-group
+│   │   │   └── --credential-name
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --resource-group-name
+│   │   │   └── --subscription-id
+│   │   └── --help
+│   └── provider-eks-cluster
+│   │   └── manage
+│   │   │   └── --agent-name
+│   │   │   └── --cluster-arn
+│   │   │   └── --cluster-group
+│   │   │   └── --credential-name
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --proxy-name
+│   │   │   └── --region
+│   │   └── unmanage
+│   │   │   └── --agent-name
+│   │   │   └── --cluster-group
+│   │   │   └── --credential-name
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --region
+│   │   └── --help
 │   └── secret
 │   │   └── create
 │   │   │   └── --data-values-file
 │   │   │   └── --dry-run
 │   │   │   └── --file
 │   │   │   └── --help
+│   │   │   └── --scope
 │   │   │   └── --template
 │   │   └── delete
+│   │   │   └── --cluster-group-name
 │   │   │   └── --cluster-name
 │   │   │   └── --help
 │   │   │   └── --management-cluster-name
 │   │   │   └── --namespace-name
 │   │   │   └── --provisioner-name
+│   │   │   └── --scope
 │   │   └── export
 │   │   │   └── create
 │   │   │   └── delete
@@ -747,13 +1079,16 @@ tanzu
 │   │   │   └── template
 │   │   │   └── --help
 │   │   └── get
+│   │   │   └── --cluster-group-name
 │   │   │   └── --cluster-name
 │   │   │   └── --help
 │   │   │   └── --management-cluster-name
 │   │   │   └── --namespace-name
 │   │   │   └── --output
 │   │   │   └── --provisioner-name
+│   │   │   └── --scope
 │   │   └── list
+│   │   │   └── --cluster-group-name
 │   │   │   └── --cluster-name
 │   │   │   └── --help
 │   │   │   └── --management-cluster-name
@@ -763,6 +1098,7 @@ tanzu
 │   │   │   └── --offset
 │   │   │   └── --output
 │   │   │   └── --provisioner-name
+│   │   │   └── --scope
 │   │   │   └── --secret-type
 │   │   └── registry
 │   │   │   └── create
@@ -776,6 +1112,7 @@ tanzu
 │   │   └── update
 │   │   │   └── --file
 │   │   │   └── --help
+│   │   │   └── --scope
 │   │   └── --help
 │   └── setting
 │   │   └── create
@@ -795,6 +1132,9 @@ tanzu
 │   │   │   └── --output
 │   │   │   └── --provisioner-name
 │   │   │   └── --scope
+│   │   └── insight
+│   │   │   └── list
+│   │   │   └── --help
 │   │   └── list
 │   │   │   └── --help
 │   │   │   └── --management-cluster-name
@@ -837,6 +1177,15 @@ tanzu
 │   │   │   └── list
 │   │   │   └── template
 │   │   │   └── update
+│   │   │   └── --help
+│   │   └── tap
+│   │   │   └── accept-eula
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── validate-eula
 │   │   │   └── --help
 │   │   └── --help
 │   └── workspace
