@@ -21,6 +21,92 @@ tanzu
 │   │   └── get
 │   │   └── list
 │   │   └── tail
+└── build-service
+│   └── build
+│   │   └── list
+│   │   └── logs
+│   │   └── status
+│   └── builder
+│   │   └── list
+│   │   └── status
+│   └── buildpack
+│   │   └── list
+│   │   └── status
+│   └── clusterstack
+│   │   └── list
+│   │   └── status
+│   └── clusterstore
+│   │   └── list
+│   │   └── status
+│   └── image
+│   │   └── list
+│   │   └── status
+│   │   └── trigger
+└── insight
+│   └── config
+│   └── health
+│   └── image
+│   │   └── add
+│   │   └── get
+│   │   └── packages
+│   └── package
+│   │   └── get
+│   │   └── images
+│   │   └── sources
+│   └── source
+│   │   └── add
+│   │   └── get
+│   │   └── packages
+│   └── triage
+│   │   └── copy
+│   │   └── list
+│   │   └── update
+└── services
+│   └── claimable
+│   │   └── list
+│   └── class-claim
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   └── classes
+│   │   └── get
+│   │   └── list
+└── external-secrets
+│   └── secrets
+│   │   └── create
+│   │   └── list
+│   │   └── sync
+│   └── stores
+│   │   └── create
+│   │   └── list
+└── accelerator
+│   └── apply
+│   └── create
+│   └── delete
+│   └── fragment
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── update
+│   └── generate
+│   └── get
+│   └── list
+│   └── push
+│   └── update
+└── package
+│   └── available
+│   └── init
+│   └── install
+│   └── installed
+│   └── release
+│   └── repository
+└── secret
+│   └── registry
+│   │   └── add
+│   │   └── delete
+│   │   └── list
 │   │   └── update
 └── telemetry
 │   └── metadata
@@ -77,6 +163,92 @@ tanzu
 │   │   │   └── get
 │   │   │   └── list
 │   │   │   └── tail
+│   └── build-service
+│   │   └── build
+│   │   │   └── list
+│   │   │   └── logs
+│   │   │   └── status
+│   │   └── builder
+│   │   │   └── list
+│   │   │   └── status
+│   │   └── buildpack
+│   │   │   └── list
+│   │   │   └── status
+│   │   └── clusterstack
+│   │   │   └── list
+│   │   │   └── status
+│   │   └── clusterstore
+│   │   │   └── list
+│   │   │   └── status
+│   │   └── image
+│   │   │   └── list
+│   │   │   └── status
+│   │   │   └── trigger
+│   └── insight
+│   │   └── config
+│   │   └── health
+│   │   └── image
+│   │   │   └── add
+│   │   │   └── get
+│   │   │   └── packages
+│   │   └── package
+│   │   │   └── get
+│   │   │   └── images
+│   │   │   └── sources
+│   │   └── source
+│   │   │   └── add
+│   │   │   └── get
+│   │   │   └── packages
+│   │   └── triage
+│   │   │   └── copy
+│   │   │   └── list
+│   │   │   └── update
+│   └── services
+│   │   └── claimable
+│   │   │   └── list
+│   │   └── class-claim
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── classes
+│   │   │   └── get
+│   │   │   └── list
+│   └── external-secrets
+│   │   └── secrets
+│   │   │   └── create
+│   │   │   └── list
+│   │   │   └── sync
+│   │   └── stores
+│   │   │   └── create
+│   │   │   └── list
+│   └── accelerator
+│   │   └── apply
+│   │   └── create
+│   │   └── delete
+│   │   └── fragment
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   └── generate
+│   │   └── get
+│   │   └── list
+│   │   └── push
+│   │   └── update
+│   └── package
+│   │   └── available
+│   │   └── init
+│   │   └── install
+│   │   └── installed
+│   │   └── release
+│   │   └── repository
+│   └── secret
+│   │   └── registry
+│   │   │   └── add
+│   │   │   └── delete
+│   │   │   └── list
 │   │   │   └── update
 └── mission-control
 │   └── account
@@ -153,6 +325,7 @@ tanzu
 │   │   └── template
 │   │   │   └── get
 │   │   │   └── list
+│   │   └── tsm-ca
 │   │   └── update
 │   │   └── upgrade
 │   │   └── validate
