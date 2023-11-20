@@ -1,16 +1,6 @@
 tanzu
 └── builder
 │   └── cli
-│   │   └── compile
-│   │   │   └── --artifacts
-│   │   │   └── --goprivate
-│   │   │   └── --help
-│   │   │   └── --ldflags
-│   │   │   └── --match
-│   │   │   └── --path
-│   │   │   └── --tags
-│   │   │   └── --target
-│   │   │   └── --version
 │   │   └── --help
 │   └── init
 │   │   └── --dry-run
@@ -39,17 +29,6 @@ tanzu
 │   │   │   └── --plugin-scope-association-file
 │   │   │   └── --version
 │   │   └── --help
-│   └── publish
-│   │   └── --help
-│   │   └── --input-artifact-dir
-│   │   └── --local-output-discovery-dir
-│   │   └── --local-output-distribution-dir
-│   │   └── --oci-discovery-image
-│   │   └── --oci-distribution-image-repository
-│   │   └── --os-arch
-│   │   └── --plugins
-│   │   └── --type
-│   │   └── --version
 │   └── --help
 └── test
 │   └── fetch
@@ -757,7 +736,7 @@ tanzu
 └── config
 │   └── cert
 │   │   └── add
-│   │   │   └── --ca-certificate
+│   │   │   └── --ca-cert
 │   │   │   └── --help
 │   │   │   └── --host
 │   │   │   └── --insecure
@@ -768,7 +747,7 @@ tanzu
 │   │   │   └── --help
 │   │   │   └── --output
 │   │   └── update
-│   │   │   └── --ca-certificate
+│   │   │   └── --ca-cert
 │   │   │   └── --help
 │   │   │   └── --insecure
 │   │   │   └── --skip-cert-verify
@@ -796,6 +775,7 @@ tanzu
 │   │   └── --insecure-skip-tls-verify
 │   │   └── --kubeconfig
 │   │   └── --kubecontext
+│   │   └── --type
 │   └── delete
 │   │   └── --help
 │   │   └── --yes
@@ -806,10 +786,10 @@ tanzu
 │   │   └── --current
 │   │   └── --help
 │   │   └── --output
-│   │   └── --target
+│   │   └── --type
 │   └── unset
 │   │   └── --help
-│   │   └── --target
+│   │   └── --type
 │   └── use
 │   │   └── --help
 │   └── --help
@@ -818,16 +798,13 @@ tanzu
 └── plugin
 │   └── clean
 │   │   └── --help
-│   └── delete
-│   │   └── --help
-│   │   └── --target
-│   │   └── --yes
 │   └── describe
 │   │   └── --help
 │   │   └── --output
 │   │   └── --target
 │   └── group
 │   │   └── get
+│   │   │   └── --all
 │   │   │   └── --help
 │   │   │   └── --output
 │   │   └── search
@@ -862,6 +839,10 @@ tanzu
 │   │   └── --help
 │   └── sync
 │   │   └── --help
+│   └── uninstall
+│   │   └── --help
+│   │   └── --target
+│   │   └── --yes
 │   └── upgrade
 │   │   └── --help
 │   │   └── --target
@@ -1449,6 +1430,15 @@ tanzu
 │   │   │   └── --output
 │   │   │   └── --provisioner-name
 │   │   │   └── --scope
+│   │   └── --help
+│   └── cost
+│   │   └── actual
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --output
+│   │   │   └── --provisioner-name
+│   │   │   └── --scope
+│   │   │   └── --time-period
 │   │   └── --help
 │   └── data-protection
 │   │   └── backup

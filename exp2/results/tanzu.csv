@@ -1,7 +1,6 @@
 tanzu
 tanzu,builder
 tanzu,builder,cli
-tanzu,builder,cli,compile
 tanzu,builder,init
 tanzu,builder,inventory
 tanzu,builder,inventory,init
@@ -10,7 +9,6 @@ tanzu,builder,inventory,plugin,activate
 tanzu,builder,inventory,plugin,add
 tanzu,builder,plugin
 tanzu,builder,plugin,build
-tanzu,builder,publish
 tanzu,test
 tanzu,test,fetch
 tanzu,apps
@@ -139,7 +137,6 @@ tanzu,context,use
 tanzu,init
 tanzu,plugin
 tanzu,plugin,clean
-tanzu,plugin,delete
 tanzu,plugin,describe
 tanzu,plugin,group
 tanzu,plugin,group,get
@@ -152,6 +149,7 @@ tanzu,plugin,source,init
 tanzu,plugin,source,list
 tanzu,plugin,source,update
 tanzu,plugin,sync
+tanzu,plugin,uninstall
 tanzu,plugin,upgrade
 tanzu,version
 tanzu,kubernetes
@@ -357,6 +355,8 @@ tanzu,mission-control,continuousdelivery,kustomization,list
 tanzu,mission-control,continuousdelivery,kustomization,template
 tanzu,mission-control,continuousdelivery,kustomization,update
 tanzu,mission-control,continuousdelivery,list
+tanzu,mission-control,cost
+tanzu,mission-control,cost,actual
 tanzu,mission-control,data-protection
 tanzu,mission-control,data-protection,backup
 tanzu,mission-control,data-protection,backup,create

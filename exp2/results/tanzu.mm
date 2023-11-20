@@ -166,10 +166,7 @@
             <node folded="false" text="plugin">
                 <node text="build" />
             </node>
-            <node folded="false" text="cli">
-                <node text="compile" />
-            </node>
-            <node text="publish" />
+            <node text="cli" />
             <node folded="false" text="inventory">
                 <node text="init" />
                 <node folded="false" text="plugin">
@@ -372,6 +369,9 @@
                     <node text="delete" />
                 </node>
                 <node text="delete" />
+            </node>
+            <node folded="false" text="cost">
+                <node text="actual" />
             </node>
             <node folded="false" text="helm">
                 <node text="enable" />
@@ -701,7 +701,7 @@
                 <node text="update" />
             </node>
             <node text="install" />
-            <node text="delete" />
+            <node text="uninstall" />
         </node>
     </node>
 </map>

@@ -1,7 +1,6 @@
 tanzu
 └── builder
 │   └── cli
-│   │   └── compile
 │   └── init
 │   └── inventory
 │   │   └── init
@@ -10,7 +9,6 @@ tanzu
 │   │   │   └── add
 │   └── plugin
 │   │   └── build
-│   └── publish
 └── test
 │   └── fetch
 └── apps
@@ -139,7 +137,6 @@ tanzu
 └── init
 └── plugin
 │   └── clean
-│   └── delete
 │   └── describe
 │   └── group
 │   │   └── get
@@ -152,6 +149,7 @@ tanzu
 │   │   └── list
 │   │   └── update
 │   └── sync
+│   └── uninstall
 │   └── upgrade
 └── version
 └── kubernetes
@@ -357,6 +355,8 @@ tanzu
 │   │   │   └── template
 │   │   │   └── update
 │   │   └── list
+│   └── cost
+│   │   └── actual
 │   └── data-protection
 │   │   └── backup
 │   │   │   └── create
