@@ -336,6 +336,8 @@ tanzu
 │   │   │   └── get
 │   │   │   └── list
 │   │   └── update
+│   └── context
+│   │   └── create
 │   └── continuousdelivery
 │   │   └── disable
 │   │   └── enable

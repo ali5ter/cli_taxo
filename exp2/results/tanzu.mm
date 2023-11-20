@@ -506,6 +506,17 @@
                 <node text="list" />
                 <node text="stream" />
             </node>
+            <node folded="false" text="workspace">
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="delete" />
+            </node>
             <node folded="false" text="ekscluster">
                 <node text="get" />
                 <node text="create" />
@@ -645,16 +656,8 @@
             <node folded="false" text="agentartifacts">
                 <node text="list" />
             </node>
-            <node folded="false" text="workspace">
-                <node text="get" />
+            <node folded="false" text="context">
                 <node text="create" />
-                <node text="list" />
-                <node text="update" />
-                <node folded="false" text="template">
-                    <node text="list" />
-                    <node text="get" />
-                </node>
-                <node text="delete" />
             </node>
             <node folded="false" text="inspection">
                 <node folded="false" text="scan">

@@ -1381,6 +1381,17 @@ tanzu
 │   │   │   └── --file
 │   │   │   └── --help
 │   │   └── --help
+│   └── context
+│   │   └── create
+│   │   │   └── --basic-auth
+│   │   │   └── --endpoint
+│   │   │   └── --help
+│   │   │   └── --idp-type
+│   │   │   └── --insecure
+│   │   │   └── --vcd-client-id
+│   │   │   └── --vcd-issuer
+│   │   │   └── --vcd-org
+│   │   └── --help
 │   └── continuousdelivery
 │   │   └── disable
 │   │   │   └── --cluster-group-name
@@ -1449,15 +1460,19 @@ tanzu
 │   │   │   └── template
 │   │   │   └── --help
 │   │   └── disable
+│   │   │   └── --cluster-group-name
 │   │   │   └── --cluster-name
 │   │   │   └── --delete-backups
+│   │   │   └── --force-delete
 │   │   │   └── --help
 │   │   │   └── --management-cluster-name
 │   │   │   └── --provisioner-name
+│   │   │   └── --scope
 │   │   └── enable
 │   │   │   └── --data-values-file
 │   │   │   └── --file
 │   │   │   └── --help
+│   │   │   └── --scope
 │   │   │   └── --template
 │   │   └── restore
 │   │   │   └── create
@@ -1482,6 +1497,7 @@ tanzu
 │   │   │   └── --data-values-file
 │   │   │   └── --file
 │   │   │   └── --help
+│   │   │   └── --scope
 │   │   │   └── --template
 │   │   └── --help
 │   └── ekscluster
