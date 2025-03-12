@@ -1,0 +1,176 @@
+cf
+└── login
+│   └── skip-ssl-validation
+│   └── sso
+│   └── sso-passcode
+│   └── origin
+└── config
+│   └── async-timeout
+│   └── color
+│   └── locale
+│   └── trace
+└── target
+└── logout
+└── help
+└── apps
+│   └── labels
+│   └── no-stats
+└── events
+└── run-task
+│   └── command
+│   └── name
+│   └── process
+│   └── wait
+└── push
+│   └── app-start-timeout
+│   └── buildpack
+│   └── disk
+│   └── docker-image
+│   └── docker-username
+│   └── droplet
+│   └── endpoint
+│   └── health-check-type
+│   └── instances
+│   └── log-rate-limit
+│   └── manifest
+│   └── memory
+│   └── no-manifest
+│   └── no-route
+│   └── no-start
+│   └── no-wait
+│   └── path
+│   └── random-route
+│   └── redact-env
+│   └── stack
+│   └── start-command
+│   └── strategy
+│   └── task
+│   └── var
+│   └── vars-file
+└── logs
+│   └── recent
+└── set-env
+└── start
+└── create-app-manifest
+└── ssh
+│   └── app-instance-index
+│   └── command
+│   └── disable-pseudo-tty
+│   └── force-pseudo-tty
+│   └── process
+│   └── request-pseudo-tty
+│   └── skip-host-validation
+│   └── skip-remote-execution
+└── app
+│   └── guid
+└── stop
+└── delete
+└── apply-manifest
+│   └── var
+│   └── vars-file
+│   └── redact-env
+└── env
+└── restart
+│   └── strategy
+│   └── no-wait
+└── scale
+│   └── force
+│   └── instances
+│   └── process
+└── restage
+│   └── strategy
+│   └── no-wait
+└── revisions
+└── marketplace
+│   └── no-plans
+│   └── show-unavailable
+└── create-user-provided-service
+└── services
+│   └── no-apps
+└── update-user-provided-service
+└── create-service-key
+│   └── wait
+└── create-service
+│   └── wait
+└── delete-service-key
+│   └── wait
+└── update-service
+│   └── wait
+└── delete-service
+│   └── force
+│   └── wait
+└── service-keys
+└── service-key
+│   └── guid
+└── service
+│   └── guid
+│   └── params
+└── bind-service
+│   └── binding-name
+│   └── wait
+└── bind-route-service
+│   └── hostname
+│   └── path
+│   └── wait
+└── unbind-route-service
+│   └── hostname
+│   └── path
+│   └── wait
+└── unbind-service
+│   └── wait
+└── routes
+│   └── org-level
+│   └── labels
+└── create-private-domain
+└── delete-route
+│   └── hostname
+│   └── path
+│   └── port
+└── domains
+│   └── labels
+└── map-route
+│   └── hostname
+│   └── path
+│   └── port
+│   └── app-protocol
+└── unmap-route
+│   └── hostname
+│   └── path
+│   └── port
+└── create-route
+│   └── hostname
+│   └── path
+│   └── port
+└── create-space
+│   └── quota
+└── spaces
+│   └── labels
+└── set-space-role
+│   └── client
+│   └── origin
+└── delete-space
+└── unset-space-role
+│   └── client
+│   └── origin
+└── space-users
+└── apply-manifest
+│   └── var
+│   └── vars-file
+│   └── redact-env
+└── orgs
+│   └── labels
+└── set-org-role
+│   └── client
+│   └── origin
+└── org-users
+│   └── all-users
+└── unset-org-role
+│   └── client
+│   └── origin
+└── repo-plugins
+└── add-plugin-repo
+└── plugins
+│   └── checksum
+│   └── outdated
+└── install-plugin
+└── list-plugin-repos
