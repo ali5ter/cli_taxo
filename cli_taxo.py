@@ -163,7 +163,17 @@ def parse_options_and_commands(command, depth=-1):
         if _COMMANDS_TOKEN_RE.search(line) and not found_commands:
             found_commands = True
         if _COMMANDS_RE.search(line) and SHOW_COMMANDS and found_commands:
-            for match in _COMMANDS_RE.search(line).groups():
+
+            _findall = _COMMANDS_RE.findall(line)
+            # When RE returns a list of tuples, reduce to a list of
+            # unique matches
+            if type(_findall[0]) is tuple:
+                import itertools
+                matches = list(set(itertools.chain.from_iterable(_findall)))
+            else:
+                matches = _findall
+
+            for match in matches:
                 if _DEBUG:
                     eprint('{:s}  Cmd match: >>{:s}<<'.format(
                         '  '*depth, match))
