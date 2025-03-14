@@ -1,97 +1,111 @@
 tanzu
-└── builder
-│   └── cli
-│   └── init
-│   └── inventory
-│   │   └── init
-│   │   └── plugin
-│   │   │   └── activate
-│   │   │   └── add
-│   └── plugin
-│   │   └── build
-└── test
-│   └── fetch
-└── apps
-│   └── workload
-│   │   └── apply
-│   │   └── create
-│   │   └── delete
-│   │   └── get
-│   │   └── list
-│   │   └── tail
-└── build-service
-│   └── build
-│   │   └── list
-│   │   └── logs
-│   │   └── status
-│   └── builder
-│   │   └── list
-│   │   └── status
-│   └── buildpack
-│   │   └── list
-│   │   └── status
-│   └── clusterstack
-│   │   └── list
-│   │   └── status
-│   └── clusterstore
-│   │   └── list
-│   │   └── status
-│   └── image
-│   │   └── list
-│   │   └── status
-│   │   └── trigger
-└── insight
+└── app
+│   └── autoscale
 │   └── config
-│   └── health
-│   └── image
-│   │   └── add
+│   │   └── build
+│   │   │   └── buildpacks
+│   │   │   └── path
+│   │   │   └── type
+│   │   └── contact
 │   │   └── get
-│   │   └── packages
-│   └── package
-│   │   └── get
-│   │   └── images
-│   │   └── sources
-│   └── source
-│   │   └── add
-│   │   └── get
-│   │   └── packages
-│   └── triage
-│   │   └── copy
-│   │   └── list
-│   │   └── update
-└── services
-│   └── claimable
-│   │   └── list
-│   └── class-claim
-│   │   └── create
+│   │   └── scale
+│   └── delete
+│   └── env
 │   │   └── delete
-│   │   └── get
 │   │   └── list
-│   └── classes
-│   │   └── get
-│   │   └── list
-└── external-secrets
-│   └── secrets
-│   │   └── create
-│   │   └── list
-│   │   └── sync
-│   └── stores
-│   │   └── create
-│   │   └── list
-└── accelerator
-│   └── apply
+│   │   └── set
+│   └── get
+│   └── init
+│   └── instances
+│   └── list
+│   └── logs
+│   └── port-forward
+│   └── restart
+│   └── scale
+│   └── start
+│   └── stop
+└── build
+│   └── config
+│   │   └── view
+└── services
+│   └── bind
 │   └── create
 │   └── delete
-│   └── fragment
-│   │   └── create
-│   │   └── delete
+│   └── get
+│   └── list
+│   └── type
 │   │   └── get
 │   │   └── list
-│   │   └── update
+│   └── unbind
+└── availability-target
+│   └── create
+│   └── delete
+│   └── get
+│   └── list
+└── cluster
+│   └── cordon
+│   └── drain
+│   └── uncordon
+└── deploy
+└── domain
+│   └── bind
+│   └── create
+│   └── delete
+│   └── get
+│   └── list
+│   └── unbind
+│   └── update
+└── domain-binding
+│   └── create
+│   └── delete
+│   └── get
+│   └── list
+│   └── update
+└── gitops
+│   └── init
+└── health-probe
+│   └── create
+│   └── delete
 │   └── generate
 │   └── get
 │   └── list
-│   └── push
+└── profile
+│   └── create
+│   └── delete
+│   └── generate
+│   └── get
+│   └── list
+└── project
+│   └── create
+│   └── delete
+│   └── get
+│   └── list
+│   └── unset
+│   └── use
+└── promote
+└── rbac
+│   └── role
+│   │   └── get
+│   │   └── list
+└── resource
+└── space
+│   └── create
+│   └── delete
+│   └── generate
+│   └── get
+│   └── list
+│   └── use
+└── trait
+│   └── create
+│   └── delete
+│   └── generate
+│   └── get
+│   └── list
+└── egress
+│   └── create
+│   └── delete
+│   └── get
+│   └── list
 │   └── update
 └── package
 │   └── available
@@ -113,6 +127,8 @@ tanzu
 │   └── participation
 │   │   └── status
 │   │   └── update
+└── api-token
+│   └── create
 └── completion
 └── config
 │   └── cert
@@ -129,12 +145,13 @@ tanzu
 │   └── unset
 └── context
 │   └── create
+│   └── current
 │   └── delete
 │   └── get
 │   └── list
 │   └── unset
 │   └── use
-└── init
+└── login
 └── plugin
 │   └── clean
 │   └── describe
@@ -152,102 +169,6 @@ tanzu
 │   └── uninstall
 │   └── upgrade
 └── version
-└── kubernetes
-│   └── apps
-│   │   └── workload
-│   │   │   └── apply
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── tail
-│   └── build-service
-│   │   └── build
-│   │   │   └── list
-│   │   │   └── logs
-│   │   │   └── status
-│   │   └── builder
-│   │   │   └── list
-│   │   │   └── status
-│   │   └── buildpack
-│   │   │   └── list
-│   │   │   └── status
-│   │   └── clusterstack
-│   │   │   └── list
-│   │   │   └── status
-│   │   └── clusterstore
-│   │   │   └── list
-│   │   │   └── status
-│   │   └── image
-│   │   │   └── list
-│   │   │   └── status
-│   │   │   └── trigger
-│   └── insight
-│   │   └── config
-│   │   └── health
-│   │   └── image
-│   │   │   └── add
-│   │   │   └── get
-│   │   │   └── packages
-│   │   └── package
-│   │   │   └── get
-│   │   │   └── images
-│   │   │   └── sources
-│   │   └── source
-│   │   │   └── add
-│   │   │   └── get
-│   │   │   └── packages
-│   │   └── triage
-│   │   │   └── copy
-│   │   │   └── list
-│   │   │   └── update
-│   └── services
-│   │   └── claimable
-│   │   │   └── list
-│   │   └── class-claim
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   └── classes
-│   │   │   └── get
-│   │   │   └── list
-│   └── external-secrets
-│   │   └── secrets
-│   │   │   └── create
-│   │   │   └── list
-│   │   │   └── sync
-│   │   └── stores
-│   │   │   └── create
-│   │   │   └── list
-│   └── accelerator
-│   │   └── apply
-│   │   └── create
-│   │   └── delete
-│   │   └── fragment
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── update
-│   │   └── generate
-│   │   └── get
-│   │   └── list
-│   │   └── push
-│   │   └── update
-│   └── package
-│   │   └── available
-│   │   └── init
-│   │   └── install
-│   │   └── installed
-│   │   └── release
-│   │   └── repository
-│   └── secret
-│   │   └── registry
-│   │   │   └── add
-│   │   │   └── delete
-│   │   │   └── list
-│   │   │   └── update
 └── mission-control
 │   └── account
 │   │   └── credential
@@ -336,6 +257,8 @@ tanzu
 │   │   │   └── get
 │   │   │   └── list
 │   │   └── update
+│   └── consumption
+│   │   └── list
 │   └── context
 │   │   └── create
 │   └── continuousdelivery
@@ -357,8 +280,6 @@ tanzu
 │   │   │   └── template
 │   │   │   └── update
 │   │   └── list
-│   └── cost
-│   │   └── actual
 │   └── data-protection
 │   │   └── backup
 │   │   │   └── create
@@ -553,6 +474,7 @@ tanzu
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
+│   │   │   └── template
 │   │   │   └── update
 │   │   │   └── validate-eula
 │   └── workspace
@@ -564,3 +486,103 @@ tanzu
 │   │   │   └── get
 │   │   │   └── list
 │   │   └── update
+└── operations
+│   └── apply
+│   └── cluster
+│   │   └── attach
+│   │   └── create
+│   │   └── delete
+│   │   └── extension
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── get
+│   │   └── kubeconfig
+│   │   │   └── get
+│   │   └── list
+│   │   └── logs
+│   │   └── nodepool
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   └── reattach
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── update
+│   │   └── upgrade
+│   │   └── validate
+│   └── clustergroup
+│   │   └── cluster
+│   │   │   └── cordon
+│   │   │   └── drain
+│   │   │   └── uncordon
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── update
+│   │   └── use
+│   └── ekscluster
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── list
+│   │   └── nodepool
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   └── options
+│   │   │   └── list
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── update
+│   └── iam
+│   │   └── add-binding
+│   │   └── list
+│   │   └── role
+│   │   │   └── get
+│   │   │   └── list
+│   └── management-cluster
+│   │   └── delete
+│   │   └── deregister
+│   │   └── extension
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── get
+│   │   └── list
+│   │   └── provisioner
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── register
+│   │   └── reregister
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── update
+│   └── policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get
+│   │   └── insight
+│   │   │   └── list
+│   │   └── list
+│   │   └── recipe
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── type
+│   │   │   └── get
+│   │   │   └── list
+│   │   └── update
+│   └── provider-eks-cluster
+│   │   └── manage
+│   │   └── unmanage

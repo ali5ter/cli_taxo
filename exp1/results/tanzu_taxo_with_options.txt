@@ -1,576 +1,512 @@
 tanzu
-└── builder
-│   └── cli
+└── app
+│   └── autoscale
+│   │   └── --cpu-average-value
+│   │   └── --cpu-average-value-
+│   │   └── --cpu-utilization
+│   │   └── --cpu-utilization-
 │   │   └── --help
+│   │   └── --max
+│   │   └── --memory-average-value
+│   │   └── --memory-average-value-
+│   │   └── --memory-utilization
+│   │   └── --memory-utilization-
+│   │   └── --min
+│   │   └── --yes
+│   │   └── --no-color
+│   └── config
+│   │   └── build
+│   │   │   └── buildpacks
+│   │   │   └── path
+│   │   │   └── type
+│   │   │   └── --help
+│   │   │   └── --no-color
+│   │   └── contact
+│   │   │   └── --app
+│   │   │   └── --help
+│   │   │   └── --no-color
+│   │   └── get
+│   │   │   └── --app
+│   │   │   └── --help
+│   │   │   └── --no-color
+│   │   └── scale
+│   │   │   └── --app
+│   │   │   └── --help
+│   │   │   └── --no-color
+│   │   └── --help
+│   │   └── --no-color
+│   └── delete
+│   │   └── --help
+│   │   └── --yes
+│   │   └── --no-color
+│   └── env
+│   │   └── delete
+│   │   │   └── --help
+│   │   │   └── --yes
+│   │   │   └── --no-color
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --show-secrets
+│   │   │   └── --no-color
+│   │   └── set
+│   │   │   └── --help
+│   │   │   └── --yes
+│   │   │   └── --no-color
+│   │   └── --help
+│   │   └── --no-color
+│   └── get
+│   │   └── --help
+│   │   └── --output
+│   │   └── --show-secrets
+│   │   └── --no-color
 │   └── init
+│   │   └── --build-path
+│   │   └── --build-type
+│   │   └── --help
+│   │   └── --yes
+│   │   └── --no-color
+│   └── instances
+│   │   └── --help
+│   │   └── --no-color
+│   └── list
+│   │   └── --help
+│   │   └── --no-color
+│   └── logs
+│   │   └── --help
+│   │   └── --lines
+│   │   └── --recent
+│   │   └── --space-replica
+│   │   └── --no-color
+│   └── port-forward
+│   │   └── --help
+│   │   └── --port
+│   │   └── --space-replica
+│   │   └── --no-color
+│   └── restart
+│   │   └── --help
+│   │   └── --yes
+│   │   └── --no-color
+│   └── scale
+│   │   └── --cpu
+│   │   └── --cpu-
+│   │   └── --help
+│   │   └── --instances
+│   │   └── --instances-
+│   │   └── --memory
+│   │   └── --memory-
+│   │   └── --yes
+│   │   └── --no-color
+│   └── start
+│   │   └── --help
+│   │   └── --yes
+│   │   └── --no-color
+│   └── stop
+│   │   └── --help
+│   │   └── --yes
+│   │   └── --no-color
+│   └── --help
+│   └── --no-color
+└── build
+│   └── config
+│   │   └── view
+│   │   │   └── --help
+│   │   └── --build-engine
+│   │   └── --build-plan-source
+│   │   └── --build-plan-source-type
+│   │   └── --containerapp-registry
+│   │   └── --enable-experimental-features
+│   │   └── --help
+│   └── --app-runtime
+│   └── --buildpacks-clear-cache
+│   └── --help
+│   └── --output-dir
+└── services
+│   └── bind
+│   │   └── --as
+│   │   └── --binding-connector
 │   │   └── --dry-run
 │   │   └── --help
-│   │   └── --repo-type
-│   └── inventory
-│   │   └── init
-│   │   │   └── --help
-│   │   │   └── --override
-│   │   │   └── --plugin-inventory-image-tag
-│   │   │   └── --repository
-│   │   └── plugin
-│   │   │   └── activate
-│   │   │   └── add
-│   │   │   └── --help
-│   │   └── --help
-│   └── plugin
-│   │   └── build
-│   │   │   └── --binary-artifacts
-│   │   │   └── --goflags
-│   │   │   └── --help
-│   │   │   └── --ldflags
-│   │   │   └── --match
-│   │   │   └── --os-arch
-│   │   │   └── --path
-│   │   │   └── --plugin-scope-association-file
-│   │   │   └── --version
-│   │   └── --help
-│   └── --help
-└── test
-│   └── fetch
-│   │   └── --help
-│   │   └── --local
-│   └── --help
-└── apps
-│   └── workload
-│   │   └── apply
-│   │   │   └── --annotation
-│   │   │   └── --app
-│   │   │   └── --build-env
-│   │   │   └── --debug
-│   │   │   └── --dry-run
-│   │   │   └── --env
-│   │   │   └── --file
-│   │   │   └── --git-branch
-│   │   │   └── --git-commit
-│   │   │   └── --git-repo
-│   │   │   └── --git-tag
-│   │   │   └── --help
-│   │   │   └── --image
-│   │   │   └── --label
-│   │   │   └── --limit-cpu
-│   │   │   └── --limit-memory
-│   │   │   └── --live-update
-│   │   │   └── --local-path
-│   │   │   └── --maven-artifact
-│   │   │   └── --maven-group
-│   │   │   └── --maven-type
-│   │   │   └── --maven-version
-│   │   │   └── --namespace
-│   │   │   └── --output
-│   │   │   └── --param
-│   │   │   └── --param-yaml
-│   │   │   └── --registry-ca-cert
-│   │   │   └── --registry-password
-│   │   │   └── --registry-token
-│   │   │   └── --registry-username
-│   │   │   └── --request-cpu
-│   │   │   └── --request-memory
-│   │   │   └── --service-account
-│   │   │   └── --service-ref
-│   │   │   └── --source-image
-│   │   │   └── --sub-path
-│   │   │   └── --tail
-│   │   │   └── --tail-timestamp
-│   │   │   └── --type
-│   │   │   └── --update-strategy
-│   │   │   └── --wait
-│   │   │   └── --wait-timeout
-│   │   │   └── --yes
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   │   └── --no-color
-│   │   │   └── --verbose
-│   │   └── create
-│   │   │   └── --annotation
-│   │   │   └── --app
-│   │   │   └── --build-env
-│   │   │   └── --debug
-│   │   │   └── --dry-run
-│   │   │   └── --env
-│   │   │   └── --file
-│   │   │   └── --git-branch
-│   │   │   └── --git-commit
-│   │   │   └── --git-repo
-│   │   │   └── --git-tag
-│   │   │   └── --help
-│   │   │   └── --image
-│   │   │   └── --label
-│   │   │   └── --limit-cpu
-│   │   │   └── --limit-memory
-│   │   │   └── --live-update
-│   │   │   └── --local-path
-│   │   │   └── --maven-artifact
-│   │   │   └── --maven-group
-│   │   │   └── --maven-type
-│   │   │   └── --maven-version
-│   │   │   └── --namespace
-│   │   │   └── --output
-│   │   │   └── --param
-│   │   │   └── --param-yaml
-│   │   │   └── --registry-ca-cert
-│   │   │   └── --registry-password
-│   │   │   └── --registry-token
-│   │   │   └── --registry-username
-│   │   │   └── --request-cpu
-│   │   │   └── --request-memory
-│   │   │   └── --service-account
-│   │   │   └── --service-ref
-│   │   │   └── --source-image
-│   │   │   └── --sub-path
-│   │   │   └── --tail
-│   │   │   └── --tail-timestamp
-│   │   │   └── --type
-│   │   │   └── --wait
-│   │   │   └── --wait-timeout
-│   │   │   └── --yes
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   │   └── --no-color
-│   │   │   └── --verbose
-│   │   └── delete
-│   │   │   └── --all
-│   │   │   └── --file
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   │   └── --wait
-│   │   │   └── --wait-timeout
-│   │   │   └── --yes
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   │   └── --no-color
-│   │   │   └── --verbose
-│   │   └── get
-│   │   │   └── --export
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   │   └── --output
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   │   └── --no-color
-│   │   │   └── --verbose
-│   │   └── list
-│   │   │   └── --all-namespaces
-│   │   │   └── --app
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   │   └── --output
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   │   └── --no-color
-│   │   │   └── --verbose
-│   │   └── tail
-│   │   │   └── --component
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   │   └── --since
-│   │   │   └── --timestamp
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   │   └── --no-color
-│   │   │   └── --verbose
-│   │   └── --help
-│   │   └── --context
-│   │   └── --kubeconfig
-│   │   └── --no-color
-│   │   └── --verbose
-│   └── --context
-│   └── --help
-│   └── --kubeconfig
-│   └── --no-color
-│   └── --verbose
-└── build-service
-│   └── build
-│   │   └── list
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   └── logs
-│   │   │   └── --build
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   └── status
-│   │   │   └── --build
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   └── --help
-│   └── builder
-│   │   └── list
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   └── status
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   └── --help
-│   └── buildpack
-│   │   └── list
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   └── status
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   └── --help
-│   └── clusterstack
-│   │   └── list
-│   │   │   └── --help
-│   │   └── status
-│   │   │   └── --help
-│   │   │   └── --verbose
-│   │   └── --help
-│   └── clusterstore
-│   │   └── list
-│   │   │   └── --help
-│   │   └── status
-│   │   │   └── --help
-│   │   │   └── --verbose
-│   │   └── --help
-│   └── image
-│   │   └── list
-│   │   │   └── --all-namespaces
-│   │   │   └── --filter
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   └── status
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   └── trigger
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   └── --help
-│   └── --help
-└── insight
-│   └── config
-│   │   └── --help
-│   └── health
-│   │   └── --help
-│   └── image
-│   │   └── add
-│   │   │   └── --artifact-group-label
-│   │   │   └── --artifact-group-uid
-│   │   │   └── --help
-│   │   │   └── --input-format
-│   │   │   └── --output-format
-│   │   │   └── --path
-│   │   └── get
-│   │   │   └── --digest
-│   │   │   └── --help
-│   │   │   └── --output-format
-│   │   └── packages
-│   │   │   └── --digest
-│   │   │   └── --help
-│   │   │   └── --name
-│   │   │   └── --output-format
-│   │   └── --help
-│   └── package
-│   │   └── get
-│   │   │   └── --help
-│   │   │   └── --name
-│   │   │   └── --output-format
-│   │   │   └── --pkgmngr
-│   │   │   └── --version
-│   │   └── images
-│   │   │   └── --help
-│   │   │   └── --name
-│   │   │   └── --output-format
-│   │   └── sources
-│   │   │   └── --help
-│   │   │   └── --name
-│   │   │   └── --output-format
-│   │   └── --help
-│   └── source
-│   │   └── add
-│   │   │   └── --artifact-group-label
-│   │   │   └── --artifact-group-uid
-│   │   │   └── --help
-│   │   │   └── --input-format
-│   │   │   └── --output-format
-│   │   │   └── --path
-│   │   └── get
-│   │   │   └── --commit
-│   │   │   └── --help
-│   │   │   └── --org
-│   │   │   └── --output-format
-│   │   │   └── --repo
-│   │   └── packages
-│   │   │   └── --commit
-│   │   │   └── --help
-│   │   │   └── --output-format
-│   │   │   └── --repo
-│   │   └── --help
-│   └── triage
-│   │   └── copy
-│   │   │   └── --artifact-group-uid
-│   │   │   └── --help
-│   │   │   └── --img-digest
-│   │   │   └── --img-registry
-│   │   │   └── --src-commit
-│   │   │   └── --src-org
-│   │   │   └── --src-repo
-│   │   │   └── --triage-uid-to-copy
-│   │   │   └── --yes
-│   │   │   └── --output-format
-│   │   └── list
-│   │   │   └── --help
-│   │   │   └── --img-digest
-│   │   │   └── --limit
-│   │   │   └── --page
-│   │   │   └── --src-commit
-│   │   │   └── --output-format
-│   │   └── update
-│   │   │   └── --artifact-group-uid
-│   │   │   └── --comment
-│   │   │   └── --cveid
-│   │   │   └── --help
-│   │   │   └── --img-digest
-│   │   │   └── --img-registry
-│   │   │   └── --justification
-│   │   │   └── --pkg-name
-│   │   │   └── --pkg-version
-│   │   │   └── --response
-│   │   │   └── --src-commit
-│   │   │   └── --src-org
-│   │   │   └── --src-repo
-│   │   │   └── --state
-│   │   │   └── --yes
-│   │   │   └── --output-format
-│   │   └── --help
-│   │   └── --output-format
-│   └── --help
-└── services
-│   └── claimable
-│   │   └── list
-│   │   │   └── --class
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   │   └── --no-color
-│   │   └── --help
-│   │   └── --context
-│   │   └── --kubeconfig
-│   │   └── --no-color
-│   └── class-claim
-│   │   └── create
-│   │   │   └── --class
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   │   └── --parameter
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   │   └── --no-color
-│   │   └── delete
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   │   └── --yes
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   │   └── --no-color
-│   │   └── get
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   │   └── --no-color
-│   │   └── list
-│   │   │   └── --all-namespaces
-│   │   │   └── --class
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   │   └── --output
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   │   └── --no-color
-│   │   └── --help
-│   │   └── --context
-│   │   └── --kubeconfig
-│   │   └── --no-color
-│   └── classes
-│   │   └── get
-│   │   │   └── --help
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   │   └── --no-color
-│   │   └── list
-│   │   │   └── --help
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   │   └── --no-color
-│   │   └── --help
-│   │   └── --context
-│   │   └── --kubeconfig
-│   │   └── --no-color
-│   └── --context
-│   └── --help
-│   └── --kubeconfig
-│   └── --no-color
-└── external-secrets
-│   └── secrets
-│   │   └── create
-│   │   │   └── --filepath
-│   │   │   └── --help
-│   │   │   └── --kubeconfig
-│   │   │   └── --namespace
-│   │   │   └── --verbose
-│   │   │   └── --yes
-│   │   └── list
-│   │   │   └── --all-namespaces
-│   │   │   └── --help
-│   │   │   └── --kubeconfig
-│   │   │   └── --namespace
-│   │   │   └── --output
-│   │   │   └── --verbose
-│   │   └── sync
-│   │   │   └── --help
-│   │   │   └── --kubeconfig
-│   │   │   └── --namespace
-│   │   │   └── --verbose
-│   │   └── --help
-│   └── stores
-│   │   └── create
-│   │   │   └── --filepath
-│   │   │   └── --help
-│   │   │   └── --kubeconfig
-│   │   │   └── --namespace
-│   │   │   └── --verbose
-│   │   │   └── --yes
-│   │   └── list
-│   │   │   └── --all-namespaces
-│   │   │   └── --help
-│   │   │   └── --kubeconfig
-│   │   │   └── --namespace
-│   │   │   └── --output
-│   │   │   └── --verbose
-│   │   └── --help
-│   └── --help
-└── accelerator
-│   └── apply
-│   │   └── --filename
-│   │   └── --help
 │   │   └── --namespace
 │   │   └── --context
 │   │   └── --kubeconfig
+│   │   └── --no-color
 │   └── create
-│   │   └── --description
-│   │   └── --display-name
-│   │   └── --git-branch
-│   │   └── --git-repo
-│   │   └── --git-sub-path
-│   │   └── --git-tag
+│   │   └── --dry-run
 │   │   └── --help
-│   │   └── --icon-url
-│   │   └── --interval
-│   │   └── --local-path
 │   │   └── --namespace
-│   │   └── --secret-ref
-│   │   └── --source-image
-│   │   └── --tags
+│   │   └── --parameter
+│   │   └── --skip-bind-prompt
 │   │   └── --context
 │   │   └── --kubeconfig
+│   │   └── --no-color
 │   └── delete
 │   │   └── --help
 │   │   └── --namespace
+│   │   └── --yes
 │   │   └── --context
 │   │   └── --kubeconfig
-│   └── fragment
-│   │   └── create
-│   │   │   └── --display-name
-│   │   │   └── --git-branch
-│   │   │   └── --git-repo
-│   │   │   └── --git-sub-path
-│   │   │   └── --git-tag
-│   │   │   └── --help
-│   │   │   └── --interval
-│   │   │   └── --local-path
-│   │   │   └── --namespace
-│   │   │   └── --secret-ref
-│   │   │   └── --source-image
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   └── delete
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
+│   │   └── --no-color
+│   └── get
+│   │   └── --help
+│   │   └── --namespace
+│   │   └── --context
+│   │   └── --kubeconfig
+│   │   └── --no-color
+│   └── list
+│   │   └── --help
+│   │   └── --context
+│   │   └── --kubeconfig
+│   │   └── --no-color
+│   └── type
 │   │   └── get
 │   │   │   └── --help
-│   │   │   └── --namespace
 │   │   │   └── --context
 │   │   │   └── --kubeconfig
+│   │   │   └── --no-color
 │   │   └── list
 │   │   │   └── --help
-│   │   │   └── --namespace
-│   │   │   └── --verbose
 │   │   │   └── --context
 │   │   │   └── --kubeconfig
-│   │   └── update
-│   │   │   └── --display-name
-│   │   │   └── --git-branch
-│   │   │   └── --git-repo
-│   │   │   └── --git-sub-path
-│   │   │   └── --git-tag
-│   │   │   └── --help
-│   │   │   └── --interval
-│   │   │   └── --namespace
-│   │   │   └── --reconcile
-│   │   │   └── --secret-ref
-│   │   │   └── --source-image
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
+│   │   │   └── --no-color
 │   │   └── --help
 │   │   └── --context
 │   │   └── --kubeconfig
+│   │   └── --no-color
+│   └── unbind
+│   │   └── --alias
+│   │   └── --help
+│   │   └── --namespace
+│   │   └── --context
+│   │   └── --kubeconfig
+│   │   └── --no-color
+│   └── --context
+│   └── --help
+│   └── --kubeconfig
+│   └── --no-color
+└── availability-target
+│   └── create
+│   │   └── --dry-run
+│   │   └── --file
+│   │   └── --help
+│   │   └── --yes
+│   │   └── --no-color
+│   │   └── --project
+│   └── delete
+│   │   └── --file
+│   │   └── --help
+│   │   └── --yes
+│   │   └── --no-color
+│   │   └── --project
+│   └── get
+│   │   └── --export
+│   │   └── --help
+│   │   └── --output
+│   │   └── --no-color
+│   │   └── --project
+│   └── list
+│   │   └── --help
+│   │   └── --output
+│   │   └── --no-color
+│   │   └── --project
+│   └── --help
+│   └── --no-color
+│   └── --project
+└── cluster
+│   └── cordon
+│   │   └── --help
+│   └── drain
+│   │   └── --dry-run
+│   │   └── --grace-period
+│   │   └── --help
+│   └── uncordon
+│   │   └── --help
+│   └── --help
+└── deploy
+│   └── --diff
+│   └── --from-build
+│   └── --help
+│   └── --nested-contexts
+│   └── --only
+│   └── --patch
+│   └── --yes
+└── domain
+│   └── bind
+│   │   └── --auto-assign-port
+│   │   └── --auto-assign-subdomain
+│   │   └── --domain
+│   │   └── --entrypoint
+│   │   └── --help
+│   │   └── --port
+│   │   └── --protocol
+│   └── create
+│   │   └── --allowed-ports
+│   │   └── --allowed-spaces
+│   │   └── --allowed-subdomains
+│   │   └── --auto-assignable-ports
+│   │   └── --auto-assignable-subdomains
+│   │   └── --certificate-provider
+│   │   └── --dns-provider
+│   │   └── --help
+│   └── delete
+│   │   └── --help
+│   └── get
+│   │   └── --help
+│   └── list
+│   │   └── --help
+│   └── unbind
+│   │   └── --help
+│   └── update
+│   │   └── --allowed-ports
+│   │   └── --allowed-spaces
+│   │   └── --allowed-subdomains
+│   │   └── --auto-assignable-ports
+│   │   └── --auto-assignable-subdomains
+│   │   └── --certificate-provider
+│   │   └── --dns-provider
+│   │   └── --help
+│   └── --help
+└── domain-binding
+│   └── create
+│   │   └── --auto-assign-port
+│   │   └── --auto-assign-subdomain-of
+│   │   └── --domain
+│   │   └── --entrypoint
+│   │   └── --help
+│   │   └── --port
+│   └── delete
+│   │   └── --help
+│   └── get
+│   │   └── --help
+│   └── list
+│   │   └── --help
+│   └── update
+│   │   └── --domain
+│   │   └── --entrypoint
+│   │   └── --help
+│   └── --help
+└── gitops
+│   └── init
+│   │   └── --help
+│   └── --help
+└── health-probe
+│   └── create
+│   │   └── --dry-run
+│   │   └── --file
+│   │   └── --help
+│   │   └── --yes
+│   │   └── --no-color
+│   │   └── --project
+│   └── delete
+│   │   └── --all
+│   │   └── --file
+│   │   └── --help
+│   │   └── --yes
+│   │   └── --no-color
+│   │   └── --project
 │   └── generate
 │   │   └── --help
-│   │   └── --options
-│   │   └── --options-file
-│   │   └── --output-dir
-│   │   └── --server-url
-│   │   └── --context
+│   │   └── --no-color
+│   │   └── --project
+│   └── get
+│   │   └── --export
+│   │   └── --help
+│   │   └── --output
+│   │   └── --no-color
+│   │   └── --project
+│   └── list
+│   │   └── --help
+│   │   └── --output
+│   │   └── --no-color
+│   │   └── --project
+│   └── --help
+│   └── --no-color
+│   └── --project
+└── profile
+│   └── create
+│   │   └── --dry-run
+│   │   └── --file
+│   │   └── --help
+│   │   └── --yes
+│   │   └── --no-color
+│   │   └── --project
+│   └── delete
+│   │   └── --file
+│   │   └── --help
+│   │   └── --yes
+│   │   └── --no-color
+│   │   └── --project
+│   └── generate
+│   │   └── --exclude-all
+│   │   └── --help
+│   │   └── --required-capability
+│   │   └── --trait
+│   │   └── --no-color
+│   │   └── --project
+│   └── get
+│   │   └── --export
+│   │   └── --help
+│   │   └── --output
+│   │   └── --no-color
+│   │   └── --project
+│   └── list
+│   │   └── --help
+│   │   └── --output
+│   │   └── --wide
+│   │   └── --no-color
+│   │   └── --project
+│   └── --help
+│   └── --no-color
+│   └── --project
+└── project
+│   └── create
+│   │   └── --description
+│   │   └── --help
+│   │   └── --yes
+│   │   └── --no-color
+│   └── delete
+│   │   └── --help
+│   │   └── --id
+│   │   └── --yes
+│   │   └── --no-color
+│   └── get
+│   │   └── --help
+│   │   └── --id
+│   │   └── --no-color
+│   └── list
+│   │   └── --help
+│   │   └── --wide
+│   │   └── --no-color
+│   └── unset
+│   │   └── --help
+│   │   └── --no-color
+│   └── use
+│   │   └── --help
+│   │   └── --id
+│   │   └── --no-color
+│   └── --help
+│   └── --no-color
+└── promote
+│   └── --filter
+│   └── --from-build
+│   └── --help
+│   └── --registry
+│   └── --to
+└── rbac
+│   └── role
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── --help
+│   └── --help
+└── resource
+│   └── --help
+└── space
+│   └── create
+│   │   └── --availability-target
+│   │   └── --cpu
+│   │   └── --dry-run
+│   │   └── --help
+│   │   └── --memory
+│   │   └── --profile
+│   │   └── --update-strategy
+│   │   └── --yes
+│   │   └── --no-color
+│   │   └── --project
+│   └── delete
+│   │   └── --file
+│   │   └── --help
+│   │   └── --yes
+│   │   └── --no-color
+│   │   └── --project
+│   └── generate
+│   │   └── --availability-target
+│   │   └── --cpu
+│   │   └── --help
+│   │   └── --memory
+│   │   └── --profile
+│   │   └── --update-strategy
+│   │   └── --no-color
+│   │   └── --project
+│   └── get
+│   │   └── --export
+│   │   └── --help
+│   │   └── --output
+│   │   └── --no-color
+│   │   └── --project
+│   └── list
+│   │   └── --help
+│   │   └── --output
+│   │   └── --wide
+│   │   └── --no-color
+│   │   └── --project
+│   └── use
+│   │   └── --help
+│   │   └── --no-color
+│   │   └── --project
+│   └── --help
+│   └── --no-color
+│   └── --project
+└── trait
+│   └── create
+│   │   └── --dry-run
+│   │   └── --file
+│   │   └── --help
+│   │   └── --yes
+│   │   └── --no-color
+│   │   └── --project
+│   └── delete
+│   │   └── --file
+│   │   └── --help
+│   │   └── --yes
+│   │   └── --no-color
+│   │   └── --project
+│   └── generate
+│   │   └── --exclude-all
+│   │   └── --help
+│   │   └── --package
+│   │   └── --no-color
+│   │   └── --project
+│   └── get
+│   │   └── --export
+│   │   └── --help
+│   │   └── --output
+│   │   └── --no-color
+│   │   └── --project
+│   └── list
+│   │   └── --help
+│   │   └── --output
+│   │   └── --wide
+│   │   └── --no-color
+│   │   └── --project
+│   └── --help
+│   └── --no-color
+│   └── --project
+└── egress
+│   └── create
+│   │   └── --help
+│   │   └── --host
+│   │   └── --port
+│   │   └── --protocol
+│   │   └── --source-ref
+│   │   └── --kubeconfig
+│   └── delete
+│   │   └── --help
 │   │   └── --kubeconfig
 │   └── get
-│   │   └── --from-context
 │   │   └── --help
-│   │   └── --namespace
-│   │   └── --server-url
-│   │   └── --verbose
-│   │   └── --context
 │   │   └── --kubeconfig
 │   └── list
-│   │   └── --from-context
 │   │   └── --help
-│   │   └── --namespace
-│   │   └── --server-url
-│   │   └── --tags
-│   │   └── --verbose
-│   │   └── --context
-│   │   └── --kubeconfig
-│   └── push
-│   │   └── --help
-│   │   └── --local-path
-│   │   └── --source-image
-│   │   └── --context
 │   │   └── --kubeconfig
 │   └── update
-│   │   └── --description
-│   │   └── --display-name
-│   │   └── --git-branch
-│   │   └── --git-repo
-│   │   └── --git-sub-path
-│   │   └── --git-tag
 │   │   └── --help
-│   │   └── --icon-url
-│   │   └── --interval
-│   │   └── --namespace
-│   │   └── --reconcile
-│   │   └── --secret-ref
-│   │   └── --source-image
-│   │   └── --tags
-│   │   └── --context
+│   │   └── --host
+│   │   └── --port
+│   │   └── --source-ref
 │   │   └── --kubeconfig
-│   └── --context
 │   └── --help
 │   └── --kubeconfig
 └── package
@@ -598,6 +534,7 @@ tanzu
 │   │   └── --yes
 │   └── install
 │   │   └── --dangerous-allow-use-of-shared-namespace
+│   │   └── --dry-run
 │   │   └── --help
 │   │   └── --namespace
 │   │   └── --package
@@ -630,8 +567,11 @@ tanzu
 │   │   └── --kubeconfig-yaml
 │   │   └── --yes
 │   └── release
+│   │   └── --build-values
+│   │   └── --build-ytt-validations
 │   │   └── --chdir
 │   │   └── --copy-to
+│   │   └── --debug
 │   │   └── --help
 │   │   └── --openapi-schema
 │   │   └── --repo-output
@@ -639,7 +579,6 @@ tanzu
 │   │   └── --tty
 │   │   └── --version
 │   │   └── --column
-│   │   └── --debug
 │   │   └── --kube-api-burst
 │   │   └── --kube-api-qps
 │   │   └── --kubeconfig
@@ -731,6 +670,10 @@ tanzu
 │   │   │   └── --help
 │   │   └── --help
 │   └── --help
+└── api-token
+│   └── create
+│   │   └── --help
+│   └── --help
 └── completion
 │   └── --help
 └── config
@@ -776,6 +719,9 @@ tanzu
 │   │   └── --kubeconfig
 │   │   └── --kubecontext
 │   │   └── --type
+│   └── current
+│   │   └── --help
+│   │   └── --short
 │   └── delete
 │   │   └── --help
 │   │   └── --yes
@@ -787,14 +733,18 @@ tanzu
 │   │   └── --help
 │   │   └── --output
 │   │   └── --type
+│   │   └── --wide
 │   └── unset
 │   │   └── --help
 │   │   └── --type
 │   └── use
 │   │   └── --help
 │   └── --help
-└── init
+└── login
+│   └── --endpoint
+│   └── --endpoint-ca-certificate
 │   └── --help
+│   └── --insecure-skip-tls-verify
 └── plugin
 │   └── clean
 │   │   └── --help
@@ -848,313 +798,6 @@ tanzu
 │   │   └── --target
 │   └── --help
 └── version
-│   └── --help
-└── kubernetes
-│   └── apps
-│   │   └── workload
-│   │   │   └── apply
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── tail
-│   │   │   └── --help
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   │   └── --no-color
-│   │   │   └── --verbose
-│   │   └── --context
-│   │   └── --help
-│   │   └── --kubeconfig
-│   │   └── --no-color
-│   │   └── --verbose
-│   └── build-service
-│   │   └── build
-│   │   │   └── list
-│   │   │   └── logs
-│   │   │   └── status
-│   │   │   └── --help
-│   │   └── builder
-│   │   │   └── list
-│   │   │   └── status
-│   │   │   └── --help
-│   │   └── buildpack
-│   │   │   └── list
-│   │   │   └── status
-│   │   │   └── --help
-│   │   └── clusterstack
-│   │   │   └── list
-│   │   │   └── status
-│   │   │   └── --help
-│   │   └── clusterstore
-│   │   │   └── list
-│   │   │   └── status
-│   │   │   └── --help
-│   │   └── image
-│   │   │   └── list
-│   │   │   └── status
-│   │   │   └── trigger
-│   │   │   └── --help
-│   │   └── --help
-│   └── insight
-│   │   └── config
-│   │   │   └── --help
-│   │   └── health
-│   │   │   └── --help
-│   │   └── image
-│   │   │   └── add
-│   │   │   └── get
-│   │   │   └── packages
-│   │   │   └── --help
-│   │   └── package
-│   │   │   └── get
-│   │   │   └── images
-│   │   │   └── sources
-│   │   │   └── --help
-│   │   └── source
-│   │   │   └── add
-│   │   │   └── get
-│   │   │   └── packages
-│   │   │   └── --help
-│   │   └── triage
-│   │   │   └── copy
-│   │   │   └── list
-│   │   │   └── update
-│   │   │   └── --help
-│   │   │   └── --output-format
-│   │   └── --help
-│   └── services
-│   │   └── claimable
-│   │   │   └── list
-│   │   │   └── --help
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   │   └── --no-color
-│   │   └── class-claim
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── --help
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   │   └── --no-color
-│   │   └── classes
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── --help
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   │   └── --no-color
-│   │   └── --context
-│   │   └── --help
-│   │   └── --kubeconfig
-│   │   └── --no-color
-│   └── external-secrets
-│   │   └── secrets
-│   │   │   └── create
-│   │   │   └── list
-│   │   │   └── sync
-│   │   │   └── --help
-│   │   └── stores
-│   │   │   └── create
-│   │   │   └── list
-│   │   │   └── --help
-│   │   └── --help
-│   └── accelerator
-│   │   └── apply
-│   │   │   └── --filename
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   └── create
-│   │   │   └── --description
-│   │   │   └── --display-name
-│   │   │   └── --git-branch
-│   │   │   └── --git-repo
-│   │   │   └── --git-sub-path
-│   │   │   └── --git-tag
-│   │   │   └── --help
-│   │   │   └── --icon-url
-│   │   │   └── --interval
-│   │   │   └── --local-path
-│   │   │   └── --namespace
-│   │   │   └── --secret-ref
-│   │   │   └── --source-image
-│   │   │   └── --tags
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   └── delete
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   └── fragment
-│   │   │   └── create
-│   │   │   └── delete
-│   │   │   └── get
-│   │   │   └── list
-│   │   │   └── update
-│   │   │   └── --help
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   └── generate
-│   │   │   └── --help
-│   │   │   └── --options
-│   │   │   └── --options-file
-│   │   │   └── --output-dir
-│   │   │   └── --server-url
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   └── get
-│   │   │   └── --from-context
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   │   └── --server-url
-│   │   │   └── --verbose
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   └── list
-│   │   │   └── --from-context
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   │   └── --server-url
-│   │   │   └── --tags
-│   │   │   └── --verbose
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   └── push
-│   │   │   └── --help
-│   │   │   └── --local-path
-│   │   │   └── --source-image
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   └── update
-│   │   │   └── --description
-│   │   │   └── --display-name
-│   │   │   └── --git-branch
-│   │   │   └── --git-repo
-│   │   │   └── --git-sub-path
-│   │   │   └── --git-tag
-│   │   │   └── --help
-│   │   │   └── --icon-url
-│   │   │   └── --interval
-│   │   │   └── --namespace
-│   │   │   └── --reconcile
-│   │   │   └── --secret-ref
-│   │   │   └── --source-image
-│   │   │   └── --tags
-│   │   │   └── --context
-│   │   │   └── --kubeconfig
-│   │   └── --context
-│   │   └── --help
-│   │   └── --kubeconfig
-│   └── package
-│   │   └── available
-│   │   │   └── --help
-│   │   │   └── --column
-│   │   │   └── --debug
-│   │   │   └── --kube-api-burst
-│   │   │   └── --kube-api-qps
-│   │   │   └── --kubeconfig
-│   │   │   └── --kubeconfig-context
-│   │   │   └── --kubeconfig-yaml
-│   │   │   └── --yes
-│   │   └── init
-│   │   │   └── --chdir
-│   │   │   └── --help
-│   │   │   └── --tty
-│   │   │   └── --column
-│   │   │   └── --debug
-│   │   │   └── --kube-api-burst
-│   │   │   └── --kube-api-qps
-│   │   │   └── --kubeconfig
-│   │   │   └── --kubeconfig-context
-│   │   │   └── --kubeconfig-yaml
-│   │   │   └── --yes
-│   │   └── install
-│   │   │   └── --dangerous-allow-use-of-shared-namespace
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   │   └── --package
-│   │   │   └── --service-account-name
-│   │   │   └── --tty
-│   │   │   └── --values
-│   │   │   └── --values-file
-│   │   │   └── --version
-│   │   │   └── --wait
-│   │   │   └── --wait-check-interval
-│   │   │   └── --wait-timeout
-│   │   │   └── --ytt-overlay-file
-│   │   │   └── --ytt-overlays
-│   │   │   └── --column
-│   │   │   └── --debug
-│   │   │   └── --kube-api-burst
-│   │   │   └── --kube-api-qps
-│   │   │   └── --kubeconfig
-│   │   │   └── --kubeconfig-context
-│   │   │   └── --kubeconfig-yaml
-│   │   │   └── --yes
-│   │   └── installed
-│   │   │   └── --help
-│   │   │   └── --column
-│   │   │   └── --debug
-│   │   │   └── --kube-api-burst
-│   │   │   └── --kube-api-qps
-│   │   │   └── --kubeconfig
-│   │   │   └── --kubeconfig-context
-│   │   │   └── --kubeconfig-yaml
-│   │   │   └── --yes
-│   │   └── release
-│   │   │   └── --chdir
-│   │   │   └── --copy-to
-│   │   │   └── --help
-│   │   │   └── --openapi-schema
-│   │   │   └── --repo-output
-│   │   │   └── --tag
-│   │   │   └── --tty
-│   │   │   └── --version
-│   │   │   └── --column
-│   │   │   └── --debug
-│   │   │   └── --kube-api-burst
-│   │   │   └── --kube-api-qps
-│   │   │   └── --kubeconfig
-│   │   │   └── --kubeconfig-context
-│   │   │   └── --kubeconfig-yaml
-│   │   │   └── --yes
-│   │   └── repository
-│   │   │   └── --help
-│   │   │   └── --column
-│   │   │   └── --debug
-│   │   │   └── --kube-api-burst
-│   │   │   └── --kube-api-qps
-│   │   │   └── --kubeconfig
-│   │   │   └── --kubeconfig-context
-│   │   │   └── --kubeconfig-yaml
-│   │   │   └── --yes
-│   │   └── --column
-│   │   └── --debug
-│   │   └── --help
-│   │   └── --kube-api-burst
-│   │   └── --kube-api-qps
-│   │   └── --kubeconfig
-│   │   └── --kubeconfig-context
-│   │   └── --kubeconfig-yaml
-│   │   └── --yes
-│   └── secret
-│   │   └── registry
-│   │   │   └── add
-│   │   │   └── delete
-│   │   │   └── list
-│   │   │   └── update
-│   │   │   └── --help
-│   │   │   └── --namespace
-│   │   │   └── --kubeconfig
-│   │   │   └── --verbose
-│   │   └── --help
-│   │   └── --kubeconfig
-│   │   └── --verbose
 │   └── --help
 └── mission-control
 │   └── account
@@ -1349,6 +992,7 @@ tanzu
 │   │   │   └── --include-all-families
 │   │   │   └── --latest
 │   │   │   └── --management-cluster-name
+│   │   │   └── --os-option
 │   │   │   └── --provisioner-name
 │   │   └── validate
 │   │   │   └── --help
@@ -1380,6 +1024,11 @@ tanzu
 │   │   └── update
 │   │   │   └── --file
 │   │   │   └── --help
+│   │   └── --help
+│   └── consumption
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --output
 │   │   └── --help
 │   └── context
 │   │   └── create
@@ -1441,15 +1090,6 @@ tanzu
 │   │   │   └── --output
 │   │   │   └── --provisioner-name
 │   │   │   └── --scope
-│   │   └── --help
-│   └── cost
-│   │   └── actual
-│   │   │   └── --help
-│   │   │   └── --management-cluster-name
-│   │   │   └── --output
-│   │   │   └── --provisioner-name
-│   │   │   └── --scope
-│   │   │   └── --time-period
 │   │   └── --help
 │   └── data-protection
 │   │   └── backup
@@ -1974,6 +1614,7 @@ tanzu
 │   │   │   └── delete
 │   │   │   └── get
 │   │   │   └── list
+│   │   │   └── template
 │   │   │   └── update
 │   │   │   └── validate-eula
 │   │   │   └── --help
@@ -2003,6 +1644,334 @@ tanzu
 │   │   └── update
 │   │   │   └── --file
 │   │   │   └── --help
+│   │   └── --help
+│   └── --help
+└── operations
+│   └── apply
+│   │   └── --dry-run
+│   │   └── --file
+│   │   └── --help
+│   └── cluster
+│   │   └── attach
+│   │   │   └── --continue-bootstrap
+│   │   │   └── --file
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --kubeconfig
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --skip-verify
+│   │   └── create
+│   │   │   └── --data-values-file
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --template
+│   │   └── delete
+│   │   │   └── --cluster-type
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   └── extension
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── get
+│   │   │   └── --cluster-type
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --output
+│   │   │   └── --provisioner-name
+│   │   └── kubeconfig
+│   │   │   └── get
+│   │   │   └── --help
+│   │   └── list
+│   │   │   └── --cluster-type
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --provisioner-name
+│   │   │   └── --query
+│   │   └── logs
+│   │   │   └── --help
+│   │   │   └── --kubeconfig
+│   │   │   └── --output
+│   │   └── nodepool
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   │   └── --help
+│   │   └── reattach
+│   │   │   └── --cluster-type
+│   │   │   └── --help
+│   │   │   └── --image-registry
+│   │   │   └── --kubeconfig
+│   │   │   └── --proxy-name
+│   │   │   └── --skip-verify
+│   │   │   └── --use-proxy
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   └── upgrade
+│   │   │   └── --help
+│   │   │   └── --include-all-families
+│   │   │   └── --latest
+│   │   │   └── --management-cluster-name
+│   │   │   └── --os-option
+│   │   │   └── --provisioner-name
+│   │   └── validate
+│   │   │   └── --help
+│   │   │   └── --kubeconfig
+│   │   └── --help
+│   └── clustergroup
+│   │   └── cluster
+│   │   │   └── cordon
+│   │   │   └── drain
+│   │   │   └── uncordon
+│   │   │   └── --help
+│   │   └── create
+│   │   │   └── --data-values-file
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --template
+│   │   └── delete
+│   │   │   └── --help
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --integration
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --query
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   └── use
+│   │   │   └── --help
+│   │   └── --help
+│   └── ekscluster
+│   │   └── create
+│   │   │   └── --data-values-file
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --template
+│   │   └── delete
+│   │   │   └── --credential-name
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --region
+│   │   └── get
+│   │   │   └── --credential-name
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --region
+│   │   └── list
+│   │   │   └── --credential-name
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   │   └── --region
+│   │   └── nodepool
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── template
+│   │   │   └── update
+│   │   │   └── --help
+│   │   └── options
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   └── --help
+│   └── iam
+│   │   └── add-binding
+│   │   │   └── --cluster
+│   │   │   └── --cluster-type
+│   │   │   └── --groups
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --name
+│   │   │   └── --provisioner-name
+│   │   │   └── --role
+│   │   │   └── --scope
+│   │   │   └── --users
+│   │   └── list
+│   │   │   └── --cluster
+│   │   │   └── --cluster-type
+│   │   │   └── --direct
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --provisioner-name
+│   │   │   └── --scope
+│   │   └── role
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── --help
+│   └── management-cluster
+│   │   └── delete
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   └── deregister
+│   │   │   └── --force
+│   │   │   └── --help
+│   │   │   └── --kubeconfig
+│   │   │   └── --output
+│   │   └── extension
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── get
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   └── list
+│   │   │   └── --help
+│   │   │   └── --max-size
+│   │   │   └── --name
+│   │   │   └── --offset
+│   │   │   └── --output
+│   │   └── provisioner
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── register
+│   │   │   └── --continue-bootstrap
+│   │   │   └── --data-values-file
+│   │   │   └── --default-cluster-group
+│   │   │   └── --default-workload-cluster-image-registry
+│   │   │   └── --default-workload-cluster-proxy-name
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --image-registry
+│   │   │   └── --kubeconfig
+│   │   │   └── --kubernetes-provider-type
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --proxy-name
+│   │   │   └── --skip-verify
+│   │   │   └── --template
+│   │   └── reregister
+│   │   │   └── --default-workload-cluster-image-registry
+│   │   │   └── --default-workload-cluster-proxy-name
+│   │   │   └── --help
+│   │   │   └── --image-registry
+│   │   │   └── --kubeconfig
+│   │   │   └── --output
+│   │   │   └── --proxy-name
+│   │   │   └── --skip-verify
+│   │   │   └── --use-proxy
+│   │   └── template
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── update
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   └── --help
+│   └── policy
+│   │   └── create
+│   │   │   └── --cluster-type
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --scope
+│   │   └── delete
+│   │   │   └── --cluster-type
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --name
+│   │   │   └── --provisioner-name
+│   │   │   └── --scope
+│   │   └── get
+│   │   │   └── --cluster-type
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --name
+│   │   │   └── --output
+│   │   │   └── --provisioner-name
+│   │   │   └── --scope
+│   │   └── insight
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── list
+│   │   │   └── --cluster-type
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --resource-name
+│   │   │   └── --scope
+│   │   │   └── --show-effective
+│   │   └── recipe
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── type
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── --help
+│   │   └── update
+│   │   │   └── --cluster-type
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --management-cluster-name
+│   │   │   └── --provisioner-name
+│   │   │   └── --scope
+│   │   └── --help
+│   └── provider-eks-cluster
+│   │   └── manage
+│   │   │   └── --agent-name
+│   │   │   └── --cluster-arn
+│   │   │   └── --cluster-group
+│   │   │   └── --credential-name
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --proxy-name
+│   │   │   └── --region
+│   │   └── unmanage
+│   │   │   └── --agent-name
+│   │   │   └── --cluster-group
+│   │   │   └── --credential-name
+│   │   │   └── --dry-run
+│   │   │   └── --file
+│   │   │   └── --help
+│   │   │   └── --output
+│   │   │   └── --region
 │   │   └── --help
 │   └── --help
 └── --help

@@ -1,283 +1,190 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <map version="0.9.0">
     <node folded="false" text="tanzu">
-        <node text="completion" />
-        <node text="version" />
-        <node folded="false" text="accelerator">
-            <node text="get" />
-            <node folded="false" text="fragment">
-                <node text="create" />
+        <node folded="false" text="operations">
+            <node folded="false" text="iam">
+                <node folded="false" text="role">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="list" />
+                <node text="add-binding" />
+            </node>
+            <node folded="false" text="provider-eks-cluster">
+                <node text="manage" />
+                <node text="unmanage" />
+            </node>
+            <node folded="false" text="clustergroup">
+                <node text="use" />
                 <node text="get" />
+                <node text="create" />
                 <node text="list" />
                 <node text="update" />
+                <node folded="false" text="cluster">
+                    <node text="cordon" />
+                    <node text="uncordon" />
+                    <node text="drain" />
+                </node>
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
                 <node text="delete" />
             </node>
+            <node folded="false" text="ekscluster">
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node folded="false" text="options">
+                    <node text="list" />
+                </node>
+                <node folded="false" text="nodepool">
+                    <node text="get" />
+                    <node text="create" />
+                    <node text="list" />
+                    <node text="update" />
+                    <node text="template" />
+                    <node text="delete" />
+                </node>
+                <node text="delete" />
+            </node>
+            <node folded="false" text="cluster">
+                <node text="reattach" />
+                <node text="upgrade" />
+                <node text="logs" />
+                <node folded="false" text="extension">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="get" />
+                <node text="create" />
+                <node text="list" />
+                <node text="update" />
+                <node folded="false" text="kubeconfig">
+                    <node text="get" />
+                </node>
+                <node text="attach" />
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="validate" />
+                <node folded="false" text="nodepool">
+                    <node text="get" />
+                    <node text="create" />
+                    <node text="list" />
+                    <node text="update" />
+                    <node text="template" />
+                    <node text="delete" />
+                </node>
+                <node text="delete" />
+            </node>
+            <node folded="false" text="policy">
+                <node text="get" />
+                <node text="list" />
+                <node text="create" />
+                <node folded="false" text="insight">
+                    <node text="list" />
+                </node>
+                <node folded="false" text="recipe">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="update" />
+                <node folded="false" text="type">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="delete" />
+            </node>
+            <node text="apply" />
+            <node folded="false" text="management-cluster">
+                <node text="deregister" />
+                <node folded="false" text="template">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node folded="false" text="extension">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="get" />
+                <node text="register" />
+                <node text="list" />
+                <node text="update" />
+                <node text="reregister" />
+                <node folded="false" text="provisioner">
+                    <node text="list" />
+                    <node text="get" />
+                </node>
+                <node text="delete" />
+            </node>
+        </node>
+        <node folded="false" text="domain">
+            <node text="unbind" />
+            <node text="get" />
+            <node text="bind" />
             <node text="create" />
             <node text="list" />
             <node text="update" />
-            <node text="push" />
-            <node text="apply" />
-            <node text="generate" />
             <node text="delete" />
         </node>
-        <node folded="false" text="package">
-            <node text="available" />
-            <node text="repository" />
-            <node text="installed" />
+        <node folded="false" text="app">
+            <node text="scale" />
+            <node text="autoscale" />
+            <node text="logs" />
+            <node text="get" />
+            <node text="stop" />
+            <node text="list" />
+            <node text="instances" />
             <node text="init" />
-            <node text="install" />
-            <node text="release" />
-        </node>
-        <node folded="false" text="kubernetes">
-            <node folded="false" text="accelerator">
-                <node text="get" />
-                <node folded="false" text="fragment">
-                    <node text="create" />
-                    <node text="get" />
-                    <node text="list" />
-                    <node text="update" />
-                    <node text="delete" />
-                </node>
-                <node text="create" />
+            <node folded="false" text="env">
+                <node text="set" />
                 <node text="list" />
-                <node text="update" />
-                <node text="push" />
-                <node text="apply" />
-                <node text="generate" />
                 <node text="delete" />
             </node>
-            <node folded="false" text="package">
-                <node text="available" />
-                <node text="repository" />
-                <node text="installed" />
-                <node text="init" />
-                <node text="install" />
-                <node text="release" />
-            </node>
-            <node folded="false" text="insight">
-                <node folded="false" text="package">
-                    <node text="images" />
-                    <node text="sources" />
-                    <node text="get" />
-                </node>
-                <node folded="false" text="image">
-                    <node text="add" />
-                    <node text="packages" />
-                    <node text="get" />
-                </node>
-                <node folded="false" text="source">
-                    <node text="add" />
-                    <node text="packages" />
-                    <node text="get" />
-                </node>
-                <node text="health" />
-                <node text="config" />
-                <node folded="false" text="triage">
-                    <node text="copy" />
-                    <node text="list" />
-                    <node text="update" />
-                </node>
-            </node>
-            <node folded="false" text="apps">
-                <node folded="false" text="workload">
-                    <node text="get" />
-                    <node text="create" />
-                    <node text="list" />
-                    <node text="tail" />
-                    <node text="apply" />
-                    <node text="delete" />
-                </node>
-            </node>
-            <node folded="false" text="secret">
-                <node folded="false" text="registry">
-                    <node text="add" />
-                    <node text="list" />
-                    <node text="update" />
-                    <node text="delete" />
-                </node>
-            </node>
-            <node folded="false" text="build-service">
-                <node folded="false" text="buildpack">
-                    <node text="status" />
-                    <node text="list" />
-                </node>
-                <node folded="false" text="builder">
-                    <node text="status" />
-                    <node text="list" />
-                </node>
-                <node folded="false" text="clusterstore">
-                    <node text="status" />
-                    <node text="list" />
-                </node>
+            <node text="port-forward" />
+            <node folded="false" text="config">
+                <node text="scale" />
+                <node text="contact" />
                 <node folded="false" text="build">
-                    <node text="status" />
-                    <node text="list" />
-                    <node text="logs" />
+                    <node text="buildpacks" />
+                    <node text="path" />
+                    <node text="type" />
                 </node>
-                <node folded="false" text="clusterstack">
-                    <node text="status" />
-                    <node text="list" />
-                </node>
-                <node folded="false" text="image">
-                    <node text="status" />
-                    <node text="trigger" />
-                    <node text="list" />
-                </node>
-            </node>
-            <node folded="false" text="external-secrets">
-                <node folded="false" text="secrets">
-                    <node text="create" />
-                    <node text="list" />
-                    <node text="sync" />
-                </node>
-                <node folded="false" text="stores">
-                    <node text="create" />
-                    <node text="list" />
-                </node>
-            </node>
-            <node folded="false" text="services">
-                <node folded="false" text="class-claim">
-                    <node text="create" />
-                    <node text="get" />
-                    <node text="list" />
-                    <node text="delete" />
-                </node>
-                <node folded="false" text="classes">
-                    <node text="list" />
-                    <node text="get" />
-                </node>
-                <node folded="false" text="claimable">
-                    <node text="list" />
-                </node>
-            </node>
-        </node>
-        <node folded="false" text="telemetry">
-            <node folded="false" text="participation">
-                <node text="status" />
-                <node text="update" />
-            </node>
-            <node folded="false" text="metadata">
-                <node text="status" />
-                <node text="update" />
-            </node>
-        </node>
-        <node folded="false" text="builder">
-            <node text="init" />
-            <node folded="false" text="plugin">
-                <node text="build" />
-            </node>
-            <node text="cli" />
-            <node folded="false" text="inventory">
-                <node text="init" />
-                <node folded="false" text="plugin">
-                    <node text="add" />
-                    <node text="activate" />
-                </node>
-            </node>
-        </node>
-        <node folded="false" text="insight">
-            <node folded="false" text="package">
-                <node text="images" />
-                <node text="sources" />
                 <node text="get" />
             </node>
-            <node folded="false" text="image">
-                <node text="add" />
-                <node text="packages" />
-                <node text="get" />
-            </node>
-            <node folded="false" text="source">
-                <node text="add" />
-                <node text="packages" />
-                <node text="get" />
-            </node>
-            <node text="health" />
-            <node text="config" />
-            <node folded="false" text="triage">
-                <node text="copy" />
-                <node text="list" />
-                <node text="update" />
-            </node>
+            <node text="start" />
+            <node text="restart" />
+            <node text="delete" />
         </node>
-        <node folded="false" text="apps">
-            <node folded="false" text="workload">
-                <node text="get" />
-                <node text="create" />
-                <node text="list" />
-                <node text="tail" />
-                <node text="apply" />
-                <node text="delete" />
-            </node>
+        <node folded="false" text="api-token">
+            <node text="create" />
         </node>
-        <node text="init" />
-        <node folded="false" text="services">
-            <node folded="false" text="class-claim">
-                <node text="create" />
-                <node text="get" />
-                <node text="list" />
-                <node text="delete" />
-            </node>
-            <node folded="false" text="classes">
-                <node text="list" />
-                <node text="get" />
-            </node>
-            <node folded="false" text="claimable">
-                <node text="list" />
-            </node>
+        <node folded="false" text="cluster">
+            <node text="cordon" />
+            <node text="uncordon" />
+            <node text="drain" />
         </node>
-        <node folded="false" text="secret">
-            <node folded="false" text="registry">
-                <node text="add" />
-                <node text="list" />
-                <node text="update" />
-                <node text="delete" />
-            </node>
+        <node folded="false" text="egress">
+            <node text="create" />
+            <node text="get" />
+            <node text="list" />
+            <node text="update" />
+            <node text="delete" />
         </node>
-        <node folded="false" text="build-service">
-            <node folded="false" text="buildpack">
-                <node text="status" />
-                <node text="list" />
-            </node>
-            <node folded="false" text="builder">
-                <node text="status" />
-                <node text="list" />
-            </node>
-            <node folded="false" text="clusterstore">
-                <node text="status" />
-                <node text="list" />
-            </node>
-            <node folded="false" text="build">
-                <node text="status" />
-                <node text="list" />
-                <node text="logs" />
-            </node>
-            <node folded="false" text="clusterstack">
-                <node text="status" />
-                <node text="list" />
-            </node>
-            <node folded="false" text="image">
-                <node text="status" />
-                <node text="trigger" />
-                <node text="list" />
-            </node>
-        </node>
-        <node folded="false" text="external-secrets">
-            <node folded="false" text="secrets">
-                <node text="create" />
-                <node text="list" />
-                <node text="sync" />
-            </node>
-            <node folded="false" text="stores">
-                <node text="create" />
-                <node text="list" />
-            </node>
-        </node>
-        <node folded="false" text="context">
+        <node text="completion" />
+        <node folded="false" text="space">
             <node text="use" />
             <node text="get" />
             <node text="create" />
             <node text="list" />
-            <node text="unset" />
+            <node text="generate" />
             <node text="delete" />
         </node>
         <node folded="false" text="mission-control">
@@ -370,9 +277,6 @@
                 </node>
                 <node text="delete" />
             </node>
-            <node folded="false" text="cost">
-                <node text="actual" />
-            </node>
             <node folded="false" text="helm">
                 <node text="enable" />
                 <node folded="false" text="repository">
@@ -413,6 +317,9 @@
                     <node text="get" />
                 </node>
                 <node text="add-binding" />
+            </node>
+            <node folded="false" text="consumption">
+                <node text="list" />
             </node>
             <node folded="false" text="continuousdelivery">
                 <node folded="false" text="gitrepository">
@@ -581,6 +488,7 @@
                     <node text="create" />
                     <node text="list" />
                     <node text="update" />
+                    <node text="template" />
                     <node text="accept-eula" />
                     <node text="delete" />
                 </node>
@@ -668,8 +576,35 @@
                 </node>
             </node>
         </node>
-        <node folded="false" text="test">
-            <node text="fetch" />
+        <node folded="false" text="telemetry">
+            <node folded="false" text="participation">
+                <node text="status" />
+                <node text="update" />
+            </node>
+            <node folded="false" text="metadata">
+                <node text="status" />
+                <node text="update" />
+            </node>
+        </node>
+        <node folded="false" text="secret">
+            <node folded="false" text="registry">
+                <node text="add" />
+                <node text="list" />
+                <node text="update" />
+                <node text="delete" />
+            </node>
+        </node>
+        <node text="version" />
+        <node folded="false" text="build">
+            <node folded="false" text="config">
+                <node text="view" />
+            </node>
+        </node>
+        <node folded="false" text="availability-target">
+            <node text="create" />
+            <node text="get" />
+            <node text="list" />
+            <node text="delete" />
         </node>
         <node folded="false" text="config">
             <node folded="false" text="eula">
@@ -687,6 +622,84 @@
             <node text="set" />
             <node text="unset" />
         </node>
+        <node folded="false" text="profile">
+            <node text="create" />
+            <node text="get" />
+            <node text="list" />
+            <node text="generate" />
+            <node text="delete" />
+        </node>
+        <node text="deploy" />
+        <node folded="false" text="trait">
+            <node text="create" />
+            <node text="get" />
+            <node text="list" />
+            <node text="generate" />
+            <node text="delete" />
+        </node>
+        <node folded="false" text="rbac">
+            <node folded="false" text="role">
+                <node text="list" />
+                <node text="get" />
+            </node>
+        </node>
+        <node folded="false" text="services">
+            <node text="unbind" />
+            <node text="get" />
+            <node text="bind" />
+            <node text="create" />
+            <node text="list" />
+            <node folded="false" text="type">
+                <node text="list" />
+                <node text="get" />
+            </node>
+            <node text="delete" />
+        </node>
+        <node folded="false" text="domain-binding">
+            <node text="create" />
+            <node text="get" />
+            <node text="list" />
+            <node text="update" />
+            <node text="delete" />
+        </node>
+        <node text="promote" />
+        <node folded="false" text="gitops">
+            <node text="init" />
+        </node>
+        <node text="resource" />
+        <node folded="false" text="package">
+            <node text="available" />
+            <node text="repository" />
+            <node text="installed" />
+            <node text="init" />
+            <node text="install" />
+            <node text="release" />
+        </node>
+        <node folded="false" text="health-probe">
+            <node text="create" />
+            <node text="get" />
+            <node text="list" />
+            <node text="generate" />
+            <node text="delete" />
+        </node>
+        <node folded="false" text="project">
+            <node text="use" />
+            <node text="get" />
+            <node text="create" />
+            <node text="list" />
+            <node text="unset" />
+            <node text="delete" />
+        </node>
+        <node folded="false" text="context">
+            <node text="use" />
+            <node text="get" />
+            <node text="create" />
+            <node text="list" />
+            <node text="current" />
+            <node text="unset" />
+            <node text="delete" />
+        </node>
+        <node text="login" />
         <node folded="false" text="plugin">
             <node text="search" />
             <node text="upgrade" />
