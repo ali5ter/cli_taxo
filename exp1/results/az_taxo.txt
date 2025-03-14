@@ -1,78 +1,432 @@
 az
 └── account
 │   └── lock
-│   │   └── list
-│   │   └── show
-│   └── clear
-│   └── list
-│   └── set
-│   └── show
-└── acr
-│   └── credential
-│   │   └── show
-│   └── repository
-│   │   └── delete
-│   │   └── list
-│   │   └── untag
-│   └── webhook
 │   │   └── create
 │   │   └── delete
 │   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── management-group
+│   │   └── entities
+│   │   │   └── list
+│   │   └── hierarchy-settings
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── update
+│   │   └── subscription
+│   │   │   └── add
+│   │   │   └── remove
+│   │   │   └── show
+│   │   │   └── show-sub-under-mg
+│   │   └── tenant-backfill
+│   │   │   └── get
+│   │   │   └── start
+│   │   └── check-name-availability
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── clear
+│   └── get-access-token
+│   └── list
+│   └── list-locations
+│   └── set
+│   └── show
+└── acr
+│   └── cache
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── config
+│   │   └── content-trust
+│   │   │   └── show
+│   │   │   └── update
+│   └── credential
+│   │   └── renew
+│   │   └── show
+│   └── credential-set
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── encryption
+│   │   └── rotate-key
+│   │   └── show
+│   └── identity
+│   │   └── assign
+│   │   └── remove
+│   │   └── show
+│   └── network-rule
+│   │   └── add
+│   │   └── list
+│   │   └── remove
+│   └── private-endpoint-connection
+│   │   └── approve
+│   │   └── delete
+│   │   └── list
+│   │   └── reject
+│   │   └── show
+│   └── private-link-resource
+│   │   └── list
+│   └── replication
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── repository
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── show-tags
+│   │   └── untag
+│   │   └── update
+│   └── scope-map
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── task
+│   │   └── credential
+│   │   │   └── add
+│   │   │   └── list
+│   │   │   └── remove
+│   │   │   └── update
+│   │   └── identity
+│   │   │   └── assign
+│   │   │   └── remove
+│   │   │   └── show
+│   │   └── timer
+│   │   │   └── add
+│   │   │   └── list
+│   │   │   └── remove
+│   │   │   └── update
+│   │   └── cancel-run
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── list-runs
+│   │   └── logs
+│   │   └── run
+│   │   └── show
+│   │   └── show-run
+│   │   └── update
+│   │   └── update-run
+│   └── token
+│   │   └── credential
+│   │   │   └── delete
+│   │   │   └── generate
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── webhook
+│   │   └── create
+│   │   └── delete
+│   │   └── get-config
+│   │   └── list
+│   │   └── list-events
 │   │   └── ping
 │   │   └── show
 │   │   └── update
 │   └── build
+│   └── check-health
+│   └── check-name
 │   └── create
 │   └── delete
 │   └── import
 │   └── list
 │   └── login
+│   └── run
 │   └── show
+│   └── show-endpoints
+│   └── show-usage
 │   └── update
-└── acs
-│   └── dcos
-│   │   └── browse
-│   └── kubernetes
-│   │   └── browse
-│   └── browse
-│   └── create
-│   └── delete
-│   └── list
-│   └── scale
-│   └── show
-│   └── wait
 └── ad
 │   └── app
-│   │   └── list
-│   │   └── show
-│   └── sp
 │   │   └── credential
+│   │   │   └── delete
 │   │   │   └── list
 │   │   │   └── reset
+│   │   └── federated-credential
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── owner
+│   │   │   └── add
+│   │   │   └── list
+│   │   │   └── remove
+│   │   └── permission
+│   │   │   └── add
+│   │   │   └── admin-consent
+│   │   │   └── delete
+│   │   │   └── grant
+│   │   │   └── list
+│   │   │   └── list-grants
 │   │   └── create
 │   │   └── delete
 │   │   └── list
 │   │   └── show
-│   └── user
+│   │   └── update
+│   └── group
+│   │   └── member
+│   │   │   └── add
+│   │   │   └── check
+│   │   │   └── list
+│   │   │   └── remove
+│   │   └── owner
+│   │   │   └── add
+│   │   │   └── list
+│   │   │   └── remove
+│   │   └── create
+│   │   └── delete
+│   │   └── get-member-groups
 │   │   └── list
 │   │   └── show
+│   └── signed-in-user
+│   │   └── list-owned-objects
+│   │   └── show
+│   └── sp
+│   │   └── credential
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── reset
+│   │   └── owner
+│   │   │   └── list
+│   │   └── create
+│   │   └── create-for-rbac
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── user
+│   │   └── create
+│   │   └── delete
+│   │   └── get-member-groups
+│   │   └── list
+│   │   └── show
+│   │   └── update
 └── advisor
 │   └── configuration
 │   │   └── list
 │   │   └── show
+│   │   └── update
+│   └── recommendation
+│   │   └── disable
+│   │   └── enable
+│   │   └── list
+└── afd
+│   └── custom-domain
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── regenerate-validation-token
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── endpoint
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── purge
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── log-analytic
+│   │   └── location
+│   │   │   └── list
+│   │   └── metric
+│   │   │   └── list
+│   │   └── ranking
+│   │   │   └── list
+│   │   └── resource
+│   │   │   └── list
+│   └── origin
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── origin-group
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── profile
+│   │   └── log-scrubbing
+│   │   │   └── show
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── usage
+│   │   └── wait
+│   └── route
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── rule
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── rule-set
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── usage
+│   │   └── wait
+│   └── secret
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── security-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── waf-log-analytic
+│   │   └── metric
+│   │   │   └── list
+│   │   └── ranking
+│   │   │   └── list
 └── aks
+│   └── approuting
+│   │   └── zone
+│   │   │   └── add
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── update
+│   │   └── disable
+│   │   └── enable
+│   │   └── update
+│   └── command
+│   │   └── invoke
+│   │   └── result
+│   └── machine
+│   │   └── list
+│   │   └── show
+│   └── maintenanceconfiguration
+│   │   └── add
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── mesh
+│   │   └── upgrade
+│   │   │   └── complete
+│   │   │   └── rollback
+│   │   │   └── start
+│   │   └── disable
+│   │   └── disable-ingress-gateway
+│   │   └── enable
+│   │   └── enable-ingress-gateway
+│   │   └── get-revisions
+│   │   └── get-upgrades
+│   └── nodepool
+│   │   └── snapshot
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── add
+│   │   └── delete
+│   │   └── delete-machines
+│   │   └── get-upgrades
+│   │   └── list
+│   │   └── operation-abort
+│   │   └── scale
+│   │   └── show
+│   │   └── start
+│   │   └── stop
+│   │   └── update
+│   │   └── upgrade
+│   │   └── wait
+│   └── oidc-issuer
+│   │   └── rotate-signing-keys
+│   └── trustedaccess
+│   │   └── role
+│   │   │   └── list
+│   │   └── rolebinding
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
 │   └── browse
+│   └── check-acr
 │   └── create
 │   └── delete
+│   └── disable-addons
+│   └── enable-addons
+│   └── get-credentials
+│   └── get-upgrades
+│   └── get-versions
+│   └── install-cli
 │   └── list
+│   └── operation-abort
+│   └── rotate-certs
 │   └── scale
 │   └── show
+│   └── start
+│   └── stop
+│   └── update
+│   └── update-credentials
 │   └── upgrade
 │   └── wait
 └── ams
 │   └── account
+│   │   └── encryption
+│   │   │   └── set
+│   │   │   └── show
+│   │   └── identity
+│   │   │   └── assign
+│   │   │   └── remove
+│   │   │   └── show
+│   │   └── mru
+│   │   │   └── set
+│   │   │   └── show
 │   │   └── sp
 │   │   │   └── create
+│   │   │   └── reset-credentials
+│   │   └── storage
+│   │   │   └── add
+│   │   │   └── remove
+│   │   │   └── set-authentication
+│   │   │   └── sync-storage-keys
+│   │   └── check-name
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── account-filter
 │   │   └── create
 │   │   └── delete
 │   │   └── list
@@ -81,57 +435,387 @@ az
 │   └── asset
 │   │   └── create
 │   │   └── delete
+│   │   └── get-encryption-key
+│   │   └── get-sas-urls
+│   │   └── list
+│   │   └── list-streaming-locators
+│   │   └── show
+│   │   └── update
+│   └── asset-filter
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── asset-track
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── update-data
+│   └── content-key-policy
+│   │   └── option
+│   │   │   └── add
+│   │   │   └── remove
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
 │   │   └── list
 │   │   └── show
 │   │   └── update
 │   └── job
+│   │   └── cancel
+│   │   └── delete
 │   │   └── list
 │   │   └── show
 │   │   └── start
-└── appservice
-│   └── plan
-│   │   └── list
-│   │   └── show
-└── backup
-│   └── container
-│   └── item
-│   │   └── list
-│   │   └── show
-│   └── job
-│   └── policy
+│   │   └── update
+│   └── live-event
+│   │   └── create
 │   │   └── delete
 │   │   └── list
-│   │   └── set
+│   │   └── reset
 │   │   └── show
-│   └── protection
-│   │   └── disable
-│   └── restore
-│   │   └── files
-│   └── vault
+│   │   └── standby
+│   │   └── start
+│   │   └── stop
+│   │   └── update
+│   │   └── wait
+│   └── live-output
 │   │   └── create
 │   │   └── delete
 │   │   └── list
 │   │   └── show
-└── batch
-│   └── account
-│   │   └── keys
+│   └── streaming-endpoint
+│   │   └── akamai
+│   │   │   └── add
+│   │   │   └── remove
+│   │   └── create
+│   │   └── delete
+│   │   └── get-skus
+│   │   └── list
+│   │   └── scale
+│   │   └── show
+│   │   └── start
+│   │   └── stop
+│   │   └── update
+│   │   └── wait
+│   └── streaming-locator
+│   │   └── create
+│   │   └── delete
+│   │   └── get-paths
+│   │   └── list
+│   │   └── list-content-keys
+│   │   └── show
+│   └── streaming-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   └── transform
+│   │   └── output
+│   │   │   └── add
+│   │   │   └── remove
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+└── apim
+│   └── api
+│   │   └── operation
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── release
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── revision
+│   │   │   └── create
+│   │   │   └── list
+│   │   └── schema
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get-etag
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── wait
+│   │   └── versionset
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── export
+│   │   └── import
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── deletedservice
+│   │   └── list
+│   │   └── purge
+│   │   └── show
+│   └── graphql
+│   │   └── resolver
+│   │   │   └── policy
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   └── nv
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── show-secret
+│   │   └── update
+│   │   └── wait
+│   └── product
+│   │   └── api
+│   │   │   └── add
+│   │   │   └── check
+│   │   │   └── delete
 │   │   │   └── list
 │   │   └── create
 │   │   └── delete
 │   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── apply-network-updates
+│   └── backup
+│   └── check-name
+│   └── create
+│   └── delete
+│   └── list
+│   └── restore
+│   └── show
+│   └── update
+│   └── wait
+└── appconfig
+│   └── credential
+│   │   └── list
+│   │   └── regenerate
+│   └── feature
+│   │   └── filter
+│   │   │   └── add
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── delete
+│   │   └── disable
+│   │   └── enable
+│   │   └── list
+│   │   └── lock
+│   │   └── set
+│   │   └── show
+│   │   └── unlock
+│   └── identity
+│   │   └── assign
+│   │   └── remove
+│   │   └── show
+│   └── kv
+│   │   └── delete
+│   │   └── export
+│   │   └── import
+│   │   └── list
+│   │   └── lock
+│   │   └── restore
+│   │   └── set
+│   │   └── set-keyvault
+│   │   └── show
+│   │   └── unlock
+│   └── replica
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   └── revision
+│   │   └── list
+│   └── snapshot
+│   │   └── archive
+│   │   └── create
+│   │   └── list
+│   │   └── recover
+│   │   └── show
+│   └── create
+│   └── delete
+│   └── list
+│   └── list-deleted
+│   └── purge
+│   └── recover
+│   └── show
+│   └── show-deleted
+│   └── update
+└── appservice
+│   └── ase
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── list-addresses
+│   │   └── list-plans
+│   │   └── show
+│   │   └── update
+│   └── hybrid-connection
+│   │   └── set-key
+│   └── plan
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── vnet-integration
+│   │   └── list
+│   └── list-locations
+└── aro
+│   └── create
+│   └── delete
+│   └── get-admin-kubeconfig
+│   └── get-versions
+│   └── list
+│   └── list-credentials
+│   └── show
+│   └── update
+│   └── validate
+│   └── wait
+└── backup
+│   └── container
+│   │   └── list
+│   │   └── re-register
+│   │   └── register
+│   │   └── show
+│   │   └── unregister
+│   └── item
+│   │   └── list
+│   │   └── set-policy
+│   │   └── show
+│   └── job
+│   │   └── list
+│   │   └── show
+│   │   └── stop
+│   │   └── wait
+│   └── policy
+│   │   └── create
+│   │   └── delete
+│   │   └── get-default-for-vm
+│   │   └── list
+│   │   └── list-associated-items
+│   │   └── set
+│   │   └── show
+│   └── protectable-item
+│   │   └── initialize
+│   │   └── list
+│   │   └── show
+│   └── protection
+│   │   └── auto-disable-for-azurewl
+│   │   └── auto-enable-for-azurewl
+│   │   └── backup-now
+│   │   └── check-vm
+│   │   └── disable
+│   │   └── enable-for-azurefileshare
+│   │   └── enable-for-azurewl
+│   │   └── enable-for-vm
+│   │   └── resume
+│   │   └── undelete
+│   │   └── update-for-vm
+│   └── recoveryconfig
+│   │   └── show
+│   └── recoverypoint
+│   │   └── list
+│   │   └── move
+│   │   └── show
+│   │   └── show-log-chain
+│   └── restore
+│   │   └── files
+│   │   │   └── mount-rp
+│   │   │   └── unmount-rp
+│   │   └── restore-azurefiles
+│   │   └── restore-azurefileshare
+│   │   └── restore-azurewl
+│   │   └── restore-disks
+│   └── vault
+│   │   └── backup-properties
+│   │   │   └── set
+│   │   │   └── show
+│   │   └── encryption
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── identity
+│   │   │   └── assign
+│   │   │   └── remove
+│   │   │   └── show
+│   │   └── resource-guard-mapping
+│   │   │   └── delete
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── list-soft-deleted-containers
+│   │   └── show
+│   │   └── update
+└── batch
+│   └── account
+│   │   └── autostorage-keys
+│   │   │   └── sync
+│   │   └── identity
+│   │   │   └── assign
+│   │   │   └── remove
+│   │   │   └── show
+│   │   └── keys
+│   │   │   └── list
+│   │   │   └── renew
+│   │   └── network-profile
+│   │   │   └── network-rule
+│   │   │   └── set
+│   │   │   └── show
+│   │   └── create
+│   │   └── delete
+│   │   └── list
 │   │   └── login
+│   │   └── outbound-endpoints
 │   │   └── set
 │   │   └── show
 │   └── application
+│   │   └── package
+│   │   │   └── activate
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── summary
+│   │   │   └── list
+│   │   │   └── show
 │   │   └── create
 │   │   └── delete
 │   │   └── list
 │   │   └── set
 │   │   └── show
-│   └── certificate
-│   │   └── list
-│   │   └── show
 │   └── job
+│   │   └── prep-release-status
+│   │   │   └── list
+│   │   └── task-counts
+│   │   │   └── show
+│   │   └── create
+│   │   └── delete
+│   │   └── disable
+│   │   └── enable
+│   │   └── list
+│   │   └── reset
+│   │   └── set
+│   │   └── show
+│   │   └── stop
+│   └── job-schedule
 │   │   └── create
 │   │   └── delete
 │   │   └── disable
@@ -142,25 +826,41 @@ az
 │   │   └── show
 │   │   └── stop
 │   └── location
+│   │   └── quotas
+│   │   │   └── show
+│   │   └── list-skus
 │   └── node
 │   │   └── file
 │   │   │   └── delete
+│   │   │   └── download
 │   │   │   └── list
 │   │   │   └── show
+│   │   └── remote-login-settings
+│   │   │   └── show
 │   │   └── scheduling
+│   │   │   └── disable
 │   │   │   └── enable
+│   │   └── service-logs
+│   │   │   └── upload
 │   │   └── user
+│   │   │   └── create
+│   │   │   └── delete
 │   │   │   └── reset
 │   │   └── delete
 │   │   └── list
 │   │   └── reboot
-│   │   └── reimage
 │   │   └── show
 │   └── pool
 │   │   └── autoscale
 │   │   │   └── disable
 │   │   │   └── enable
-│   │   └── os
+│   │   │   └── evaluate
+│   │   └── node-counts
+│   │   │   └── list
+│   │   └── supported-images
+│   │   │   └── list
+│   │   └── usage-metrics
+│   │   │   └── list
 │   │   └── create
 │   │   └── delete
 │   │   └── list
@@ -168,127 +868,828 @@ az
 │   │   └── resize
 │   │   └── set
 │   │   └── show
+│   └── private-endpoint-connection
+│   │   └── list
+│   │   └── show
+│   └── private-link-resource
+│   │   └── list
+│   │   └── show
 │   └── task
 │   │   └── file
 │   │   │   └── delete
+│   │   │   └── download
 │   │   │   └── list
 │   │   │   └── show
 │   │   └── subtask
+│   │   │   └── list
 │   │   └── create
 │   │   └── delete
 │   │   └── list
+│   │   └── reactivate
 │   │   └── reset
 │   │   └── show
 │   │   └── stop
-└── batchai
-│   └── cluster
-│   │   └── file
-│   │   └── node
-│   │   └── create
-│   │   └── delete
-│   │   └── list
-│   │   └── resize
-│   │   └── show
-│   └── experiment
-│   │   └── list
-│   │   └── show
-│   └── job
-│   │   └── file
-│   │   │   └── list
-│   │   └── node
-│   │   └── create
-│   │   └── delete
-│   │   └── list
-│   │   └── show
-│   │   └── wait
-│   └── workspace
-│   │   └── list
-│   │   └── show
+└── bicep
+│   └── build
+│   └── build-params
+│   └── decompile
+│   └── decompile-params
+│   └── format
+│   └── generate-params
+│   └── install
+│   └── lint
+│   └── list-versions
+│   └── publish
+│   └── restore
+│   └── uninstall
+│   └── upgrade
+│   └── version
 └── billing
+│   └── enrollment-account
+│   │   └── billing-permission
+│   │   │   └── list
+│   │   └── list
+│   │   └── show
 │   └── invoice
+│   │   └── list
+│   │   └── show
 │   └── period
+│   │   └── list
+│   │   └── show
+│   └── transfer
+│   │   └── accept-transfer
+│   │   └── list
+│   │   └── show
+└── bot
+│   └── authsetting
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── list-providers
+│   │   └── show
+│   └── webchat
+│   │   └── show
+│   └── create
+│   └── delete
+│   └── prepare-deploy
+│   └── show
+│   └── update
+└── cache
+│   └── delete
+│   └── list
+│   └── purge
+│   └── show
+└── capacity
+│   └── reservation
+│   │   └── group
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
 └── cdn
+│   └── custom-domain
+│   │   └── create
+│   │   └── delete
+│   │   └── disable-https
+│   │   └── enable-https
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── edge-node
+│   │   └── list
 │   └── endpoint
 │   │   └── create
 │   │   └── delete
 │   │   └── list
 │   │   └── load
+│   │   └── name-exists
 │   │   └── purge
 │   │   └── show
 │   │   └── start
 │   │   └── stop
 │   │   └── update
+│   │   └── validate-custom-domain
+│   │   └── wait
 │   └── origin
-│   └── profile
+│   │   └── create
+│   │   └── delete
 │   │   └── list
 │   │   └── show
-│   │   └── usage
+│   │   └── update
+│   │   └── wait
+│   └── origin-group
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── name-exists
 │   └── usage
 └── cloud
 │   └── list
+│   └── list-profiles
 │   └── register
 │   └── set
 │   └── show
 │   └── unregister
 │   └── update
-└── consumption
-│   └── budget
+└── cognitiveservices
+│   └── account
+│   │   └── commitment-plan
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── deployment
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── identity
+│   │   │   └── assign
+│   │   │   └── remove
+│   │   │   └── show
+│   │   └── keys
+│   │   │   └── list
+│   │   │   └── regenerate
+│   │   └── network-rule
+│   │   │   └── add
+│   │   │   └── list
+│   │   │   └── remove
+│   │   └── create
+│   │   └── delete
 │   │   └── list
+│   │   └── list-deleted
+│   │   └── list-kinds
+│   │   └── list-models
+│   │   └── list-skus
+│   │   └── list-usage
+│   │   └── purge
+│   │   └── recover
 │   │   └── show
-│   └── pricesheet
+│   │   └── show-deleted
+│   │   └── update
+│   └── commitment-tier
+│   │   └── list
+│   └── model
+│   │   └── list
 │   └── usage
+│   │   └── list
+└── connection
+│   └── create
+│   │   └── app-insights
+│   │   └── appconfig
+│   │   └── confluent-cloud
+│   │   └── cosmos-cassandra
+│   │   └── cosmos-gremlin
+│   │   └── cosmos-mongo
+│   │   └── cosmos-sql
+│   │   └── cosmos-table
+│   │   └── eventhub
+│   │   └── keyvault
+│   │   └── mysql
+│   │   └── mysql-flexible
+│   │   └── postgres
+│   │   └── postgres-flexible
+│   │   └── redis
+│   │   └── redis-enterprise
+│   │   └── servicebus
+│   │   └── signalr
+│   │   └── sql
+│   │   └── storage-blob
+│   │   └── storage-file
+│   │   └── storage-queue
+│   │   └── storage-table
+│   │   └── webpubsub
+│   └── preview-configuration
+│   │   └── app-insights
+│   │   └── appconfig
+│   │   └── confluent-cloud
+│   │   └── cosmos-cassandra
+│   │   └── cosmos-gremlin
+│   │   └── cosmos-mongo
+│   │   └── cosmos-sql
+│   │   └── cosmos-table
+│   │   └── eventhub
+│   │   └── keyvault
+│   │   └── mysql
+│   │   └── mysql-flexible
+│   │   └── postgres
+│   │   └── postgres-flexible
+│   │   └── redis
+│   │   └── redis-enterprise
+│   │   └── servicebus
+│   │   └── signalr
+│   │   └── sql
+│   │   └── storage-blob
+│   │   └── storage-file
+│   │   └── storage-queue
+│   │   └── storage-table
+│   │   └── webpubsub
+│   └── update
+│   │   └── app-insights
+│   │   └── appconfig
+│   │   └── confluent-cloud
+│   │   └── cosmos-cassandra
+│   │   └── cosmos-gremlin
+│   │   └── cosmos-mongo
+│   │   └── cosmos-sql
+│   │   └── cosmos-table
+│   │   └── eventhub
+│   │   └── keyvault
+│   │   └── mysql
+│   │   └── mysql-flexible
+│   │   └── postgres
+│   │   └── postgres-flexible
+│   │   └── redis
+│   │   └── redis-enterprise
+│   │   └── servicebus
+│   │   └── signalr
+│   │   └── sql
+│   │   └── storage-blob
+│   │   └── storage-file
+│   │   └── storage-queue
+│   │   └── storage-table
+│   │   └── webpubsub
+│   └── delete
+│   └── generate-configuration
+│   └── list
+│   └── list-support-types
+│   └── show
+│   └── validate
+│   └── wait
 └── container
+│   └── container-group-profile
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── list-revisions
+│   │   └── show
+│   │   └── show-revision
+│   └── attach
+│   └── create
+│   └── delete
 │   └── exec
+│   └── export
 │   └── list
 │   └── logs
+│   └── restart
 │   └── show
-└── cosmosdb
-│   └── collection
+│   └── start
+│   └── stop
+└── containerapp
+│   └── auth
+│   │   └── apple
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── facebook
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── github
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── google
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── microsoft
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── openid-connect
+│   │   │   └── add
+│   │   │   └── remove
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── twitter
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── show
+│   │   └── update
+│   └── compose
+│   │   └── create
+│   └── connection
+│   │   └── create
+│   │   │   └── app-insights
+│   │   │   └── appconfig
+│   │   │   └── cognitiveservices
+│   │   │   └── confluent-cloud
+│   │   │   └── containerapp
+│   │   │   └── cosmos-cassandra
+│   │   │   └── cosmos-gremlin
+│   │   │   └── cosmos-mongo
+│   │   │   └── cosmos-sql
+│   │   │   └── cosmos-table
+│   │   │   └── eventhub
+│   │   │   └── fabric-sql
+│   │   │   └── keyvault
+│   │   │   └── mysql-flexible
+│   │   │   └── postgres-flexible
+│   │   │   └── redis
+│   │   │   └── redis-enterprise
+│   │   │   └── servicebus
+│   │   │   └── signalr
+│   │   │   └── sql
+│   │   │   └── storage-blob
+│   │   │   └── storage-file
+│   │   │   └── storage-queue
+│   │   │   └── storage-table
+│   │   │   └── webpubsub
+│   │   └── update
+│   │   │   └── app-insights
+│   │   │   └── appconfig
+│   │   │   └── cognitiveservices
+│   │   │   └── confluent-cloud
+│   │   │   └── containerapp
+│   │   │   └── cosmos-cassandra
+│   │   │   └── cosmos-gremlin
+│   │   │   └── cosmos-mongo
+│   │   │   └── cosmos-sql
+│   │   │   └── cosmos-table
+│   │   │   └── eventhub
+│   │   │   └── fabric-sql
+│   │   │   └── keyvault
+│   │   │   └── mysql-flexible
+│   │   │   └── postgres-flexible
+│   │   │   └── redis
+│   │   │   └── redis-enterprise
+│   │   │   └── servicebus
+│   │   │   └── signalr
+│   │   │   └── sql
+│   │   │   └── storage-blob
+│   │   │   └── storage-file
+│   │   │   └── storage-queue
+│   │   │   └── storage-table
+│   │   │   └── webpubsub
+│   │   └── delete
+│   │   └── list
+│   │   └── list-configuration
+│   │   └── list-support-types
+│   │   └── show
+│   │   └── validate
+│   │   └── wait
+│   └── dapr
+│   │   └── disable
+│   │   └── enable
+│   └── env
+│   │   └── certificate
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── upload
+│   │   └── dapr-component
+│   │   │   └── list
+│   │   │   └── remove
+│   │   │   └── set
+│   │   │   └── show
+│   │   └── logs
+│   │   │   └── show
+│   │   └── storage
+│   │   │   └── list
+│   │   │   └── remove
+│   │   │   └── set
+│   │   │   └── show
+│   │   └── workload-profile
+│   │   │   └── add
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── list-supported
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── list-usages
+│   │   └── show
+│   │   └── update
+│   └── github-action
+│   │   └── add
+│   │   └── delete
+│   │   └── show
+│   └── hostname
+│   │   └── add
+│   │   └── bind
+│   │   └── delete
+│   │   └── list
+│   └── identity
+│   │   └── assign
+│   │   └── remove
+│   │   └── show
+│   └── ingress
+│   │   └── access-restriction
+│   │   │   └── list
+│   │   │   └── remove
+│   │   │   └── set
+│   │   └── cors
+│   │   │   └── disable
+│   │   │   └── enable
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── sticky-sessions
+│   │   │   └── set
+│   │   │   └── show
+│   │   └── traffic
+│   │   │   └── set
+│   │   │   └── show
+│   │   └── disable
+│   │   └── enable
+│   │   └── show
+│   │   └── update
+│   └── job
+│   │   └── execution
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── identity
+│   │   │   └── assign
+│   │   │   └── remove
+│   │   │   └── show
+│   │   └── secret
+│   │   │   └── list
+│   │   │   └── remove
+│   │   │   └── set
+│   │   │   └── show
+│   │   └── create
+│   │   └── delete
 │   │   └── list
 │   │   └── show
-│   └── database
+│   │   └── start
+│   │   └── stop
+│   │   └── update
+│   └── logs
+│   │   └── show
+│   └── registry
+│   │   └── list
+│   │   └── remove
+│   │   └── set
+│   │   └── show
+│   └── replica
 │   │   └── list
 │   │   └── show
+│   └── revision
+│   │   └── label
+│   │   │   └── add
+│   │   │   └── remove
+│   │   │   └── swap
+│   │   └── activate
+│   │   └── copy
+│   │   └── deactivate
+│   │   └── list
+│   │   └── restart
+│   │   └── set-mode
+│   │   └── show
+│   └── secret
+│   │   └── list
+│   │   └── remove
+│   │   └── set
+│   │   └── show
+│   └── ssl
+│   │   └── upload
+│   └── browse
 │   └── create
+│   └── delete
+│   └── exec
+│   └── list
+│   └── list-usages
+│   └── show
+│   └── show-custom-domain-verification-id
+│   └── up
+│   └── update
+└── cosmosdb
+│   └── cassandra
+│   │   └── keyspace
+│   │   │   └── throughput
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── exists
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── table
+│   │   │   └── throughput
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── exists
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   └── gremlin
+│   │   └── database
+│   │   │   └── throughput
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── exists
+│   │   │   └── list
+│   │   │   └── restore
+│   │   │   └── show
+│   │   └── graph
+│   │   │   └── throughput
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── exists
+│   │   │   └── list
+│   │   │   └── restore
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── restorable-database
+│   │   │   └── list
+│   │   └── restorable-graph
+│   │   │   └── list
+│   │   └── restorable-resource
+│   │   │   └── list
+│   │   └── retrieve-latest-backup-time
+│   └── keys
+│   │   └── list
+│   │   └── regenerate
+│   └── locations
+│   │   └── list
+│   │   └── show
+│   └── mongodb
+│   │   └── collection
+│   │   │   └── throughput
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── exists
+│   │   │   └── list
+│   │   │   └── restore
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── database
+│   │   │   └── throughput
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── exists
+│   │   │   └── list
+│   │   │   └── restore
+│   │   │   └── show
+│   │   └── restorable-collection
+│   │   │   └── list
+│   │   └── restorable-database
+│   │   │   └── list
+│   │   └── restorable-resource
+│   │   │   └── list
+│   │   └── role
+│   │   │   └── definition
+│   │   └── user
+│   │   │   └── definition
+│   │   └── retrieve-latest-backup-time
+│   └── network-rule
+│   │   └── add
+│   │   └── list
+│   │   └── remove
+│   └── postgres
+│   │   └── cluster
+│   │   │   └── server
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── promote
+│   │   │   └── restart
+│   │   │   └── show
+│   │   │   └── start
+│   │   │   └── stop
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── configuration
+│   │   │   └── coordinator
+│   │   │   └── node
+│   │   │   └── server
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── firewall-rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── role
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── check-name-availability
+│   └── private-endpoint-connection
+│   │   └── approve
+│   │   └── delete
+│   │   └── reject
+│   │   └── show
+│   └── private-link-resource
+│   │   └── list
+│   └── restorable-database-account
+│   │   └── list
+│   │   └── show
+│   └── service
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── sql
+│   │   └── container
+│   │   │   └── throughput
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── exists
+│   │   │   └── list
+│   │   │   └── restore
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── database
+│   │   │   └── throughput
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── exists
+│   │   │   └── list
+│   │   │   └── restore
+│   │   │   └── show
+│   │   └── restorable-container
+│   │   │   └── list
+│   │   └── restorable-database
+│   │   │   └── list
+│   │   └── restorable-resource
+│   │   │   └── list
+│   │   └── role
+│   │   │   └── assignment
+│   │   │   └── definition
+│   │   └── stored-procedure
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── trigger
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── user-defined-function
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── retrieve-latest-backup-time
+│   └── table
+│   │   └── restorable-resource
+│   │   │   └── list
+│   │   └── restorable-table
+│   │   │   └── list
+│   │   └── throughput
+│   │   │   └── migrate
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── exists
+│   │   └── list
+│   │   └── restore
+│   │   └── retrieve-latest-backup-time
+│   │   └── show
+│   └── check-name-exists
+│   └── create
+│   └── delete
+│   └── failover-priority-change
+│   └── list
+│   └── offline-region
+│   └── restore
+│   └── show
+│   └── update
+└── data-boundary
+│   └── create
+│   └── show
+│   └── show-tenant
+└── deployment
+│   └── group
+│   │   └── cancel
+│   │   └── create
+│   │   └── delete
+│   │   └── export
+│   │   └── list
+│   │   └── show
+│   │   └── validate
+│   │   └── wait
+│   │   └── what-if
+│   └── mg
+│   │   └── cancel
+│   │   └── create
+│   │   └── delete
+│   │   └── export
+│   │   └── list
+│   │   └── show
+│   │   └── validate
+│   │   └── wait
+│   │   └── what-if
+│   └── operation
+│   │   └── group
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── mg
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── sub
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── tenant
+│   │   │   └── list
+│   │   │   └── show
+│   └── sub
+│   │   └── cancel
+│   │   └── create
+│   │   └── delete
+│   │   └── export
+│   │   └── list
+│   │   └── show
+│   │   └── validate
+│   │   └── wait
+│   │   └── what-if
+│   └── tenant
+│   │   └── cancel
+│   │   └── create
+│   │   └── delete
+│   │   └── export
+│   │   └── list
+│   │   └── show
+│   │   └── validate
+│   │   └── wait
+│   │   └── what-if
+└── deployment-scripts
 │   └── delete
 │   └── list
 │   └── show
-│   └── update
+│   └── show-log
 └── disk
+│   └── create
+│   └── delete
+│   └── grant-access
+│   └── list
+│   └── revoke-access
+│   └── show
+│   └── update
+│   └── wait
+└── disk-access
 │   └── create
 │   └── delete
 │   └── list
 │   └── show
 │   └── update
 │   └── wait
-└── dla
-│   └── job
-│   │   └── pipeline
-│   │   └── cancel
-│   │   └── list
+└── disk-encryption-set
+│   └── identity
+│   │   └── assign
+│   │   └── remove
 │   │   └── show
-│   │   └── submit
-│   │   └── wait
-└── dls
-│   └── fs
-│   │   └── access
-│   │   │   └── set
-│   │   │   └── show
-│   │   └── append
-│   │   └── create
-│   │   └── delete
-│   │   └── download
-│   │   └── join
-│   │   └── list
-│   │   └── move
-│   │   └── preview
-│   │   └── show
-│   │   └── test
-│   │   └── upload
+│   └── create
+│   └── delete
+│   └── list
+│   └── list-associated-resources
+│   └── show
+│   └── update
+│   └── wait
 └── dms
 │   └── project
 │   │   └── task
 │   │   │   └── cancel
+│   │   │   └── check-name
+│   │   │   └── create
+│   │   │   └── cutover
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── check-name
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   └── check-name
+│   └── check-status
+│   └── create
+│   └── delete
+│   └── list
+│   └── list-skus
+│   └── show
+│   └── start
+│   └── stop
+│   └── wait
+└── eventgrid
+│   └── domain
+│   │   └── event-subscription
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── key
+│   │   │   └── list
+│   │   │   └── regenerate
+│   │   └── topic
+│   │   │   └── event-subscription
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── list
@@ -297,64 +1698,373 @@ az
 │   │   └── delete
 │   │   └── list
 │   │   └── show
-│   └── create
-│   └── delete
-│   └── list
-│   └── show
-│   └── start
-│   └── stop
-│   └── wait
-└── eventgrid
-│   └── topic
-│   │   └── key
-│   │   │   └── list
-│   │   └── list
-│   │   └── show
-└── eventhubs
-│   └── eventhub
+│   │   └── update
+│   └── event-subscription
 │   │   └── create
 │   │   └── delete
 │   │   └── list
 │   │   └── show
 │   │   └── update
-│   └── namespace
+│   └── extension-topic
+│   │   └── show
+│   └── partner
+│   │   └── configuration
+│   │   │   └── authorize
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── unauthorize
+│   │   │   └── update
+│   │   └── destination
+│   │   │   └── activate
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── namespace
+│   │   │   └── channel
+│   │   │   └── key
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── registration
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── topic
+│   │   │   └── event-subscription
+│   │   │   └── activate
+│   │   │   └── deactivate
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── verified-partner
+│   │   │   └── list
+│   │   │   └── show
+│   └── system-topic
+│   │   └── event-subscription
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── topic
+│   │   └── event-subscription
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── key
+│   │   │   └── list
+│   │   │   └── regenerate
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── topic-type
+│   │   └── list
+│   │   └── list-event-types
+│   │   └── show
+└── eventhubs
+│   └── cluster
+│   │   └── namespace
+│   │   │   └── list
+│   │   └── available-region
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── eventhub
+│   │   └── authorization-rule
+│   │   │   └── keys
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── consumer-group
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── georecovery-alias
+│   │   └── authorization-rule
+│   │   │   └── keys
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── break-pair
 │   │   └── create
 │   │   └── delete
 │   │   └── exists
+│   │   └── fail-over
+│   │   └── list
+│   │   └── set
+│   │   └── show
+│   └── namespace
+│   │   └── application-group
+│   │   │   └── policy
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── authorization-rule
+│   │   │   └── keys
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── encryption
+│   │   │   └── add
+│   │   │   └── remove
+│   │   └── identity
+│   │   │   └── assign
+│   │   │   └── remove
+│   │   └── network-rule-set
+│   │   │   └── ip-rule
+│   │   │   └── virtual-network-rule
+│   │   │   └── create
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── private-endpoint-connection
+│   │   │   └── approve
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── reject
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── private-link-resource
+│   │   │   └── show
+│   │   └── replica
+│   │   │   └── add
+│   │   │   └── remove
+│   │   └── schema-registry
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── exists
+│   │   └── failover
 │   │   └── list
 │   │   └── show
 │   │   └── update
+│   │   └── wait
 └── extension
 │   └── add
 │   └── list
+│   └── list-available
+│   └── list-versions
 │   └── remove
 │   └── show
 │   └── update
 └── feature
+│   └── registration
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
 │   └── list
+│   └── register
 │   └── show
+│   └── unregister
 └── functionapp
 │   └── config
+│   │   └── access-restriction
+│   │   │   └── add
+│   │   │   └── remove
+│   │   │   └── set
+│   │   │   └── show
+│   │   └── appsettings
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── set
+│   │   └── container
+│   │   │   └── delete
+│   │   │   └── set
+│   │   │   └── show
 │   │   └── hostname
 │   │   │   └── add
 │   │   │   └── delete
+│   │   │   └── get-external-ip
 │   │   │   └── list
 │   │   └── ssl
 │   │   │   └── bind
+│   │   │   └── delete
+│   │   │   └── import
 │   │   │   └── list
+│   │   │   └── show
+│   │   │   └── unbind
+│   │   │   └── upload
+│   │   └── set
+│   │   └── show
+│   └── connection
+│   │   └── create
+│   │   │   └── app-insights
+│   │   │   └── appconfig
+│   │   │   └── cognitiveservices
+│   │   │   └── confluent-cloud
+│   │   │   └── cosmos-cassandra
+│   │   │   └── cosmos-gremlin
+│   │   │   └── cosmos-mongo
+│   │   │   └── cosmos-sql
+│   │   │   └── cosmos-table
+│   │   │   └── eventhub
+│   │   │   └── fabric-sql
+│   │   │   └── keyvault
+│   │   │   └── mysql-flexible
+│   │   │   └── postgres-flexible
+│   │   │   └── redis
+│   │   │   └── redis-enterprise
+│   │   │   └── servicebus
+│   │   │   └── signalr
+│   │   │   └── sql
+│   │   │   └── storage-blob
+│   │   │   └── storage-file
+│   │   │   └── storage-queue
+│   │   │   └── storage-table
+│   │   │   └── webpubsub
+│   │   └── update
+│   │   │   └── app-insights
+│   │   │   └── appconfig
+│   │   │   └── cognitiveservices
+│   │   │   └── confluent-cloud
+│   │   │   └── cosmos-cassandra
+│   │   │   └── cosmos-gremlin
+│   │   │   └── cosmos-mongo
+│   │   │   └── cosmos-sql
+│   │   │   └── cosmos-table
+│   │   │   └── eventhub
+│   │   │   └── fabric-sql
+│   │   │   └── keyvault
+│   │   │   └── mysql-flexible
+│   │   │   └── postgres-flexible
+│   │   │   └── redis
+│   │   │   └── redis-enterprise
+│   │   │   └── servicebus
+│   │   │   └── signalr
+│   │   │   └── sql
+│   │   │   └── storage-blob
+│   │   │   └── storage-file
+│   │   │   └── storage-queue
+│   │   │   └── storage-table
+│   │   │   └── webpubsub
+│   │   └── delete
+│   │   └── list
+│   │   └── list-configuration
+│   │   └── list-support-types
+│   │   └── show
+│   │   └── validate
+│   │   └── wait
+│   └── cors
+│   │   └── add
+│   │   └── credentials
+│   │   └── remove
+│   │   └── show
 │   └── deployment
+│   │   └── config
+│   │   │   └── set
+│   │   │   └── show
+│   │   └── container
+│   │   │   └── config
+│   │   │   └── show-cd-url
+│   │   └── github-actions
+│   │   │   └── add
+│   │   │   └── remove
+│   │   └── slot
+│   │   │   └── auto-swap
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── swap
 │   │   └── source
 │   │   │   └── config
+│   │   │   └── config-local-git
+│   │   │   └── config-zip
 │   │   │   └── delete
 │   │   │   └── show
 │   │   │   └── sync
+│   │   │   └── update-token
 │   │   └── user
 │   │   │   └── set
-│   └── identity
+│   │   │   └── show
+│   │   └── list-publishing-credentials
+│   │   └── list-publishing-profiles
+│   └── function
+│   │   └── keys
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── set
+│   │   └── delete
+│   │   └── list
 │   │   └── show
+│   └── hybrid-connection
+│   │   └── add
+│   │   └── list
+│   │   └── remove
+│   └── identity
+│   │   └── assign
+│   │   └── remove
+│   │   └── show
+│   └── keys
+│   │   └── delete
+│   │   └── list
+│   │   └── set
+│   └── log
+│   │   └── deployment
+│   │   │   └── list
+│   │   │   └── show
+│   └── plan
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── runtime
+│   │   └── config
+│   │   │   └── set
+│   │   │   └── show
+│   └── scale
+│   │   └── config
+│   │   │   └── always-ready
+│   │   │   └── set
+│   │   │   └── show
+│   └── vnet-integration
+│   │   └── add
+│   │   └── list
+│   │   └── remove
 │   └── create
 │   └── delete
 │   └── list
+│   └── list-consumption-locations
+│   └── list-flexconsumption-locations
+│   └── list-flexconsumption-runtimes
+│   └── list-runtimes
 │   └── restart
 │   └── show
 │   └── start
@@ -362,8 +2072,11 @@ az
 │   └── update
 └── group
 │   └── lock
+│   │   └── create
+│   │   └── delete
 │   │   └── list
 │   │   └── show
+│   │   └── update
 │   └── create
 │   └── delete
 │   └── exists
@@ -372,23 +2085,151 @@ az
 │   └── show
 │   └── update
 │   └── wait
+└── hdinsight
+│   └── application
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── wait
+│   └── autoscale
+│   │   └── condition
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── create
+│   │   └── delete
+│   │   └── list-timezones
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── azure-monitor
+│   │   └── disable
+│   │   └── enable
+│   │   └── show
+│   └── azure-monitor-agent
+│   │   └── disable
+│   │   └── enable
+│   │   └── show
+│   └── host
+│   │   └── list
+│   │   └── restart
+│   └── monitor
+│   │   └── disable
+│   │   └── enable
+│   │   └── show
+│   └── script-action
+│   │   └── delete
+│   │   └── execute
+│   │   └── list
+│   │   └── list-execution-history
+│   │   └── promote
+│   │   └── show-execution-details
+│   └── create
+│   └── delete
+│   └── list
+│   └── list-usage
+│   └── resize
+│   └── rotate-disk-encryption-key
+│   └── show
+│   └── update
+│   └── wait
 └── identity
+│   └── federated-credential
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── create
+│   └── delete
+│   └── list
+│   └── list-operations
+│   └── list-resources
+│   └── show
+└── image
+│   └── builder
+│   │   └── customizer
+│   │   │   └── add
+│   │   │   └── clear
+│   │   │   └── remove
+│   │   └── error-handler
+│   │   │   └── add
+│   │   │   └── remove
+│   │   │   └── show
+│   │   └── identity
+│   │   │   └── assign
+│   │   │   └── remove
+│   │   │   └── show
+│   │   └── optimizer
+│   │   │   └── add
+│   │   │   └── remove
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── output
+│   │   │   └── versioning
+│   │   │   └── add
+│   │   │   └── clear
+│   │   │   └── remove
+│   │   └── trigger
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── wait
+│   │   └── validator
+│   │   │   └── add
+│   │   │   └── remove
+│   │   │   └── show
+│   │   └── cancel
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── run
+│   │   └── show
+│   │   └── show-runs
+│   │   └── update
+│   │   └── wait
 │   └── create
 │   └── delete
 │   └── list
 │   └── show
-└── image
-│   └── list
-│   └── show
+│   └── update
+│   └── wait
 └── iot
-│   └── dps
-│   │   └── certificate
+│   └── central
+│   │   └── app
+│   │   │   └── identity
+│   │   │   └── private-endpoint-connection
+│   │   │   └── private-link-resource
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── list
 │   │   │   └── show
 │   │   │   └── update
+│   └── dps
+│   │   └── certificate
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── generate-verification-code
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
 │   │   │   └── verify
+│   │   └── linked-hub
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── policy
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
 │   │   └── create
 │   │   └── delete
 │   │   └── list
@@ -398,291 +2239,2247 @@ az
 │   │   └── certificate
 │   │   │   └── create
 │   │   │   └── delete
+│   │   │   └── generate-verification-code
 │   │   │   └── list
 │   │   │   └── show
 │   │   │   └── update
 │   │   │   └── verify
-│   │   └── job
+│   │   └── consumer-group
+│   │   │   └── create
+│   │   │   └── delete
 │   │   │   └── list
 │   │   │   └── show
-│   │   └── policy
+│   │   └── identity
+│   │   │   └── assign
+│   │   │   └── remove
+│   │   │   └── show
+│   │   └── message-enrichment
+│   │   │   └── create
+│   │   │   └── delete
 │   │   │   └── list
+│   │   │   └── update
+│   │   └── policy
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── renew-key
 │   │   │   └── show
 │   │   └── create
 │   │   └── delete
 │   │   └── list
+│   │   └── list-skus
+│   │   └── manual-failover
 │   │   └── show
+│   │   └── show-quota-metrics
+│   │   └── show-stats
 │   │   └── update
+│   │   └── wait
 └── keyvault
+│   └── backup
+│   │   └── start
 │   └── certificate
 │   │   └── contact
 │   │   │   └── add
+│   │   │   └── delete
 │   │   │   └── list
 │   │   └── issuer
 │   │   │   └── admin
+│   │   │   └── create
+│   │   │   └── delete
 │   │   │   └── list
 │   │   │   └── show
+│   │   │   └── update
 │   │   └── pending
+│   │   │   └── delete
 │   │   │   └── merge
 │   │   │   └── show
+│   │   └── backup
+│   │   └── create
+│   │   └── delete
+│   │   └── download
+│   │   └── get-default-policy
+│   │   └── import
+│   │   └── list
+│   │   └── list-deleted
+│   │   └── list-versions
+│   │   └── purge
+│   │   └── recover
+│   │   └── restore
+│   │   └── set-attributes
+│   │   └── show
+│   │   └── show-deleted
+│   └── key
+│   │   └── rotation-policy
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── backup
 │   │   └── create
 │   │   └── delete
 │   │   └── download
 │   │   └── import
 │   │   └── list
+│   │   └── list-deleted
+│   │   └── list-versions
 │   │   └── purge
-│   │   └── recover
-│   │   └── show
-│   └── key
-│   │   └── backup
-│   │   └── create
-│   │   └── delete
-│   │   └── import
-│   │   └── list
-│   │   └── purge
+│   │   └── random
 │   │   └── recover
 │   │   └── restore
+│   │   └── rotate
+│   │   └── set-attributes
 │   │   └── show
+│   │   └── show-deleted
+│   │   └── sign
+│   │   └── verify
+│   └── network-rule
+│   │   └── add
+│   │   └── list
+│   │   └── remove
+│   │   └── wait
+│   └── private-endpoint-connection
+│   │   └── approve
+│   │   └── delete
+│   │   └── list
+│   │   └── reject
+│   │   └── show
+│   │   └── wait
+│   └── private-link-resource
+│   │   └── list
+│   └── region
+│   │   └── add
+│   │   └── list
+│   │   └── remove
+│   │   └── wait
+│   └── restore
+│   │   └── start
+│   └── role
+│   │   └── assignment
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   └── definition
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
 │   └── secret
 │   │   └── backup
 │   │   └── delete
 │   │   └── download
 │   │   └── list
+│   │   └── list-deleted
+│   │   └── list-versions
 │   │   └── purge
 │   │   └── recover
 │   │   └── restore
 │   │   └── set
+│   │   └── set-attributes
 │   │   └── show
+│   │   └── show-deleted
+│   └── security-domain
+│   │   └── download
+│   │   └── init-recovery
+│   │   └── restore-blob
+│   │   └── upload
+│   │   └── wait
+│   └── setting
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── check-name
+│   └── create
+│   └── delete
+│   └── delete-policy
+│   └── list
+│   └── list-deleted
+│   └── purge
+│   └── recover
+│   └── set-policy
+│   └── show
+│   └── show-deleted
+│   └── update
+│   └── update-hsm
+│   └── wait
+│   └── wait-hsm
+└── lock
 │   └── create
 │   └── delete
 │   └── list
-│   └── purge
-│   └── recover
 │   └── show
 │   └── update
-└── lab
-│   └── artifact
-│   └── environment
-│   │   └── list
-│   │   └── show
-│   └── formula
-│   │   └── delete
-│   │   └── list
-│   │   └── show
-│   └── secret
-│   │   └── list
-│   │   └── set
-│   │   └── show
-│   └── vm
-│   │   └── claim
+└── logicapp
+│   └── config
+│   │   └── appsettings
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── set
+│   └── deployment
+│   │   └── source
+│   │   │   └── config-zip
+│   └── create
+│   └── delete
+│   └── list
+│   └── restart
+│   └── scale
+│   └── show
+│   └── start
+│   └── stop
+│   └── update
+└── managed-cassandra
+│   └── cluster
 │   │   └── create
+│   │   └── deallocate
 │   │   └── delete
+│   │   └── invoke-command
 │   │   └── list
 │   │   └── show
 │   │   └── start
-│   │   └── stop
-│   └── vnet
-│   │   └── get
-│   └── delete
-│   └── get
-└── lock
-│   └── list
-│   └── show
-└── managedapp
-│   └── create
-│   └── delete
-│   └── list
-│   └── show
-└── maps
-└── monitor
-│   └── alert
+│   │   └── status
+│   │   └── update
+│   └── datacenter
 │   │   └── create
 │   │   └── delete
 │   │   └── list
 │   │   └── show
 │   │   └── update
+└── managedapp
+│   └── definition
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── create
+│   └── delete
+│   └── list
+│   └── show
+└── managedservices
+│   └── assignment
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── wait
+│   └── definition
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── wait
+└── maps
+│   └── account
+│   │   └── keys
+│   │   │   └── list
+│   │   │   └── renew
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── creator
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── map
+│   │   └── list-operation
+└── mariadb
+│   └── db
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   └── server
+│   │   └── configuration
+│   │   │   └── list
+│   │   │   └── set
+│   │   │   └── show
+│   │   └── firewall-rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── private-endpoint-connection
+│   │   │   └── approve
+│   │   │   └── delete
+│   │   │   └── reject
+│   │   │   └── show
+│   │   └── private-link-resource
+│   │   │   └── list
+│   │   └── replica
+│   │   │   └── create
+│   │   │   └── list
+│   │   │   └── stop
+│   │   └── vnet-rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── georestore
+│   │   └── list
+│   │   └── list-skus
+│   │   └── restart
+│   │   └── restore
+│   │   └── show
+│   │   └── show-connection-string
+│   │   └── start
+│   │   └── stop
+│   │   └── update
+│   │   └── wait
+│   └── server-logs
+│   │   └── download
+│   │   └── list
+└── monitor
+│   └── account
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── action-group
+│   │   └── test-notifications
+│   │   │   └── create
+│   │   └── create
+│   │   └── delete
+│   │   └── enable-receiver
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── activity-log
+│   │   └── alert
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── list
+│   │   └── list-categories
 │   └── autoscale
+│   │   └── profile
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── list-timezones
+│   │   │   └── show
 │   │   └── rule
 │   │   │   └── copy
+│   │   │   └── create
+│   │   │   └── delete
 │   │   │   └── list
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── show-predictive-metric
+│   │   └── update
+│   └── diagnostic-settings
+│   │   └── categories
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── subscription
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── log-analytics
+│   │   └── cluster
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── workspace
+│   │   │   └── data-export
+│   │   │   └── linked-service
+│   │   │   └── linked-storage
+│   │   │   └── pack
+│   │   │   └── saved-search
+│   │   │   └── table
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get-schema
+│   │   │   └── get-shared-keys
+│   │   │   └── list
+│   │   │   └── list-available-service-tier
+│   │   │   └── list-deleted-workspaces
+│   │   │   └── list-link-target
+│   │   │   └── list-management-groups
+│   │   │   └── list-usages
+│   │   │   └── recover
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   └── log-profiles
 │   │   └── create
 │   │   └── delete
 │   │   └── list
 │   │   └── show
 │   │   └── update
 │   └── metrics
+│   │   └── alert
+│   │   │   └── condition
+│   │   │   └── dimension
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
 │   │   └── list
+│   │   └── list-definitions
+│   │   └── list-sub
+│   │   └── list-sub-definitions
 └── mysql
 │   └── db
+│   │   └── create
+│   │   └── delete
 │   │   └── list
 │   │   └── show
+│   └── flexible-server
+│   │   └── ad-admin
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── wait
+│   │   └── advanced-threat-protection-setting
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── backup
+│   │   │   └── create
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── db
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── deploy
+│   │   │   └── run
+│   │   │   └── setup
+│   │   └── firewall-rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── gtid
+│   │   │   └── reset
+│   │   └── identity
+│   │   │   └── assign
+│   │   │   └── list
+│   │   │   └── remove
+│   │   │   └── show
+│   │   └── import
+│   │   │   └── create
+│   │   │   └── stop-replication
+│   │   └── maintenance
+│   │   │   └── list
+│   │   │   └── reschedule
+│   │   │   └── show
+│   │   └── parameter
+│   │   │   └── list
+│   │   │   └── set
+│   │   │   └── set-batch
+│   │   │   └── show
+│   │   └── replica
+│   │   │   └── create
+│   │   │   └── list
+│   │   │   └── stop-replication
+│   │   └── server-logs
+│   │   │   └── download
+│   │   │   └── list
+│   │   └── create
+│   │   └── delete
+│   │   └── detach-vnet
+│   │   └── geo-restore
+│   │   └── list
+│   │   └── list-skus
+│   │   └── restart
+│   │   └── restore
+│   │   └── show
+│   │   └── show-connection-string
+│   │   └── start
+│   │   └── stop
+│   │   └── update
+│   │   └── upgrade
+│   │   └── wait
 │   └── server
+│   │   └── ad-admin
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── wait
+│   │   └── configuration
+│   │   │   └── list
+│   │   │   └── set
+│   │   │   └── show
+│   │   └── firewall-rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── key
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── private-endpoint-connection
+│   │   │   └── approve
+│   │   │   └── delete
+│   │   │   └── reject
+│   │   │   └── show
+│   │   └── private-link-resource
+│   │   │   └── list
+│   │   └── replica
+│   │   │   └── create
+│   │   │   └── list
+│   │   │   └── stop
+│   │   └── vnet-rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
 │   │   └── create
 │   │   └── delete
 │   │   └── georestore
 │   │   └── list
+│   │   └── list-skus
+│   │   └── restart
 │   │   └── restore
+│   │   └── show
+│   │   └── show-connection-string
+│   │   └── start
+│   │   └── stop
+│   │   └── update
+│   │   └── upgrade
+│   │   └── wait
+│   └── server-logs
+│   │   └── download
+│   │   └── list
+└── netappfiles
+│   └── account
+│   │   └── ad
+│   │   │   └── add
+│   │   │   └── list
+│   │   │   └── remove
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── backup-policy
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── backup-vault
+│   │   │   └── backup
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── change-key-vault
+│   │   └── create
+│   │   └── delete
+│   │   └── get-key-vault-status
+│   │   └── list
+│   │   └── migrate-backup
+│   │   └── renew-credentials
+│   │   └── show
+│   │   └── transitiontocmk
+│   │   └── update
+│   │   └── wait
+│   └── pool
+│   │   └── create
+│   │   └── delete
+│   │   └── list
 │   │   └── show
 │   │   └── update
 │   │   └── wait
+│   └── quota-limit
+│   │   └── list
+│   │   └── show
+│   └── resource
+│   │   └── region-info
+│   │   │   └── default
+│   │   │   └── list
+│   │   └── query-region-info
+│   └── snapshot
+│   │   └── policy
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── volumes
+│   │   │   └── wait
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── restore-files
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── subvolume
+│   │   └── metadata
+│   │   │   └── show
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── volume
+│   │   └── export-policy
+│   │   │   └── add
+│   │   │   └── list
+│   │   │   └── remove
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── latest-backup-status
+│   │   │   └── current
+│   │   └── latest-restore-status
+│   │   │   └── current
+│   │   └── quota-rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── replication
+│   │   │   └── approve
+│   │   │   └── authorize-external-replication
+│   │   │   └── finalize-external-replication
+│   │   │   └── list
+│   │   │   └── peer-external-cluster
+│   │   │   └── perform-replication-transfer
+│   │   │   └── populate-availability-zone
+│   │   │   └── re-initialize
+│   │   │   └── reestablish
+│   │   │   └── remove
+│   │   │   └── resume
+│   │   │   └── status
+│   │   │   └── suspend
+│   │   └── break-file-locks
+│   │   └── create
+│   │   └── delete
+│   │   └── finalize-relocation
+│   │   └── get-groupid-list-for-ldapuser
+│   │   └── list
+│   │   └── migrate-backup
+│   │   └── pool-change
+│   │   └── populate-availability-zone
+│   │   └── relocate
+│   │   └── reset-cifs-pw
+│   │   └── revert
+│   │   └── revert-relocation
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── volume-group
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── check-file-path-availability
+│   └── check-name-availability
+│   └── check-quota-availability
+│   └── query-network-sibling-set
+│   └── update-network-sibling-set
 └── network
-│   └── asg
-│   │   └── list
-│   │   └── show
-│   └── dns
-│   │   └── zone
+│   └── application-gateway
+│   │   └── address-pool
+│   │   │   └── create
+│   │   │   └── delete
 │   │   │   └── list
 │   │   │   └── show
-│   └── lb
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── auth-cert
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── client-cert
+│   │   │   └── add
+│   │   │   └── list
+│   │   │   └── remove
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── frontend-ip
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── frontend-port
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── http-listener
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── http-settings
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── identity
+│   │   │   └── assign
+│   │   │   └── remove
+│   │   │   └── show
+│   │   │   └── wait
+│   │   └── listener
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── private-link
+│   │   │   └── wait
 │   │   └── probe
+│   │   │   └── create
+│   │   │   └── delete
 │   │   │   └── list
 │   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── redirect-config
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── rewrite-rule
+│   │   │   └── condition
+│   │   │   └── set
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── list-request-headers
+│   │   │   └── list-response-headers
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── root-cert
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── routing-rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
 │   │   └── rule
+│   │   │   └── create
+│   │   │   └── delete
 │   │   │   └── list
 │   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── settings
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── ssl-cert
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── ssl-policy
+│   │   │   └── predefined
+│   │   │   └── list-options
+│   │   │   └── set
+│   │   │   └── show
+│   │   │   └── wait
+│   │   └── ssl-profile
+│   │   │   └── add
+│   │   │   └── list
+│   │   │   └── remove
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── url-path-map
+│   │   │   └── rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── waf-config
+│   │   │   └── list-dynamic-rule-sets
+│   │   │   └── list-rule-sets
+│   │   │   └── set
+│   │   │   └── show
+│   │   └── waf-policy
+│   │   │   └── custom-rule
+│   │   │   └── managed-rule
+│   │   │   └── policy-setting
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── show-backend-health
+│   │   └── start
+│   │   └── stop
+│   │   └── update
+│   │   └── wait
+│   └── asg
 │   │   └── create
 │   │   └── delete
 │   │   └── list
 │   │   └── show
 │   │   └── update
+│   │   └── wait
+│   └── cross-region-lb
+│   │   └── address-pool
+│   │   │   └── address
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── frontend-ip
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── custom-ip
+│   │   └── prefix
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   └── ddos-protection
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── dns
+│   │   └── record-set
+│   │   │   └── a
+│   │   │   └── aaaa
+│   │   │   └── caa
+│   │   │   └── cname
+│   │   │   └── mx
+│   │   │   └── ns
+│   │   │   └── ptr
+│   │   │   └── soa
+│   │   │   └── srv
+│   │   │   └── txt
+│   │   │   └── list
+│   │   └── zone
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── export
+│   │   │   └── import
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── list-references
+│   └── express-route
+│   │   └── auth
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── wait
+│   │   └── gateway
+│   │   │   └── connection
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── peering
+│   │   │   └── connection
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── port
+│   │   │   └── authorization
+│   │   │   └── identity
+│   │   │   └── link
+│   │   │   └── location
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── generate-loa
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── create
+│   │   └── delete
+│   │   └── get-stats
+│   │   └── list
+│   │   └── list-arp-tables
+│   │   └── list-service-providers
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── lb
+│   │   └── address-pool
+│   │   │   └── address
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── frontend-ip
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── inbound-nat-pool
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── inbound-nat-rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── outbound-rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── probe
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── list-mapping
+│   │   └── list-nic
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── local-gateway
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── nat
+│   │   └── gateway
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   └── network-watcher
+│   │   └── connection-monitor
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── wait
 │   └── nic
+│   │   └── ip-config
+│   │   │   └── address-pool
+│   │   │   └── inbound-nat-rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
 │   │   └── create
 │   │   └── delete
 │   │   └── list
+│   │   └── list-effective-nsg
 │   │   └── show
+│   │   └── show-effective-route-table
 │   │   └── update
+│   │   └── wait
 │   └── nsg
 │   │   └── rule
+│   │   │   └── create
+│   │   │   └── delete
 │   │   │   └── list
 │   │   │   └── show
-│   │   └── list
-│   │   └── show
-│   └── vnet
-│   │   └── peering
-│   │   │   └── list
-│   │   │   └── show
-│   │   └── subnet
-│   │   │   └── list
-│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
 │   │   └── create
 │   │   └── delete
 │   │   └── list
 │   │   └── show
 │   │   └── update
+│   │   └── wait
+│   └── private-dns
+│   │   └── link
+│   │   │   └── vnet
+│   │   └── record-set
+│   │   │   └── a
+│   │   │   └── aaaa
+│   │   │   └── cname
+│   │   │   └── mx
+│   │   │   └── ptr
+│   │   │   └── soa
+│   │   │   └── srv
+│   │   │   └── txt
+│   │   │   └── list
+│   │   └── zone
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── export
+│   │   │   └── import
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   └── private-endpoint
+│   │   └── asg
+│   │   │   └── add
+│   │   │   └── list
+│   │   │   └── remove
+│   │   │   └── wait
+│   │   └── dns-zone-group
+│   │   │   └── add
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── remove
+│   │   │   └── show
+│   │   │   └── wait
+│   │   └── ip-config
+│   │   │   └── add
+│   │   │   └── list
+│   │   │   └── remove
+│   │   │   └── wait
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── list-types
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── private-endpoint-connection
+│   │   └── approve
+│   │   └── delete
+│   │   └── list
+│   │   └── reject
+│   │   └── show
+│   └── private-link-resource
+│   │   └── list
+│   └── private-link-service
+│   │   └── connection
+│   │   │   └── delete
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── list-auto-approved
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── profile
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── wait
+│   └── public-ip
+│   │   └── ddos-protection
+│   │   │   └── show
+│   │   └── prefix
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── route-table
+│   │   └── route
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── routeserver
+│   │   └── peering
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── list-advertised-routes
+│   │   │   └── list-learned-routes
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── service-endpoint
+│   │   └── policy
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── policy-definition
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── list
+│   └── traffic-manager
+│   │   └── endpoint
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── show-geographic-hierarchy
+│   │   │   └── update
+│   │   └── profile
+│   │   │   └── check-dns
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   └── virtual-appliance
+│   │   └── connection
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── inbound-security-rule
+│   │   │   └── create
+│   │   │   └── show
+│   │   └── reimage
+│   │   └── restart
+│   │   └── wait
+│   └── vnet
+│   │   └── peering
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── sync
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── subnet
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── list-available-delegations
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── check-ip-address
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── list-endpoint-services
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── vnet-gateway
+│   │   └── aad
+│   │   │   └── assign
+│   │   │   └── remove
+│   │   │   └── show
+│   │   │   └── wait
+│   │   └── ipsec-policy
+│   │   │   └── add
+│   │   │   └── clear
+│   │   │   └── list
+│   │   │   └── wait
+│   │   └── nat-rule
+│   │   │   └── wait
+│   │   └── packet-capture
+│   │   │   └── wait
+│   │   └── revoked-cert
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── wait
+│   │   └── root-cert
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── wait
+│   │   └── vpn-client
+│   │   │   └── ipsec-policy
+│   │   │   └── generate
+│   │   │   └── show-url
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── list-advertised-routes
+│   │   └── list-bgp-peer-status
+│   │   └── list-learned-routes
+│   │   └── reset
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── vpn-connection
+│   │   └── ipsec-policy
+│   │   │   └── add
+│   │   │   └── clear
+│   │   │   └── list
+│   │   │   └── wait
+│   │   └── packet-capture
+│   │   │   └── start
+│   │   │   └── wait
+│   │   └── shared-key
+│   │   │   └── reset
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
 │   └── watcher
+│   │   └── connection-monitor
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── query
+│   │   │   └── show
+│   │   │   └── start
+│   │   │   └── stop
+│   │   │   └── wait
+│   │   └── flow-log
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── packet-capture
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── show-status
+│   │   │   └── stop
+│   │   │   └── wait
 │   │   └── troubleshooting
 │   │   │   └── show
+│   │   │   └── start
 │   │   └── configure
 │   │   └── list
+│   │   └── run-configuration-diagnostic
+│   │   └── show-next-hop
+│   │   └── show-security-group-view
+│   │   └── show-topology
+│   │   └── test-ip-flow
+│   └── list-service-aliases
+│   └── list-service-tags
+│   └── list-usages
 └── policy
 │   └── assignment
+│   │   └── identity
+│   │   │   └── assign
+│   │   │   └── remove
+│   │   │   └── show
+│   │   └── non-compliance-message
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   └── create
+│   │   └── delete
 │   │   └── list
 │   │   └── show
+│   │   └── update
+│   └── attestation
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
 │   └── definition
+│   │   └── create
+│   │   └── delete
 │   │   └── list
 │   │   └── show
+│   │   └── update
 │   └── event
+│   │   └── list
+│   └── metadata
+│   │   └── list
+│   │   └── show
+│   └── remediation
+│   │   └── deployment
+│   │   │   └── list
+│   │   └── cancel
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   └── set-definition
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
 │   └── state
 │   │   └── list
+│   │   └── summarize
+│   │   └── trigger-scan
 └── postgres
 │   └── db
+│   │   └── create
+│   │   └── delete
 │   │   └── list
 │   │   └── show
+│   └── flexible-server
+│   │   └── ad-admin
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── wait
+│   │   └── advanced-threat-protection-setting
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── backup
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── db
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── deploy
+│   │   │   └── run
+│   │   │   └── setup
+│   │   └── fabric-mirroring
+│   │   │   └── start
+│   │   │   └── stop
+│   │   │   └── update-databases
+│   │   └── firewall-rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── identity
+│   │   │   └── assign
+│   │   │   └── list
+│   │   │   └── remove
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── index-tuning
+│   │   │   └── list-recommendations
+│   │   │   └── list-settings
+│   │   │   └── set-settings
+│   │   │   └── show
+│   │   │   └── show-settings
+│   │   │   └── update
+│   │   └── long-term-retention
+│   │   │   └── list
+│   │   │   └── pre-check
+│   │   │   └── show
+│   │   │   └── start
+│   │   └── migration
+│   │   │   └── check-name-availability
+│   │   │   └── create
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── parameter
+│   │   │   └── list
+│   │   │   └── set
+│   │   │   └── show
+│   │   └── private-endpoint-connection
+│   │   │   └── approve
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── reject
+│   │   │   └── show
+│   │   └── private-link-resource
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── replica
+│   │   │   └── create
+│   │   │   └── list
+│   │   │   └── promote
+│   │   └── server-logs
+│   │   │   └── download
+│   │   │   └── list
+│   │   └── virtual-endpoint
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── geo-restore
+│   │   └── list
+│   │   └── list-skus
+│   │   └── restart
+│   │   └── restore
+│   │   └── revive-dropped
+│   │   └── show
+│   │   └── show-connection-string
+│   │   └── start
+│   │   └── stop
+│   │   └── update
+│   │   └── upgrade
+│   │   └── wait
 │   └── server
+│   │   └── ad-admin
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── wait
+│   │   └── configuration
+│   │   │   └── list
+│   │   │   └── set
+│   │   │   └── show
+│   │   └── firewall-rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── key
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── private-endpoint-connection
+│   │   │   └── approve
+│   │   │   └── delete
+│   │   │   └── reject
+│   │   │   └── show
+│   │   └── private-link-resource
+│   │   │   └── list
+│   │   └── replica
+│   │   │   └── create
+│   │   │   └── list
+│   │   │   └── stop
+│   │   └── vnet-rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
 │   │   └── create
 │   │   └── delete
 │   │   └── georestore
 │   │   └── list
+│   │   └── list-skus
+│   │   └── restart
 │   │   └── restore
 │   │   └── show
+│   │   └── show-connection-string
 │   │   └── update
 │   │   └── wait
+│   └── server-logs
+│   │   └── download
+│   │   └── list
+└── ppg
+│   └── create
+│   └── delete
+│   └── list
+│   └── show
+│   └── update
+└── private-link
+│   └── association
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
 └── provider
 │   └── operation
+│   │   └── list
+│   │   └── show
+│   └── permission
+│   │   └── list
 │   └── list
 │   └── register
 │   └── show
+│   └── unregister
 └── redis
+│   └── access-policy
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── access-policy-assignment
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── firewall-rules
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── identity
+│   │   └── assign
+│   │   └── remove
+│   │   └── show
+│   └── patch-schedule
+│   │   └── create
+│   │   └── delete
+│   │   └── show
+│   │   └── update
+│   └── server-link
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
 │   └── create
 │   └── delete
 │   └── export
+│   └── flush
+│   └── force-reboot
 │   └── import
 │   └── list
+│   └── list-keys
+│   └── regenerate-keys
 │   └── show
 │   └── update
-└── reservations
-│   └── catalog
-│   └── reservation
+└── relay
+│   └── hyco
+│   │   └── authorization-rule
+│   │   │   └── keys
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
 │   │   └── list
-│   │   └── merge
 │   │   └── show
-│   │   └── split
 │   │   └── update
-└── resource
-│   └── link
-│   │   └── list
-│   │   └── show
-│   └── lock
-│   │   └── list
-│   │   └── show
-│   └── create
-│   └── delete
-│   └── list
-│   └── move
-│   └── show
-│   └── tag
-│   └── update
-└── role
-└── servicebus
 │   └── namespace
+│   │   └── authorization-rule
+│   │   │   └── keys
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
 │   │   └── create
 │   │   └── delete
 │   │   └── exists
 │   │   └── list
 │   │   └── show
 │   │   └── update
+│   │   └── wait
+│   └── wcfrelay
+│   │   └── authorization-rule
+│   │   │   └── keys
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+└── resource
+│   └── link
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── lock
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── create
+│   └── delete
+│   └── invoke-action
+│   └── list
+│   └── move
+│   └── patch
+│   └── show
+│   └── tag
+│   └── update
+│   └── wait
+└── resourcemanagement
+│   └── private-link
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+└── restore-point
+│   └── collection
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── list-all
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── create
+│   └── delete
+│   └── show
+│   └── wait
+└── role
+│   └── assignment
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── list-changelogs
+│   │   └── update
+│   └── definition
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+└── search
+│   └── admin-key
+│   │   └── renew
+│   │   └── show
+│   └── private-endpoint-connection
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── private-link-resource
+│   │   └── list
+│   └── query-key
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   └── service
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── shared-private-link-resource
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+└── security
+│   └── adaptive-application-controls
+│   │   └── list
+│   │   └── show
+│   └── alert
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── alerts-suppression-rule
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── assessment
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   └── assessment-metadata
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   └── atp
+│   │   └── cosmosdb
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── storage
+│   │   │   └── show
+│   │   │   └── update
+│   └── auto-provisioning-setting
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── automation
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── validate
+│   └── automation-action-event-hub
+│   │   └── create
+│   └── automation-action-logic-app
+│   │   └── create
+│   └── automation-action-workspace
+│   │   └── create
+│   └── automation-rule
+│   │   └── create
+│   └── automation-rule-set
+│   │   └── create
+│   └── automation-scope
+│   │   └── create
+│   └── automation-source
+│   │   └── create
+│   └── discovered-security-solution
+│   │   └── list
+│   │   └── show
+│   └── external-security-solution
+│   │   └── list
+│   │   └── show
+│   └── iot-alerts
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   └── iot-analytics
+│   │   └── list
+│   │   └── show
+│   └── iot-recommendations
+│   │   └── list
+│   │   └── show
+│   └── iot-solution
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── jit-policy
+│   │   └── list
+│   │   └── show
+│   └── location
+│   │   └── list
+│   │   └── show
+│   └── pricing
+│   │   └── create
+│   │   └── list
+│   │   └── show
+│   └── regulatory-compliance-assessments
+│   │   └── list
+│   │   └── show
+│   └── regulatory-compliance-controls
+│   │   └── list
+│   │   └── show
+│   └── regulatory-compliance-standards
+│   │   └── list
+│   │   └── show
+│   └── secure-score-control-definitions
+│   │   └── list
+│   └── secure-score-controls
+│   │   └── list
+│   └── secure-scores
+│   │   └── list
+│   │   └── show
+│   └── security-solutions
+│   │   └── list
+│   └── security-solutions-reference-data
+│   │   └── list
+│   └── setting
+│   │   └── create
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── sub-assessment
+│   │   └── list
+│   │   └── show
+│   └── task
+│   │   └── list
+│   │   └── show
+│   └── topology
+│   │   └── list
+│   │   └── show
+│   └── va
+│   │   └── sql
+│   │   │   └── baseline
+│   │   │   └── results
+│   │   │   └── scans
+│   └── workspace-setting
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+└── servicebus
+│   └── georecovery-alias
+│   │   └── authorization-rule
+│   │   │   └── keys
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── break-pair
+│   │   └── create
+│   │   └── delete
+│   │   └── exists
+│   │   └── fail-over
+│   │   └── list
+│   │   └── set
+│   │   └── show
+│   └── migration
+│   │   └── abort
+│   │   └── complete
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── start
+│   │   └── wait
+│   └── namespace
+│   │   └── authorization-rule
+│   │   │   └── keys
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── encryption
+│   │   │   └── add
+│   │   │   └── remove
+│   │   └── identity
+│   │   │   └── assign
+│   │   │   └── remove
+│   │   └── network-rule-set
+│   │   │   └── ip-rule
+│   │   │   └── virtual-network-rule
+│   │   │   └── create
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── private-endpoint-connection
+│   │   │   └── approve
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── reject
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── private-link-resource
+│   │   │   └── show
+│   │   └── replica
+│   │   │   └── add
+│   │   │   └── remove
+│   │   └── create
+│   │   └── delete
+│   │   └── exists
+│   │   └── failover
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
 │   └── queue
+│   │   └── authorization-rule
+│   │   │   └── keys
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
 │   │   └── create
 │   │   └── delete
 │   │   └── list
 │   │   └── show
 │   │   └── update
 │   └── topic
-│   │   └── subscription
-│   │   │   └── rule
+│   │   └── authorization-rule
+│   │   │   └── keys
+│   │   │   └── create
+│   │   │   └── delete
 │   │   │   └── list
 │   │   │   └── show
+│   │   │   └── update
+│   │   └── subscription
+│   │   │   └── rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
 │   │   └── create
 │   │   └── delete
 │   │   └── list
 │   │   └── show
 │   │   └── update
 └── sf
-│   └── cluster
+│   └── application
 │   │   └── certificate
 │   │   │   └── add
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── application-type
+│   │   └── version
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   └── cluster
+│   │   └── client-certificate
+│   │   │   └── add
+│   │   │   └── remove
 │   │   └── durability
+│   │   │   └── update
 │   │   └── node
 │   │   │   └── add
+│   │   │   └── remove
+│   │   └── node-type
+│   │   │   └── add
 │   │   └── reliability
+│   │   │   └── update
 │   │   └── setting
+│   │   │   └── remove
+│   │   │   └── set
+│   │   └── upgrade-type
 │   │   │   └── set
 │   │   └── create
 │   │   └── list
 │   │   └── show
-└── snapshot
+│   └── managed-application
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── managed-application-type
+│   │   └── version
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── managed-cluster
+│   │   └── client-certificate
+│   │   │   └── add
+│   │   │   └── delete
+│   │   └── network-security-rule
+│   │   │   └── add
+│   │   │   └── delete
+│   │   │   └── get
+│   │   │   └── list
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── managed-node-type
+│   │   └── node
+│   │   │   └── delete
+│   │   │   └── reimage
+│   │   │   └── restart
+│   │   └── vm-extension
+│   │   │   └── add
+│   │   │   └── delete
+│   │   └── vm-secret
+│   │   │   └── add
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── managed-service
+│   │   └── correlation-scheme
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── update
+│   │   └── load-metrics
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── service
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+└── sig
+│   └── gallery-application
+│   │   └── version
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── image-definition
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── list-community
+│   │   └── list-shared
+│   │   └── show
+│   │   └── show-community
+│   │   └── show-shared
+│   │   └── update
+│   │   └── wait
+│   └── image-version
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── list-community
+│   │   └── list-shared
+│   │   └── show
+│   │   └── show-community
+│   │   └── show-shared
+│   │   └── update
+│   │   └── wait
+│   └── share
+│   │   └── add
+│   │   └── enable-community
+│   │   └── remove
+│   │   └── reset
+│   │   └── wait
 │   └── create
 │   └── delete
 │   └── list
+│   └── list-community
+│   └── list-shared
+│   └── show
+│   └── show-community
+│   └── show-shared
+│   └── update
+│   └── wait
+└── signalr
+│   └── cors
+│   │   └── add
+│   │   └── list
+│   │   └── remove
+│   │   └── update
+│   └── custom-certificate
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── custom-domain
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── identity
+│   │   └── assign
+│   │   └── remove
+│   │   └── show
+│   └── key
+│   │   └── list
+│   │   └── renew
+│   └── network-rule
+│   │   └── ip-rule
+│   │   │   └── add
+│   │   │   └── remove
+│   │   └── list
+│   │   └── update
+│   └── replica
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── restart
+│   │   └── show
+│   │   └── start
+│   │   └── stop
+│   │   └── update
+│   └── upstream
+│   │   └── clear
+│   │   └── list
+│   │   └── update
+│   └── create
+│   └── delete
+│   └── list
+│   └── restart
+│   └── show
+│   └── start
+│   └── stop
+│   └── update
+└── snapshot
+│   └── create
+│   └── delete
+│   └── grant-access
+│   └── list
+│   └── revoke-access
 │   └── show
 │   └── update
+│   └── wait
 └── sql
 │   └── db
+│   │   └── advanced-threat-protection-setting
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── audit-policy
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── classification
+│   │   │   └── recommendation
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── geo-backup
+│   │   │   └── list
+│   │   │   └── restore
+│   │   │   └── show
+│   │   └── ledger-digest-uploads
+│   │   │   └── disable
+│   │   │   └── enable
+│   │   │   └── show
+│   │   └── ltr-backup
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── restore
+│   │   │   └── show
+│   │   │   └── wait
+│   │   └── ltr-policy
+│   │   │   └── set
+│   │   │   └── show
 │   │   └── op
+│   │   │   └── cancel
 │   │   │   └── list
 │   │   └── replica
 │   │   │   └── create
+│   │   │   └── delete-link
+│   │   │   └── list-links
+│   │   │   └── set-primary
+│   │   └── str-policy
+│   │   │   └── set
+│   │   │   └── show
+│   │   │   └── wait
 │   │   └── tde
+│   │   │   └── key
 │   │   │   └── set
 │   │   │   └── show
 │   │   └── copy
@@ -691,264 +4488,1227 @@ az
 │   │   └── export
 │   │   └── import
 │   │   └── list
+│   │   └── list-deleted
+│   │   └── list-editions
+│   │   └── list-usages
 │   │   └── rename
 │   │   └── restore
 │   │   └── show
+│   │   └── show-connection-string
+│   │   └── show-deleted
 │   │   └── update
 │   └── dw
-│   │   └── list
-│   │   └── pause
-│   │   └── show
-│   └── mi
-│   │   └── list
-│   │   └── show
-│   └── midb
 │   │   └── create
 │   │   └── delete
 │   │   └── list
+│   │   └── pause
+│   │   └── resume
 │   │   └── show
-│   └── server
-│   │   └── key
+│   │   └── update
+│   └── elastic-pool
+│   │   └── op
+│   │   │   └── cancel
 │   │   │   └── list
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── list-dbs
+│   │   └── list-editions
+│   │   └── show
+│   │   └── update
+│   └── failover-group
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── set-primary
+│   │   └── show
+│   │   └── update
+│   └── instance-failover-group
+│   │   └── create
+│   │   └── delete
+│   │   └── set-primary
+│   │   └── show
+│   │   └── update
+│   └── mi
+│   │   └── ad-admin
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── update
+│   │   └── ad-only-auth
+│   │   │   └── disable
+│   │   │   └── enable
+│   │   │   └── get
+│   │   └── advanced-threat-protection-setting
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── dtc
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── endpoint-cert
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── key
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── link
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── failover
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── op
+│   │   │   └── cancel
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── partner-cert
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── server-configuration-option
+│   │   │   └── list
+│   │   │   └── set
+│   │   │   └── show
+│   │   │   └── wait
+│   │   └── start-stop-schedule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── tde-key
+│   │   │   └── set
 │   │   │   └── show
 │   │   └── create
 │   │   └── delete
+│   │   └── failover
 │   │   └── list
+│   │   └── refresh-external-governance-status
 │   │   └── show
+│   │   └── start
+│   │   └── stop
 │   │   └── update
-└── storage
-│   └── account
-│   │   └── keys
+│   └── midb
+│   │   └── advanced-threat-protection-setting
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── copy
+│   │   │   └── cancel
+│   │   │   └── complete
 │   │   │   └── list
+│   │   │   └── start
+│   │   └── ledger-digest-uploads
+│   │   │   └── disable
+│   │   │   └── enable
+│   │   │   └── show
+│   │   └── log-replay
+│   │   │   └── complete
+│   │   │   └── show
+│   │   │   └── start
+│   │   │   └── stop
+│   │   │   └── wait
+│   │   └── ltr-backup
+│   │   │   └── wait
+│   │   └── ltr-policy
+│   │   └── move
+│   │   │   └── cancel
+│   │   │   └── complete
+│   │   │   └── list
+│   │   │   └── start
+│   │   └── short-term-retention-policy
 │   │   └── create
 │   │   └── delete
 │   │   └── list
+│   │   └── list-deleted
+│   │   └── recover
+│   │   └── restore
 │   │   └── show
+│   │   └── update
+│   └── recoverable-midb
+│   │   └── list
+│   │   └── show
+│   └── server
+│   │   └── ad-admin
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── update
+│   │   └── ad-only-auth
+│   │   │   └── disable
+│   │   │   └── enable
+│   │   │   └── get
+│   │   └── advanced-threat-protection-setting
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── audit-policy
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── conn-policy
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── dns-alias
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── set
+│   │   │   └── show
+│   │   └── firewall-rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── key
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── ms-support
+│   │   │   └── audit-policy
+│   │   └── outbound-firewall-rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── tde-key
+│   │   │   └── revalidate
+│   │   │   └── set
+│   │   │   └── show
+│   │   └── vnet-rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── list-usages
+│   │   └── refresh-external-governance-status
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── virtual-cluster
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   └── vm
+│   │   └── group
+│   │   │   └── ag-listener
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── add-to-group
+│   │   └── create
+│   │   └── delete
+│   │   └── enable-azure-ad-auth
+│   │   └── list
+│   │   └── remove-from-group
+│   │   └── show
+│   │   └── start-assessment
+│   │   └── update
+│   │   └── validate-azure-ad-auth
+│   └── list-usages
+│   └── show-usage
+└── sshkey
+│   └── create
+│   └── delete
+│   └── list
+│   └── show
+│   └── update
+└── stack
+│   └── group
+│   │   └── create
+│   │   └── delete
+│   │   └── export
+│   │   └── list
+│   │   └── show
+│   │   └── validate
+│   └── mg
+│   │   └── create
+│   │   └── delete
+│   │   └── export
+│   │   └── list
+│   │   └── show
+│   │   └── validate
+│   └── sub
+│   │   └── create
+│   │   └── delete
+│   │   └── export
+│   │   └── list
+│   │   └── show
+│   │   └── validate
+└── staticwebapp
+│   └── appsettings
+│   │   └── delete
+│   │   └── list
+│   │   └── set
+│   └── backends
+│   │   └── link
+│   │   └── show
+│   │   └── unlink
+│   │   └── validate
+│   └── enterprise-edge
+│   │   └── disable
+│   │   └── enable
+│   │   └── show
+│   └── environment
+│   │   └── delete
+│   │   └── functions
+│   │   └── list
+│   │   └── show
+│   └── functions
+│   │   └── link
+│   │   └── show
+│   │   └── unlink
+│   └── hostname
+│   │   └── delete
+│   │   └── list
+│   │   └── set
+│   │   └── show
+│   └── identity
+│   │   └── assign
+│   │   └── remove
+│   │   └── show
+│   └── secrets
+│   │   └── list
+│   │   └── reset-api-key
+│   └── users
+│   │   └── invite
+│   │   └── list
+│   │   └── update
+│   └── create
+│   └── delete
+│   └── disconnect
+│   └── list
+│   └── reconnect
+│   └── show
+│   └── update
+└── storage
+│   └── account
+│   │   └── blob-service-properties
+│   │   │   └── cors-rule
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── encryption-scope
+│   │   │   └── create
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── file-service-properties
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── hns-migration
+│   │   │   └── start
+│   │   │   └── stop
+│   │   └── keys
+│   │   │   └── list
+│   │   │   └── renew
+│   │   └── local-user
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── list-keys
+│   │   │   └── regenerate-password
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── management-policy
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── migration
+│   │   │   └── show
+│   │   │   └── start
+│   │   └── network-rule
+│   │   │   └── add
+│   │   │   └── list
+│   │   │   └── remove
+│   │   └── private-link-resource
+│   │   └── check-name
+│   │   └── create
+│   │   └── delete
+│   │   └── file-service-usage
+│   │   └── generate-sas
+│   │   └── list
+│   │   └── revoke-delegation-keys
+│   │   └── show
+│   │   └── show-connection-string
+│   │   └── show-usage
 │   │   └── update
 │   └── blob
 │   │   └── copy
 │   │   │   └── cancel
 │   │   │   └── start
+│   │   │   └── start-batch
+│   │   └── immutability-policy
+│   │   │   └── delete
+│   │   │   └── set
+│   │   └── incremental-copy
+│   │   │   └── cancel
+│   │   │   └── start
 │   │   └── lease
+│   │   │   └── acquire
 │   │   │   └── break
 │   │   │   └── change
+│   │   │   └── release
 │   │   │   └── renew
 │   │   └── metadata
 │   │   │   └── show
+│   │   │   └── update
+│   │   └── service-properties
+│   │   │   └── delete-policy
+│   │   │   └── show
+│   │   │   └── update
 │   │   └── delete
+│   │   └── delete-batch
 │   │   └── download
+│   │   └── download-batch
 │   │   └── exists
+│   │   └── generate-sas
 │   │   └── list
+│   │   └── restore
+│   │   └── set-legal-hold
+│   │   └── set-tier
 │   │   └── show
 │   │   └── snapshot
 │   │   └── undelete
 │   │   └── update
 │   │   └── upload
+│   │   └── upload-batch
 │   │   └── url
+│   └── container
+│   │   └── immutability-policy
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── extend
+│   │   │   └── lock
+│   │   │   └── show
+│   │   └── lease
+│   │   │   └── acquire
+│   │   │   └── break
+│   │   │   └── change
+│   │   │   └── release
+│   │   │   └── renew
+│   │   └── legal-hold
+│   │   │   └── clear
+│   │   │   └── set
+│   │   │   └── show
+│   │   └── metadata
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── policy
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── exists
+│   │   └── generate-sas
+│   │   └── list
+│   │   └── restore
+│   │   └── set-permission
+│   │   └── show
+│   │   └── show-permission
+│   └── container-rm
+│   │   └── create
+│   │   └── delete
+│   │   └── exists
+│   │   └── list
+│   │   └── show
+│   │   └── update
 │   └── cors
 │   │   └── add
+│   │   └── clear
 │   │   └── list
+│   └── directory
+│   │   └── metadata
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── exists
+│   │   └── list
+│   │   └── show
 │   └── entity
 │   │   └── delete
 │   │   └── insert
 │   │   └── merge
 │   │   └── query
+│   │   └── replace
 │   │   └── show
 │   └── file
 │   │   └── copy
 │   │   │   └── cancel
 │   │   │   └── start
+│   │   │   └── start-batch
 │   │   └── metadata
 │   │   │   └── show
+│   │   │   └── update
 │   │   └── delete
+│   │   └── delete-batch
 │   │   └── download
+│   │   └── download-batch
 │   │   └── exists
+│   │   └── generate-sas
 │   │   └── list
 │   │   └── resize
 │   │   └── show
 │   │   └── update
 │   │   └── upload
+│   │   └── upload-batch
 │   │   └── url
-│   └── logging
-│   │   └── show
-│   └── message
-│   │   └── clear
-│   │   └── get
-│   │   └── peek
-│   │   └── put
-│   └── metrics
-│   │   └── show
-│   └── queue
+│   └── fs
+│   │   └── access
+│   │   │   └── remove-recursive
+│   │   │   └── set
+│   │   │   └── set-recursive
+│   │   │   └── show
+│   │   │   └── update-recursive
+│   │   └── directory
+│   │   │   └── metadata
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── exists
+│   │   │   └── generate-sas
+│   │   │   └── list
+│   │   │   └── move
+│   │   │   └── show
+│   │   └── file
+│   │   │   └── metadata
+│   │   │   └── append
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── download
+│   │   │   └── exists
+│   │   │   └── list
+│   │   │   └── move
+│   │   │   └── set-expiry
+│   │   │   └── show
+│   │   │   └── upload
 │   │   └── metadata
 │   │   │   └── show
-│   │   └── policy
-│   │   │   └── list
+│   │   │   └── update
+│   │   └── service-properties
 │   │   │   └── show
+│   │   │   └── update
 │   │   └── create
 │   │   └── delete
 │   │   └── exists
 │   │   └── list
-│   │   └── stats
+│   │   └── list-deleted-path
+│   │   └── show
+│   │   └── undelete-path
+│   └── logging
+│   │   └── show
+│   │   └── update
+│   └── metrics
+│   │   └── show
+│   │   └── update
 │   └── share
 │   │   └── metadata
 │   │   │   └── show
+│   │   │   └── update
 │   │   └── policy
+│   │   │   └── create
+│   │   │   └── delete
 │   │   │   └── list
 │   │   │   └── show
+│   │   │   └── update
+│   │   └── close-handle
 │   │   └── create
 │   │   └── delete
 │   │   └── exists
+│   │   └── generate-sas
 │   │   └── list
+│   │   └── list-handle
 │   │   └── show
 │   │   └── snapshot
 │   │   └── stats
 │   │   └── update
-│   └── table
-│   │   └── policy
-│   │   │   └── list
-│   │   │   └── show
+│   │   └── url
+│   └── share-rm
 │   │   └── create
 │   │   └── delete
 │   │   └── exists
 │   │   └── list
+│   │   └── restore
+│   │   └── show
 │   │   └── stats
+│   │   └── update
+│   └── table
+│   │   └── policy
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── exists
+│   │   └── generate-sas
+│   │   └── list
+│   │   └── stats
+│   └── copy
+│   └── remove
+└── synapse
+│   └── activity-run
+│   │   └── query-by-pipeline-run
+│   └── ad-only-auth
+│   │   └── disable
+│   │   └── enable
+│   │   └── get
+│   └── data-flow
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── set
+│   │   └── show
+│   └── dataset
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── integration-runtime
+│   │   └── managed
+│   │   │   └── create
+│   │   └── self-hosted
+│   │   │   └── create
+│   │   └── delete
+│   │   └── get-connection-info
+│   │   └── get-monitoring-data
+│   │   └── get-status
+│   │   └── list
+│   │   └── list-auth-key
+│   │   └── regenerate-auth-key
+│   │   └── show
+│   │   └── start
+│   │   └── stop
+│   │   └── sync-credentials
+│   │   └── update
+│   │   └── upgrade
+│   │   └── wait
+│   └── integration-runtime-node
+│   │   └── delete
+│   │   └── get-ip-address
+│   │   └── show
+│   │   └── update
+│   └── kql-script
+│   │   └── create
+│   │   └── delete
+│   │   └── export
+│   │   └── import
+│   │   └── list
+│   │   └── show
+│   │   └── wait
+│   └── kusto
+│   │   └── pool
+│   │   │   └── add-language-extension
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── detach-follower-database
+│   │   │   └── list
+│   │   │   └── list-follower-database
+│   │   │   └── list-language-extension
+│   │   │   └── list-sku
+│   │   │   └── remove-language-extension
+│   │   │   └── show
+│   │   │   └── start
+│   │   │   └── stop
+│   │   │   └── update
+│   │   │   └── wait
+│   └── link-connection
+│   │   └── create
+│   │   └── delete
+│   │   └── edit-link-tables
+│   │   └── get-link-tables-status
+│   │   └── get-status
+│   │   └── list
+│   │   └── list-link-tables
+│   │   └── show
+│   │   └── start
+│   │   └── stop
+│   │   └── update
+│   │   └── update-landing-zone-credential
+│   └── linked-service
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── managed-private-endpoints
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   └── notebook
+│   │   └── create
+│   │   └── delete
+│   │   └── export
+│   │   └── import
+│   │   └── list
+│   │   └── set
+│   │   └── show
+│   └── pipeline
+│   │   └── create
+│   │   └── create-run
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   └── pipeline-run
+│   │   └── cancel
+│   │   └── query-by-workspace
+│   │   └── show
+│   └── role
+│   │   └── assignment
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── definition
+│   │   │   └── list
+│   │   │   └── show
+│   │   └── scope
+│   │   │   └── list
+│   └── spark
+│   │   └── job
+│   │   │   └── cancel
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── submit
+│   │   └── pool
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── session
+│   │   │   └── cancel
+│   │   │   └── create
+│   │   │   └── list
+│   │   │   └── reset-timeout
+│   │   │   └── show
+│   │   └── statement
+│   │   │   └── cancel
+│   │   │   └── invoke
+│   │   │   └── list
+│   │   │   └── show
+│   └── spark-job-definition
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── sql
+│   │   └── ad-admin
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── audit-policy
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── pool
+│   │   │   └── audit-policy
+│   │   │   └── classification
+│   │   │   └── tde
+│   │   │   └── threat-policy
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── list-deleted
+│   │   │   └── pause
+│   │   │   └── restore
+│   │   │   └── resume
+│   │   │   └── show
+│   │   │   └── show-connection-string
+│   │   │   └── update
+│   │   │   └── wait
+│   └── sql-script
+│   │   └── create
+│   │   └── delete
+│   │   └── export
+│   │   └── import
+│   │   └── list
+│   │   └── show
+│   │   └── wait
+│   └── trigger
+│   │   └── create
+│   │   └── delete
+│   │   └── get-event-subscription-status
+│   │   └── list
+│   │   └── show
+│   │   └── start
+│   │   └── stop
+│   │   └── subscribe-to-event
+│   │   └── unsubscribe-from-event
+│   │   └── update
+│   │   └── wait
+│   └── trigger-run
+│   │   └── cancel
+│   │   └── query-by-workspace
+│   │   └── rerun
+│   └── workspace
+│   │   └── firewall-rule
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   │   └── wait
+│   │   └── key
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── wait
+│   │   └── managed-identity
+│   │   │   └── grant-sql-access
+│   │   │   └── revoke-sql-access
+│   │   │   └── show-sql-access
+│   │   │   └── wait
+│   │   └── activate
+│   │   └── check-name
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
+│   └── workspace-package
+│   │   └── delete
+│   │   └── list
+│   │   └── show
+│   │   └── upload
+│   │   └── upload-batch
 └── tag
+│   └── add-value
 │   └── create
 │   └── delete
 │   └── list
+│   └── remove-value
+│   └── update
+└── ts
+│   └── create
+│   └── delete
+│   └── export
+│   └── list
+│   └── show
+│   └── update
 └── vm
+│   └── application
+│   │   └── list
+│   │   └── set
+│   └── availability-set
+│   │   └── convert
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── list-sizes
+│   │   └── show
+│   │   └── update
+│   └── boot-diagnostics
+│   │   └── disable
+│   │   └── enable
+│   │   └── get-boot-log
+│   │   └── get-boot-log-uris
 │   └── diagnostics
+│   │   └── get-default-config
 │   │   └── set
 │   └── disk
+│   │   └── attach
+│   │   └── detach
 │   └── encryption
+│   │   └── disable
 │   │   └── enable
 │   │   └── show
 │   └── extension
 │   │   └── image
 │   │   │   └── list
+│   │   │   └── list-names
+│   │   │   └── list-versions
 │   │   │   └── show
+│   │   └── delete
 │   │   └── list
 │   │   └── set
 │   │   └── show
+│   │   └── wait
+│   └── host
+│   │   └── group
+│   │   │   └── create
+│   │   │   └── delete
+│   │   │   └── get-instance-view
+│   │   │   └── list
+│   │   │   └── show
+│   │   │   └── update
+│   │   └── create
+│   │   └── delete
+│   │   └── get-instance-view
+│   │   └── list
+│   │   └── list-resize-options
+│   │   └── redeploy
+│   │   └── resize
+│   │   └── restart
+│   │   └── show
+│   │   └── update
+│   │   └── wait
 │   └── identity
+│   │   └── assign
+│   │   └── remove
 │   │   └── show
 │   └── image
+│   │   └── terms
+│   │   │   └── accept
+│   │   │   └── cancel
+│   │   │   └── show
 │   │   └── list
+│   │   └── list-offers
+│   │   └── list-publishers
+│   │   └── list-skus
 │   │   └── show
+│   └── monitor
+│   │   └── log
+│   │   │   └── show
 │   └── nic
 │   │   └── add
 │   │   └── list
+│   │   └── remove
 │   │   └── set
 │   │   └── show
+│   └── run-command
+│   │   └── create
+│   │   └── delete
+│   │   └── invoke
+│   │   └── list
+│   │   └── show
+│   │   └── update
+│   │   └── wait
 │   └── secret
 │   │   └── add
+│   │   └── format
+│   │   └── list
+│   │   └── remove
+│   └── unmanaged-disk
+│   │   └── attach
+│   │   └── detach
 │   │   └── list
 │   └── user
 │   │   └── delete
+│   │   └── reset-ssh
 │   │   └── update
+│   └── assess-patches
+│   └── auto-shutdown
 │   └── capture
 │   └── convert
 │   └── create
 │   └── deallocate
 │   └── delete
 │   └── generalize
+│   └── get-instance-view
+│   └── install-patches
 │   └── list
+│   └── list-ip-addresses
+│   └── list-sizes
+│   └── list-skus
+│   └── list-usage
+│   └── list-vm-resize-options
+│   └── open-port
+│   └── perform-maintenance
+│   └── reapply
 │   └── redeploy
+│   └── reimage
 │   └── resize
 │   └── restart
 │   └── show
+│   └── simulate-eviction
 │   └── start
 │   └── stop
 │   └── update
 │   └── wait
 └── vmss
+│   └── application
+│   │   └── list
+│   │   └── set
 │   └── diagnostics
+│   │   └── get-default-config
 │   │   └── set
 │   └── disk
+│   │   └── attach
+│   │   └── detach
 │   └── encryption
+│   │   └── disable
 │   │   └── enable
 │   │   └── show
 │   └── extension
 │   │   └── image
 │   │   │   └── list
+│   │   │   └── list-names
+│   │   │   └── list-versions
 │   │   │   └── show
+│   │   └── delete
 │   │   └── list
 │   │   └── set
 │   │   └── show
+│   │   └── upgrade
 │   └── identity
+│   │   └── assign
 │   │   └── show
 │   └── nic
 │   │   └── list
+│   │   └── list-vm-nics
 │   │   └── show
+│   └── rolling-upgrade
+│   │   └── cancel
+│   │   └── get-latest
+│   │   └── start
+│   └── run-command
+│   │   └── create
+│   │   └── delete
+│   │   └── invoke
+│   │   └── list
+│   │   └── show
+│   │   └── update
 │   └── create
 │   └── deallocate
 │   └── delete
+│   └── delete-instances
+│   └── get-instance-view
+│   └── get-os-upgrade-history
 │   └── list
+│   └── list-instance-connection-info
+│   └── list-instance-public-ips
+│   └── list-instances
+│   └── list-skus
+│   └── perform-maintenance
 │   └── reimage
 │   └── restart
 │   └── scale
+│   └── set-orchestration-service-state
 │   └── show
+│   └── simulate-eviction
 │   └── start
 │   └── stop
 │   └── update
+│   └── update-domain-walk
+│   └── update-instances
 │   └── wait
 └── webapp
 │   └── auth
 │   │   └── show
+│   │   └── update
 │   └── config
+│   │   └── access-restriction
+│   │   │   └── add
+│   │   │   └── remove
+│   │   │   └── set
+│   │   │   └── show
 │   │   └── appsettings
+│   │   │   └── delete
 │   │   │   └── list
 │   │   │   └── set
 │   │   └── backup
 │   │   │   └── create
+│   │   │   └── delete
 │   │   │   └── list
+│   │   │   └── restore
 │   │   │   └── show
 │   │   │   └── update
+│   │   └── connection-string
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── set
 │   │   └── container
+│   │   │   └── delete
 │   │   │   └── set
 │   │   │   └── show
 │   │   └── hostname
 │   │   │   └── add
 │   │   │   └── delete
+│   │   │   └── get-external-ip
 │   │   │   └── list
+│   │   └── snapshot
+│   │   │   └── list
+│   │   │   └── restore
 │   │   └── ssl
 │   │   │   └── bind
+│   │   │   └── delete
+│   │   │   └── import
 │   │   │   └── list
+│   │   │   └── show
+│   │   │   └── unbind
+│   │   │   └── upload
+│   │   └── storage-account
+│   │   │   └── add
+│   │   │   └── delete
+│   │   │   └── list
+│   │   │   └── update
 │   │   └── set
+│   │   └── show
+│   └── connection
+│   │   └── create
+│   │   │   └── app-insights
+│   │   │   └── appconfig
+│   │   │   └── cognitiveservices
+│   │   │   └── confluent-cloud
+│   │   │   └── cosmos-cassandra
+│   │   │   └── cosmos-gremlin
+│   │   │   └── cosmos-mongo
+│   │   │   └── cosmos-sql
+│   │   │   └── cosmos-table
+│   │   │   └── eventhub
+│   │   │   └── fabric-sql
+│   │   │   └── keyvault
+│   │   │   └── mysql-flexible
+│   │   │   └── postgres-flexible
+│   │   │   └── redis
+│   │   │   └── redis-enterprise
+│   │   │   └── servicebus
+│   │   │   └── signalr
+│   │   │   └── sql
+│   │   │   └── storage-blob
+│   │   │   └── storage-file
+│   │   │   └── storage-queue
+│   │   │   └── storage-table
+│   │   │   └── webpubsub
+│   │   └── update
+│   │   │   └── app-insights
+│   │   │   └── appconfig
+│   │   │   └── cognitiveservices
+│   │   │   └── confluent-cloud
+│   │   │   └── cosmos-cassandra
+│   │   │   └── cosmos-gremlin
+│   │   │   └── cosmos-mongo
+│   │   │   └── cosmos-sql
+│   │   │   └── cosmos-table
+│   │   │   └── eventhub
+│   │   │   └── fabric-sql
+│   │   │   └── keyvault
+│   │   │   └── mysql-flexible
+│   │   │   └── postgres-flexible
+│   │   │   └── redis
+│   │   │   └── redis-enterprise
+│   │   │   └── servicebus
+│   │   │   └── signalr
+│   │   │   └── sql
+│   │   │   └── storage-blob
+│   │   │   └── storage-file
+│   │   │   └── storage-queue
+│   │   │   └── storage-table
+│   │   │   └── webpubsub
+│   │   └── delete
+│   │   └── list
+│   │   └── list-configuration
+│   │   └── list-support-types
+│   │   └── show
+│   │   └── validate
+│   │   └── wait
+│   └── cors
+│   │   └── add
+│   │   └── remove
 │   │   └── show
 │   └── deployment
 │   │   └── container
 │   │   │   └── config
+│   │   │   └── show-cd-url
+│   │   └── github-actions
+│   │   │   └── add
+│   │   │   └── remove
 │   │   └── slot
+│   │   │   └── auto-swap
 │   │   │   └── create
 │   │   │   └── delete
 │   │   │   └── list
 │   │   │   └── swap
 │   │   └── source
 │   │   │   └── config
+│   │   │   └── config-local-git
 │   │   │   └── delete
 │   │   │   └── show
 │   │   │   └── sync
+│   │   │   └── update-token
 │   │   └── user
 │   │   │   └── set
+│   │   │   └── show
+│   │   └── list-publishing-credentials
+│   │   └── list-publishing-profiles
+│   └── hybrid-connection
+│   │   └── add
+│   │   └── list
+│   │   └── remove
 │   └── identity
+│   │   └── assign
+│   │   └── remove
 │   │   └── show
 │   └── log
+│   │   └── deployment
+│   │   │   └── list
+│   │   │   └── show
 │   │   └── config
+│   │   └── download
 │   │   └── show
 │   │   └── tail
+│   └── sitecontainers
+│   │   └── create
+│   │   └── delete
+│   │   └── list
+│   │   └── log
+│   │   └── show
+│   │   └── status
+│   │   └── update
+│   └── traffic-routing
+│   │   └── clear
+│   │   └── set
+│   │   └── show
+│   └── vnet-integration
+│   │   └── add
+│   │   └── list
+│   │   └── remove
+│   └── webjob
+│   │   └── continuous
+│   │   │   └── list
+│   │   │   └── remove
+│   │   │   └── start
+│   │   │   └── stop
+│   │   └── triggered
+│   │   │   └── list
+│   │   │   └── log
+│   │   │   └── remove
+│   │   │   └── run
 │   └── browse
 │   └── create
+│   └── create-remote-connection
 │   └── delete
+│   └── deploy
 │   └── list
+│   └── list-instances
+│   └── list-runtimes
 │   └── restart
 │   └── show
 │   └── start
 │   └── stop
+│   └── up
 │   └── update
 └── configure
 └── feedback
 └── find
-└── interactive
 └── login
 └── logout
+└── rest
+└── survey
+└── version

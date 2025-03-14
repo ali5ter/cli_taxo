@@ -3,8 +3,8 @@
 # @author Alister Lewis-Bowen <bowena@vmware.com>
 
 ../cli_taxo.py az \
-    --commands-token '^Subgroups:|^Commands:' \
-    --commands-filter '^\s+(\w+?)\s+:\s' \
+    --commands-token '^Here are the base commands:|^Subgroups:|^Commands:' \
+    --commands-filter '^\s\s\s\s([a-z-]+)\s+:\s' \
     --options-token '^Global Arguments|^Arguments' \
-    --options-filter '^\s+?(--.+?)\s-*.+:\s' \
+    --options-filter '^\s\s\s\s(--[a-z-]+)\s' \
     "$@"
